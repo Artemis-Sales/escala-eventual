@@ -43,22 +43,9 @@ export const ManualSwapModal: React.FC<ManualSwapModalProps> = ({ item, onClose 
     const isAbsent = absentTeacherIds.includes(teacher.id);
     const isCurrentSub = teacher.id === item.substituteTeacherId;
     const isAlreadyAssignedInPeriod = alreadyAllocatedInPeriod.has(teacher.id);
-    const isExempt =
-      teacher.isExemptFromSubstitutions ||
-      teacher.name.toUpperCase().includes('DANILO') ||
-      teacher.name.toUpperCase().includes('PEDRO MARQUES');
-
-    const isAreaCoordinator =
-      teacher.role === 'COORDENADOR_AREA' ||
-      teacher.name.toUpperCase().includes('ADRIANA BEGOSSO') ||
-      teacher.name.toUpperCase().includes('ALEXANDRE CUSTODIO') ||
-      teacher.name.toUpperCase().includes('MARCIA PEREIRA');
-
-    const isManagementTeam =
-      teacher.role === 'EQUIPE_GESTORA' ||
-      teacher.name.toUpperCase().includes('GENILSON') ||
-      teacher.name.toUpperCase().includes('DÉBORA') ||
-      teacher.name.toUpperCase().includes('RENATA');
+    const isExempt = teacher.isExemptFromSubstitutions;
+    const isAreaCoordinator = teacher.role === 'COORDENADOR_AREA';
+    const isManagementTeam = teacher.role === 'EQUIPE_GESTORA';
 
     const slot = scheduleSlots.find(
       (s) => s.teacherId === teacher.id && s.dayOfWeek === selectedDay && s.periodId === item.periodId

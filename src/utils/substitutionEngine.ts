@@ -8,14 +8,7 @@ import type {
   DailySubstitutionPlan,
   SubstitutionCandidate,
 } from '../types';
-
-export function normalizeText(str: string): string {
-  return (str || '')
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .toUpperCase()
-    .trim();
-}
+import { normalizeText } from './text';
 
 export function getEligibleCandidates(
   periodId: number,
@@ -30,14 +23,8 @@ export function getEligibleCandidates(
   const candidates: SubstitutionCandidate[] = [];
 
   for (const teacher of allTeachers) {
-    const normName = normalizeText(teacher.name);
-
-    // 1. Professores isentos de realizar substituições (Danilo, Pedro ou com flag isento)
-    if (
-      teacher.isExemptFromSubstitutions ||
-      normName.includes('DANILO') ||
-      normName.includes('PEDRO MARQUES')
-    ) {
+    // 1. Professores isentos de realizar substituições (flag isento)
+    if (teacher.isExemptFromSubstitutions) {
       continue;
     }
 
@@ -68,17 +55,8 @@ export function getEligibleCandidates(
     }
 
     // 5. Determinar o Tier do Docente/Gestor
-    const isAreaCoordinator =
-      teacher.role === 'COORDENADOR_AREA' ||
-      normName.includes('ADRIANA BEGOSSO') ||
-      normName.includes('ALEXANDRE CUSTODIO') ||
-      normName.includes('MARCIA PEREIRA');
-
-    const isManagementTeam =
-      teacher.role === 'EQUIPE_GESTORA' ||
-      normName.includes('GENILSON') ||
-      normName.includes('DEBORA') ||
-      normName.includes('RENATA');
+    const isAreaCoordinator = teacher.role === 'COORDENADOR_AREA';
+    const isManagementTeam = teacher.role === 'EQUIPE_GESTORA';
 
     let tier: 1 | 2 | 3 = 1;
     let matchType: 'MESMA_MATERIA' | 'MESMA_AREA' | 'DISPONIVEL' | 'COORDENADOR_AREA' | 'EQUIPE_GESTORA' = 'DISPONIVEL';
