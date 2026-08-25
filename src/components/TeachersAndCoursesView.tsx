@@ -41,7 +41,7 @@ export const TeachersAndCoursesView: React.FC = () => {
     return matchesSearch && matchesArea;
   });
 
-  const handleSave = (teacherData: any) => {
+  const handleSave = (teacherData: Omit<Teacher, 'id' | 'totalSubstitutionsCount'>) => {
     if (editingTeacher) {
       updateTeacher({ ...editingTeacher, ...teacherData });
       setEditingTeacher(null);
@@ -212,7 +212,7 @@ export const TeachersAndCoursesView: React.FC = () => {
 interface TeacherFormModalProps {
   teacher: Teacher | null;
   areas: KnowledgeArea[];
-  onSave: (data: any) => void;
+  onSave: (data: Omit<Teacher, 'id' | 'totalSubstitutionsCount'>) => void;
   onClose: () => void;
 }
 

@@ -53,10 +53,10 @@ export const WeeklyScheduleView: React.FC = () => {
 
   // Exportar Grade Geral do Dia para Excel
   const handleExportGeneralExcel = () => {
-    const rows: any[] = [];
+    const rows: Record<string, string>[] = [];
 
     filteredClasses.forEach((cls) => {
-      const rowObj: any = { 'Turma / Ano': cls.name };
+      const rowObj: Record<string, string> = { 'Turma / Ano': cls.name };
 
       periods.forEach((p) => {
         const slot = scheduleSlots.find(

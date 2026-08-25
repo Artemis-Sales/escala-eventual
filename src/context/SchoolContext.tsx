@@ -16,6 +16,7 @@ import {
   generateInitialSchedule,
 } from '../data/mockData';
 import { generateDailyPlan } from '../utils/substitutionEngine';
+import { randomTeacherColor } from '../utils/colors';
 
 interface SchoolContextType {
   teachers: Teacher[];
@@ -58,39 +59,54 @@ const LOCAL_STORAGE_KEY_TEACHERS = 'escala_escola_oficial_teachers_v5';
 const LOCAL_STORAGE_KEY_SLOTS = 'escala_escola_oficial_slots_v5';
 const LOCAL_STORAGE_KEY_HISTORY = 'escala_escola_oficial_history_v5';
 
+function loadFromStorage<T>(key: string, fallback: T): T {
+  const saved = localStorage.getItem(key);
+  if (!saved) return fallback;
+
+  try {
+    return JSON.parse(saved) as T;
+  } catch (err) {
+    console.warn(`Dado corrompido em localStorage["${key}"], usando valor padrão.`, err);
+    localStorage.removeItem(key);
+    return fallback;
+  }
+}
+
 export const SchoolProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [teachers, setTeachers] = useState<Teacher[]>(() => {
-    const saved = localStorage.getItem(LOCAL_STORAGE_KEY_TEACHERS);
-    return saved ? JSON.parse(saved) : INITIAL_TEACHERS;
-  });
+  const [teachers, setTeachers] = useState<Teacher[]>(() =>
+    loadFromStorage(LOCAL_STORAGE_KEY_TEACHERS, INITIAL_TEACHERS)
+  );
 
   const [classes] = useState<ClassGroup[]>(INITIAL_CLASSES);
   const [periods] = useState<PeriodDefinition[]>(PERIODS_DEFINITION);
 
-  const [scheduleSlots, setScheduleSlots] = useState<ScheduleSlot[]>(() => {
-    const saved = localStorage.getItem(LOCAL_STORAGE_KEY_SLOTS);
-    return saved ? JSON.parse(saved) : generateInitialSchedule();
-  });
+  const [scheduleSlots, setScheduleSlots] = useState<ScheduleSlot[]>(() =>
+    loadFromStorage(LOCAL_STORAGE_KEY_SLOTS, generateInitialSchedule())
+  );
 
-  const [history, setHistory] = useState<HistoryRecord[]>(() => {
-    const saved = localStorage.getItem(LOCAL_STORAGE_KEY_HISTORY);
-    return saved ? JSON.parse(saved) : [];
-  });
+  const [history, setHistory] = useState<HistoryRecord[]>(() =>
+    loadFromStorage<HistoryRecord[]>(LOCAL_STORAGE_KEY_HISTORY, [])
+  );
 
   const [selectedDate, setSelectedDateState] = useState<string>(() => {
     const today = new Date();
     return today.toISOString().split('T')[0];
   });
 
+  // Sábado e domingo não têm aula: aproximamos para o dia útil mais próximo
+  // (sábado -> sexta anterior, domingo -> segunda seguinte) em vez de cair
+  // silenciosamente em "segunda" para qualquer dia não mapeado.
   const getDayOfWeekFromDate = (dateStr: string): DayOfWeek => {
     const d = new Date(dateStr + 'T00:00:00');
     const dayIndex = d.getDay();
     switch (dayIndex) {
+      case 0: return 'segunda'; // domingo -> segunda seguinte
       case 1: return 'segunda';
       case 2: return 'terca';
       case 3: return 'quarta';
       case 4: return 'quinta';
       case 5: return 'sexta';
+      case 6: return 'sexta'; // sábado -> sexta anterior
       default: return 'segunda';
     }
   };
@@ -99,7 +115,7 @@ export const SchoolProvider: React.FC<{ children: React.ReactNode }> = ({ childr
     getDayOfWeekFromDate(new Date().toISOString().split('T')[0])
   );
 
-  const [absentTeacherIds, setAbsentTeacherIds] = useState<string[]>(['t_1']);
+  const [absentTeacherIds, setAbsentTeacherIds] = useState<string[]>([]);
   const [currentPlan, setCurrentPlan] = useState<DailySubstitutionPlan | null>(null);
 
   useEffect(() => {
@@ -274,7 +290,7 @@ export const SchoolProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       ...teacherData,
       id: `teacher-${Date.now()}`,
       totalSubstitutionsCount: 0,
-      color: `#${Math.floor(Math.random() * 16777215).toString(16)}`,
+      color: randomTeacherColor(),
     };
     setTeachers((prev) => [...prev, newTeacher]);
   };
@@ -391,7 +407,7 @@ export const SchoolProvider: React.FC<{ children: React.ReactNode }> = ({ childr
     setScheduleSlots(generateInitialSchedule());
     setHistory([]);
     setCurrentPlan(null);
-    setAbsentTeacherIds(['t_1']);
+    setAbsentTeacherIds([]);
   };
 
   return (
