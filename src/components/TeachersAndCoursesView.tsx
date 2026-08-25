@@ -25,7 +25,6 @@ export const TeachersAndCoursesView: React.FC = () => {
   const [isMultiplicaOpen, setIsMultiplicaOpen] = useState(false);
 
   const areas: KnowledgeArea[] = [
-    'Exatas',
     'Linguagens',
     'Ciências da Natureza',
     'Ciências Humanas',
@@ -225,7 +224,7 @@ const TeacherFormModal: React.FC<TeacherFormModalProps> = ({
   const [name, setName] = useState(teacher?.name || '');
   const [mainSubject, setMainSubject] = useState(teacher?.mainSubject || '');
   const [knowledgeArea, setKnowledgeArea] = useState<KnowledgeArea>(
-    teacher?.knowledgeArea || 'Exatas'
+    teacher?.knowledgeArea || 'Linguagens'
   );
   const [role, setRole] = useState<StaffRole>(teacher?.role || 'PROFESSOR');
   const [isExempt, setIsExempt] = useState(teacher?.isExemptFromSubstitutions || false);

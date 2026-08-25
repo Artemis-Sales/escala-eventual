@@ -1,7 +1,10 @@
 export type DayOfWeek = 'segunda' | 'terca' | 'quarta' | 'quinta' | 'sexta';
 
+// Modelo de areas da escola: Linguagens (Lingua Portuguesa, Lingua Inglesa, Artes e
+// Educacao Fisica), Ciencias da Natureza (Biologia, Fisica, Matematica e Quimica; no
+// Fundamental, Ciencias) e Ciencias Humanas (Historia, Geografia, Filosofia e
+// Sociologia). O restante fica em Parte Diversificada ou Gestao Escolar.
 export type KnowledgeArea =
-  | 'Exatas'
   | 'Linguagens'
   | 'Ciências da Natureza'
   | 'Ciências Humanas'

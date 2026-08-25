@@ -41,10 +41,9 @@ const CANONICAL_SUBJECTS: Record<string, string> = {
   'LINGUA PORTUGUESA': 'Língua Portuguesa',
   'REDACAO E LEITURA': 'Redação e Leitura',
   'ORIENTACAO DE ESTUDO – LINGUA…': 'Orientação de Estudo – Língua…',
-  // Exatas
+  // Ciencias da Natureza (Matematica entra aqui, conforme o modelo da escola)
   'MATEMATICA': 'Matemática',
   'ORIENTACAO DE ESTUDO – MATEM…': 'Orientação de Estudo – Matem…',
-  // Ciencias da Natureza
   'BIOLOGIA': 'Biologia',
   'CIENCIAS': 'Ciências',
   'FISICA': 'Física',
@@ -110,12 +109,19 @@ export function canonicalSubjectName(raw: string | undefined | null): string {
   return CANONICAL_SUBJECTS[normalizeText(clean)] ?? toTitleCase(clean);
 }
 
+// Modelo de areas adotado pela escola:
+//   Linguagens          -> Lingua Portuguesa, Lingua Inglesa, Artes e Educacao Fisica
+//   Ciencias da Natureza-> Biologia, Fisica, Matematica e Quimica (Ciencias, no Fundamental)
+//   Ciencias Humanas    -> Historia, Geografia, Filosofia e Sociologia
+// O que nao pertence a essas tres areas fica em Parte Diversificada (itinerarios,
+// curso tecnico, tutoria) ou Gestao Escolar.
+//
 // A ordem importa: regras mais especificas primeiro. "EDUCACAO FISICA" precisa ser
 // testada antes de "FISICA", e "LOGICA E LINGUAGENS DE PROGRAMACAO" antes de "LINGUA".
 const AREA_RULES: { pattern: RegExp; area: KnowledgeArea }[] = [
   { pattern: /DIRECAO|COORDENACAO PEDAGOGICA|GESTAO/, area: 'Gestão Escolar' },
   { pattern: /EDUCACAO FISICA|ESPORTE/, area: 'Linguagens' },
-  { pattern: /MATEM/, area: 'Exatas' },
+  { pattern: /MATEM/, area: 'Ciências da Natureza' },
   {
     pattern:
       /LINGUAGENS DE PROGR|PROGRAMA|DESENVOLVIMENT|MODELAGEM|REDES DE COMPUTADORES|INTELIGENCIA ARTIFICIAL|VERSIONAMENTO|ROBOTICA|TECNOLOGIA|CARREIRA E COMPETENCIAS|PROJETO DE VIDA|PROJETO MULTIDISCIPLINAR|EDUCACAO FINANCEIRA|EMPREENDEDORISMO|TUTORIA|ELETIVA|CLUBE/,
@@ -136,7 +142,6 @@ export function resolveKnowledgeArea(subject: string | undefined | null): Knowle
 }
 
 const VALID_AREAS: KnowledgeArea[] = [
-  'Exatas',
   'Linguagens',
   'Ciências da Natureza',
   'Ciências Humanas',

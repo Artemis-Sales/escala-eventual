@@ -103,7 +103,7 @@ export function downloadExcelTemplate(_periods?: PeriodDefinition[]) {
     {
       'Nome': 'Prof. Carlos Silva',
       'Disciplina_Principal': 'Matemática',
-      'Area_Conhecimento': 'Exatas',
+      'Area_Conhecimento': 'Ciências da Natureza',
       'Disciplinas_Secundarias': 'Física, Raciocínio Lógico',
       'Telefone': '(11) 98765-4321',
       'Cargo': 'PROFESSOR',

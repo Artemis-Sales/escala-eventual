@@ -97,25 +97,23 @@ describe('canonicalSubjectName', () => {
 
 describe('resolveKnowledgeArea', () => {
   // Caso que motivou a correcao: 'EDUCACAO FISICA'.includes('FISICA') classificava
-  // Educacao Fisica como Exatas.
-  it('classifica Educação Física em Linguagens, e não em Exatas', () => {
+  // Educacao Fisica junto com Fisica.
+  it('classifica Educação Física em Linguagens, e não junto com Física', () => {
     expect(resolveKnowledgeArea('Educação Fisica')).toBe('Linguagens');
     expect(resolveKnowledgeArea('EDUCACAO FISICA')).toBe('Linguagens');
     expect(resolveKnowledgeArea('FISICA')).toBe('Ciências da Natureza');
   });
 
-  // A regra de Exatas vinha antes e engolia todas as Ciencias da Natureza.
-  it('classifica ciências da natureza fora de Exatas', () => {
-    ['CIENCIAS', 'BIOLOGIA', 'QUIMICA', 'FISICA', 'PRATICAS EXPERIMENTAIS'].forEach((s) =>
+  // Modelo da escola: Biologia, Fisica, Matematica e Quimica formam Ciencias da
+  // Natureza (Ciencias, no Fundamental).
+  it('classifica ciências da natureza, incluindo matemática', () => {
+    ['CIENCIAS', 'BIOLOGIA', 'QUIMICA', 'FISICA', 'MATEMATICA', 'PRATICAS EXPERIMENTAIS',
+      'ORIENTAÇÃO DE ESTUDO – MATEM…'].forEach((s) =>
       expect(resolveKnowledgeArea(s)).toBe('Ciências da Natureza')
     );
   });
 
-  it('mantém apenas matemática em Exatas', () => {
-    expect(resolveKnowledgeArea('MATEMATICA')).toBe('Exatas');
-    expect(resolveKnowledgeArea('ORIENTAÇÃO DE ESTUDO – MATEM…')).toBe('Exatas');
-  });
-
+  // Modelo da escola: Lingua Portuguesa, Lingua Inglesa, Artes e Educacao Fisica.
   it('classifica linguagens', () => {
     ['LINGUA PORTUGUESA', 'LINGUA INGLESA', 'REDAÇÃO E LEITURA', 'ARTE', 'ESPORTE-MÚSICA-ARTE',
       'ORIENTAÇÃO DE ESTUDO – LÍNGUA…'].forEach((s) =>

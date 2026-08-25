@@ -54,7 +54,7 @@ export const INITIAL_TEACHERS: Teacher[] = [
     "id": "t_2",
     "name": "ALAIR JORGE CYRINO DO AMARAL",
     "mainSubject": "Matemática",
-    "knowledgeArea": "Exatas",
+    "knowledgeArea": "Ciências da Natureza",
     "secondarySubjects": [
       "Projeto de Vida",
       "Física",
@@ -355,7 +355,7 @@ export const INITIAL_TEACHERS: Teacher[] = [
     "id": "t_22",
     "name": "WESLEY DE JESUS OLIVEIRA",
     "mainSubject": "Matemática",
-    "knowledgeArea": "Exatas",
+    "knowledgeArea": "Ciências da Natureza",
     "secondarySubjects": [
       "Orientação de Estudo – Matem…"
     ],
@@ -369,7 +369,7 @@ export const INITIAL_TEACHERS: Teacher[] = [
     "id": "t_23",
     "name": "WILLIAM RODRIGUES DA SILVA",
     "mainSubject": "Matemática",
-    "knowledgeArea": "Exatas",
+    "knowledgeArea": "Ciências da Natureza",
     "secondarySubjects": [
       "Orientação de Estudo – Matem…"
     ],

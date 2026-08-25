@@ -17,6 +17,7 @@ import {
 } from '../data/mockData';
 import { generateDailyPlan } from '../utils/substitutionEngine';
 import { randomTeacherColor } from '../utils/colors';
+import { canonicalSubjectName, resolveKnowledgeArea } from '../utils/subjects';
 
 interface SchoolContextType {
   teachers: Teacher[];
@@ -61,6 +62,12 @@ const LOCAL_STORAGE_KEY_TEACHERS = 'escala_escola_oficial_teachers_v5';
 // recarrega a grade corrigida sem descartar historico nem contadores de substituicao.
 const LOCAL_STORAGE_KEY_SLOTS = 'escala_escola_oficial_slots_v6';
 const LOCAL_STORAGE_KEY_HISTORY = 'escala_escola_oficial_history_v5';
+const LOCAL_STORAGE_KEY_DATA_VERSION = 'escala_escola_oficial_data_version';
+
+// Versao 1: disciplinas passaram a ter grafia unica (sem o nome da turma grudado) e as
+// areas seguem o modelo da escola, com Matematica em Ciencias da Natureza. Trocar a
+// chave descartaria os contadores de substituicao, entao migramos os dados no lugar.
+const CURRENT_DATA_VERSION = 1;
 
 function loadFromStorage<T>(key: string, fallback: T): T {
   const saved = localStorage.getItem(key);
@@ -75,17 +82,48 @@ function loadFromStorage<T>(key: string, fallback: T): T {
   }
 }
 
-export const SchoolProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [teachers, setTeachers] = useState<Teacher[]>(() =>
-    loadFromStorage(LOCAL_STORAGE_KEY_TEACHERS, INITIAL_TEACHERS)
+function readDataVersion(): number {
+  const parsed = Number(localStorage.getItem(LOCAL_STORAGE_KEY_DATA_VERSION));
+  return Number.isFinite(parsed) ? parsed : 0;
+}
+
+/** Padroniza a grafia das disciplinas e reclassifica a area, preservando o resto. */
+function migrateTeachers(teachers: Teacher[]): Teacher[] {
+  return teachers.map((teacher) => {
+    const mainSubject = canonicalSubjectName(teacher.mainSubject) || teacher.mainSubject;
+    const secondary = (teacher.secondarySubjects ?? []).map(canonicalSubjectName).filter(Boolean);
+
+    return {
+      ...teacher,
+      mainSubject,
+      secondarySubjects: [...new Set(secondary)].filter((s) => s !== mainSubject),
+      knowledgeArea: resolveKnowledgeArea(mainSubject),
+    };
+  });
+}
+
+function migrateSlots(slots: ScheduleSlot[]): ScheduleSlot[] {
+  return slots.map((slot) =>
+    slot.subject ? { ...slot, subject: canonicalSubjectName(slot.subject) } : slot
   );
+}
+
+export const SchoolProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  // Dados salvos antes da versao atual passam pela migracao uma unica vez.
+  const isOutdated = readDataVersion() < CURRENT_DATA_VERSION;
+
+  const [teachers, setTeachers] = useState<Teacher[]>(() => {
+    const loaded = loadFromStorage(LOCAL_STORAGE_KEY_TEACHERS, INITIAL_TEACHERS);
+    return isOutdated ? migrateTeachers(loaded) : loaded;
+  });
 
   const [classes] = useState<ClassGroup[]>(INITIAL_CLASSES);
   const [periods] = useState<PeriodDefinition[]>(PERIODS_DEFINITION);
 
-  const [scheduleSlots, setScheduleSlots] = useState<ScheduleSlot[]>(() =>
-    loadFromStorage(LOCAL_STORAGE_KEY_SLOTS, generateInitialSchedule())
-  );
+  const [scheduleSlots, setScheduleSlots] = useState<ScheduleSlot[]>(() => {
+    const loaded = loadFromStorage(LOCAL_STORAGE_KEY_SLOTS, generateInitialSchedule());
+    return isOutdated ? migrateSlots(loaded) : loaded;
+  });
 
   const [history, setHistory] = useState<HistoryRecord[]>(() =>
     loadFromStorage<HistoryRecord[]>(LOCAL_STORAGE_KEY_HISTORY, [])
@@ -120,6 +158,10 @@ export const SchoolProvider: React.FC<{ children: React.ReactNode }> = ({ childr
 
   const [absentTeacherIds, setAbsentTeacherIds] = useState<string[]>([]);
   const [currentPlan, setCurrentPlan] = useState<DailySubstitutionPlan | null>(null);
+
+  useEffect(() => {
+    localStorage.setItem(LOCAL_STORAGE_KEY_DATA_VERSION, String(CURRENT_DATA_VERSION));
+  }, []);
 
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY_TEACHERS, JSON.stringify(teachers));

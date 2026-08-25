@@ -15,7 +15,7 @@ const classes: ClassGroup[] = [
 function teacher(overrides: Partial<Teacher> & Pick<Teacher, 'id' | 'name'>): Teacher {
   return {
     mainSubject: 'Matemática',
-    knowledgeArea: 'Exatas',
+    knowledgeArea: 'Ciências da Natureza',
     totalSubstitutionsCount: 0,
     ...overrides,
   };
@@ -86,8 +86,8 @@ describe('getEligibleCandidates', () => {
   });
 
   it('prioriza mesma matéria, depois mesma área, depois disponível', () => {
-    const sameSubject = teacher({ id: 't_same_subj', name: 'A', mainSubject: 'Matemática', knowledgeArea: 'Exatas' });
-    const sameArea = teacher({ id: 't_same_area', name: 'B', mainSubject: 'Física', knowledgeArea: 'Exatas' });
+    const sameSubject = teacher({ id: 't_same_subj', name: 'A', mainSubject: 'Matemática', knowledgeArea: 'Ciências da Natureza' });
+    const sameArea = teacher({ id: 't_same_area', name: 'B', mainSubject: 'Física', knowledgeArea: 'Ciências da Natureza' });
     const other = teacher({ id: 't_other', name: 'C', mainSubject: 'História', knowledgeArea: 'Ciências Humanas' });
 
     const result = getEligibleCandidates(1, 'segunda', absentTeacher, [], [other, sameArea, sameSubject], [], {}, new Set());
