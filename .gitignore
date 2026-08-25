@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Dados reais da escola (nomes/telefones de professores) e scripts
+# de extração pontuais usados apenas para gerar src/data/mockData.ts
+*.xlsx
+*.xls
+extracted_data.json
+generateCleanData.cjs
+inspectTurmas.cjs
