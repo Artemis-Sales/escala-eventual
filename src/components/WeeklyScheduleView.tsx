@@ -22,7 +22,7 @@ import type { DayOfWeek, ScheduleSlot, SlotType, ClassGroup } from '../types';
 export const WeeklyScheduleView: React.FC = () => {
   const { teachers, classes, periods, scheduleSlots, updateSlot } = useSchool();
 
-  // Mode: 'geral_dia' (Grade Geral de Todas as Turmas no Dia) | 'professor' (Grade Individual do Professor) | 'turma' (Grade Semanal de uma Turma)
+  // Mode: 'geral_dia' | 'professor' | 'turma'
   const [viewMode, setViewMode] = useState<'geral_dia' | 'professor' | 'turma'>('geral_dia');
 
   // Filtros
@@ -37,7 +37,7 @@ export const WeeklyScheduleView: React.FC = () => {
   const [isMultiplicaOpen, setIsMultiplicaOpen] = useState(false);
 
   const selectedTeacher = teachers.find((t) => t.id === selectedTeacherId);
-  const selectedClass = classes.find((c) => c.id === selectedClassId);
+  const selectedClass = classes.find((c) => c.id === selectedClassId || c.name === selectedClassId);
 
   // Filtrar turmas pelo segmento
   const filteredClasses = classes.filter((c) => {
@@ -69,7 +69,7 @@ export const WeeklyScheduleView: React.FC = () => {
 
         if (slot) {
           const teacher = teachers.find((t) => t.id === slot.teacherId);
-          rowObj[`${p.label} (${p.time})`] = `${slot.subject || teacher?.mainSubject || 'Aula'}\n(${teacher?.name || 'Prof'})`;
+          rowObj[`${p.label} (${p.time})`] = `${slot.subject || teacher?.mainSubject || 'Aula'} - ${teacher?.name || 'Prof'}`;
         } else {
           rowObj[`${p.label} (${p.time})`] = '- - -';
         }
@@ -80,37 +80,37 @@ export const WeeklyScheduleView: React.FC = () => {
 
     const worksheet = XLSX.utils.json_to_sheet(rows);
     const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, `Grade_${selectedDay}`);
+    XLSX.utils.book_append_sheet(workbook, worksheet, `Grade_${selectedDay.toUpperCase()}`);
     XLSX.writeFile(workbook, `Grade_Geral_${selectedDay.toUpperCase()}_Todas_Turmas.xlsx`);
   };
 
   return (
     <div className="weekly-schedule-view">
-      {/* Top Header com Seletor de Modo */}
+      {/* Barra Superior com Alternador de Modos e Ações Rápidas */}
       <div className="schedule-header-controls">
         <div className="schedule-mode-toggle">
           <button
             className={`btn-mode-tab ${viewMode === 'geral_dia' ? 'active' : ''}`}
             onClick={() => setViewMode('geral_dia')}
           >
-            <School size={17} />
-            <span>🏫 Grade Geral do Dia (Todas as Turmas)</span>
+            <School size={16} />
+            <span>Grade Geral do Dia (Todas as Turmas)</span>
           </button>
 
           <button
             className={`btn-mode-tab ${viewMode === 'professor' ? 'active' : ''}`}
             onClick={() => setViewMode('professor')}
           >
-            <Users size={17} />
-            <span>👤 Grade Individual por Professor</span>
+            <Users size={16} />
+            <span>Grade por Professor</span>
           </button>
 
           <button
             className={`btn-mode-tab ${viewMode === 'turma' ? 'active' : ''}`}
             onClick={() => setViewMode('turma')}
           >
-            <BookOpen size={17} />
-            <span>📚 Grade Semanal por Turma</span>
+            <BookOpen size={16} />
+            <span>Grade por Turma</span>
           </button>
         </div>
 
@@ -144,7 +144,7 @@ export const WeeklyScheduleView: React.FC = () => {
             <div className="day-picker-group">
               <label className="filter-label">
                 <Calendar size={15} />
-                <span>Dia da Semana:</span>
+                <span>Dia:</span>
               </label>
               <div className="day-buttons-row">
                 {DAYS_OF_WEEK.map((d) => (
@@ -176,13 +176,13 @@ export const WeeklyScheduleView: React.FC = () => {
                   className={`btn-segment-chip ${segmentFilter === 'fundamental' ? 'active' : ''}`}
                   onClick={() => setSegmentFilter('fundamental')}
                 >
-                  Fundamental II (8)
+                  Fundamental II
                 </button>
                 <button
                   className={`btn-segment-chip ${segmentFilter === 'medio' ? 'active' : ''}`}
                   onClick={() => setSegmentFilter('medio')}
                 >
-                  Ensino Médio (6)
+                  Ensino Médio
                 </button>
               </div>
             </div>
@@ -192,7 +192,7 @@ export const WeeklyScheduleView: React.FC = () => {
               <Search size={15} />
               <input
                 type="text"
-                placeholder="Buscar professor, disciplina ou turma..."
+                placeholder="Filtrar professor ou disciplina..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
@@ -203,7 +203,7 @@ export const WeeklyScheduleView: React.FC = () => {
             <table className="general-matrix-table">
               <thead>
                 <tr>
-                  <th className="th-class-col">Turma / Ano</th>
+                  <th className="th-class-col">Turma</th>
                   {periods.map((period) => (
                     <th key={period.id} className="th-period-col">
                       <div className="matrix-period-label">{period.label}</div>
@@ -298,26 +298,29 @@ export const WeeklyScheduleView: React.FC = () => {
       {/* ========================================================================= */}
       {viewMode === 'professor' && (
         <div className="teacher-individual-schedule-section">
+          {/* Seletor do Professor */}
           <div className="schedule-top-bar">
             <div className="teacher-select-group">
               <label className="input-label">
                 <Users size={16} />
-                <span>Selecione o Professor:</span>
+                <span>Professor Selecionado:</span>
               </label>
               <select
                 value={selectedTeacherId}
                 onChange={(e) => setSelectedTeacherId(e.target.value)}
                 className="select-input-custom"
+                style={{ minWidth: 320 }}
               >
                 {teachers.map((t) => (
                   <option key={t.id} value={t.id}>
-                    {t.name} ({t.mainSubject} • {t.knowledgeArea}) {t.isExemptFromSubstitutions ? '🚫 [Isento]' : ''}
+                    {t.name} — {t.mainSubject} ({t.knowledgeArea}) {t.isExemptFromSubstitutions ? '🚫 [Isento]' : ''}
                   </option>
                 ))}
               </select>
             </div>
           </div>
 
+          {/* Card de Perfil do Professor */}
           {selectedTeacher && (
             <div className="teacher-profile-card">
               <div className="profile-left">
@@ -344,7 +347,7 @@ export const WeeklyScheduleView: React.FC = () => {
                   <span className="mini-stat-num text-primary">
                     {scheduleSlots.filter((s) => s.teacherId === selectedTeacher.id && s.type === 'AULA').length}
                   </span>
-                  <span className="mini-stat-label">Aulas / Semana</span>
+                  <span className="mini-stat-label">Aulas na Semana</span>
                 </div>
                 <div className="mini-stat">
                   <span className="mini-stat-num text-warning">
@@ -356,31 +359,33 @@ export const WeeklyScheduleView: React.FC = () => {
                   <span className="mini-stat-num text-success">
                     {scheduleSlots.filter((s) => s.teacherId === selectedTeacher.id && s.type === 'LIVRE').length}
                   </span>
-                  <span className="mini-stat-label">Janelas Livres</span>
+                  <span className="mini-stat-label">Horários Livres</span>
                 </div>
               </div>
             </div>
           )}
 
+          {/* Legenda de Cores */}
           <div className="schedule-legend">
             <div className="legend-item">
               <div className="legend-box legend-aula"></div>
-              <span>Aula Regular com Turma</span>
+              <span>Aula com Turma</span>
             </div>
             <div className="legend-item">
               <div className="legend-box legend-multiplica"></div>
-              <span>Multiplica SP (1h30 - Bloqueado)</span>
+              <span>Multiplica SP (1h30)</span>
             </div>
             <div className="legend-item">
               <div className="legend-box legend-curso"></div>
-              <span>ATPC / Formação Geral</span>
+              <span>ATPC / Formação</span>
             </div>
             <div className="legend-item">
               <div className="legend-box legend-livre"></div>
-              <span>Horário Livre (Disponível para Substituição)</span>
+              <span>Livre / Janela (Disponível p/ Substituição)</span>
             </div>
           </div>
 
+          {/* Tabela da Grade Semanal do Professor */}
           <div className="schedule-table-container">
             <table className="schedule-table">
               <thead>
@@ -430,7 +435,7 @@ export const WeeklyScheduleView: React.FC = () => {
                             {slotType === 'AULA' && (
                               <>
                                 <div className="slot-class-name">
-                                  <BookOpen size={13} />
+                                  <BookOpen size={12} />
                                   <span title={slot?.classId}>{classGroup?.name || slot?.classId || 'Turma'}</span>
                                 </div>
                                 <div className="slot-subject-name">
@@ -442,24 +447,24 @@ export const WeeklyScheduleView: React.FC = () => {
                             {slotType === 'CURSO_FORMACAO' && (
                               <>
                                 <div className={`slot-training-title ${isMultiplica ? 'text-multiplica' : ''}`}>
-                                  <GraduationCap size={14} />
+                                  <GraduationCap size={13} />
                                   <span>{slot?.trainingName || 'ATPC / Formação'}</span>
                                 </div>
                                 <span className={`slot-blocked-badge ${isMultiplica ? 'badge-multiplica' : ''}`}>
-                                  {isMultiplica ? 'Multiplica SP (1h30)' : 'Bloqueado'}
+                                  {isMultiplica ? 'Multiplica SP' : 'Bloqueado'}
                                 </span>
                               </>
                             )}
 
                             {slotType === 'LIVRE' && (
                               <div className="slot-free-text">
-                                <ShieldCheck size={14} />
+                                <ShieldCheck size={13} />
                                 <span>Livre (Janela)</span>
                               </div>
                             )}
 
-                            <button className="btn-edit-slot-hover" title="Editar este horário">
-                              <Edit3 size={12} />
+                            <button className="btn-edit-slot-hover" title="Clique para editar este horário">
+                              <Edit3 size={11} />
                             </button>
                           </div>
                         </td>
@@ -478,26 +483,56 @@ export const WeeklyScheduleView: React.FC = () => {
       {/* ========================================================================= */}
       {viewMode === 'turma' && (
         <div className="class-individual-schedule-section">
+          {/* Seletor de Turma */}
           <div className="schedule-top-bar">
             <div className="teacher-select-group">
               <label className="input-label">
                 <BookOpen size={16} />
-                <span>Selecione a Turma:</span>
+                <span>Turma Selecionada:</span>
               </label>
               <select
                 value={selectedClassId}
                 onChange={(e) => setSelectedClassId(e.target.value)}
                 className="select-input-custom"
+                style={{ minWidth: 260 }}
               >
                 {classes.map((c) => (
                   <option key={c.id} value={c.id}>
-                    {c.name} ({c.segment})
+                    {c.name} — ({c.segment})
                   </option>
                 ))}
               </select>
             </div>
           </div>
 
+          {/* Banner da Turma */}
+          {selectedClass && (
+            <div className="class-profile-banner">
+              <div className="class-banner-left">
+                <div className="class-avatar-box">
+                  <School size={24} />
+                </div>
+                <div>
+                  <h2 className="class-banner-title">{selectedClass.name}</h2>
+                  <span className="class-banner-segment">{selectedClass.segment}</span>
+                </div>
+              </div>
+              <div className="class-banner-stats">
+                <div className="mini-stat">
+                  <span className="mini-stat-num text-primary">
+                    {
+                      scheduleSlots.filter(
+                        (s) => (s.classId === selectedClass.id || s.classId === selectedClass.name) && s.type === 'AULA'
+                      ).length
+                    }
+                  </span>
+                  <span className="mini-stat-label">Aulas / Semana</span>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Tabela Semanal da Turma */}
           <div className="schedule-table-container">
             <table className="schedule-table">
               <thead>
@@ -535,12 +570,19 @@ export const WeeklyScheduleView: React.FC = () => {
                           <div className="slot-cell-content">
                             {slot && teacher ? (
                               <>
-                                <div className="slot-class-name">
-                                  <BookOpen size={13} />
-                                  <span>{subjectName}</span>
+                                <div className="slot-subject-name" style={{ color: '#1E40AF', fontWeight: 800 }}>
+                                  {subjectName}
                                 </div>
-                                <div className="slot-subject-name" style={{ fontWeight: 700, color: '#1E293B' }}>
-                                  Prof. {teacher.name}
+                                <div className="matrix-teacher-row" style={{ marginTop: 2 }}>
+                                  <div
+                                    className="matrix-teacher-avatar"
+                                    style={{ backgroundColor: teacher.color || '#3B82F6', width: 18, height: 18 }}
+                                  >
+                                    {teacher.name.charAt(0)}
+                                  </div>
+                                  <span className="matrix-teacher-name" style={{ fontWeight: 600 }}>
+                                    {teacher.name}
+                                  </span>
                                 </div>
                               </>
                             ) : (
@@ -667,7 +709,7 @@ const SlotEditModal: React.FC<SlotEditModalProps> = ({
                   >
                     {classes.map((c) => (
                       <option key={c.id} value={c.id}>
-                        {c.name}
+                        {c.name} ({c.segment})
                       </option>
                     ))}
                   </select>
@@ -680,7 +722,7 @@ const SlotEditModal: React.FC<SlotEditModalProps> = ({
                     value={subject}
                     onChange={(e) => setSubject(e.target.value)}
                     className="text-input-custom"
-                    placeholder="Ex: MATEMATICA, FISICA..."
+                    placeholder="Ex: MATEMÁTICA, HISTÓRIA..."
                     required
                   />
                 </div>
