@@ -1,5 +1,51 @@
 import * as XLSX from 'xlsx';
-import type { DailySubstitutionPlan, Teacher, PeriodDefinition } from '../types';
+import type {
+  DailySubstitutionPlan,
+  Teacher,
+  PeriodDefinition,
+  ScheduleSlot,
+  DayOfWeek,
+  SlotType,
+  StaffRole,
+} from '../types';
+import { normalizeText } from './text';
+
+type SheetRow = Record<string, unknown>;
+
+function cellToString(value: unknown): string {
+  return value === undefined || value === null ? '' : String(value).trim();
+}
+
+function normalizeDayOfWeek(raw: unknown): DayOfWeek | null {
+  const n = normalizeText(cellToString(raw));
+  if (n.startsWith('SEG')) return 'segunda';
+  if (n.startsWith('TER')) return 'terca';
+  if (n.startsWith('QUA')) return 'quarta';
+  if (n.startsWith('QUI')) return 'quinta';
+  if (n.startsWith('SEX')) return 'sexta';
+  return null;
+}
+
+function normalizeSlotType(raw: unknown): SlotType {
+  const n = normalizeText(cellToString(raw));
+  if (n === 'AULA') return 'AULA';
+  if (n.startsWith('CURSO') || n.includes('FORMACAO') || n.includes('ATPC') || n.includes('MULTIPLICA')) {
+    return 'CURSO_FORMACAO';
+  }
+  return 'LIVRE';
+}
+
+function normalizeRole(raw: unknown): StaffRole {
+  const n = normalizeText(cellToString(raw));
+  if (n.includes('GESTORA') || n.includes('GESTAO') || n.includes('DIRECAO')) return 'EQUIPE_GESTORA';
+  if (n.includes('COORDENADOR') || n.includes('COORD')) return 'COORDENADOR_AREA';
+  return 'PROFESSOR';
+}
+
+function normalizeBoolean(raw: unknown): boolean {
+  const n = normalizeText(cellToString(raw));
+  return n === 'SIM' || n === 'TRUE' || n === '1' || n === 'X';
+}
 
 export function exportDailyPlanToExcel(
   plan: DailySubstitutionPlan,
@@ -59,6 +105,8 @@ export function downloadExcelTemplate(_periods?: PeriodDefinition[]) {
       'Area_Conhecimento': 'Exatas',
       'Disciplinas_Secundarias': 'Física, Raciocínio Lógico',
       'Telefone': '(11) 98765-4321',
+      'Cargo': 'PROFESSOR',
+      'Isento_Substituicao': 'NAO',
     },
     {
       'Nome': 'Profa. Beatriz Lima',
@@ -66,6 +114,8 @@ export function downloadExcelTemplate(_periods?: PeriodDefinition[]) {
       'Area_Conhecimento': 'Linguagens',
       'Disciplinas_Secundarias': 'Redação, Literatura',
       'Telefone': '(11) 98765-4444',
+      'Cargo': 'COORDENADOR_AREA',
+      'Isento_Substituicao': 'NAO',
     },
   ];
   const wsT = XLSX.utils.json_to_sheet(teachersExample);
@@ -103,11 +153,14 @@ export function downloadExcelTemplate(_periods?: PeriodDefinition[]) {
   XLSX.writeFile(wb, 'Modelo_Grade_Escola_Integral.xlsx');
 }
 
-export async function parseUploadedExcel(file: File): Promise<{
-  importedTeachers?: Partial<Teacher>[];
-  importedSlots?: any[];
+export interface ParsedExcelResult {
+  importedTeachers?: Teacher[];
+  importedSlots?: ScheduleSlot[];
+  warnings?: string[];
   error?: string;
-}> {
+}
+
+export async function parseUploadedExcel(file: File): Promise<ParsedExcelResult> {
   return new Promise((resolve) => {
     const reader = new FileReader();
 
@@ -115,37 +168,82 @@ export async function parseUploadedExcel(file: File): Promise<{
       try {
         const data = new Uint8Array(e.target?.result as ArrayBuffer);
         const workbook = XLSX.read(data, { type: 'array' });
+        const importBatchId = Date.now();
 
-        let importedTeachers: Partial<Teacher>[] = [];
-        let importedSlots: any[] = [];
+        let importedTeachers: Teacher[] = [];
+        const warnings: string[] = [];
 
         if (workbook.SheetNames.includes('Professores')) {
-          const rawTeachers = XLSX.utils.sheet_to_json<any>(workbook.Sheets['Professores']);
-          importedTeachers = rawTeachers.map((row, idx) => ({
-            id: `imp-t-${idx}-${Date.now()}`,
-            name: row['Nome'] || row['nome'] || `Professor ${idx + 1}`,
-            mainSubject: row['Disciplina_Principal'] || row['disciplina'] || 'Geral',
-            knowledgeArea: row['Area_Conhecimento'] || 'Linguagens',
-            secondarySubjects: row['Disciplinas_Secundarias']
-              ? String(row['Disciplinas_Secundarias']).split(',').map((s) => s.trim())
-              : [],
-            totalSubstitutionsCount: 0,
-            phone: row['Telefone'] || '',
-          }));
+          const rawTeachers = XLSX.utils.sheet_to_json<SheetRow>(workbook.Sheets['Professores']);
+          importedTeachers = rawTeachers.map((row, idx) => {
+            const isExempt = normalizeBoolean(row['Isento_Substituicao'] ?? row['Isento']);
+            return {
+              id: `imp-t-${idx}-${importBatchId}`,
+              name: cellToString(row['Nome'] ?? row['nome']) || `Professor ${idx + 1}`,
+              mainSubject: cellToString(row['Disciplina_Principal'] ?? row['disciplina']) || 'Geral',
+              knowledgeArea:
+                (cellToString(row['Area_Conhecimento']) as Teacher['knowledgeArea']) || 'Linguagens',
+              secondarySubjects: row['Disciplinas_Secundarias']
+                ? cellToString(row['Disciplinas_Secundarias'])
+                    .split(',')
+                    .map((s) => s.trim())
+                    .filter(Boolean)
+                : [],
+              totalSubstitutionsCount: 0,
+              phone: cellToString(row['Telefone']),
+              role: normalizeRole(row['Cargo'] ?? row['Funcao']),
+              isExemptFromSubstitutions: isExempt,
+              exemptReason: isExempt ? cellToString(row['Motivo_Isencao']) || undefined : undefined,
+            };
+          });
         }
 
-        const scheduleSheetName =
-          workbook.SheetNames.find((s) => s.toLowerCase().includes('grade') || s.toLowerCase().includes('horario')) ||
-          workbook.SheetNames[0];
+        const scheduleSheetName = workbook.SheetNames.find(
+          (s) => normalizeText(s).includes('GRADE') || normalizeText(s).includes('HORARIO')
+        );
 
-        if (scheduleSheetName && scheduleSheetName !== 'Professores') {
-          const rawSchedule = XLSX.utils.sheet_to_json<any>(workbook.Sheets[scheduleSheetName]);
-          importedSlots = rawSchedule;
+        let importedSlots: ScheduleSlot[] = [];
+
+        if (scheduleSheetName) {
+          const teacherIdByName = new Map<string, string>();
+          importedTeachers.forEach((t) => teacherIdByName.set(normalizeText(t.name), t.id));
+
+          const rawSchedule = XLSX.utils.sheet_to_json<SheetRow>(workbook.Sheets[scheduleSheetName]);
+
+          importedSlots = rawSchedule.reduce<ScheduleSlot[]>((acc, row, idx) => {
+            const dayOfWeek = normalizeDayOfWeek(row['Dia_Semana'] ?? row['dia']);
+            const periodId = Number(row['Periodo_Numero'] ?? row['periodo']);
+            const teacherName = cellToString(row['Nome_Professor'] ?? row['professor']);
+            const teacherId = teacherIdByName.get(normalizeText(teacherName));
+
+            if (!dayOfWeek || !Number.isFinite(periodId) || !teacherId) {
+              warnings.push(
+                `Linha ${idx + 2} da grade ignorada (dia/período/professor não reconhecido: "${teacherName || '—'}").`
+              );
+              return acc;
+            }
+
+            const type = normalizeSlotType(row['Tipo']);
+            const subjectOrCourse = cellToString(row['Disciplina_ou_Curso']) || undefined;
+
+            acc.push({
+              id: `slot_${teacherId}_${dayOfWeek}_${periodId}`,
+              teacherId,
+              dayOfWeek,
+              periodId,
+              type,
+              classId: type === 'AULA' ? cellToString(row['Turma']) || undefined : undefined,
+              subject: type === 'AULA' ? subjectOrCourse : undefined,
+              trainingName: type === 'CURSO_FORMACAO' ? subjectOrCourse : undefined,
+            });
+            return acc;
+          }, []);
         }
 
-        resolve({ importedTeachers, importedSlots });
-      } catch (err: any) {
-        resolve({ error: `Erro ao processar planilha: ${err.message}` });
+        resolve({ importedTeachers, importedSlots, warnings });
+      } catch (err) {
+        const message = err instanceof Error ? err.message : String(err);
+        resolve({ error: `Erro ao processar planilha: ${message}` });
       }
     };
 

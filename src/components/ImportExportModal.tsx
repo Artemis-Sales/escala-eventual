@@ -10,18 +10,15 @@ import {
   Users,
 } from 'lucide-react';
 import { useSchool } from '../context/SchoolContext';
-import { downloadExcelTemplate, parseUploadedExcel } from '../utils/excelHelper';
+import { downloadExcelTemplate, parseUploadedExcel, type ParsedExcelResult } from '../utils/excelHelper';
+import { randomTeacherColor } from '../utils/colors';
 import type { Teacher } from '../types';
 
 export const ImportExportModal: React.FC = () => {
-  const { periods, setAllTeachers } = useSchool();
+  const { periods, setAllTeachers, setAllScheduleSlots } = useSchool();
 
   const [dragActive, setDragActive] = useState(false);
-  const [parsedData, setParsedData] = useState<{
-    importedTeachers?: Partial<Teacher>[];
-    importedSlots?: any[];
-    error?: string;
-  } | null>(null);
+  const [parsedData, setParsedData] = useState<ParsedExcelResult | null>(null);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
   const handleDownloadTemplate = () => {
@@ -56,18 +53,16 @@ export const ImportExportModal: React.FC = () => {
     if (!parsedData) return;
 
     if (parsedData.importedTeachers && parsedData.importedTeachers.length > 0) {
-      const formattedTeachers: Teacher[] = parsedData.importedTeachers.map((t, idx) => ({
-        id: t.id || `imp-t-${idx}`,
-        name: t.name || `Professor ${idx + 1}`,
-        mainSubject: t.mainSubject || 'Geral',
-        knowledgeArea: t.knowledgeArea || 'Linguagens',
-        secondarySubjects: t.secondarySubjects || [],
-        totalSubstitutionsCount: 0,
-        color: `#${Math.floor(Math.random() * 16777215).toString(16)}`,
-        phone: t.phone || '',
+      const formattedTeachers: Teacher[] = parsedData.importedTeachers.map((t) => ({
+        ...t,
+        color: randomTeacherColor(),
       }));
 
       setAllTeachers(formattedTeachers);
+    }
+
+    if (parsedData.importedSlots && parsedData.importedSlots.length > 0) {
+      setAllScheduleSlots(parsedData.importedSlots);
     }
 
     setSuccessMessage('Dados da planilha importados e aplicados com sucesso no sistema!');
@@ -160,6 +155,23 @@ export const ImportExportModal: React.FC = () => {
                 </div>
               </div>
 
+              {parsedData.warnings && parsedData.warnings.length > 0 && (
+                <div className="alert-banner-warning">
+                  <AlertTriangle size={18} />
+                  <div>
+                    <strong>{parsedData.warnings.length} linha(s) da grade foram ignoradas:</strong>
+                    <ul style={{ margin: '4px 0 0', paddingLeft: 18 }}>
+                      {parsedData.warnings.slice(0, 5).map((w, i) => (
+                        <li key={i}>{w}</li>
+                      ))}
+                      {parsedData.warnings.length > 5 && (
+                        <li>+{parsedData.warnings.length - 5} outras...</li>
+                      )}
+                    </ul>
+                  </div>
+                </div>
+              )}
+
               {parsedData.importedTeachers && parsedData.importedTeachers.length > 0 && (
                 <div className="preview-teachers-list">
                   <h5>Exemplo de Professores Encontrados:</h5>
@@ -204,7 +216,10 @@ export const ImportExportModal: React.FC = () => {
             <span className="step-num">1</span>
             <div className="step-content">
               <strong>Aba "Professores"</strong>
-              <p>Colunas: Nome, Disciplina_Principal, Area_Conhecimento, Telefone.</p>
+              <p>
+                Colunas: Nome, Disciplina_Principal, Area_Conhecimento, Telefone, Cargo
+                (PROFESSOR, COORDENADOR_AREA ou EQUIPE_GESTORA) e Isento_Substituicao (SIM/NAO).
+              </p>
             </div>
           </div>
 
@@ -213,8 +228,9 @@ export const ImportExportModal: React.FC = () => {
             <div className="step-content">
               <strong>Aba "Grade_e_Cursos"</strong>
               <p>
-                Colunas: Dia_Semana, Periodo_Numero (1 a 9), Nome_Professor, Tipo (AULA,
-                CURSO_FORMACAO ou LIVRE), Turma, Disciplina_ou_Curso.
+                Colunas: Dia_Semana, Periodo_Numero (1 a 9), Nome_Professor (deve bater com o
+                Nome da aba Professores), Tipo (AULA, CURSO_FORMACAO ou LIVRE), Turma,
+                Disciplina_ou_Curso.
               </p>
             </div>
           </div>
@@ -225,7 +241,8 @@ export const ImportExportModal: React.FC = () => {
               <strong>Bloqueios de Cursos/Formações</strong>
               <p>
                 Qualquer período marcado com o tipo <code>CURSO_FORMACAO</code> será automaticamente
-                bloqueado para substituições.
+                bloqueado para substituições. Ao aplicar a importação, professores e grade de
+                horários substituem por completo os dados atuais do sistema.
               </p>
             </div>
           </div>
