@@ -30,3 +30,6 @@ dist-ssr
 extracted_data.json
 generateCleanData.cjs
 inspectTurmas.cjs
+
+# Configuracoes locais do Claude Code (especificas da maquina)
+.claude/settings.local.json

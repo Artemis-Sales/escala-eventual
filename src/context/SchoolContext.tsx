@@ -56,7 +56,10 @@ interface SchoolContextType {
 const SchoolContext = createContext<SchoolContextType | undefined>(undefined);
 
 const LOCAL_STORAGE_KEY_TEACHERS = 'escala_escola_oficial_teachers_v5';
-const LOCAL_STORAGE_KEY_SLOTS = 'escala_escola_oficial_slots_v5';
+// v6: a grade salva ate a v5 fundia as duas turmas de Desenvolvimento de Sistemas
+// (2ª e 3ª série A) numa so, deixando a 3ª série A sem nenhuma aula. Trocar a chave
+// recarrega a grade corrigida sem descartar historico nem contadores de substituicao.
+const LOCAL_STORAGE_KEY_SLOTS = 'escala_escola_oficial_slots_v6';
 const LOCAL_STORAGE_KEY_HISTORY = 'escala_escola_oficial_history_v5';
 
 function loadFromStorage<T>(key: string, fallback: T): T {

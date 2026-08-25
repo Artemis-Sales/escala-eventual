@@ -41,8 +41,8 @@ export const INITIAL_TEACHERS: Teacher[] = [
   {
     "id": "t_1",
     "name": "ADRIANA BEGOSSO PINHEIRO",
-    "mainSubject": "Educação Fisica",
-    "knowledgeArea": "Exatas",
+    "mainSubject": "Educação Física",
+    "knowledgeArea": "Linguagens",
     "secondarySubjects": [],
     "totalSubstitutionsCount": 0,
     "color": "#2563EB",
@@ -53,17 +53,12 @@ export const INITIAL_TEACHERS: Teacher[] = [
   {
     "id": "t_2",
     "name": "ALAIR JORGE CYRINO DO AMARAL",
-    "mainSubject": "MATEMATICA",
+    "mainSubject": "Matemática",
     "knowledgeArea": "Exatas",
     "secondarySubjects": [
-      "PROJETO DE VIDA",
-      "FISICA",
-      "ORIENTAÇÃO DE ESTUDO – MATEM… 6º ANO A INTEGRAL 9H ANUAL",
-      "ORIENTAÇÃO DE ESTUDO – MATEM… 6º ANO B INTEGRAL 9H ANUAL",
-      "ORIENTAÇÃO DE ESTUDO – MATEM… 1ª SERIE A INTEGRAL 9H ANUAL",
-      "ORIENTAÇÃO DE ESTUDO – MATEM… 7º ANO B INTEGRAL 9H ANUAL",
-      "ORIENTAÇÃO DE ESTUDO – MATEM… 7º ANO A INTEGRAL 9H ANUAL",
-      "ORIENTAÇÃO DE ESTUDO – MATEM… 2ª SERIE B INTEGRAL 9H ANUAL"
+      "Projeto de Vida",
+      "Física",
+      "Orientação de Estudo – Matem…"
     ],
     "totalSubstitutionsCount": 0,
     "color": "#7C3AED",
@@ -74,10 +69,10 @@ export const INITIAL_TEACHERS: Teacher[] = [
   {
     "id": "t_3",
     "name": "ALEXANDRE CUSTODIO DOS SANTOS",
-    "mainSubject": "HISTORIA",
+    "mainSubject": "História",
     "knowledgeArea": "Ciências Humanas",
     "secondarySubjects": [
-      "PROJETO DE VIDA"
+      "Projeto de Vida"
     ],
     "totalSubstitutionsCount": 0,
     "color": "#059669",
@@ -88,15 +83,15 @@ export const INITIAL_TEACHERS: Teacher[] = [
   {
     "id": "t_4",
     "name": "DANILO",
-    "mainSubject": "MODELAGEM E DESENVOLVIMENT… 6082 - DESENVOLVIMENTO DE SIST…",
-    "knowledgeArea": "Exatas",
+    "mainSubject": "Modelagem e Desenvolviment…",
+    "knowledgeArea": "Parte Diversificada",
     "secondarySubjects": [
-      "REDES DE COMPUTADORES E SEG… 6082 - DESENVOLVIMENTO DE SIST…",
-      "CARREIRA E COMPETENCIAS PARA … 6082 - DESENVOLVIMENTO DE SIST…",
-      "PROJETO MULTIDISCIPLINAR 6082 - DESENVOLVIMENTO DE SIST…",
-      "INTELIGÊNCIA ARTIFICIAL",
-      "LOGICA E LINGUAGENS DE PROGR… 6082 - DESENVOLVIMENTO DE SIST…",
-      "PROCESSOS DE DESENVOLVIMENT… 6082 - DESENVOLVIMENTO DE SIST…"
+      "Redes de Computadores e Seg…",
+      "Carreira e Competências para …",
+      "Projeto Multidisciplinar",
+      "Inteligência Artificial",
+      "Lógica e Linguagens de Progr…",
+      "Processos de Desenvolviment…"
     ],
     "totalSubstitutionsCount": 0,
     "color": "#D97706",
@@ -108,11 +103,10 @@ export const INITIAL_TEACHERS: Teacher[] = [
   {
     "id": "t_5",
     "name": "ELIANE DA SILVA",
-    "mainSubject": "ROBOTICA",
-    "knowledgeArea": "Exatas",
+    "mainSubject": "Robótica",
+    "knowledgeArea": "Parte Diversificada",
     "secondarySubjects": [
-      "ORIENTAÇÃO DE ESTUDO – MATEM… 8º ANO A INTEGRAL 9H ANUAL",
-      "ORIENTAÇÃO DE ESTUDO – MATEM… 8º ANO B INTEGRAL 9H ANUAL"
+      "Orientação de Estudo – Matem…"
     ],
     "totalSubstitutionsCount": 0,
     "color": "#DC2626",
@@ -123,12 +117,12 @@ export const INITIAL_TEACHERS: Teacher[] = [
   {
     "id": "t_6",
     "name": "ELISANGELA GREJO AZZELLA",
-    "mainSubject": "QUIMICA",
-    "knowledgeArea": "Exatas",
+    "mainSubject": "Química",
+    "knowledgeArea": "Ciências da Natureza",
     "secondarySubjects": [
-      "FISICA",
-      "BIOLOGIA",
-      "PRATICAS EXPERIMENTAIS"
+      "Física",
+      "Biologia",
+      "Práticas Experimentais"
     ],
     "totalSubstitutionsCount": 0,
     "color": "#0891B2",
@@ -139,12 +133,12 @@ export const INITIAL_TEACHERS: Teacher[] = [
   {
     "id": "t_7",
     "name": "GISELLE MOREIRA ARAUJO CARVALHO",
-    "mainSubject": "GEOGRAFIA",
+    "mainSubject": "Geografia",
     "knowledgeArea": "Ciências Humanas",
     "secondarySubjects": [
       "Atualidades",
-      "PROJETO DE VIDA",
-      "APROFUNDAMENTO DE GEOGRAFIA 3ª SERIE B INTEGRAL 9H ANUAL"
+      "Projeto de Vida",
+      "Aprofundamento de Geografia"
     ],
     "totalSubstitutionsCount": 0,
     "color": "#4F46E5",
@@ -155,10 +149,10 @@ export const INITIAL_TEACHERS: Teacher[] = [
   {
     "id": "t_8",
     "name": "LARISSA BATISTA FRAGOSSO",
-    "mainSubject": "LINGUA PORTUGUESA",
+    "mainSubject": "Língua Portuguesa",
     "knowledgeArea": "Linguagens",
     "secondarySubjects": [
-      "REDAÇÃO E LEITURA"
+      "Redação e Leitura"
     ],
     "totalSubstitutionsCount": 0,
     "color": "#9333EA",
@@ -169,11 +163,10 @@ export const INITIAL_TEACHERS: Teacher[] = [
   {
     "id": "t_9",
     "name": "LEANDRO PARIJIANI DE LUCCA",
-    "mainSubject": "EDUCAÇÃO FINANCEIRA",
+    "mainSubject": "Educação Financeira",
     "knowledgeArea": "Parte Diversificada",
     "secondarySubjects": [
-      "MATEMATICA",
-      "Educação Financeira",
+      "Matemática",
       "Empreendedorismo"
     ],
     "totalSubstitutionsCount": 0,
@@ -185,7 +178,7 @@ export const INITIAL_TEACHERS: Teacher[] = [
   {
     "id": "t_10",
     "name": "LEONELIA DA CONCEICAO DE PONTES FARIA",
-    "mainSubject": "LINGUA INGLESA",
+    "mainSubject": "Língua Inglesa",
     "knowledgeArea": "Linguagens",
     "secondarySubjects": [],
     "totalSubstitutionsCount": 0,
@@ -197,12 +190,10 @@ export const INITIAL_TEACHERS: Teacher[] = [
   {
     "id": "t_11",
     "name": "MARCIA PEREIRA DA SILVA",
-    "mainSubject": "CIENCIAS",
-    "knowledgeArea": "Exatas",
+    "mainSubject": "Ciências",
+    "knowledgeArea": "Ciências da Natureza",
     "secondarySubjects": [
-      "PRATICAS EXPERIMENTAIS 6º ANO A INTEGRAL 9H ANUAL",
-      "PRATICAS EXPERIMENTAIS 7º ANO A INTEGRAL 9H ANUAL",
-      "PRATICAS EXPERIMENTAIS 6º ANO B INTEGRAL 9H ANUAL"
+      "Práticas Experimentais"
     ],
     "totalSubstitutionsCount": 0,
     "color": "#059669",
@@ -213,12 +204,12 @@ export const INITIAL_TEACHERS: Teacher[] = [
   {
     "id": "t_12",
     "name": "PEDRO MARQUES FERREIRA",
-    "mainSubject": "PROGRAMAÇÃO MOBILE",
+    "mainSubject": "Programação Mobile",
     "knowledgeArea": "Parte Diversificada",
     "secondarySubjects": [
-      "Versionamento de Código e Sistemas … 6082 - DESENVOLVIMENTO DE SIST…",
-      "PROGRAMAÇÃO FRONT-END 6082 - DESENVOLVIMENTO DE SIST…",
-      "PROGRAMAÇÃO BACK-END 6082 - DESENVOLVIMENTO DE SIST…"
+      "Versionamento de Código e Sistemas …",
+      "Programação Front-End",
+      "Programação Back-End"
     ],
     "totalSubstitutionsCount": 0,
     "color": "#D97706",
@@ -230,17 +221,13 @@ export const INITIAL_TEACHERS: Teacher[] = [
   {
     "id": "t_13",
     "name": "REBECA INGRID BRANDAO LUPIANHES",
-    "mainSubject": "TECNOLOGIA E INOVACAO 8º ANO A INTEGRAL 9H ANUAL",
-    "knowledgeArea": "Exatas",
+    "mainSubject": "Tecnologia e Inovação",
+    "knowledgeArea": "Parte Diversificada",
     "secondarySubjects": [
-      "CIENCIAS",
-      "TECNOLOGIA E INOVACAO 7º ANO A INTEGRAL 9H ANUAL",
-      "TECNOLOGIA E INOVACAO",
-      "TECNOLOGIA E INOVACAO 6º ANO A INTEGRAL 9H ANUAL",
-      "PROGRAMACAO",
-      "PROJETO DE VIDA",
-      "TECNOLOGIA E INOVACAO 9º ANO A INTEGRAL 9H ANUAL",
-      "PRATICAS EXPERIMENTAIS 7º ANO B INTEGRAL 9H ANUAL"
+      "Ciências",
+      "Programação",
+      "Projeto de Vida",
+      "Práticas Experimentais"
     ],
     "totalSubstitutionsCount": 0,
     "color": "#DC2626",
@@ -251,21 +238,10 @@ export const INITIAL_TEACHERS: Teacher[] = [
   {
     "id": "t_14",
     "name": "RITA DE CASSIA ANTUNES",
-    "mainSubject": "ORIENTAÇÃO DE ESTUDO – LÍNGUA… 9º ANO A INTEGRAL 9H ANUAL",
-    "knowledgeArea": "Parte Diversificada",
+    "mainSubject": "Orientação de Estudo – Língua…",
+    "knowledgeArea": "Linguagens",
     "secondarySubjects": [
-      "REDAÇÃO E LEITURA",
-      "ORIENTAÇÃO DE ESTUDO – LÍNGUA… 3ª SERIE B INTEGRAL 9H ANUAL",
-      "ORIENTAÇÃO DE ESTUDO – LÍNGUA… 7º ANO B INTEGRAL 9H ANUAL",
-      "ORIENTAÇÃO DE ESTUDO – LÍNGUA… 1ª SERIE A INTEGRAL 9H ANUAL",
-      "ORIENTAÇÃO DE ESTUDO – LÍNGUA… 9º ANO B INTEGRAL 9H ANUAL",
-      "ORIENTAÇÃO DE ESTUDO – LÍNGUA… 6º ANO B INTEGRAL 9H ANUAL",
-      "ORIENTAÇÃO DE ESTUDO – LÍNGUA… 6º ANO A INTEGRAL 9H ANUAL",
-      "ORIENTAÇÃO DE ESTUDO – LÍNGUA… 2ª SERIE B INTEGRAL 9H ANUAL",
-      "ORIENTAÇÃO DE ESTUDO – LÍNGUA… 7º ANO A INTEGRAL 9H ANUAL",
-      "ORIENTAÇÃO DE ESTUDO – LÍNGUA… 8º ANO A INTEGRAL 9H ANUAL",
-      "ORIENTAÇÃO DE ESTUDO – LÍNGUA… 1ª SERIE B INTEGRAL 9H ANUAL",
-      "ORIENTAÇÃO DE ESTUDO – LÍNGUA… 8º ANO B INTEGRAL 9H ANUAL"
+      "Redação e Leitura"
     ],
     "totalSubstitutionsCount": 0,
     "color": "#0891B2",
@@ -276,11 +252,10 @@ export const INITIAL_TEACHERS: Teacher[] = [
   {
     "id": "t_15",
     "name": "ROODNEY GOMES NAZARETH",
-    "mainSubject": "EDUCACAO FISICA",
-    "knowledgeArea": "Exatas",
+    "mainSubject": "Educação Física",
+    "knowledgeArea": "Linguagens",
     "secondarySubjects": [
-      "ESPORTE-MÚSICA-ARTE",
-      "Educação Fisica"
+      "Esporte-Música-Arte"
     ],
     "totalSubstitutionsCount": 0,
     "color": "#4F46E5",
@@ -291,11 +266,11 @@ export const INITIAL_TEACHERS: Teacher[] = [
   {
     "id": "t_16",
     "name": "ROSANA CRISTINA DOS SANTOS",
-    "mainSubject": "REDAÇÃO E LEITURA",
+    "mainSubject": "Redação e Leitura",
     "knowledgeArea": "Linguagens",
     "secondarySubjects": [
-      "LINGUA PORTUGUESA",
-      "LINGUA INGLESA"
+      "Língua Portuguesa",
+      "Língua Inglesa"
     ],
     "totalSubstitutionsCount": 0,
     "color": "#9333EA",
@@ -306,14 +281,11 @@ export const INITIAL_TEACHERS: Teacher[] = [
   {
     "id": "t_17",
     "name": "SINDERLANDIA SANTOS DE MORAES",
-    "mainSubject": "CIENCIAS",
-    "knowledgeArea": "Exatas",
+    "mainSubject": "Ciências",
+    "knowledgeArea": "Ciências da Natureza",
     "secondarySubjects": [
-      "PRATICAS EXPERIMENTAIS 8º ANO A INTEGRAL 9H ANUAL",
-      "PRATICAS EXPERIMENTAIS 9º ANO A INTEGRAL 9H ANUAL",
-      "BIOLOGIA",
-      "PRATICAS EXPERIMENTAIS 8º ANO B INTEGRAL 9H ANUAL",
-      "PRATICAS EXPERIMENTAIS 9º ANO B INTEGRAL 9H ANUAL"
+      "Práticas Experimentais",
+      "Biologia"
     ],
     "totalSubstitutionsCount": 0,
     "color": "#2563EB",
@@ -324,10 +296,10 @@ export const INITIAL_TEACHERS: Teacher[] = [
   {
     "id": "t_18",
     "name": "SONIA REGINA BREGNOLLI LEME",
-    "mainSubject": "ARTE",
+    "mainSubject": "Arte",
     "knowledgeArea": "Linguagens",
     "secondarySubjects": [
-      "ESPORTE-MÚSICA-ARTE"
+      "Esporte-Música-Arte"
     ],
     "totalSubstitutionsCount": 0,
     "color": "#7C3AED",
@@ -338,7 +310,7 @@ export const INITIAL_TEACHERS: Teacher[] = [
   {
     "id": "t_19",
     "name": "VANESSA GONÇALVES LIMA DE SANTANA",
-    "mainSubject": "LINGUA PORTUGUESA",
+    "mainSubject": "Língua Portuguesa",
     "knowledgeArea": "Linguagens",
     "secondarySubjects": [],
     "totalSubstitutionsCount": 0,
@@ -350,14 +322,14 @@ export const INITIAL_TEACHERS: Teacher[] = [
   {
     "id": "t_20",
     "name": "VINICIUS BEZERRA RIBEIRO",
-    "mainSubject": "SOCIOLOGIA",
+    "mainSubject": "Sociologia",
     "knowledgeArea": "Ciências Humanas",
     "secondarySubjects": [
-      "FILOSOFIA",
-      "PROJETO DE VIDA",
-      "GEOGRAFIA",
-      "APROFUNDAMENTO DE FILOSOFIA 3ª SERIE B INTEGRAL 9H ANUAL",
-      "APROFUNDAMENTO DE SOCIOLOGIA 3ª SERIE B INTEGRAL 9H ANUAL"
+      "Filosofia",
+      "Projeto de Vida",
+      "Geografia",
+      "Aprofundamento de Filosofia",
+      "Aprofundamento de Sociologia"
     ],
     "totalSubstitutionsCount": 0,
     "color": "#D97706",
@@ -368,10 +340,10 @@ export const INITIAL_TEACHERS: Teacher[] = [
   {
     "id": "t_21",
     "name": "VINICIUS VIRGILIO MENSATO",
-    "mainSubject": "HISTORIA",
+    "mainSubject": "História",
     "knowledgeArea": "Ciências Humanas",
     "secondarySubjects": [
-      "PROJETO DE VIDA"
+      "Projeto de Vida"
     ],
     "totalSubstitutionsCount": 0,
     "color": "#DC2626",
@@ -382,12 +354,10 @@ export const INITIAL_TEACHERS: Teacher[] = [
   {
     "id": "t_22",
     "name": "WESLEY DE JESUS OLIVEIRA",
-    "mainSubject": "MATEMATICA",
+    "mainSubject": "Matemática",
     "knowledgeArea": "Exatas",
     "secondarySubjects": [
-      "ORIENTAÇÃO DE ESTUDO – MATEM… 9º ANO A INTEGRAL 9H ANUAL",
-      "ORIENTAÇÃO DE ESTUDO – MATEM… 9º ANO B INTEGRAL 9H ANUAL",
-      "ORIENTAÇÃO DE ESTUDO – MATEM… 3ª SERIE B INTEGRAL 9H ANUAL"
+      "Orientação de Estudo – Matem…"
     ],
     "totalSubstitutionsCount": 0,
     "color": "#0891B2",
@@ -398,10 +368,10 @@ export const INITIAL_TEACHERS: Teacher[] = [
   {
     "id": "t_23",
     "name": "WILLIAM RODRIGUES DA SILVA",
-    "mainSubject": "MATEMATICA",
+    "mainSubject": "Matemática",
     "knowledgeArea": "Exatas",
     "secondarySubjects": [
-      "ORIENTAÇÃO DE ESTUDO – MATEM… 1ª SERIE B INTEGRAL 9H ANUAL"
+      "Orientação de Estudo – Matem…"
     ],
     "totalSubstitutionsCount": 0,
     "color": "#4F46E5",
@@ -464,7 +434,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "7B",
-    "subject": "Educação Fisica"
+    "subject": "Educação Física"
   },
   {
     "id": "slot_t_1_terca_1",
@@ -487,7 +457,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "7A",
-    "subject": "Educação Fisica"
+    "subject": "Educação Física"
   },
   {
     "id": "slot_t_1_sexta_1",
@@ -496,7 +466,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "9B",
-    "subject": "Educação Fisica"
+    "subject": "Educação Física"
   },
   {
     "id": "slot_t_1_segunda_2",
@@ -512,7 +482,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "8A",
-    "subject": "Educação Fisica"
+    "subject": "Educação Física"
   },
   {
     "id": "slot_t_1_quarta_2",
@@ -528,7 +498,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "6B",
-    "subject": "Educação Fisica"
+    "subject": "Educação Física"
   },
   {
     "id": "slot_t_1_sexta_2",
@@ -537,7 +507,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "8A",
-    "subject": "Educação Fisica"
+    "subject": "Educação Física"
   },
   {
     "id": "slot_t_1_segunda_3",
@@ -553,7 +523,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "6A",
-    "subject": "Educação Fisica"
+    "subject": "Educação Física"
   },
   {
     "id": "slot_t_1_quarta_3",
@@ -569,7 +539,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "6A",
-    "subject": "Educação Fisica"
+    "subject": "Educação Física"
   },
   {
     "id": "slot_t_1_sexta_3",
@@ -592,7 +562,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "9B",
-    "subject": "Educação Fisica"
+    "subject": "Educação Física"
   },
   {
     "id": "slot_t_1_quarta_4",
@@ -608,7 +578,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "9A",
-    "subject": "Educação Fisica"
+    "subject": "Educação Física"
   },
   {
     "id": "slot_t_1_sexta_4",
@@ -624,7 +594,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "6B",
-    "subject": "Educação Fisica"
+    "subject": "Educação Física"
   },
   {
     "id": "slot_t_1_terca_5",
@@ -633,7 +603,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "9A",
-    "subject": "Educação Fisica"
+    "subject": "Educação Física"
   },
   {
     "id": "slot_t_1_quarta_5",
@@ -705,7 +675,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "7B",
-    "subject": "Educação Fisica"
+    "subject": "Educação Física"
   },
   {
     "id": "slot_t_1_quarta_7",
@@ -742,7 +712,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "7A",
-    "subject": "Educação Fisica"
+    "subject": "Educação Física"
   },
   {
     "id": "slot_t_1_quarta_8",
@@ -807,7 +777,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_2_terca_1",
@@ -823,7 +793,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "6B",
-    "subject": "PROJETO DE VIDA"
+    "subject": "Projeto de Vida"
   },
   {
     "id": "slot_t_2_quinta_1",
@@ -832,7 +802,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_2_sexta_1",
@@ -848,7 +818,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_2_terca_2",
@@ -864,7 +834,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_2_quinta_2",
@@ -873,7 +843,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_2_sexta_2",
@@ -889,7 +859,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_2_terca_3",
@@ -898,7 +868,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_2_quarta_3",
@@ -907,7 +877,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "FISICA"
+    "subject": "Física"
   },
   {
     "id": "slot_t_2_quinta_3",
@@ -916,7 +886,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_2_sexta_3",
@@ -932,7 +902,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_2_terca_4",
@@ -941,7 +911,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_2_quarta_4",
@@ -950,7 +920,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "FISICA"
+    "subject": "Física"
   },
   {
     "id": "slot_t_2_quinta_4",
@@ -959,7 +929,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_2_sexta_4",
@@ -975,7 +945,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "6A",
-    "subject": "PROJETO DE VIDA"
+    "subject": "Projeto de Vida"
   },
   {
     "id": "slot_t_2_terca_5",
@@ -984,7 +954,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "6A",
-    "subject": "ORIENTAÇÃO DE ESTUDO – MATEM… 6º ANO A INTEGRAL 9H ANUAL"
+    "subject": "Orientação de Estudo – Matem…"
   },
   {
     "id": "slot_t_2_quarta_5",
@@ -1000,7 +970,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "6B",
-    "subject": "ORIENTAÇÃO DE ESTUDO – MATEM… 6º ANO B INTEGRAL 9H ANUAL"
+    "subject": "Orientação de Estudo – Matem…"
   },
   {
     "id": "slot_t_2_sexta_5",
@@ -1016,7 +986,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "ORIENTAÇÃO DE ESTUDO – MATEM… 1ª SERIE A INTEGRAL 9H ANUAL"
+    "subject": "Orientação de Estudo – Matem…"
   },
   {
     "id": "slot_t_2_terca_6",
@@ -1025,7 +995,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "6A",
-    "subject": "ORIENTAÇÃO DE ESTUDO – MATEM… 6º ANO A INTEGRAL 9H ANUAL"
+    "subject": "Orientação de Estudo – Matem…"
   },
   {
     "id": "slot_t_2_quarta_6",
@@ -1041,7 +1011,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "6B",
-    "subject": "ORIENTAÇÃO DE ESTUDO – MATEM… 6º ANO B INTEGRAL 9H ANUAL"
+    "subject": "Orientação de Estudo – Matem…"
   },
   {
     "id": "slot_t_2_sexta_6",
@@ -1057,7 +1027,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "FISICA"
+    "subject": "Física"
   },
   {
     "id": "slot_t_2_terca_7",
@@ -1066,7 +1036,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_2_quarta_7",
@@ -1075,7 +1045,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "7B",
-    "subject": "ORIENTAÇÃO DE ESTUDO – MATEM… 7º ANO B INTEGRAL 9H ANUAL"
+    "subject": "Orientação de Estudo – Matem…"
   },
   {
     "id": "slot_t_2_quinta_7",
@@ -1098,7 +1068,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "FISICA"
+    "subject": "Física"
   },
   {
     "id": "slot_t_2_terca_8",
@@ -1121,7 +1091,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "7A",
-    "subject": "ORIENTAÇÃO DE ESTUDO – MATEM… 7º ANO A INTEGRAL 9H ANUAL"
+    "subject": "Orientação de Estudo – Matem…"
   },
   {
     "id": "slot_t_2_sexta_8",
@@ -1165,7 +1135,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 9,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "ORIENTAÇÃO DE ESTUDO – MATEM… 2ª SERIE B INTEGRAL 9H ANUAL"
+    "subject": "Orientação de Estudo – Matem…"
   },
   {
     "id": "slot_t_3_segunda_1",
@@ -1174,7 +1144,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "HISTORIA"
+    "subject": "História"
   },
   {
     "id": "slot_t_3_terca_1",
@@ -1211,7 +1181,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "HISTORIA"
+    "subject": "História"
   },
   {
     "id": "slot_t_3_terca_2",
@@ -1247,8 +1217,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "segunda",
     "periodId": 3,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "HISTORIA"
+    "classId": "3EMA_DS",
+    "subject": "História"
   },
   {
     "id": "slot_t_3_terca_3",
@@ -1271,7 +1241,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "HISTORIA"
+    "subject": "História"
   },
   {
     "id": "slot_t_3_sexta_3",
@@ -1294,7 +1264,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "HISTORIA"
+    "subject": "História"
   },
   {
     "id": "slot_t_3_quarta_4",
@@ -1310,7 +1280,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "HISTORIA"
+    "subject": "História"
   },
   {
     "id": "slot_t_3_sexta_4",
@@ -1333,7 +1303,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "HISTORIA"
+    "subject": "História"
   },
   {
     "id": "slot_t_3_quarta_5",
@@ -1342,7 +1312,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "HISTORIA"
+    "subject": "História"
   },
   {
     "id": "slot_t_3_quinta_5",
@@ -1372,7 +1342,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "PROJETO DE VIDA"
+    "subject": "Projeto de Vida"
   },
   {
     "id": "slot_t_3_quarta_6",
@@ -1381,7 +1351,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "HISTORIA"
+    "subject": "História"
   },
   {
     "id": "slot_t_3_quinta_6",
@@ -1410,8 +1380,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "terca",
     "periodId": 7,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "HISTORIA"
+    "classId": "3EMA_DS",
+    "subject": "História"
   },
   {
     "id": "slot_t_3_quarta_7",
@@ -1427,7 +1397,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "HISTORIA"
+    "subject": "História"
   },
   {
     "id": "slot_t_3_sexta_7",
@@ -1450,7 +1420,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "PROJETO DE VIDA"
+    "subject": "Projeto de Vida"
   },
   {
     "id": "slot_t_3_quarta_8",
@@ -1466,7 +1436,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "HISTORIA"
+    "subject": "História"
   },
   {
     "id": "slot_t_3_sexta_8",
@@ -1516,8 +1486,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "segunda",
     "periodId": 1,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "MODELAGEM E DESENVOLVIMENT… 6082 - DESENVOLVIMENTO DE SIST…"
+    "classId": "3EMA_DS",
+    "subject": "Modelagem e Desenvolviment…"
   },
   {
     "id": "slot_t_4_terca_1",
@@ -1533,7 +1503,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "REDES DE COMPUTADORES E SEG… 6082 - DESENVOLVIMENTO DE SIST…"
+    "subject": "Redes de Computadores e Seg…"
   },
   {
     "id": "slot_t_4_quinta_1",
@@ -1542,7 +1512,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "CARREIRA E COMPETENCIAS PARA … 6082 - DESENVOLVIMENTO DE SIST…"
+    "subject": "Carreira e Competências para …"
   },
   {
     "id": "slot_t_4_sexta_1",
@@ -1557,8 +1527,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "segunda",
     "periodId": 2,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "MODELAGEM E DESENVOLVIMENT… 6082 - DESENVOLVIMENTO DE SIST…"
+    "classId": "3EMA_DS",
+    "subject": "Modelagem e Desenvolviment…"
   },
   {
     "id": "slot_t_4_terca_2",
@@ -1567,7 +1537,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "CARREIRA E COMPETENCIAS PARA … 6082 - DESENVOLVIMENTO DE SIST…"
+    "subject": "Carreira e Competências para …"
   },
   {
     "id": "slot_t_4_quarta_2",
@@ -1583,7 +1553,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "CARREIRA E COMPETENCIAS PARA … 6082 - DESENVOLVIMENTO DE SIST…"
+    "subject": "Carreira e Competências para …"
   },
   {
     "id": "slot_t_4_sexta_2",
@@ -1605,8 +1575,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "terca",
     "periodId": 3,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "PROJETO MULTIDISCIPLINAR 6082 - DESENVOLVIMENTO DE SIST…"
+    "classId": "3EMA_DS",
+    "subject": "Projeto Multidisciplinar"
   },
   {
     "id": "slot_t_4_quarta_3",
@@ -1622,7 +1592,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "REDES DE COMPUTADORES E SEG… 6082 - DESENVOLVIMENTO DE SIST…"
+    "subject": "Redes de Computadores e Seg…"
   },
   {
     "id": "slot_t_4_sexta_3",
@@ -1644,8 +1614,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "terca",
     "periodId": 4,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "INTELIGÊNCIA ARTIFICIAL"
+    "classId": "3EMA_DS",
+    "subject": "Inteligência Artificial"
   },
   {
     "id": "slot_t_4_quarta_4",
@@ -1660,8 +1630,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "quinta",
     "periodId": 4,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "INTELIGÊNCIA ARTIFICIAL"
+    "classId": "3EMA_DS",
+    "subject": "Inteligência Artificial"
   },
   {
     "id": "slot_t_4_sexta_4",
@@ -1670,7 +1640,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "REDES DE COMPUTADORES E SEG… 6082 - DESENVOLVIMENTO DE SIST…"
+    "subject": "Redes de Computadores e Seg…"
   },
   {
     "id": "slot_t_4_segunda_5",
@@ -1679,7 +1649,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "LOGICA E LINGUAGENS DE PROGR… 6082 - DESENVOLVIMENTO DE SIST…"
+    "subject": "Lógica e Linguagens de Progr…"
   },
   {
     "id": "slot_t_4_terca_5",
@@ -1695,7 +1665,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "LOGICA E LINGUAGENS DE PROGR… 6082 - DESENVOLVIMENTO DE SIST…"
+    "subject": "Lógica e Linguagens de Progr…"
   },
   {
     "id": "slot_t_4_quinta_5",
@@ -1703,8 +1673,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "quinta",
     "periodId": 5,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "INTELIGÊNCIA ARTIFICIAL"
+    "classId": "3EMA_DS",
+    "subject": "Inteligência Artificial"
   },
   {
     "id": "slot_t_4_sexta_5",
@@ -1712,8 +1682,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "sexta",
     "periodId": 5,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "PROJETO MULTIDISCIPLINAR 6082 - DESENVOLVIMENTO DE SIST…"
+    "classId": "3EMA_DS",
+    "subject": "Projeto Multidisciplinar"
   },
   {
     "id": "slot_t_4_segunda_6",
@@ -1722,7 +1692,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "LOGICA E LINGUAGENS DE PROGR… 6082 - DESENVOLVIMENTO DE SIST…"
+    "subject": "Lógica e Linguagens de Progr…"
   },
   {
     "id": "slot_t_4_terca_6",
@@ -1738,7 +1708,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "LOGICA E LINGUAGENS DE PROGR… 6082 - DESENVOLVIMENTO DE SIST…"
+    "subject": "Lógica e Linguagens de Progr…"
   },
   {
     "id": "slot_t_4_quinta_6",
@@ -1747,7 +1717,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "PROCESSOS DE DESENVOLVIMENT… 6082 - DESENVOLVIMENTO DE SIST…"
+    "subject": "Processos de Desenvolviment…"
   },
   {
     "id": "slot_t_4_sexta_6",
@@ -1755,8 +1725,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "sexta",
     "periodId": 6,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "PROJETO MULTIDISCIPLINAR 6082 - DESENVOLVIMENTO DE SIST…"
+    "classId": "3EMA_DS",
+    "subject": "Projeto Multidisciplinar"
   },
   {
     "id": "slot_t_4_segunda_7",
@@ -1765,7 +1735,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "PROCESSOS DE DESENVOLVIMENT… 6082 - DESENVOLVIMENTO DE SIST…"
+    "subject": "Processos de Desenvolviment…"
   },
   {
     "id": "slot_t_4_terca_7",
@@ -1794,8 +1764,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "sexta",
     "periodId": 7,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "MODELAGEM E DESENVOLVIMENT… 6082 - DESENVOLVIMENTO DE SIST…"
+    "classId": "3EMA_DS",
+    "subject": "Modelagem e Desenvolviment…"
   },
   {
     "id": "slot_t_4_segunda_8",
@@ -1804,7 +1774,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "PROCESSOS DE DESENVOLVIMENT… 6082 - DESENVOLVIMENTO DE SIST…"
+    "subject": "Processos de Desenvolviment…"
   },
   {
     "id": "slot_t_4_terca_8",
@@ -1833,8 +1803,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "sexta",
     "periodId": 8,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "MODELAGEM E DESENVOLVIMENT… 6082 - DESENVOLVIMENTO DE SIST…"
+    "classId": "3EMA_DS",
+    "subject": "Modelagem e Desenvolviment…"
   },
   {
     "id": "slot_t_4_segunda_9",
@@ -1878,7 +1848,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "9B",
-    "subject": "ROBOTICA"
+    "subject": "Robótica"
   },
   {
     "id": "slot_t_5_terca_1",
@@ -1887,7 +1857,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "7A",
-    "subject": "ROBOTICA"
+    "subject": "Robótica"
   },
   {
     "id": "slot_t_5_quarta_1",
@@ -1903,7 +1873,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "9A",
-    "subject": "ROBOTICA"
+    "subject": "Robótica"
   },
   {
     "id": "slot_t_5_sexta_1",
@@ -1912,7 +1882,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "6B",
-    "subject": "ROBOTICA"
+    "subject": "Robótica"
   },
   {
     "id": "slot_t_5_segunda_2",
@@ -1921,7 +1891,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "9B",
-    "subject": "ROBOTICA"
+    "subject": "Robótica"
   },
   {
     "id": "slot_t_5_terca_2",
@@ -1930,7 +1900,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "7A",
-    "subject": "ROBOTICA"
+    "subject": "Robótica"
   },
   {
     "id": "slot_t_5_quarta_2",
@@ -1946,7 +1916,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "9A",
-    "subject": "ROBOTICA"
+    "subject": "Robótica"
   },
   {
     "id": "slot_t_5_sexta_2",
@@ -1955,7 +1925,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "6B",
-    "subject": "ROBOTICA"
+    "subject": "Robótica"
   },
   {
     "id": "slot_t_5_segunda_3",
@@ -1964,7 +1934,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "8A",
-    "subject": "ROBOTICA"
+    "subject": "Robótica"
   },
   {
     "id": "slot_t_5_terca_3",
@@ -1973,7 +1943,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "ROBOTICA"
+    "subject": "Robótica"
   },
   {
     "id": "slot_t_5_quarta_3",
@@ -1989,7 +1959,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "8B",
-    "subject": "ROBOTICA"
+    "subject": "Robótica"
   },
   {
     "id": "slot_t_5_sexta_3",
@@ -1998,7 +1968,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "ROBOTICA"
+    "subject": "Robótica"
   },
   {
     "id": "slot_t_5_segunda_4",
@@ -2007,7 +1977,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "8A",
-    "subject": "ROBOTICA"
+    "subject": "Robótica"
   },
   {
     "id": "slot_t_5_terca_4",
@@ -2016,7 +1986,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "ROBOTICA"
+    "subject": "Robótica"
   },
   {
     "id": "slot_t_5_quarta_4",
@@ -2032,7 +2002,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "8B",
-    "subject": "ROBOTICA"
+    "subject": "Robótica"
   },
   {
     "id": "slot_t_5_sexta_4",
@@ -2041,7 +2011,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "ROBOTICA"
+    "subject": "Robótica"
   },
   {
     "id": "slot_t_5_segunda_5",
@@ -2050,7 +2020,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "ROBOTICA"
+    "subject": "Robótica"
   },
   {
     "id": "slot_t_5_terca_5",
@@ -2073,7 +2043,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "ROBOTICA"
+    "subject": "Robótica"
   },
   {
     "id": "slot_t_5_sexta_5",
@@ -2089,7 +2059,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "ROBOTICA"
+    "subject": "Robótica"
   },
   {
     "id": "slot_t_5_terca_6",
@@ -2112,7 +2082,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "ROBOTICA"
+    "subject": "Robótica"
   },
   {
     "id": "slot_t_5_sexta_6",
@@ -2128,7 +2098,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "7B",
-    "subject": "ROBOTICA"
+    "subject": "Robótica"
   },
   {
     "id": "slot_t_5_terca_7",
@@ -2144,7 +2114,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "8A",
-    "subject": "ORIENTAÇÃO DE ESTUDO – MATEM… 8º ANO A INTEGRAL 9H ANUAL"
+    "subject": "Orientação de Estudo – Matem…"
   },
   {
     "id": "slot_t_5_quinta_7",
@@ -2153,7 +2123,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "6A",
-    "subject": "ROBOTICA"
+    "subject": "Robótica"
   },
   {
     "id": "slot_t_5_sexta_7",
@@ -2169,7 +2139,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "7B",
-    "subject": "ROBOTICA"
+    "subject": "Robótica"
   },
   {
     "id": "slot_t_5_terca_8",
@@ -2178,7 +2148,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "8B",
-    "subject": "ORIENTAÇÃO DE ESTUDO – MATEM… 8º ANO B INTEGRAL 9H ANUAL"
+    "subject": "Orientação de Estudo – Matem…"
   },
   {
     "id": "slot_t_5_quarta_8",
@@ -2194,7 +2164,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "6A",
-    "subject": "ROBOTICA"
+    "subject": "Robótica"
   },
   {
     "id": "slot_t_5_sexta_8",
@@ -2245,7 +2215,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "QUIMICA"
+    "subject": "Química"
   },
   {
     "id": "slot_t_6_terca_1",
@@ -2254,7 +2224,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "FISICA"
+    "subject": "Física"
   },
   {
     "id": "slot_t_6_quarta_1",
@@ -2263,7 +2233,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "QUIMICA"
+    "subject": "Química"
   },
   {
     "id": "slot_t_6_quinta_1",
@@ -2272,7 +2242,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "BIOLOGIA"
+    "subject": "Biologia"
   },
   {
     "id": "slot_t_6_sexta_1",
@@ -2288,7 +2258,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "QUIMICA"
+    "subject": "Química"
   },
   {
     "id": "slot_t_6_terca_2",
@@ -2297,7 +2267,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "FISICA"
+    "subject": "Física"
   },
   {
     "id": "slot_t_6_quarta_2",
@@ -2306,7 +2276,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "QUIMICA"
+    "subject": "Química"
   },
   {
     "id": "slot_t_6_quinta_2",
@@ -2315,7 +2285,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "BIOLOGIA"
+    "subject": "Biologia"
   },
   {
     "id": "slot_t_6_sexta_2",
@@ -2352,7 +2322,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "PRATICAS EXPERIMENTAIS"
+    "subject": "Práticas Experimentais"
   },
   {
     "id": "slot_t_6_sexta_3",
@@ -2367,8 +2337,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "segunda",
     "periodId": 4,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "FISICA"
+    "classId": "3EMA_DS",
+    "subject": "Física"
   },
   {
     "id": "slot_t_6_terca_4",
@@ -2377,7 +2347,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "PRATICAS EXPERIMENTAIS"
+    "subject": "Práticas Experimentais"
   },
   {
     "id": "slot_t_6_quarta_4",
@@ -2393,7 +2363,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "PRATICAS EXPERIMENTAIS"
+    "subject": "Práticas Experimentais"
   },
   {
     "id": "slot_t_6_sexta_4",
@@ -2409,7 +2379,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "PRATICAS EXPERIMENTAIS"
+    "subject": "Práticas Experimentais"
   },
   {
     "id": "slot_t_6_terca_5",
@@ -2418,7 +2388,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "FISICA"
+    "subject": "Física"
   },
   {
     "id": "slot_t_6_quarta_5",
@@ -2455,7 +2425,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "BIOLOGIA"
+    "subject": "Biologia"
   },
   {
     "id": "slot_t_6_quarta_6",
@@ -2464,7 +2434,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "PRATICAS EXPERIMENTAIS"
+    "subject": "Práticas Experimentais"
   },
   {
     "id": "slot_t_6_quinta_6",
@@ -2487,7 +2457,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "QUIMICA"
+    "subject": "Química"
   },
   {
     "id": "slot_t_6_terca_7",
@@ -2503,7 +2473,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "BIOLOGIA"
+    "subject": "Biologia"
   },
   {
     "id": "slot_t_6_quinta_7",
@@ -2512,7 +2482,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "QUIMICA"
+    "subject": "Química"
   },
   {
     "id": "slot_t_6_sexta_7",
@@ -2521,7 +2491,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "FISICA"
+    "subject": "Física"
   },
   {
     "id": "slot_t_6_segunda_8",
@@ -2530,7 +2500,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "QUIMICA"
+    "subject": "Química"
   },
   {
     "id": "slot_t_6_terca_8",
@@ -2538,8 +2508,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "terca",
     "periodId": 8,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "FISICA"
+    "classId": "3EMA_DS",
+    "subject": "Física"
   },
   {
     "id": "slot_t_6_quarta_8",
@@ -2555,7 +2525,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "QUIMICA"
+    "subject": "Química"
   },
   {
     "id": "slot_t_6_sexta_8",
@@ -2564,7 +2534,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "FISICA"
+    "subject": "Física"
   },
   {
     "id": "slot_t_6_segunda_9",
@@ -2601,7 +2571,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 9,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "FISICA"
+    "subject": "Física"
   },
   {
     "id": "slot_t_7_segunda_1",
@@ -2610,7 +2580,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "GEOGRAFIA"
+    "subject": "Geografia"
   },
   {
     "id": "slot_t_7_terca_1",
@@ -2628,7 +2598,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "8A",
-    "subject": "GEOGRAFIA"
+    "subject": "Geografia"
   },
   {
     "id": "slot_t_7_quinta_1",
@@ -2651,7 +2621,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "GEOGRAFIA"
+    "subject": "Geografia"
   },
   {
     "id": "slot_t_7_terca_2",
@@ -2669,7 +2639,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "9B",
-    "subject": "GEOGRAFIA"
+    "subject": "Geografia"
   },
   {
     "id": "slot_t_7_quinta_2",
@@ -2692,7 +2662,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "GEOGRAFIA"
+    "subject": "Geografia"
   },
   {
     "id": "slot_t_7_terca_3",
@@ -2701,7 +2671,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "GEOGRAFIA"
+    "subject": "Geografia"
   },
   {
     "id": "slot_t_7_quarta_3",
@@ -2710,7 +2680,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "8B",
-    "subject": "GEOGRAFIA"
+    "subject": "Geografia"
   },
   {
     "id": "slot_t_7_quinta_3",
@@ -2733,7 +2703,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "GEOGRAFIA"
+    "subject": "Geografia"
   },
   {
     "id": "slot_t_7_terca_4",
@@ -2742,7 +2712,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "8B",
-    "subject": "GEOGRAFIA"
+    "subject": "Geografia"
   },
   {
     "id": "slot_t_7_quarta_4",
@@ -2751,7 +2721,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "9A",
-    "subject": "GEOGRAFIA"
+    "subject": "Geografia"
   },
   {
     "id": "slot_t_7_quinta_4",
@@ -2795,7 +2765,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "8A",
-    "subject": "GEOGRAFIA"
+    "subject": "Geografia"
   },
   {
     "id": "slot_t_7_sexta_5",
@@ -2811,7 +2781,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "8A",
-    "subject": "GEOGRAFIA"
+    "subject": "Geografia"
   },
   {
     "id": "slot_t_7_terca_6",
@@ -2820,7 +2790,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "9A",
-    "subject": "GEOGRAFIA"
+    "subject": "Geografia"
   },
   {
     "id": "slot_t_7_quarta_6",
@@ -2829,7 +2799,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "9A",
-    "subject": "PROJETO DE VIDA"
+    "subject": "Projeto de Vida"
   },
   {
     "id": "slot_t_7_quinta_6",
@@ -2838,7 +2808,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "9B",
-    "subject": "GEOGRAFIA"
+    "subject": "Geografia"
   },
   {
     "id": "slot_t_7_sexta_6",
@@ -2854,7 +2824,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "9B",
-    "subject": "GEOGRAFIA"
+    "subject": "Geografia"
   },
   {
     "id": "slot_t_7_terca_7",
@@ -2863,7 +2833,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "9A",
-    "subject": "GEOGRAFIA"
+    "subject": "Geografia"
   },
   {
     "id": "slot_t_7_quarta_7",
@@ -2872,7 +2842,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "9B",
-    "subject": "PROJETO DE VIDA"
+    "subject": "Projeto de Vida"
   },
   {
     "id": "slot_t_7_quinta_7",
@@ -2881,7 +2851,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "GEOGRAFIA"
+    "subject": "Geografia"
   },
   {
     "id": "slot_t_7_sexta_7",
@@ -2897,7 +2867,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "8B",
-    "subject": "GEOGRAFIA"
+    "subject": "Geografia"
   },
   {
     "id": "slot_t_7_terca_8",
@@ -2906,7 +2876,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "GEOGRAFIA"
+    "subject": "Geografia"
   },
   {
     "id": "slot_t_7_quarta_8",
@@ -2922,7 +2892,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "GEOGRAFIA"
+    "subject": "Geografia"
   },
   {
     "id": "slot_t_7_sexta_8",
@@ -2931,7 +2901,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "APROFUNDAMENTO DE GEOGRAFIA 3ª SERIE B INTEGRAL 9H ANUAL"
+    "subject": "Aprofundamento de Geografia"
   },
   {
     "id": "slot_t_7_segunda_9",
@@ -2968,7 +2938,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 9,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "APROFUNDAMENTO DE GEOGRAFIA 3ª SERIE B INTEGRAL 9H ANUAL"
+    "subject": "Aprofundamento de Geografia"
   },
   {
     "id": "slot_t_8_segunda_1",
@@ -2983,8 +2953,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "terca",
     "periodId": 1,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "LINGUA PORTUGUESA"
+    "classId": "3EMA_DS",
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_8_quarta_1",
@@ -2993,7 +2963,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_8_quinta_1",
@@ -3001,8 +2971,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "quinta",
     "periodId": 1,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "LINGUA PORTUGUESA"
+    "classId": "3EMA_DS",
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_8_sexta_1",
@@ -3024,8 +2994,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "terca",
     "periodId": 2,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "LINGUA PORTUGUESA"
+    "classId": "3EMA_DS",
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_8_quarta_2",
@@ -3034,7 +3004,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_8_quinta_2",
@@ -3042,8 +3012,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "quinta",
     "periodId": 2,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "LINGUA PORTUGUESA"
+    "classId": "3EMA_DS",
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_8_sexta_2",
@@ -3059,7 +3029,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_8_terca_3",
@@ -3068,7 +3038,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "9A",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_8_quarta_3",
@@ -3077,7 +3047,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "9B",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_8_quinta_3",
@@ -3093,7 +3063,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "9B",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_8_segunda_4",
@@ -3102,7 +3072,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_8_terca_4",
@@ -3111,7 +3081,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "9A",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_8_quarta_4",
@@ -3120,7 +3090,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "9B",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_8_quinta_4",
@@ -3136,7 +3106,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "9B",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_8_segunda_5",
@@ -3144,8 +3114,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "segunda",
     "periodId": 5,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "REDAÇÃO E LEITURA"
+    "classId": "3EMA_DS",
+    "subject": "Redação e Leitura"
   },
   {
     "id": "slot_t_8_terca_5",
@@ -3154,7 +3124,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "9B",
-    "subject": "REDAÇÃO E LEITURA"
+    "subject": "Redação e Leitura"
   },
   {
     "id": "slot_t_8_quarta_5",
@@ -3163,7 +3133,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "9A",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_8_quinta_5",
@@ -3185,8 +3155,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "segunda",
     "periodId": 6,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "REDAÇÃO E LEITURA"
+    "classId": "3EMA_DS",
+    "subject": "Redação e Leitura"
   },
   {
     "id": "slot_t_8_terca_6",
@@ -3195,7 +3165,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "9B",
-    "subject": "REDAÇÃO E LEITURA"
+    "subject": "Redação e Leitura"
   },
   {
     "id": "slot_t_8_quarta_6",
@@ -3225,7 +3195,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "9A",
-    "subject": "REDAÇÃO E LEITURA"
+    "subject": "Redação e Leitura"
   },
   {
     "id": "slot_t_8_terca_7",
@@ -3234,7 +3204,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "REDAÇÃO E LEITURA"
+    "subject": "Redação e Leitura"
   },
   {
     "id": "slot_t_8_quarta_7",
@@ -3257,7 +3227,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "REDAÇÃO E LEITURA"
+    "subject": "Redação e Leitura"
   },
   {
     "id": "slot_t_8_segunda_8",
@@ -3266,7 +3236,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "9A",
-    "subject": "REDAÇÃO E LEITURA"
+    "subject": "Redação e Leitura"
   },
   {
     "id": "slot_t_8_terca_8",
@@ -3275,7 +3245,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "REDAÇÃO E LEITURA"
+    "subject": "Redação e Leitura"
   },
   {
     "id": "slot_t_8_quarta_8",
@@ -3298,7 +3268,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "REDAÇÃO E LEITURA"
+    "subject": "Redação e Leitura"
   },
   {
     "id": "slot_t_8_segunda_9",
@@ -3335,7 +3305,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 9,
     "type": "AULA",
     "classId": "9A",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_9_segunda_1",
@@ -3351,7 +3321,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "7B",
-    "subject": "EDUCAÇÃO FINANCEIRA"
+    "subject": "Educação Financeira"
   },
   {
     "id": "slot_t_9_quarta_1",
@@ -3360,7 +3330,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "7A",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_9_quinta_1",
@@ -3392,7 +3362,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "7B",
-    "subject": "EDUCAÇÃO FINANCEIRA"
+    "subject": "Educação Financeira"
   },
   {
     "id": "slot_t_9_quarta_2",
@@ -3401,7 +3371,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "7A",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_9_quinta_2",
@@ -3433,7 +3403,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "8B",
-    "subject": "EDUCAÇÃO FINANCEIRA"
+    "subject": "Educação Financeira"
   },
   {
     "id": "slot_t_9_quarta_3",
@@ -3456,7 +3426,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_9_segunda_4",
@@ -3465,7 +3435,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "7A",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_9_terca_4",
@@ -3481,7 +3451,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_9_quinta_4",
@@ -3490,7 +3460,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "EDUCAÇÃO FINANCEIRA"
+    "subject": "Educação Financeira"
   },
   {
     "id": "slot_t_9_sexta_4",
@@ -3499,7 +3469,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_9_segunda_5",
@@ -3508,7 +3478,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "8B",
-    "subject": "EDUCAÇÃO FINANCEIRA"
+    "subject": "Educação Financeira"
   },
   {
     "id": "slot_t_9_terca_5",
@@ -3517,7 +3487,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "8A",
-    "subject": "EDUCAÇÃO FINANCEIRA"
+    "subject": "Educação Financeira"
   },
   {
     "id": "slot_t_9_quarta_5",
@@ -3526,7 +3496,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_9_quinta_5",
@@ -3535,7 +3505,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "EDUCAÇÃO FINANCEIRA"
+    "subject": "Educação Financeira"
   },
   {
     "id": "slot_t_9_sexta_5",
@@ -3558,7 +3528,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "8A",
-    "subject": "EDUCAÇÃO FINANCEIRA"
+    "subject": "Educação Financeira"
   },
   {
     "id": "slot_t_9_quarta_6",
@@ -3574,7 +3544,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "7A",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_9_sexta_6",
@@ -3590,7 +3560,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "EDUCAÇÃO FINANCEIRA"
+    "subject": "Educação Financeira"
   },
   {
     "id": "slot_t_9_terca_7",
@@ -3615,7 +3585,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "EDUCAÇÃO FINANCEIRA"
+    "subject": "Educação Financeira"
   },
   {
     "id": "slot_t_9_sexta_7",
@@ -3624,7 +3594,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "7A",
-    "subject": "EDUCAÇÃO FINANCEIRA"
+    "subject": "Educação Financeira"
   },
   {
     "id": "slot_t_9_segunda_8",
@@ -3633,7 +3603,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "EDUCAÇÃO FINANCEIRA"
+    "subject": "Educação Financeira"
   },
   {
     "id": "slot_t_9_terca_8",
@@ -3656,7 +3626,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "EDUCAÇÃO FINANCEIRA"
+    "subject": "Educação Financeira"
   },
   {
     "id": "slot_t_9_sexta_8",
@@ -3665,7 +3635,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "7A",
-    "subject": "EDUCAÇÃO FINANCEIRA"
+    "subject": "Educação Financeira"
   },
   {
     "id": "slot_t_9_segunda_9",
@@ -3702,7 +3672,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 9,
     "type": "AULA",
     "classId": "7A",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_10_segunda_1",
@@ -3711,7 +3681,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "8A",
-    "subject": "LINGUA INGLESA"
+    "subject": "Língua Inglesa"
   },
   {
     "id": "slot_t_10_terca_1",
@@ -3727,7 +3697,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "7B",
-    "subject": "LINGUA INGLESA"
+    "subject": "Língua Inglesa"
   },
   {
     "id": "slot_t_10_quinta_1",
@@ -3736,7 +3706,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "9B",
-    "subject": "LINGUA INGLESA"
+    "subject": "Língua Inglesa"
   },
   {
     "id": "slot_t_10_sexta_1",
@@ -3745,7 +3715,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "LINGUA INGLESA"
+    "subject": "Língua Inglesa"
   },
   {
     "id": "slot_t_10_segunda_2",
@@ -3754,7 +3724,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "8A",
-    "subject": "LINGUA INGLESA"
+    "subject": "Língua Inglesa"
   },
   {
     "id": "slot_t_10_terca_2",
@@ -3770,7 +3740,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "7B",
-    "subject": "LINGUA INGLESA"
+    "subject": "Língua Inglesa"
   },
   {
     "id": "slot_t_10_quinta_2",
@@ -3779,7 +3749,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "9B",
-    "subject": "LINGUA INGLESA"
+    "subject": "Língua Inglesa"
   },
   {
     "id": "slot_t_10_sexta_2",
@@ -3788,7 +3758,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "LINGUA INGLESA"
+    "subject": "Língua Inglesa"
   },
   {
     "id": "slot_t_10_segunda_3",
@@ -3797,7 +3767,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "LINGUA INGLESA"
+    "subject": "Língua Inglesa"
   },
   {
     "id": "slot_t_10_terca_3",
@@ -3813,7 +3783,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "LINGUA INGLESA"
+    "subject": "Língua Inglesa"
   },
   {
     "id": "slot_t_10_quinta_3",
@@ -3829,7 +3799,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "7A",
-    "subject": "LINGUA INGLESA"
+    "subject": "Língua Inglesa"
   },
   {
     "id": "slot_t_10_segunda_4",
@@ -3838,7 +3808,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "LINGUA INGLESA"
+    "subject": "Língua Inglesa"
   },
   {
     "id": "slot_t_10_terca_4",
@@ -3854,7 +3824,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "8B",
-    "subject": "LINGUA INGLESA"
+    "subject": "Língua Inglesa"
   },
   {
     "id": "slot_t_10_quinta_4",
@@ -3870,7 +3840,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "7A",
-    "subject": "LINGUA INGLESA"
+    "subject": "Língua Inglesa"
   },
   {
     "id": "slot_t_10_segunda_5",
@@ -3879,7 +3849,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "9A",
-    "subject": "LINGUA INGLESA"
+    "subject": "Língua Inglesa"
   },
   {
     "id": "slot_t_10_terca_5",
@@ -3888,7 +3858,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "LINGUA INGLESA"
+    "subject": "Língua Inglesa"
   },
   {
     "id": "slot_t_10_quarta_5",
@@ -3897,7 +3867,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "8B",
-    "subject": "LINGUA INGLESA"
+    "subject": "Língua Inglesa"
   },
   {
     "id": "slot_t_10_quinta_5",
@@ -3920,7 +3890,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "9A",
-    "subject": "LINGUA INGLESA"
+    "subject": "Língua Inglesa"
   },
   {
     "id": "slot_t_10_terca_6",
@@ -3929,7 +3899,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "LINGUA INGLESA"
+    "subject": "Língua Inglesa"
   },
   {
     "id": "slot_t_10_quarta_6",
@@ -3966,7 +3936,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "LINGUA INGLESA"
+    "subject": "Língua Inglesa"
   },
   {
     "id": "slot_t_10_quarta_7",
@@ -3974,8 +3944,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "quarta",
     "periodId": 7,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "LINGUA INGLESA"
+    "classId": "3EMA_DS",
+    "subject": "Língua Inglesa"
   },
   {
     "id": "slot_t_10_quinta_7",
@@ -3991,7 +3961,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "LINGUA INGLESA"
+    "subject": "Língua Inglesa"
   },
   {
     "id": "slot_t_10_segunda_8",
@@ -4007,7 +3977,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "LINGUA INGLESA"
+    "subject": "Língua Inglesa"
   },
   {
     "id": "slot_t_10_quarta_8",
@@ -4064,8 +4034,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "sexta",
     "periodId": 9,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "LINGUA INGLESA"
+    "classId": "3EMA_DS",
+    "subject": "Língua Inglesa"
   },
   {
     "id": "slot_t_11_segunda_1",
@@ -4074,7 +4044,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "7A",
-    "subject": "CIENCIAS"
+    "subject": "Ciências"
   },
   {
     "id": "slot_t_11_terca_1",
@@ -4083,7 +4053,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "6A",
-    "subject": "PRATICAS EXPERIMENTAIS 6º ANO A INTEGRAL 9H ANUAL"
+    "subject": "Práticas Experimentais"
   },
   {
     "id": "slot_t_11_quarta_1",
@@ -4113,7 +4083,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "6B",
-    "subject": "CIENCIAS"
+    "subject": "Ciências"
   },
   {
     "id": "slot_t_11_terca_2",
@@ -4122,7 +4092,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "6B",
-    "subject": "CIENCIAS"
+    "subject": "Ciências"
   },
   {
     "id": "slot_t_11_quarta_2",
@@ -4152,7 +4122,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "6A",
-    "subject": "CIENCIAS"
+    "subject": "Ciências"
   },
   {
     "id": "slot_t_11_terca_3",
@@ -4175,7 +4145,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "7A",
-    "subject": "CIENCIAS"
+    "subject": "Ciências"
   },
   {
     "id": "slot_t_11_sexta_3",
@@ -4191,7 +4161,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "6A",
-    "subject": "CIENCIAS"
+    "subject": "Ciências"
   },
   {
     "id": "slot_t_11_terca_4",
@@ -4242,7 +4212,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "7A",
-    "subject": "PRATICAS EXPERIMENTAIS 7º ANO A INTEGRAL 9H ANUAL"
+    "subject": "Práticas Experimentais"
   },
   {
     "id": "slot_t_11_quinta_5",
@@ -4251,7 +4221,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "7A",
-    "subject": "CIENCIAS"
+    "subject": "Ciências"
   },
   {
     "id": "slot_t_11_sexta_5",
@@ -4288,7 +4258,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "6A",
-    "subject": "CIENCIAS"
+    "subject": "Ciências"
   },
   {
     "id": "slot_t_11_sexta_6",
@@ -4325,7 +4295,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "6B",
-    "subject": "PRATICAS EXPERIMENTAIS 6º ANO B INTEGRAL 9H ANUAL"
+    "subject": "Práticas Experimentais"
   },
   {
     "id": "slot_t_11_sexta_7",
@@ -4362,7 +4332,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "6B",
-    "subject": "CIENCIAS"
+    "subject": "Ciências"
   },
   {
     "id": "slot_t_11_sexta_8",
@@ -4426,8 +4396,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "quarta",
     "periodId": 1,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "PROGRAMAÇÃO MOBILE"
+    "classId": "3EMA_DS",
+    "subject": "Programação Mobile"
   },
   {
     "id": "slot_t_12_quinta_1",
@@ -4442,8 +4412,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "sexta",
     "periodId": 1,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "Versionamento de Código e Sistemas … 6082 - DESENVOLVIMENTO DE SIST…"
+    "classId": "3EMA_DS",
+    "subject": "Versionamento de Código e Sistemas …"
   },
   {
     "id": "slot_t_12_segunda_2",
@@ -4465,8 +4435,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "quarta",
     "periodId": 2,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "PROGRAMAÇÃO MOBILE"
+    "classId": "3EMA_DS",
+    "subject": "Programação Mobile"
   },
   {
     "id": "slot_t_12_quinta_2",
@@ -4481,8 +4451,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "sexta",
     "periodId": 2,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "PROGRAMAÇÃO MOBILE"
+    "classId": "3EMA_DS",
+    "subject": "Programação Mobile"
   },
   {
     "id": "slot_t_12_segunda_3",
@@ -4504,8 +4474,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "quarta",
     "periodId": 3,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "Versionamento de Código e Sistemas … 6082 - DESENVOLVIMENTO DE SIST…"
+    "classId": "3EMA_DS",
+    "subject": "Versionamento de Código e Sistemas …"
   },
   {
     "id": "slot_t_12_quinta_3",
@@ -4520,8 +4490,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "sexta",
     "periodId": 3,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "PROGRAMAÇÃO MOBILE"
+    "classId": "3EMA_DS",
+    "subject": "Programação Mobile"
   },
   {
     "id": "slot_t_12_segunda_4",
@@ -4543,8 +4513,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "quarta",
     "periodId": 4,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "Versionamento de Código e Sistemas … 6082 - DESENVOLVIMENTO DE SIST…"
+    "classId": "3EMA_DS",
+    "subject": "Versionamento de Código e Sistemas …"
   },
   {
     "id": "slot_t_12_quinta_4",
@@ -4559,8 +4529,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "sexta",
     "periodId": 4,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "PROGRAMAÇÃO FRONT-END 6082 - DESENVOLVIMENTO DE SIST…"
+    "classId": "3EMA_DS",
+    "subject": "Programação Front-End"
   },
   {
     "id": "slot_t_12_segunda_5",
@@ -4575,8 +4545,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "terca",
     "periodId": 5,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "PROGRAMAÇÃO BACK-END 6082 - DESENVOLVIMENTO DE SIST…"
+    "classId": "3EMA_DS",
+    "subject": "Programação Back-End"
   },
   {
     "id": "slot_t_12_quarta_5",
@@ -4584,8 +4554,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "quarta",
     "periodId": 5,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "PROGRAMAÇÃO FRONT-END 6082 - DESENVOLVIMENTO DE SIST…"
+    "classId": "3EMA_DS",
+    "subject": "Programação Front-End"
   },
   {
     "id": "slot_t_12_quinta_5",
@@ -4614,8 +4584,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "terca",
     "periodId": 6,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "PROGRAMAÇÃO BACK-END 6082 - DESENVOLVIMENTO DE SIST…"
+    "classId": "3EMA_DS",
+    "subject": "Programação Back-End"
   },
   {
     "id": "slot_t_12_quarta_6",
@@ -4623,8 +4593,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "quarta",
     "periodId": 6,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "PROGRAMAÇÃO FRONT-END 6082 - DESENVOLVIMENTO DE SIST…"
+    "classId": "3EMA_DS",
+    "subject": "Programação Front-End"
   },
   {
     "id": "slot_t_12_quinta_6",
@@ -4702,8 +4672,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "quinta",
     "periodId": 8,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "PROGRAMAÇÃO BACK-END 6082 - DESENVOLVIMENTO DE SIST…"
+    "classId": "3EMA_DS",
+    "subject": "Programação Back-End"
   },
   {
     "id": "slot_t_12_sexta_8",
@@ -4775,7 +4745,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "8A",
-    "subject": "TECNOLOGIA E INOVACAO 8º ANO A INTEGRAL 9H ANUAL"
+    "subject": "Tecnologia e Inovação"
   },
   {
     "id": "slot_t_13_sexta_1",
@@ -4784,7 +4754,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "7B",
-    "subject": "CIENCIAS"
+    "subject": "Ciências"
   },
   {
     "id": "slot_t_13_segunda_2",
@@ -4814,7 +4784,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "8A",
-    "subject": "TECNOLOGIA E INOVACAO 8º ANO A INTEGRAL 9H ANUAL"
+    "subject": "Tecnologia e Inovação"
   },
   {
     "id": "slot_t_13_sexta_2",
@@ -4823,7 +4793,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "7B",
-    "subject": "CIENCIAS"
+    "subject": "Ciências"
   },
   {
     "id": "slot_t_13_segunda_3",
@@ -4839,7 +4809,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "7A",
-    "subject": "TECNOLOGIA E INOVACAO 7º ANO A INTEGRAL 9H ANUAL"
+    "subject": "Tecnologia e Inovação"
   },
   {
     "id": "slot_t_13_quarta_3",
@@ -4848,7 +4818,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "6B",
-    "subject": "TECNOLOGIA E INOVACAO"
+    "subject": "Tecnologia e Inovação"
   },
   {
     "id": "slot_t_13_quinta_3",
@@ -4857,7 +4827,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "9B",
-    "subject": "TECNOLOGIA E INOVACAO"
+    "subject": "Tecnologia e Inovação"
   },
   {
     "id": "slot_t_13_sexta_3",
@@ -4866,7 +4836,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "6A",
-    "subject": "TECNOLOGIA E INOVACAO 6º ANO A INTEGRAL 9H ANUAL"
+    "subject": "Tecnologia e Inovação"
   },
   {
     "id": "slot_t_13_segunda_4",
@@ -4882,7 +4852,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "7A",
-    "subject": "TECNOLOGIA E INOVACAO 7º ANO A INTEGRAL 9H ANUAL"
+    "subject": "Tecnologia e Inovação"
   },
   {
     "id": "slot_t_13_quarta_4",
@@ -4891,7 +4861,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "6B",
-    "subject": "TECNOLOGIA E INOVACAO"
+    "subject": "Tecnologia e Inovação"
   },
   {
     "id": "slot_t_13_quinta_4",
@@ -4900,7 +4870,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "9B",
-    "subject": "TECNOLOGIA E INOVACAO"
+    "subject": "Tecnologia e Inovação"
   },
   {
     "id": "slot_t_13_sexta_4",
@@ -4909,7 +4879,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "6A",
-    "subject": "TECNOLOGIA E INOVACAO 6º ANO A INTEGRAL 9H ANUAL"
+    "subject": "Tecnologia e Inovação"
   },
   {
     "id": "slot_t_13_segunda_5",
@@ -4918,7 +4888,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "PROGRAMACAO"
+    "subject": "Programação"
   },
   {
     "id": "slot_t_13_terca_5",
@@ -4934,7 +4904,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "7B",
-    "subject": "CIENCIAS"
+    "subject": "Ciências"
   },
   {
     "id": "slot_t_13_quinta_5",
@@ -4943,7 +4913,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "7B",
-    "subject": "TECNOLOGIA E INOVACAO"
+    "subject": "Tecnologia e Inovação"
   },
   {
     "id": "slot_t_13_sexta_5",
@@ -4959,7 +4929,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "PROGRAMACAO"
+    "subject": "Programação"
   },
   {
     "id": "slot_t_13_terca_6",
@@ -4975,7 +4945,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "7B",
-    "subject": "PROJETO DE VIDA"
+    "subject": "Projeto de Vida"
   },
   {
     "id": "slot_t_13_quinta_6",
@@ -4984,7 +4954,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "7B",
-    "subject": "TECNOLOGIA E INOVACAO"
+    "subject": "Tecnologia e Inovação"
   },
   {
     "id": "slot_t_13_sexta_6",
@@ -5014,7 +4984,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "7A",
-    "subject": "PROJETO DE VIDA"
+    "subject": "Projeto de Vida"
   },
   {
     "id": "slot_t_13_quinta_7",
@@ -5023,7 +4993,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "8B",
-    "subject": "TECNOLOGIA E INOVACAO"
+    "subject": "Tecnologia e Inovação"
   },
   {
     "id": "slot_t_13_sexta_7",
@@ -5032,7 +5002,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "9A",
-    "subject": "TECNOLOGIA E INOVACAO 9º ANO A INTEGRAL 9H ANUAL"
+    "subject": "Tecnologia e Inovação"
   },
   {
     "id": "slot_t_13_segunda_8",
@@ -5062,7 +5032,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "8B",
-    "subject": "TECNOLOGIA E INOVACAO"
+    "subject": "Tecnologia e Inovação"
   },
   {
     "id": "slot_t_13_sexta_8",
@@ -5071,7 +5041,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "9A",
-    "subject": "TECNOLOGIA E INOVACAO 9º ANO A INTEGRAL 9H ANUAL"
+    "subject": "Tecnologia e Inovação"
   },
   {
     "id": "slot_t_13_segunda_9",
@@ -5108,7 +5078,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 9,
     "type": "AULA",
     "classId": "7B",
-    "subject": "PRATICAS EXPERIMENTAIS 7º ANO B INTEGRAL 9H ANUAL"
+    "subject": "Práticas Experimentais"
   },
   {
     "id": "slot_t_14_segunda_1",
@@ -5124,7 +5094,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "9A",
-    "subject": "ORIENTAÇÃO DE ESTUDO – LÍNGUA… 9º ANO A INTEGRAL 9H ANUAL"
+    "subject": "Orientação de Estudo – Língua…"
   },
   {
     "id": "slot_t_14_quarta_1",
@@ -5147,7 +5117,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "REDAÇÃO E LEITURA"
+    "subject": "Redação e Leitura"
   },
   {
     "id": "slot_t_14_segunda_2",
@@ -5163,7 +5133,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "9A",
-    "subject": "ORIENTAÇÃO DE ESTUDO – LÍNGUA… 9º ANO A INTEGRAL 9H ANUAL"
+    "subject": "Orientação de Estudo – Língua…"
   },
   {
     "id": "slot_t_14_quarta_2",
@@ -5186,7 +5156,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "REDAÇÃO E LEITURA"
+    "subject": "Redação e Leitura"
   },
   {
     "id": "slot_t_14_segunda_3",
@@ -5202,7 +5172,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "ORIENTAÇÃO DE ESTUDO – LÍNGUA… 3ª SERIE B INTEGRAL 9H ANUAL"
+    "subject": "Orientação de Estudo – Língua…"
   },
   {
     "id": "slot_t_14_quarta_3",
@@ -5211,7 +5181,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "7B",
-    "subject": "REDAÇÃO E LEITURA"
+    "subject": "Redação e Leitura"
   },
   {
     "id": "slot_t_14_quinta_3",
@@ -5227,7 +5197,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "7B",
-    "subject": "ORIENTAÇÃO DE ESTUDO – LÍNGUA… 7º ANO B INTEGRAL 9H ANUAL"
+    "subject": "Orientação de Estudo – Língua…"
   },
   {
     "id": "slot_t_14_segunda_4",
@@ -5243,7 +5213,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "ORIENTAÇÃO DE ESTUDO – LÍNGUA… 3ª SERIE B INTEGRAL 9H ANUAL"
+    "subject": "Orientação de Estudo – Língua…"
   },
   {
     "id": "slot_t_14_quarta_4",
@@ -5252,7 +5222,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "7B",
-    "subject": "REDAÇÃO E LEITURA"
+    "subject": "Redação e Leitura"
   },
   {
     "id": "slot_t_14_quinta_4",
@@ -5268,7 +5238,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "ORIENTAÇÃO DE ESTUDO – LÍNGUA… 1ª SERIE A INTEGRAL 9H ANUAL"
+    "subject": "Orientação de Estudo – Língua…"
   },
   {
     "id": "slot_t_14_segunda_5",
@@ -5277,7 +5247,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "9B",
-    "subject": "ORIENTAÇÃO DE ESTUDO – LÍNGUA… 9º ANO B INTEGRAL 9H ANUAL"
+    "subject": "Orientação de Estudo – Língua…"
   },
   {
     "id": "slot_t_14_terca_5",
@@ -5286,7 +5256,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "8B",
-    "subject": "REDAÇÃO E LEITURA"
+    "subject": "Redação e Leitura"
   },
   {
     "id": "slot_t_14_quarta_5",
@@ -5295,7 +5265,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "6B",
-    "subject": "ORIENTAÇÃO DE ESTUDO – LÍNGUA… 6º ANO B INTEGRAL 9H ANUAL"
+    "subject": "Orientação de Estudo – Língua…"
   },
   {
     "id": "slot_t_14_quinta_5",
@@ -5318,7 +5288,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "9B",
-    "subject": "ORIENTAÇÃO DE ESTUDO – LÍNGUA… 9º ANO B INTEGRAL 9H ANUAL"
+    "subject": "Orientação de Estudo – Língua…"
   },
   {
     "id": "slot_t_14_terca_6",
@@ -5327,7 +5297,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "8B",
-    "subject": "REDAÇÃO E LEITURA"
+    "subject": "Redação e Leitura"
   },
   {
     "id": "slot_t_14_quarta_6",
@@ -5336,7 +5306,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "6B",
-    "subject": "ORIENTAÇÃO DE ESTUDO – LÍNGUA… 6º ANO B INTEGRAL 9H ANUAL"
+    "subject": "Orientação de Estudo – Língua…"
   },
   {
     "id": "slot_t_14_quinta_6",
@@ -5345,7 +5315,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "ORIENTAÇÃO DE ESTUDO – LÍNGUA… 3ª SERIE B INTEGRAL 9H ANUAL"
+    "subject": "Orientação de Estudo – Língua…"
   },
   {
     "id": "slot_t_14_sexta_6",
@@ -5361,7 +5331,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "8A",
-    "subject": "REDAÇÃO E LEITURA"
+    "subject": "Redação e Leitura"
   },
   {
     "id": "slot_t_14_terca_7",
@@ -5370,7 +5340,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "6A",
-    "subject": "ORIENTAÇÃO DE ESTUDO – LÍNGUA… 6º ANO A INTEGRAL 9H ANUAL"
+    "subject": "Orientação de Estudo – Língua…"
   },
   {
     "id": "slot_t_14_quarta_7",
@@ -5379,7 +5349,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "ORIENTAÇÃO DE ESTUDO – LÍNGUA… 2ª SERIE B INTEGRAL 9H ANUAL"
+    "subject": "Orientação de Estudo – Língua…"
   },
   {
     "id": "slot_t_14_quinta_7",
@@ -5388,7 +5358,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "7A",
-    "subject": "ORIENTAÇÃO DE ESTUDO – LÍNGUA… 7º ANO A INTEGRAL 9H ANUAL"
+    "subject": "Orientação de Estudo – Língua…"
   },
   {
     "id": "slot_t_14_sexta_7",
@@ -5397,7 +5367,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "8A",
-    "subject": "ORIENTAÇÃO DE ESTUDO – LÍNGUA… 8º ANO A INTEGRAL 9H ANUAL"
+    "subject": "Orientação de Estudo – Língua…"
   },
   {
     "id": "slot_t_14_segunda_8",
@@ -5406,7 +5376,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "8A",
-    "subject": "REDAÇÃO E LEITURA"
+    "subject": "Redação e Leitura"
   },
   {
     "id": "slot_t_14_terca_8",
@@ -5415,7 +5385,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "6A",
-    "subject": "ORIENTAÇÃO DE ESTUDO – LÍNGUA… 6º ANO A INTEGRAL 9H ANUAL"
+    "subject": "Orientação de Estudo – Língua…"
   },
   {
     "id": "slot_t_14_quarta_8",
@@ -5438,7 +5408,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "ORIENTAÇÃO DE ESTUDO – LÍNGUA… 1ª SERIE B INTEGRAL 9H ANUAL"
+    "subject": "Orientação de Estudo – Língua…"
   },
   {
     "id": "slot_t_14_segunda_9",
@@ -5475,7 +5445,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 9,
     "type": "AULA",
     "classId": "8B",
-    "subject": "ORIENTAÇÃO DE ESTUDO – LÍNGUA… 8º ANO B INTEGRAL 9H ANUAL"
+    "subject": "Orientação de Estudo – Língua…"
   },
   {
     "id": "slot_t_15_segunda_1",
@@ -5491,7 +5461,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "EDUCACAO FISICA"
+    "subject": "Educação Física"
   },
   {
     "id": "slot_t_15_quarta_1",
@@ -5500,7 +5470,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "8B",
-    "subject": "ESPORTE-MÚSICA-ARTE"
+    "subject": "Esporte-Música-Arte"
   },
   {
     "id": "slot_t_15_quinta_1",
@@ -5509,7 +5479,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "7B",
-    "subject": "ESPORTE-MÚSICA-ARTE"
+    "subject": "Esporte-Música-Arte"
   },
   {
     "id": "slot_t_15_sexta_1",
@@ -5518,7 +5488,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "ESPORTE-MÚSICA-ARTE"
+    "subject": "Esporte-Música-Arte"
   },
   {
     "id": "slot_t_15_segunda_2",
@@ -5527,7 +5497,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "7A",
-    "subject": "ESPORTE-MÚSICA-ARTE"
+    "subject": "Esporte-Música-Arte"
   },
   {
     "id": "slot_t_15_terca_2",
@@ -5543,7 +5513,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "8B",
-    "subject": "ESPORTE-MÚSICA-ARTE"
+    "subject": "Esporte-Música-Arte"
   },
   {
     "id": "slot_t_15_quinta_2",
@@ -5552,7 +5522,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "7B",
-    "subject": "ESPORTE-MÚSICA-ARTE"
+    "subject": "Esporte-Música-Arte"
   },
   {
     "id": "slot_t_15_sexta_2",
@@ -5561,7 +5531,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "ESPORTE-MÚSICA-ARTE"
+    "subject": "Esporte-Música-Arte"
   },
   {
     "id": "slot_t_15_segunda_3",
@@ -5570,7 +5540,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "7A",
-    "subject": "ESPORTE-MÚSICA-ARTE"
+    "subject": "Esporte-Música-Arte"
   },
   {
     "id": "slot_t_15_terca_3",
@@ -5586,7 +5556,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "EDUCACAO FISICA"
+    "subject": "Educação Física"
   },
   {
     "id": "slot_t_15_quinta_3",
@@ -5595,7 +5565,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "8A",
-    "subject": "ESPORTE-MÚSICA-ARTE"
+    "subject": "Esporte-Música-Arte"
   },
   {
     "id": "slot_t_15_sexta_3",
@@ -5604,7 +5574,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "EDUCACAO FISICA"
+    "subject": "Educação Física"
   },
   {
     "id": "slot_t_15_segunda_4",
@@ -5627,7 +5597,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "EDUCACAO FISICA"
+    "subject": "Educação Física"
   },
   {
     "id": "slot_t_15_quinta_4",
@@ -5636,7 +5606,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "8A",
-    "subject": "ESPORTE-MÚSICA-ARTE"
+    "subject": "Esporte-Música-Arte"
   },
   {
     "id": "slot_t_15_sexta_4",
@@ -5645,7 +5615,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "8B",
-    "subject": "Educação Fisica"
+    "subject": "Educação Física"
   },
   {
     "id": "slot_t_15_segunda_5",
@@ -5668,7 +5638,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "6A",
-    "subject": "ESPORTE-MÚSICA-ARTE"
+    "subject": "Esporte-Música-Arte"
   },
   {
     "id": "slot_t_15_quinta_5",
@@ -5677,7 +5647,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "EDUCACAO FISICA"
+    "subject": "Educação Física"
   },
   {
     "id": "slot_t_15_sexta_5",
@@ -5707,7 +5677,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "6A",
-    "subject": "ESPORTE-MÚSICA-ARTE"
+    "subject": "Esporte-Música-Arte"
   },
   {
     "id": "slot_t_15_quinta_6",
@@ -5716,7 +5686,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "8B",
-    "subject": "Educação Fisica"
+    "subject": "Educação Física"
   },
   {
     "id": "slot_t_15_sexta_6",
@@ -5746,7 +5716,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "EDUCACAO FISICA"
+    "subject": "Educação Física"
   },
   {
     "id": "slot_t_15_quinta_7",
@@ -5754,8 +5724,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "quinta",
     "periodId": 7,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "EDUCACAO FISICA"
+    "classId": "3EMA_DS",
+    "subject": "Educação Física"
   },
   {
     "id": "slot_t_15_sexta_7",
@@ -5764,7 +5734,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "6B",
-    "subject": "ESPORTE-MÚSICA-ARTE"
+    "subject": "Esporte-Música-Arte"
   },
   {
     "id": "slot_t_15_segunda_8",
@@ -5801,7 +5771,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "6B",
-    "subject": "ESPORTE-MÚSICA-ARTE"
+    "subject": "Esporte-Música-Arte"
   },
   {
     "id": "slot_t_15_segunda_9",
@@ -5838,7 +5808,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 9,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "EDUCACAO FISICA"
+    "subject": "Educação Física"
   },
   {
     "id": "slot_t_16_segunda_1",
@@ -5847,7 +5817,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "REDAÇÃO E LEITURA"
+    "subject": "Redação e Leitura"
   },
   {
     "id": "slot_t_16_terca_1",
@@ -5863,7 +5833,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "6A",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_16_quinta_1",
@@ -5872,7 +5842,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "6A",
-    "subject": "LINGUA INGLESA"
+    "subject": "Língua Inglesa"
   },
   {
     "id": "slot_t_16_sexta_1",
@@ -5881,7 +5851,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "7A",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_16_segunda_2",
@@ -5890,7 +5860,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "REDAÇÃO E LEITURA"
+    "subject": "Redação e Leitura"
   },
   {
     "id": "slot_t_16_terca_2",
@@ -5906,7 +5876,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "6A",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_16_quinta_2",
@@ -5915,7 +5885,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "6A",
-    "subject": "LINGUA INGLESA"
+    "subject": "Língua Inglesa"
   },
   {
     "id": "slot_t_16_sexta_2",
@@ -5924,7 +5894,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "7A",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_16_segunda_3",
@@ -5933,7 +5903,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "6B",
-    "subject": "REDAÇÃO E LEITURA"
+    "subject": "Redação e Leitura"
   },
   {
     "id": "slot_t_16_terca_3",
@@ -5949,7 +5919,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "7A",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_16_quinta_3",
@@ -5958,7 +5928,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "6B",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_16_sexta_3",
@@ -5967,7 +5937,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "6B",
-    "subject": "LINGUA INGLESA"
+    "subject": "Língua Inglesa"
   },
   {
     "id": "slot_t_16_segunda_4",
@@ -5976,7 +5946,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "6B",
-    "subject": "REDAÇÃO E LEITURA"
+    "subject": "Redação e Leitura"
   },
   {
     "id": "slot_t_16_terca_4",
@@ -5992,7 +5962,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "7A",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_16_quinta_4",
@@ -6001,7 +5971,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "6B",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_16_sexta_4",
@@ -6010,7 +5980,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "6B",
-    "subject": "LINGUA INGLESA"
+    "subject": "Língua Inglesa"
   },
   {
     "id": "slot_t_16_segunda_5",
@@ -6019,7 +5989,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "7A",
-    "subject": "REDAÇÃO E LEITURA"
+    "subject": "Redação e Leitura"
   },
   {
     "id": "slot_t_16_terca_5",
@@ -6042,7 +6012,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "REDAÇÃO E LEITURA"
+    "subject": "Redação e Leitura"
   },
   {
     "id": "slot_t_16_sexta_5",
@@ -6058,7 +6028,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "7A",
-    "subject": "REDAÇÃO E LEITURA"
+    "subject": "Redação e Leitura"
   },
   {
     "id": "slot_t_16_terca_6",
@@ -6081,7 +6051,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "REDAÇÃO E LEITURA"
+    "subject": "Redação e Leitura"
   },
   {
     "id": "slot_t_16_sexta_6",
@@ -6097,7 +6067,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "6A",
-    "subject": "REDAÇÃO E LEITURA"
+    "subject": "Redação e Leitura"
   },
   {
     "id": "slot_t_16_terca_7",
@@ -6106,7 +6076,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "6B",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_16_quarta_7",
@@ -6129,7 +6099,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "6A",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_16_segunda_8",
@@ -6138,7 +6108,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "6A",
-    "subject": "REDAÇÃO E LEITURA"
+    "subject": "Redação e Leitura"
   },
   {
     "id": "slot_t_16_terca_8",
@@ -6147,7 +6117,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "6B",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_16_quarta_8",
@@ -6170,7 +6140,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "6A",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_16_segunda_9",
@@ -6221,7 +6191,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "8B",
-    "subject": "CIENCIAS"
+    "subject": "Ciências"
   },
   {
     "id": "slot_t_17_quarta_1",
@@ -6230,7 +6200,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "9B",
-    "subject": "CIENCIAS"
+    "subject": "Ciências"
   },
   {
     "id": "slot_t_17_quinta_1",
@@ -6239,7 +6209,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "8B",
-    "subject": "CIENCIAS"
+    "subject": "Ciências"
   },
   {
     "id": "slot_t_17_sexta_1",
@@ -6262,7 +6232,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "8B",
-    "subject": "CIENCIAS"
+    "subject": "Ciências"
   },
   {
     "id": "slot_t_17_quarta_2",
@@ -6271,7 +6241,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "8A",
-    "subject": "PRATICAS EXPERIMENTAIS 8º ANO A INTEGRAL 9H ANUAL"
+    "subject": "Práticas Experimentais"
   },
   {
     "id": "slot_t_17_quinta_2",
@@ -6280,7 +6250,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "8B",
-    "subject": "CIENCIAS"
+    "subject": "Ciências"
   },
   {
     "id": "slot_t_17_sexta_2",
@@ -6303,7 +6273,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "8A",
-    "subject": "CIENCIAS"
+    "subject": "Ciências"
   },
   {
     "id": "slot_t_17_quarta_3",
@@ -6312,7 +6282,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "9A",
-    "subject": "PRATICAS EXPERIMENTAIS 9º ANO A INTEGRAL 9H ANUAL"
+    "subject": "Práticas Experimentais"
   },
   {
     "id": "slot_t_17_quinta_3",
@@ -6321,7 +6291,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "BIOLOGIA"
+    "subject": "Biologia"
   },
   {
     "id": "slot_t_17_sexta_3",
@@ -6330,7 +6300,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "9A",
-    "subject": "CIENCIAS"
+    "subject": "Ciências"
   },
   {
     "id": "slot_t_17_segunda_4",
@@ -6346,7 +6316,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "8A",
-    "subject": "CIENCIAS"
+    "subject": "Ciências"
   },
   {
     "id": "slot_t_17_quarta_4",
@@ -6362,7 +6332,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "BIOLOGIA"
+    "subject": "Biologia"
   },
   {
     "id": "slot_t_17_sexta_4",
@@ -6371,7 +6341,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "9A",
-    "subject": "CIENCIAS"
+    "subject": "Ciências"
   },
   {
     "id": "slot_t_17_segunda_5",
@@ -6387,7 +6357,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "BIOLOGIA"
+    "subject": "Biologia"
   },
   {
     "id": "slot_t_17_quarta_5",
@@ -6403,7 +6373,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "9B",
-    "subject": "CIENCIAS"
+    "subject": "Ciências"
   },
   {
     "id": "slot_t_17_sexta_5",
@@ -6426,7 +6396,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "BIOLOGIA"
+    "subject": "Biologia"
   },
   {
     "id": "slot_t_17_quarta_6",
@@ -6456,7 +6426,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "8B",
-    "subject": "PRATICAS EXPERIMENTAIS 8º ANO B INTEGRAL 9H ANUAL"
+    "subject": "Práticas Experimentais"
   },
   {
     "id": "slot_t_17_terca_7",
@@ -6479,7 +6449,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "9A",
-    "subject": "CIENCIAS"
+    "subject": "Ciências"
   },
   {
     "id": "slot_t_17_sexta_7",
@@ -6488,7 +6458,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "9B",
-    "subject": "CIENCIAS"
+    "subject": "Ciências"
   },
   {
     "id": "slot_t_17_segunda_8",
@@ -6497,7 +6467,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "9B",
-    "subject": "PRATICAS EXPERIMENTAIS 9º ANO B INTEGRAL 9H ANUAL"
+    "subject": "Práticas Experimentais"
   },
   {
     "id": "slot_t_17_terca_8",
@@ -6506,7 +6476,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "9B",
-    "subject": "CIENCIAS"
+    "subject": "Ciências"
   },
   {
     "id": "slot_t_17_quarta_8",
@@ -6522,7 +6492,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "9A",
-    "subject": "CIENCIAS"
+    "subject": "Ciências"
   },
   {
     "id": "slot_t_17_sexta_8",
@@ -6531,7 +6501,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "8A",
-    "subject": "CIENCIAS"
+    "subject": "Ciências"
   },
   {
     "id": "slot_t_17_segunda_9",
@@ -6568,7 +6538,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 9,
     "type": "AULA",
     "classId": "8A",
-    "subject": "CIENCIAS"
+    "subject": "Ciências"
   },
   {
     "id": "slot_t_18_segunda_1",
@@ -6577,7 +6547,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "8B",
-    "subject": "ARTE"
+    "subject": "Arte"
   },
   {
     "id": "slot_t_18_terca_1",
@@ -6586,7 +6556,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "6B",
-    "subject": "ARTE"
+    "subject": "Arte"
   },
   {
     "id": "slot_t_18_quarta_1",
@@ -6595,7 +6565,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "ARTE"
+    "subject": "Arte"
   },
   {
     "id": "slot_t_18_quinta_1",
@@ -6618,7 +6588,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "7B",
-    "subject": "ARTE"
+    "subject": "Arte"
   },
   {
     "id": "slot_t_18_terca_2",
@@ -6627,7 +6597,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "9B",
-    "subject": "ESPORTE-MÚSICA-ARTE"
+    "subject": "Esporte-Música-Arte"
   },
   {
     "id": "slot_t_18_quarta_2",
@@ -6636,7 +6606,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "ARTE"
+    "subject": "Arte"
   },
   {
     "id": "slot_t_18_quinta_2",
@@ -6659,7 +6629,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "7B",
-    "subject": "ARTE"
+    "subject": "Arte"
   },
   {
     "id": "slot_t_18_terca_3",
@@ -6668,7 +6638,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "9B",
-    "subject": "ESPORTE-MÚSICA-ARTE"
+    "subject": "Esporte-Música-Arte"
   },
   {
     "id": "slot_t_18_quarta_3",
@@ -6677,7 +6647,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "ESPORTE-MÚSICA-ARTE"
+    "subject": "Esporte-Música-Arte"
   },
   {
     "id": "slot_t_18_quinta_3",
@@ -6700,7 +6670,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "9A",
-    "subject": "ESPORTE-MÚSICA-ARTE"
+    "subject": "Esporte-Música-Arte"
   },
   {
     "id": "slot_t_18_terca_4",
@@ -6716,7 +6686,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "ESPORTE-MÚSICA-ARTE"
+    "subject": "Esporte-Música-Arte"
   },
   {
     "id": "slot_t_18_quinta_4",
@@ -6725,7 +6695,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "6A",
-    "subject": "ARTE"
+    "subject": "Arte"
   },
   {
     "id": "slot_t_18_sexta_4",
@@ -6748,7 +6718,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "7A",
-    "subject": "ARTE"
+    "subject": "Arte"
   },
   {
     "id": "slot_t_18_quarta_5",
@@ -6764,7 +6734,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "6A",
-    "subject": "ARTE"
+    "subject": "Arte"
   },
   {
     "id": "slot_t_18_sexta_5",
@@ -6780,7 +6750,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "6B",
-    "subject": "ARTE"
+    "subject": "Arte"
   },
   {
     "id": "slot_t_18_terca_6",
@@ -6789,7 +6759,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "7A",
-    "subject": "ARTE"
+    "subject": "Arte"
   },
   {
     "id": "slot_t_18_quarta_6",
@@ -6798,7 +6768,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "8A",
-    "subject": "ARTE"
+    "subject": "Arte"
   },
   {
     "id": "slot_t_18_quinta_6",
@@ -6807,7 +6777,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "9A",
-    "subject": "ARTE"
+    "subject": "Arte"
   },
   {
     "id": "slot_t_18_sexta_6",
@@ -6823,7 +6793,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "ESPORTE-MÚSICA-ARTE"
+    "subject": "Esporte-Música-Arte"
   },
   {
     "id": "slot_t_18_terca_7",
@@ -6832,7 +6802,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "ESPORTE-MÚSICA-ARTE"
+    "subject": "Esporte-Música-Arte"
   },
   {
     "id": "slot_t_18_quarta_7",
@@ -6841,7 +6811,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "9A",
-    "subject": "ESPORTE-MÚSICA-ARTE"
+    "subject": "Esporte-Música-Arte"
   },
   {
     "id": "slot_t_18_quinta_7",
@@ -6857,7 +6827,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "ARTE"
+    "subject": "Arte"
   },
   {
     "id": "slot_t_18_segunda_8",
@@ -6866,7 +6836,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "ESPORTE-MÚSICA-ARTE"
+    "subject": "Esporte-Música-Arte"
   },
   {
     "id": "slot_t_18_terca_8",
@@ -6875,7 +6845,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "ESPORTE-MÚSICA-ARTE"
+    "subject": "Esporte-Música-Arte"
   },
   {
     "id": "slot_t_18_quarta_8",
@@ -6898,7 +6868,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "ARTE"
+    "subject": "Arte"
   },
   {
     "id": "slot_t_18_segunda_9",
@@ -6935,7 +6905,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 9,
     "type": "AULA",
     "classId": "9B",
-    "subject": "ARTE"
+    "subject": "Arte"
   },
   {
     "id": "slot_t_19_segunda_1",
@@ -6951,7 +6921,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_19_quarta_1",
@@ -6967,7 +6937,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_19_sexta_1",
@@ -6976,7 +6946,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "8B",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_19_segunda_2",
@@ -6992,7 +6962,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_19_quarta_2",
@@ -7008,7 +6978,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_19_sexta_2",
@@ -7017,7 +6987,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "8B",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_19_segunda_3",
@@ -7026,7 +6996,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_19_terca_3",
@@ -7035,7 +7005,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "7B",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_19_quarta_3",
@@ -7051,7 +7021,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "7B",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_19_sexta_3",
@@ -7060,7 +7030,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_19_segunda_4",
@@ -7069,7 +7039,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_19_terca_4",
@@ -7078,7 +7048,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "7B",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_19_quarta_4",
@@ -7094,7 +7064,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "7B",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_19_sexta_4",
@@ -7103,7 +7073,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_19_segunda_5",
@@ -7112,7 +7082,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "8A",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_19_terca_5",
@@ -7121,7 +7091,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_19_quarta_5",
@@ -7130,7 +7100,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_19_quinta_5",
@@ -7139,7 +7109,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_19_sexta_5",
@@ -7148,7 +7118,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_19_segunda_6",
@@ -7157,7 +7127,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "8B",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_19_terca_6",
@@ -7166,7 +7136,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_19_quarta_6",
@@ -7175,7 +7145,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_19_quinta_6",
@@ -7184,7 +7154,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_19_sexta_6",
@@ -7193,7 +7163,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_19_segunda_7",
@@ -7209,7 +7179,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "8A",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_19_quarta_7",
@@ -7218,7 +7188,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "8B",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_19_quinta_7",
@@ -7227,7 +7197,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "8A",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_19_sexta_7",
@@ -7250,7 +7220,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "8A",
-    "subject": "LINGUA PORTUGUESA"
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_19_quarta_8",
@@ -7322,7 +7292,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "SOCIOLOGIA"
+    "subject": "Sociologia"
   },
   {
     "id": "slot_t_20_quarta_1",
@@ -7331,7 +7301,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "SOCIOLOGIA"
+    "subject": "Sociologia"
   },
   {
     "id": "slot_t_20_quinta_1",
@@ -7347,7 +7317,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "FILOSOFIA"
+    "subject": "Filosofia"
   },
   {
     "id": "slot_t_20_segunda_2",
@@ -7363,7 +7333,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "FILOSOFIA"
+    "subject": "Filosofia"
   },
   {
     "id": "slot_t_20_quarta_2",
@@ -7372,7 +7342,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "SOCIOLOGIA"
+    "subject": "Sociologia"
   },
   {
     "id": "slot_t_20_quinta_2",
@@ -7388,7 +7358,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "FILOSOFIA"
+    "subject": "Filosofia"
   },
   {
     "id": "slot_t_20_segunda_3",
@@ -7404,7 +7374,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "FILOSOFIA"
+    "subject": "Filosofia"
   },
   {
     "id": "slot_t_20_quarta_3",
@@ -7413,7 +7383,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "8A",
-    "subject": "PROJETO DE VIDA"
+    "subject": "Projeto de Vida"
   },
   {
     "id": "slot_t_20_quinta_3",
@@ -7429,7 +7399,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "SOCIOLOGIA"
+    "subject": "Sociologia"
   },
   {
     "id": "slot_t_20_segunda_4",
@@ -7445,7 +7415,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "6A",
-    "subject": "GEOGRAFIA"
+    "subject": "Geografia"
   },
   {
     "id": "slot_t_20_quarta_4",
@@ -7454,7 +7424,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "6A",
-    "subject": "GEOGRAFIA"
+    "subject": "Geografia"
   },
   {
     "id": "slot_t_20_quinta_4",
@@ -7470,7 +7440,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "7B",
-    "subject": "GEOGRAFIA"
+    "subject": "Geografia"
   },
   {
     "id": "slot_t_20_segunda_5",
@@ -7486,7 +7456,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "6B",
-    "subject": "GEOGRAFIA"
+    "subject": "Geografia"
   },
   {
     "id": "slot_t_20_quarta_5",
@@ -7495,7 +7465,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "APROFUNDAMENTO DE FILOSOFIA 3ª SERIE B INTEGRAL 9H ANUAL"
+    "subject": "Aprofundamento de Filosofia"
   },
   {
     "id": "slot_t_20_quinta_5",
@@ -7525,7 +7495,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "6B",
-    "subject": "GEOGRAFIA"
+    "subject": "Geografia"
   },
   {
     "id": "slot_t_20_quarta_6",
@@ -7534,7 +7504,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "APROFUNDAMENTO DE FILOSOFIA 3ª SERIE B INTEGRAL 9H ANUAL"
+    "subject": "Aprofundamento de Filosofia"
   },
   {
     "id": "slot_t_20_quinta_6",
@@ -7557,7 +7527,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "7A",
-    "subject": "GEOGRAFIA"
+    "subject": "Geografia"
   },
   {
     "id": "slot_t_20_terca_7",
@@ -7566,7 +7536,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "7A",
-    "subject": "GEOGRAFIA"
+    "subject": "Geografia"
   },
   {
     "id": "slot_t_20_quarta_7",
@@ -7575,7 +7545,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "6B",
-    "subject": "GEOGRAFIA"
+    "subject": "Geografia"
   },
   {
     "id": "slot_t_20_quinta_7",
@@ -7584,7 +7554,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "APROFUNDAMENTO DE SOCIOLOGIA 3ª SERIE B INTEGRAL 9H ANUAL"
+    "subject": "Aprofundamento de Sociologia"
   },
   {
     "id": "slot_t_20_sexta_7",
@@ -7593,7 +7563,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "7B",
-    "subject": "GEOGRAFIA"
+    "subject": "Geografia"
   },
   {
     "id": "slot_t_20_segunda_8",
@@ -7602,7 +7572,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "7A",
-    "subject": "GEOGRAFIA"
+    "subject": "Geografia"
   },
   {
     "id": "slot_t_20_terca_8",
@@ -7611,7 +7581,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "7B",
-    "subject": "GEOGRAFIA"
+    "subject": "Geografia"
   },
   {
     "id": "slot_t_20_quarta_8",
@@ -7627,7 +7597,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "APROFUNDAMENTO DE SOCIOLOGIA 3ª SERIE B INTEGRAL 9H ANUAL"
+    "subject": "Aprofundamento de Sociologia"
   },
   {
     "id": "slot_t_20_sexta_8",
@@ -7636,7 +7606,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "8B",
-    "subject": "PROJETO DE VIDA"
+    "subject": "Projeto de Vida"
   },
   {
     "id": "slot_t_20_segunda_9",
@@ -7673,7 +7643,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 9,
     "type": "AULA",
     "classId": "6A",
-    "subject": "GEOGRAFIA"
+    "subject": "Geografia"
   },
   {
     "id": "slot_t_21_segunda_1",
@@ -7682,7 +7652,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "6A",
-    "subject": "HISTORIA"
+    "subject": "História"
   },
   {
     "id": "slot_t_21_terca_1",
@@ -7705,7 +7675,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "6B",
-    "subject": "HISTORIA"
+    "subject": "História"
   },
   {
     "id": "slot_t_21_sexta_1",
@@ -7714,7 +7684,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "8A",
-    "subject": "HISTORIA"
+    "subject": "História"
   },
   {
     "id": "slot_t_21_segunda_2",
@@ -7723,7 +7693,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "8B",
-    "subject": "HISTORIA"
+    "subject": "História"
   },
   {
     "id": "slot_t_21_terca_2",
@@ -7746,7 +7716,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "7A",
-    "subject": "HISTORIA"
+    "subject": "História"
   },
   {
     "id": "slot_t_21_sexta_2",
@@ -7755,7 +7725,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "9B",
-    "subject": "HISTORIA"
+    "subject": "História"
   },
   {
     "id": "slot_t_21_segunda_3",
@@ -7764,7 +7734,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "9A",
-    "subject": "HISTORIA"
+    "subject": "História"
   },
   {
     "id": "slot_t_21_terca_3",
@@ -7787,7 +7757,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "9A",
-    "subject": "HISTORIA"
+    "subject": "História"
   },
   {
     "id": "slot_t_21_sexta_3",
@@ -7796,7 +7766,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "8B",
-    "subject": "HISTORIA"
+    "subject": "História"
   },
   {
     "id": "slot_t_21_segunda_4",
@@ -7805,7 +7775,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "7B",
-    "subject": "HISTORIA"
+    "subject": "História"
   },
   {
     "id": "slot_t_21_terca_4",
@@ -7828,7 +7798,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "7A",
-    "subject": "HISTORIA"
+    "subject": "História"
   },
   {
     "id": "slot_t_21_sexta_4",
@@ -7837,7 +7807,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "8A",
-    "subject": "HISTORIA"
+    "subject": "História"
   },
   {
     "id": "slot_t_21_segunda_5",
@@ -7867,7 +7837,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "8B",
-    "subject": "HISTORIA"
+    "subject": "História"
   },
   {
     "id": "slot_t_21_sexta_5",
@@ -7883,7 +7853,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "6A",
-    "subject": "HISTORIA"
+    "subject": "História"
   },
   {
     "id": "slot_t_21_terca_6",
@@ -7899,7 +7869,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "7A",
-    "subject": "HISTORIA"
+    "subject": "História"
   },
   {
     "id": "slot_t_21_quinta_6",
@@ -7908,7 +7878,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "8A",
-    "subject": "HISTORIA"
+    "subject": "História"
   },
   {
     "id": "slot_t_21_sexta_6",
@@ -7924,7 +7894,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "6B",
-    "subject": "HISTORIA"
+    "subject": "História"
   },
   {
     "id": "slot_t_21_terca_7",
@@ -7933,7 +7903,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "9B",
-    "subject": "HISTORIA"
+    "subject": "História"
   },
   {
     "id": "slot_t_21_quarta_7",
@@ -7942,7 +7912,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "6A",
-    "subject": "HISTORIA"
+    "subject": "História"
   },
   {
     "id": "slot_t_21_quinta_7",
@@ -7951,7 +7921,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "7B",
-    "subject": "HISTORIA"
+    "subject": "História"
   },
   {
     "id": "slot_t_21_sexta_7",
@@ -7960,7 +7930,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "PROJETO DE VIDA"
+    "subject": "Projeto de Vida"
   },
   {
     "id": "slot_t_21_segunda_8",
@@ -7969,7 +7939,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "6B",
-    "subject": "HISTORIA"
+    "subject": "História"
   },
   {
     "id": "slot_t_21_terca_8",
@@ -7978,7 +7948,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "9A",
-    "subject": "HISTORIA"
+    "subject": "História"
   },
   {
     "id": "slot_t_21_quarta_8",
@@ -7994,7 +7964,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "7B",
-    "subject": "HISTORIA"
+    "subject": "História"
   },
   {
     "id": "slot_t_21_sexta_8",
@@ -8003,7 +7973,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "9B",
-    "subject": "HISTORIA"
+    "subject": "História"
   },
   {
     "id": "slot_t_21_segunda_9",
@@ -8040,7 +8010,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 9,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "PROJETO DE VIDA"
+    "subject": "Projeto de Vida"
   },
   {
     "id": "slot_t_22_segunda_1",
@@ -8049,7 +8019,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "9A",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_22_terca_1",
@@ -8058,7 +8028,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "9B",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_22_quarta_1",
@@ -8067,7 +8037,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "9A",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_22_quinta_1",
@@ -8076,7 +8046,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_22_sexta_1",
@@ -8085,7 +8055,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "9A",
-    "subject": "ORIENTAÇÃO DE ESTUDO – MATEM… 9º ANO A INTEGRAL 9H ANUAL"
+    "subject": "Orientação de Estudo – Matem…"
   },
   {
     "id": "slot_t_22_segunda_2",
@@ -8094,7 +8064,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "9A",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_22_terca_2",
@@ -8110,7 +8080,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "9A",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_22_quinta_2",
@@ -8119,7 +8089,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_22_sexta_2",
@@ -8128,7 +8098,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "9A",
-    "subject": "ORIENTAÇÃO DE ESTUDO – MATEM… 9º ANO A INTEGRAL 9H ANUAL"
+    "subject": "Orientação de Estudo – Matem…"
   },
   {
     "id": "slot_t_22_segunda_3",
@@ -8137,7 +8107,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "9B",
-    "subject": "ORIENTAÇÃO DE ESTUDO – MATEM… 9º ANO B INTEGRAL 9H ANUAL"
+    "subject": "Orientação de Estudo – Matem…"
   },
   {
     "id": "slot_t_22_terca_3",
@@ -8153,7 +8123,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_22_quinta_3",
@@ -8161,8 +8131,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "quinta",
     "periodId": 3,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "MATEMATICA"
+    "classId": "3EMA_DS",
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_22_sexta_3",
@@ -8178,7 +8148,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "9B",
-    "subject": "ORIENTAÇÃO DE ESTUDO – MATEM… 9º ANO B INTEGRAL 9H ANUAL"
+    "subject": "Orientação de Estudo – Matem…"
   },
   {
     "id": "slot_t_22_terca_4",
@@ -8194,7 +8164,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_22_quinta_4",
@@ -8217,7 +8187,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "ORIENTAÇÃO DE ESTUDO – MATEM… 3ª SERIE B INTEGRAL 9H ANUAL"
+    "subject": "Orientação de Estudo – Matem…"
   },
   {
     "id": "slot_t_22_terca_5",
@@ -8233,7 +8203,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "9B",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_22_quinta_5",
@@ -8242,7 +8212,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "9A",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_22_sexta_5",
@@ -8258,7 +8228,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "ORIENTAÇÃO DE ESTUDO – MATEM… 3ª SERIE B INTEGRAL 9H ANUAL"
+    "subject": "Orientação de Estudo – Matem…"
   },
   {
     "id": "slot_t_22_terca_6",
@@ -8274,7 +8244,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "9B",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_22_quinta_6",
@@ -8282,8 +8252,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "quinta",
     "periodId": 6,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "MATEMATICA"
+    "classId": "3EMA_DS",
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_22_sexta_6",
@@ -8298,8 +8268,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "segunda",
     "periodId": 7,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "MATEMATICA"
+    "classId": "3EMA_DS",
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_22_terca_7",
@@ -8315,7 +8285,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "ORIENTAÇÃO DE ESTUDO – MATEM… 3ª SERIE B INTEGRAL 9H ANUAL"
+    "subject": "Orientação de Estudo – Matem…"
   },
   {
     "id": "slot_t_22_quinta_7",
@@ -8324,7 +8294,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "9B",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_22_sexta_7",
@@ -8339,8 +8309,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "segunda",
     "periodId": 8,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "MATEMATICA"
+    "classId": "3EMA_DS",
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_22_terca_8",
@@ -8363,7 +8333,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "9B",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_22_sexta_8",
@@ -8414,7 +8384,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "6B",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_23_terca_1",
@@ -8423,7 +8393,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "8A",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_23_quarta_1",
@@ -8446,7 +8416,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "6A",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_23_segunda_2",
@@ -8455,7 +8425,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "6A",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_23_terca_2",
@@ -8464,7 +8434,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "6A",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_23_quarta_2",
@@ -8473,7 +8443,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "6B",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_23_quinta_2",
@@ -8489,7 +8459,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "6A",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_23_segunda_3",
@@ -8498,7 +8468,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "8B",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_23_terca_3",
@@ -8507,7 +8477,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "6B",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_23_quarta_3",
@@ -8516,7 +8486,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "6A",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_23_quinta_3",
@@ -8532,7 +8502,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "8A",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_23_segunda_4",
@@ -8541,7 +8511,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "8B",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_23_terca_4",
@@ -8550,7 +8520,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "6B",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_23_quarta_4",
@@ -8559,7 +8529,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "8A",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_23_quinta_4",
@@ -8582,7 +8552,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "7B",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_23_terca_5",
@@ -8591,7 +8561,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "7B",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_23_quarta_5",
@@ -8600,7 +8570,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "8A",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_23_quinta_5",
@@ -8623,7 +8593,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "7B",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_23_terca_6",
@@ -8632,7 +8602,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "7B",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_23_quarta_6",
@@ -8641,7 +8611,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "8B",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_23_quinta_6",
@@ -8671,7 +8641,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "8B",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_23_quarta_7",
@@ -8680,7 +8650,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "ORIENTAÇÃO DE ESTUDO – MATEM… 1ª SERIE B INTEGRAL 9H ANUAL"
+    "subject": "Orientação de Estudo – Matem…"
   },
   {
     "id": "slot_t_23_quinta_7",
@@ -8696,7 +8666,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "8B",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_23_segunda_8",
@@ -8726,7 +8696,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "8A",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_23_sexta_8",
@@ -8735,7 +8705,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "7B",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_23_segunda_9",
@@ -8772,7 +8742,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 9,
     "type": "AULA",
     "classId": "6B",
-    "subject": "MATEMATICA"
+    "subject": "Matemática"
   },
   {
     "id": "slot_gestao_1_segunda_1",

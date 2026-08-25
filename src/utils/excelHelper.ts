@@ -9,6 +9,7 @@ import type {
   StaffRole,
 } from '../types';
 import { normalizeText } from './text';
+import { canonicalSubjectName, coerceKnowledgeArea } from './subjects';
 
 type SheetRow = Record<string, unknown>;
 
@@ -177,16 +178,19 @@ export async function parseUploadedExcel(file: File): Promise<ParsedExcelResult>
           const rawTeachers = XLSX.utils.sheet_to_json<SheetRow>(workbook.Sheets['Professores']);
           importedTeachers = rawTeachers.map((row, idx) => {
             const isExempt = normalizeBoolean(row['Isento_Substituicao'] ?? row['Isento']);
+            const mainSubject =
+              canonicalSubjectName(cellToString(row['Disciplina_Principal'] ?? row['disciplina'])) || 'Geral';
             return {
               id: `imp-t-${idx}-${importBatchId}`,
               name: cellToString(row['Nome'] ?? row['nome']) || `Professor ${idx + 1}`,
-              mainSubject: cellToString(row['Disciplina_Principal'] ?? row['disciplina']) || 'Geral',
-              knowledgeArea:
-                (cellToString(row['Area_Conhecimento']) as Teacher['knowledgeArea']) || 'Linguagens',
+              mainSubject,
+              // Quando a planilha nao traz a area (ou traz um valor invalido), deduzimos
+              // pela disciplina em vez de assumir um padrao fixo.
+              knowledgeArea: coerceKnowledgeArea(cellToString(row['Area_Conhecimento']), mainSubject),
               secondarySubjects: row['Disciplinas_Secundarias']
                 ? cellToString(row['Disciplinas_Secundarias'])
                     .split(',')
-                    .map((s) => s.trim())
+                    .map(canonicalSubjectName)
                     .filter(Boolean)
                 : [],
               totalSubstitutionsCount: 0,
@@ -224,7 +228,9 @@ export async function parseUploadedExcel(file: File): Promise<ParsedExcelResult>
             }
 
             const type = normalizeSlotType(row['Tipo']);
-            const subjectOrCourse = cellToString(row['Disciplina_ou_Curso']) || undefined;
+            const rawSubjectOrCourse = cellToString(row['Disciplina_ou_Curso']);
+            const subjectOrCourse = rawSubjectOrCourse || undefined;
+            const cleanSubject = canonicalSubjectName(rawSubjectOrCourse) || undefined;
 
             acc.push({
               id: `slot_${teacherId}_${dayOfWeek}_${periodId}`,
@@ -233,7 +239,7 @@ export async function parseUploadedExcel(file: File): Promise<ParsedExcelResult>
               periodId,
               type,
               classId: type === 'AULA' ? cellToString(row['Turma']) || undefined : undefined,
-              subject: type === 'AULA' ? subjectOrCourse : undefined,
+              subject: type === 'AULA' ? cleanSubject : undefined,
               trainingName: type === 'CURSO_FORMACAO' ? subjectOrCourse : undefined,
             });
             return acc;
