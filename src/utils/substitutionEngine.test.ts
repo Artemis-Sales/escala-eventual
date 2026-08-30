@@ -75,7 +75,7 @@ describe('getEligibleCandidates', () => {
     expect(byId['t_reg'].tier).toBe(1);
   });
 
-  it('nunca escolhe coordenador/gestão à frente de um professor regular disponível', () => {
+  it('nunca escolhe coordenador/gestão à frente de um professor que ainda não substituiu hoje', () => {
     const coord = teacher({ id: 't_coord', name: 'Coord', role: 'COORDENADOR_AREA' });
     const gestao = teacher({ id: 't_gestao', name: 'Gestao', role: 'EQUIPE_GESTORA' });
     const regular = teacher({ id: 't_reg', name: 'Regular', totalSubstitutionsCount: 999 });
@@ -93,6 +93,55 @@ describe('getEligibleCandidates', () => {
     const result = getEligibleCandidates(1, 'segunda', absentTeacher, [], [other, sameArea, sameSubject], [], {}, new Set());
 
     expect(result.map((c) => c.matchType)).toEqual(['MESMA_MATERIA', 'MESMA_AREA', 'DISPONIVEL']);
+  });
+
+  // Regra: a 2a substituicao no mesmo dia so acontece quando todos os outros
+  // disponiveis ja entraram em sala.
+  it('só repete um professor depois que todos os outros disponíveis já substituíram', () => {
+    const jaSubstituiu = teacher({ id: 't_repete', name: 'Repete', mainSubject: 'Matemática' });
+    const livre = teacher({ id: 't_livre', name: 'Livre', mainSubject: 'História', totalSubstitutionsCount: 50 });
+
+    const result = getEligibleCandidates(
+      1, 'segunda', absentTeacher, [], [jaSubstituiu, livre], [], { t_repete: 1 }, new Set()
+    );
+
+    // Mesmo com mesma matéria e histórico melhor, quem já entrou em sala hoje fica atrás.
+    expect(result[0].teacher.id).toBe('t_livre');
+    expect(result[1].teacher.id).toBe('t_repete');
+  });
+
+  it('aciona coordenador e gestão antes de dar a segunda aula a um professor', () => {
+    const professor = teacher({ id: 't_prof', name: 'Professor' });
+    const coord = teacher({ id: 't_coord', name: 'Coord', role: 'COORDENADOR_AREA' });
+    const gestao = teacher({ id: 't_gestao', name: 'Gestao', role: 'EQUIPE_GESTORA' });
+
+    const result = getEligibleCandidates(
+      1, 'segunda', absentTeacher, [], [professor, coord, gestao], [], { t_prof: 1 }, new Set()
+    );
+
+    expect(result.map((c) => c.teacher.id)).toEqual(['t_coord', 't_gestao', 't_prof']);
+  });
+
+  it('entre quem já substituiu hoje, prefere quem substituiu menos vezes', () => {
+    const uma = teacher({ id: 't_uma', name: 'Uma', totalSubstitutionsCount: 99 });
+    const duas = teacher({ id: 't_duas', name: 'Duas' });
+
+    const result = getEligibleCandidates(
+      1, 'segunda', absentTeacher, [], [duas, uma], [], { t_uma: 1, t_duas: 2 }, new Set()
+    );
+
+    expect(result[0].teacher.id).toBe('t_uma');
+  });
+
+  it('mantém o tier entre candidatos que ainda não substituíram hoje', () => {
+    const coord = teacher({ id: 't_coord', name: 'Coord', role: 'COORDENADOR_AREA' });
+    const professor = teacher({ id: 't_prof', name: 'Professor', totalSubstitutionsCount: 30 });
+
+    const result = getEligibleCandidates(
+      1, 'segunda', absentTeacher, [], [coord, professor], [], {}, new Set()
+    );
+
+    expect(result[0].teacher.id).toBe('t_prof');
   });
 
   it('entre professores empatados em tier/afinidade, prioriza quem fez menos substituições (equidade)', () => {

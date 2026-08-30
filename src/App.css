@@ -1734,6 +1734,11 @@ input, select, textarea {
   text-transform: uppercase;
 }
 
+.mini-stat-note {
+  color: #64748B;
+  text-transform: none;
+}
+
 /* Banner de Perfil da Turma */
 .class-profile-banner {
   background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);

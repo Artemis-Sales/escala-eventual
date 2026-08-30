@@ -317,7 +317,8 @@ export const INITIAL_TEACHERS: Teacher[] = [
     "color": "#059669",
     "phone": "",
     "isExemptFromSubstitutions": false,
-    "role": "PROFESSOR"
+    "role": "PROFESSOR",
+    "isExemptFromElectives": true
   },
   {
     "id": "t_20",

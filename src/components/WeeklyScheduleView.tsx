@@ -18,6 +18,7 @@ import { useSchool } from '../context/SchoolContext';
 import { DAYS_OF_WEEK } from '../data/mockData';
 import { MultiplicaModal } from './MultiplicaModal';
 import type { DayOfWeek, ScheduleSlot, SlotType, ClassGroup } from '../types';
+import { electiveLessonsFor, weeklyLessonsFor } from '../utils/workload';
 
 export const WeeklyScheduleView: React.FC = () => {
   const { teachers, classes, periods, scheduleSlots, updateSlot } = useSchool();
@@ -345,9 +346,17 @@ export const WeeklyScheduleView: React.FC = () => {
               <div className="profile-stats">
                 <div className="mini-stat">
                   <span className="mini-stat-num text-primary">
-                    {scheduleSlots.filter((s) => s.teacherId === selectedTeacher.id && s.type === 'AULA').length}
+                    {weeklyLessonsFor(selectedTeacher, scheduleSlots)}
                   </span>
-                  <span className="mini-stat-label">Aulas na Semana</span>
+                  <span className="mini-stat-label">
+                    Aulas na Semana
+                    {electiveLessonsFor(selectedTeacher) > 0 && (
+                      <span className="mini-stat-note">
+                        {' '}
+                        (inclui {electiveLessonsFor(selectedTeacher)} de eletiva)
+                      </span>
+                    )}
+                  </span>
                 </div>
                 <div className="mini-stat">
                   <span className="mini-stat-num text-warning">

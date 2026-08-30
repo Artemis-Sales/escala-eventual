@@ -99,7 +99,9 @@ export function getEligibleCandidates(
     if (tier === 2) tierPenalty = 500;
     else if (tier === 3) tierPenalty = 1000;
 
-    const score = tierPenalty + subsDone * 10 + dailySubs * 35 - affinityBonus;
+    // As substituições já feitas hoje não entram no score: elas são critério de
+    // desempate anterior a ele, aplicado na ordenação abaixo.
+    const score = tierPenalty + subsDone * 10 - affinityBonus;
 
     candidates.push({
       teacher,
@@ -111,8 +113,26 @@ export function getEligibleCandidates(
     });
   }
 
-  // Ordenar primeiro por Tier (Tier 1 > Tier 2 > Tier 3), e depois por Score
+  // Ordem de escolha:
+  //
+  // 1. Quem ainda não substituiu hoje vem sempre antes de quem já substituiu. Uma
+  //    segunda aula no mesmo dia é último caso: só acontece quando todos os outros
+  //    disponíveis já entraram em sala — inclusive coordenadores de área e equipe
+  //    gestora, que por isso podem ser acionados antes de alguém repetir.
+  // 2. Entre quem já substituiu, prefere quem substituiu menos vezes hoje.
+  // 3. Depois o Tier (Professor > Coord. de Área > Equipe Gestora).
+  // 4. Por fim o score (equidade no acumulado e afinidade com a disciplina).
   return candidates.sort((a, b) => {
+    const aJaSubstituiu = a.dailySubsAllocatedToday > 0 ? 1 : 0;
+    const bJaSubstituiu = b.dailySubsAllocatedToday > 0 ? 1 : 0;
+    if (aJaSubstituiu !== bJaSubstituiu) {
+      return aJaSubstituiu - bJaSubstituiu;
+    }
+
+    if (a.dailySubsAllocatedToday !== b.dailySubsAllocatedToday) {
+      return a.dailySubsAllocatedToday - b.dailySubsAllocatedToday;
+    }
+
     if (a.tier !== b.tier) {
       return a.tier - b.tier;
     }
