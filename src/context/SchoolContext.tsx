@@ -47,6 +47,7 @@ interface SchoolContextType {
   setAllScheduleSlots: (slots: ScheduleSlot[]) => void;
   setAllTeachers: (teachers: Teacher[]) => void;
   resetAllData: () => void;
+  clearHistoryAndCounters: () => void;
   updateTeacherSubCount: (teacherId: string, delta: number) => void;
 
   // Multiplica SP e Cursos
@@ -445,15 +446,34 @@ export const SchoolProvider: React.FC<{ children: React.ReactNode }> = ({ childr
     setTeachers(newTeachers);
   };
 
+  // Restaura a grade e o cadastro das planilhas oficiais. O historico de escalas e os
+  // contadores de substituicao sao registros do que ja aconteceu, nao fazem parte da
+  // grade oficial, entao sobrevivem a restauracao.
   const resetAllData = () => {
+    const contadoresAtuais: Record<string, number> = {};
+    teachers.forEach((t) => {
+      contadoresAtuais[t.id] = t.totalSubstitutionsCount;
+    });
+
     localStorage.removeItem(LOCAL_STORAGE_KEY_TEACHERS);
     localStorage.removeItem(LOCAL_STORAGE_KEY_SLOTS);
-    localStorage.removeItem(LOCAL_STORAGE_KEY_HISTORY);
-    setTeachers(INITIAL_TEACHERS);
+
+    setTeachers(
+      INITIAL_TEACHERS.map((t) => ({
+        ...t,
+        totalSubstitutionsCount: contadoresAtuais[t.id] ?? t.totalSubstitutionsCount,
+      }))
+    );
     setScheduleSlots(generateInitialSchedule());
-    setHistory([]);
     setCurrentPlan(null);
     setAbsentTeacherIds([]);
+  };
+
+  // Apaga apenas o historico de escalas oficializadas e zera os contadores.
+  const clearHistoryAndCounters = () => {
+    localStorage.removeItem(LOCAL_STORAGE_KEY_HISTORY);
+    setHistory([]);
+    setTeachers((prev) => prev.map((t) => ({ ...t, totalSubstitutionsCount: 0 })));
   };
 
   return (
@@ -483,6 +503,7 @@ export const SchoolProvider: React.FC<{ children: React.ReactNode }> = ({ childr
         setAllScheduleSlots,
         setAllTeachers,
         resetAllData,
+        clearHistoryAndCounters,
         updateTeacherSubCount,
         addMultiplicaCourse,
         removeMultiplicaCourse,

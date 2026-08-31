@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import {
   GraduationCap,
   Clock,
@@ -24,19 +24,35 @@ export const MultiplicaModal: React.FC<MultiplicaModalProps> = ({ onClose }) => 
 
   const [selectedTeacherId, setSelectedTeacherId] = useState<string>(teachers[0]?.id || '');
   const [selectedDay, setSelectedDay] = useState<DayOfWeek>('terca');
-  const [selectedBlock, setSelectedBlock] = useState<string>('4_5'); // Default: 4ª e 5ª aula (10:00 - 11:40)
   const [role, setRole] = useState<'cursista' | 'multiplicador'>('cursista');
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
-  // Blocos de 1h30min (2 aulas de 50min)
-  const timeBlocks = [
-    { id: '1_2', label: '1ª e 2ª Aula (07:10 - 08:50)', periods: [1, 2] },
-    { id: '2_3', label: '2ª e 3ª Aula (08:00 - 09:40)', periods: [2, 3] },
-    { id: '4_5', label: '4ª e 5ª Aula (10:00 - 11:40)', periods: [4, 5] },
-    { id: '5_6', label: '5ª e 6ª Aula (10:50 - 12:30)', periods: [5, 6] },
-    { id: '7_8', label: '7ª e 8ª Aula (13:30 - 15:10)', periods: [7, 8] },
-    { id: '8_9', label: '8ª e 9ª Aula (14:20 - 16:00)', periods: [8, 9] },
-  ];
+  // O curso ocupa duas aulas seguidas (1h30). Montamos um bloco para cada aula em que
+  // ele pode começar, a partir dos horários reais da grade — antes a lista era fixa e
+  // não oferecia os blocos que atravessam o intervalo (3ª/4ª) ou o almoço (6ª/7ª),
+  // o que impedia o cadastro quando a formação começava nesses horários.
+  const timeBlocks = useMemo(() => {
+    const aulas = periods.filter((p) => !p.isBreak).sort((a, b) => a.id - b.id);
+
+    return aulas.slice(0, -1).map((aula, i) => {
+      const seguinte = aulas[i + 1];
+      const [inicio, fimPrimeira] = aula.time.split(' - ');
+      const [inicioSeguinte, fim] = seguinte.time.split(' - ');
+
+      return {
+        id: `${aula.id}_${seguinte.id}`,
+        label: `${aula.label} e ${seguinte.label} (${inicio} - ${fim})`,
+        periods: [aula.id, seguinte.id],
+        // Aulas não emendadas: existe intervalo ou almoço entre elas.
+        hasGap: fimPrimeira !== inicioSeguinte,
+      };
+    });
+  }, [periods]);
+
+  // O Multiplica começa a partir das 8h, então o bloco das 08:00 é o padrão.
+  const [selectedBlock, setSelectedBlock] = useState<string>(
+    () => timeBlocks.find((b) => b.label.includes('(08:00'))?.id ?? timeBlocks[0]?.id ?? ''
+  );
 
   const handleAdd = (e: React.FormEvent) => {
     e.preventDefault();
@@ -181,7 +197,10 @@ export const MultiplicaModal: React.FC<MultiplicaModalProps> = ({ onClose }) => 
                           onChange={() => setSelectedBlock(b.id)}
                         />
                         <Clock size={15} />
-                        <span>{b.label}</span>
+                        <span>
+                          {b.label}
+                          {b.hasGap && <em className="time-block-gap"> · com intervalo entre as aulas</em>}
+                        </span>
                       </label>
                     ))}
                   </div>

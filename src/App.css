@@ -2784,6 +2784,12 @@ input, select, textarea {
   gap: 6px;
 }
 
+.time-block-gap {
+  font-style: normal;
+  font-weight: 500;
+  color: #B45309;
+}
+
 .time-block-option {
   background: #FFFFFF;
   border: 1px solid var(--border-color);

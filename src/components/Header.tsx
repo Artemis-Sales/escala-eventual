@@ -22,7 +22,11 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab }) => {
   const handleReset = () => {
     if (
       window.confirm(
-        'Deseja restaurar todos os dados para o padrão oficial das planilhas da escola?'
+        'Restaurar a grade e o cadastro de professores para o padrão oficial das planilhas?\n\n' +
+          'SERÁ PERDIDO: as alterações feitas na grade, incluindo os horários do Multiplica SP ' +
+          'e dos cursos de formação cadastrados.\n\n' +
+          'SERÁ MANTIDO: o histórico de escalas oficializadas e os contadores de substituição ' +
+          'de cada professor.'
       )
     ) {
       resetAllData();
