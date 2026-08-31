@@ -2778,36 +2778,70 @@ input, select, textarea {
   outline: none;
 }
 
-.time-blocks-list {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.time-block-gap {
-  font-style: normal;
-  font-weight: 500;
-  color: #B45309;
-}
-
-.time-block-option {
-  background: #FFFFFF;
-  border: 1px solid var(--border-color);
-  padding: 7px 10px;
-  border-radius: var(--radius-sm);
+/* Horário do curso Multiplica (independente da grade) */
+.multiplica-time-row {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.8rem;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.multiplica-time-input {
+  width: auto;
+  min-width: 120px;
+  font-variant-numeric: tabular-nums;
+}
+
+.multiplica-time-end {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: var(--text-muted, #64748B);
+}
+
+.multiplica-quick-times {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.multiplica-quick-chip {
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 5px 10px;
+  font-size: 0.78rem;
   font-weight: 600;
+  color: #475569;
   cursor: pointer;
+  font-variant-numeric: tabular-nums;
   transition: all 0.15s;
 }
 
-.time-block-option.selected {
-  border-color: #9333EA;
-  background: #FAF5FF;
-  color: #7E22CE;
+.multiplica-quick-chip:hover {
+  border-color: #94A3B8;
+}
+
+.multiplica-quick-chip.active {
+  background: #EEF2FF;
+  border-color: #6366F1;
+  color: #4338CA;
+}
+
+.multiplica-affected {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: #475569;
+  line-height: 1.45;
+}
+
+.multiplica-affected-empty {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #B45309;
 }
 
 .role-radio-group {

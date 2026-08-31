@@ -51,7 +51,14 @@ interface SchoolContextType {
   updateTeacherSubCount: (teacherId: string, delta: number) => void;
 
   // Multiplica SP e Cursos
-  addMultiplicaCourse: (teacherId: string, dayOfWeek: DayOfWeek, periodIds: number[], trainingName: string) => void;
+  addMultiplicaCourse: (
+    teacherId: string,
+    dayOfWeek: DayOfWeek,
+    periodIds: number[],
+    trainingName: string,
+    startTime?: string,
+    endTime?: string
+  ) => void;
   removeMultiplicaCourse: (teacherId: string, dayOfWeek: DayOfWeek, periodIds: number[]) => void;
 }
 
@@ -378,7 +385,9 @@ export const SchoolProvider: React.FC<{ children: React.ReactNode }> = ({ childr
     teacherId: string,
     dayOfWeek: DayOfWeek,
     periodIds: number[],
-    trainingName: string
+    trainingName: string,
+    startTime?: string,
+    endTime?: string
   ) => {
     setScheduleSlots((prev) => {
       const updated = [...prev];
@@ -393,6 +402,8 @@ export const SchoolProvider: React.FC<{ children: React.ReactNode }> = ({ childr
           periodId: pId,
           type: 'CURSO_FORMACAO',
           trainingName: trainingName || 'Multiplica SP (1h30)',
+          trainingStartTime: startTime,
+          trainingEndTime: endTime,
         };
 
         if (existingIdx >= 0) {

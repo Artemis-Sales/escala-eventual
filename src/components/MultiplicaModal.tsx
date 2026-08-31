@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import { useSchool } from '../context/SchoolContext';
 import { DAYS_OF_WEEK } from '../data/mockData';
+import { INICIOS_FREQUENTES, courseEndTime, periodsOverlappedBy } from '../utils/multiplica';
 import type { DayOfWeek } from '../types';
 
 interface MultiplicaModalProps {
@@ -27,46 +28,40 @@ export const MultiplicaModal: React.FC<MultiplicaModalProps> = ({ onClose }) => 
   const [role, setRole] = useState<'cursista' | 'multiplicador'>('cursista');
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
-  // O curso ocupa duas aulas seguidas (1h30). Montamos um bloco para cada aula em que
-  // ele pode começar, a partir dos horários reais da grade — antes a lista era fixa e
-  // não oferecia os blocos que atravessam o intervalo (3ª/4ª) ou o almoço (6ª/7ª),
-  // o que impedia o cadastro quando a formação começava nesses horários.
-  const timeBlocks = useMemo(() => {
-    const aulas = periods.filter((p) => !p.isBreak).sort((a, b) => a.id - b.id);
+  // O curso tem horário próprio, independente da grade: começa numa hora livre e dura
+  // 1h30. Ele pode começar no meio de uma aula, durante o intervalo ou no almoço, e
+  // por isso cobre duas ou três aulas dependendo do início.
+  const [startTime, setStartTime] = useState<string>('08:00');
 
-    return aulas.slice(0, -1).map((aula, i) => {
-      const seguinte = aulas[i + 1];
-      const [inicio, fimPrimeira] = aula.time.split(' - ');
-      const [inicioSeguinte, fim] = seguinte.time.split(' - ');
-
-      return {
-        id: `${aula.id}_${seguinte.id}`,
-        label: `${aula.label} e ${seguinte.label} (${inicio} - ${fim})`,
-        periods: [aula.id, seguinte.id],
-        // Aulas não emendadas: existe intervalo ou almoço entre elas.
-        hasGap: fimPrimeira !== inicioSeguinte,
-      };
-    });
-  }, [periods]);
-
-  // O Multiplica começa a partir das 8h, então o bloco das 08:00 é o padrão.
-  const [selectedBlock, setSelectedBlock] = useState<string>(
-    () => timeBlocks.find((b) => b.label.includes('(08:00'))?.id ?? timeBlocks[0]?.id ?? ''
+  const endTime = courseEndTime(startTime);
+  const affectedPeriods = useMemo(
+    () => periodsOverlappedBy(startTime, periods),
+    [startTime, periods]
   );
+
+  const affectedLabels = affectedPeriods
+    .map((id) => periods.find((p) => p.id === id)?.label ?? `${id}ª Aula`)
+    .join(', ');
 
   const handleAdd = (e: React.FormEvent) => {
     e.preventDefault();
-    const block = timeBlocks.find((b) => b.id === selectedBlock);
-    if (!block || !selectedTeacherId) return;
+    if (!selectedTeacherId || affectedPeriods.length === 0) return;
 
     const teacher = teachers.find((t) => t.id === selectedTeacherId);
     const roleLabel = role === 'multiplicador' ? 'Formador/Multiplicador' : 'Cursista';
     const trainingName = `Multiplica SP (1h30 - ${roleLabel})`;
 
-    addMultiplicaCourse(selectedTeacherId, selectedDay, block.periods, trainingName);
+    addMultiplicaCourse(
+      selectedTeacherId,
+      selectedDay,
+      affectedPeriods,
+      trainingName,
+      startTime,
+      endTime
+    );
 
     setToastMessage(
-      `✅ ${teacher?.name || 'Professor'} cadastrado no Multiplica SP (${block.label}) com sucesso!`
+      `✅ ${teacher?.name || 'Professor'} cadastrado no Multiplica SP (${startTime} - ${endTime}) com sucesso!`
     );
     setTimeout(() => setToastMessage(null), 3000);
   };
@@ -83,6 +78,7 @@ export const MultiplicaModal: React.FC<MultiplicaModalProps> = ({ onClose }) => 
     periodIds: number[];
     periodLabels: string;
     trainingName: string;
+    horario?: string;
   }
 
   const groupsMap = new Map<string, MultiplicaGroup>();
@@ -107,6 +103,10 @@ export const MultiplicaModal: React.FC<MultiplicaModalProps> = ({ onClose }) => 
         periodIds: [slot.periodId],
         periodLabels: pDef?.label || `${slot.periodId}ª Aula`,
         trainingName: slot.trainingName || 'Multiplica SP',
+        horario:
+          slot.trainingStartTime && slot.trainingEndTime
+            ? `${slot.trainingStartTime} - ${slot.trainingEndTime}`
+            : undefined,
       });
     }
   });
@@ -182,28 +182,48 @@ export const MultiplicaModal: React.FC<MultiplicaModalProps> = ({ onClose }) => 
                 </div>
 
                 <div className="form-group">
-                  <label className="input-label">Bloco de Horário (Duração 1h30min):</label>
-                  <div className="time-blocks-list">
-                    {timeBlocks.map((b) => (
-                      <label
-                        key={b.id}
-                        className={`time-block-option ${selectedBlock === b.id ? 'selected' : ''}`}
+                  <label className="input-label" htmlFor="multiplica-inicio">
+                    Horário de Início (duração de 1h30):
+                  </label>
+
+                  <div className="multiplica-time-row">
+                    <input
+                      id="multiplica-inicio"
+                      type="time"
+                      value={startTime}
+                      onChange={(e) => setStartTime(e.target.value)}
+                      className="select-input-custom multiplica-time-input"
+                      required
+                    />
+                    <span className="multiplica-time-end">
+                      <Clock size={15} /> termina às <strong>{endTime}</strong>
+                    </span>
+                  </div>
+
+                  <div className="multiplica-quick-times">
+                    {INICIOS_FREQUENTES.map((h) => (
+                      <button
+                        type="button"
+                        key={h}
+                        className={`multiplica-quick-chip ${startTime === h ? 'active' : ''}`}
+                        onClick={() => setStartTime(h)}
                       >
-                        <input
-                          type="radio"
-                          name="timeBlock"
-                          value={b.id}
-                          checked={selectedBlock === b.id}
-                          onChange={() => setSelectedBlock(b.id)}
-                        />
-                        <Clock size={15} />
-                        <span>
-                          {b.label}
-                          {b.hasGap && <em className="time-block-gap"> · com intervalo entre as aulas</em>}
-                        </span>
-                      </label>
+                        {h}
+                      </button>
                     ))}
                   </div>
+
+                  {affectedPeriods.length > 0 ? (
+                    <p className="multiplica-affected">
+                      Bloqueia {affectedPeriods.length} aula(s) para substituição:{' '}
+                      <strong>{affectedLabels}</strong>
+                    </p>
+                  ) : (
+                    <p className="multiplica-affected multiplica-affected-empty">
+                      <AlertCircle size={14} /> Nesse horário o curso não cruza nenhuma aula da
+                      grade — nada seria bloqueado.
+                    </p>
+                  )}
                 </div>
 
                 <div className="form-group">
@@ -270,8 +290,9 @@ export const MultiplicaModal: React.FC<MultiplicaModalProps> = ({ onClose }) => 
                               <Calendar size={13} /> {dayLabel}
                             </span>
                             <span className="item-periods">
-                              <Clock size={13} /> {item.periodLabels} (1h30)
+                              <Clock size={13} /> {item.horario ?? '1h30'}
                             </span>
+                            <span className="item-periods">{item.periodLabels}</span>
                           </div>
                           <div className="item-training-tag">{item.trainingName}</div>
                         </div>

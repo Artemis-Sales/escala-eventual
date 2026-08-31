@@ -53,6 +53,10 @@ export interface ScheduleSlot {
   classId?: string;
   subject?: string;
   trainingName?: string;
+  // O curso de formação tem horário próprio, independente da grade: começa num
+  // horário livre e dura 1h30, podendo atravessar duas ou três aulas.
+  trainingStartTime?: string; // "09:30"
+  trainingEndTime?: string; // "11:00"
 }
 
 export interface SubstitutionCandidate {
