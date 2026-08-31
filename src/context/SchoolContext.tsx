@@ -201,7 +201,8 @@ export const SchoolProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       teachers,
       scheduleSlots,
       classes,
-      periods
+      periods,
+      history
     );
     setCurrentPlan(plan);
   };

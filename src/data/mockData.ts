@@ -48,7 +48,10 @@ export const INITIAL_TEACHERS: Teacher[] = [
     "color": "#2563EB",
     "phone": "",
     "isExemptFromSubstitutions": false,
-    "role": "COORDENADOR_AREA"
+    "role": "COORDENADOR_AREA",
+    "blockedSubstitutionPeriods": [
+      6
+    ]
   },
   {
     "id": "t_2",

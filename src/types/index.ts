@@ -32,6 +32,7 @@ export interface Teacher {
   isExemptFromSubstitutions?: boolean; // Se true, não realiza substituições (Ex: Danilo, Pedro)
   exemptReason?: string;
   isExemptFromElectives?: boolean; // Se true, não assume as aulas de eletiva da semana
+  blockedSubstitutionPeriods?: number[]; // Aulas em que nunca pode ser escalado para substituir
   role?: StaffRole; // 'PROFESSOR' | 'COORDENADOR_AREA' (Adriana, Alexandre, Marcia) | 'EQUIPE_GESTORA' (Genilson, Débora, Renata)
 }
 

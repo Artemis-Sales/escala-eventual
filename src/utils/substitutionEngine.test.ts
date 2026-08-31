@@ -144,6 +144,67 @@ describe('getEligibleCandidates', () => {
     expect(result[0].teacher.id).toBe('t_prof');
   });
 
+  // Regra: a Adriana nunca entra na 6a aula.
+  it('não escala um professor num horário bloqueado para ele', () => {
+    const bloqueado = teacher({ id: 't_bloq', name: 'Adriana', blockedSubstitutionPeriods: [6] });
+    const livre = teacher({ id: 't_livre', name: 'Outro', totalSubstitutionsCount: 99 });
+    const todos = [bloqueado, livre];
+
+    const na6a = getEligibleCandidates(6, 'segunda', absentTeacher, [], todos, [], {}, new Set());
+    expect(na6a.map((c) => c.teacher.id)).toEqual(['t_livre']);
+
+    // Nos demais horários continua disponível, e na frente por ter feito menos.
+    const na5a = getEligibleCandidates(5, 'segunda', absentTeacher, [], todos, [], {}, new Set());
+    expect(na5a[0].teacher.id).toBe('t_bloq');
+  });
+
+  // Regra: a carga semanal (grade + eletivas + substituicoes) nao passa de 32 aulas.
+  it('não escala quem já atingiu o teto de aulas semanais', () => {
+    const noLimite = teacher({ id: 't_cheio', name: 'Cheio' });
+    const comFolga = teacher({ id: 't_folga', name: 'Folga', totalSubstitutionsCount: 99 });
+
+    const result = getEligibleCandidates(
+      1, 'segunda', absentTeacher, [], [noLimite, comFolga], [], {}, new Set(),
+      { lessonsByTeacher: { t_cheio: 32, t_folga: 20 }, substitutionsByTeacher: {} }
+    );
+
+    expect(result.map((c) => c.teacher.id)).toEqual(['t_folga']);
+  });
+
+  it('conta as substituições já feitas na semana no teto', () => {
+    const quase = teacher({ id: 't_quase', name: 'Quase' });
+
+    const cabeMaisUma = getEligibleCandidates(
+      1, 'segunda', absentTeacher, [], [quase], [], {}, new Set(),
+      { lessonsByTeacher: { t_quase: 28 }, substitutionsByTeacher: { t_quase: 3 } }
+    );
+    expect(cabeMaisUma).toHaveLength(1); // 28 + 3 = 31, a 32a aula ainda cabe
+
+    const estourou = getEligibleCandidates(
+      1, 'segunda', absentTeacher, [], [quase], [], {}, new Set(),
+      { lessonsByTeacher: { t_quase: 28 }, substitutionsByTeacher: { t_quase: 4 } }
+    );
+    expect(estourou).toHaveLength(0); // 28 + 4 = 32, no teto
+  });
+
+  it('conta também as substituições já alocadas no plano do dia', () => {
+    const t = teacher({ id: 't_dia', name: 'Dia' });
+
+    const result = getEligibleCandidates(
+      1, 'segunda', absentTeacher, [], [t], [], { t_dia: 2 }, new Set(),
+      { lessonsByTeacher: { t_dia: 30 }, substitutionsByTeacher: {} }
+    );
+
+    expect(result).toHaveLength(0); // 30 + 2 já alocadas = 32
+  });
+
+  it('sem contexto semanal, não aplica o teto', () => {
+    const t = teacher({ id: 't_sem', name: 'Sem contexto' });
+    const result = getEligibleCandidates(1, 'segunda', absentTeacher, [], [t], [], {}, new Set());
+
+    expect(result).toHaveLength(1);
+  });
+
   it('entre professores empatados em tier/afinidade, prioriza quem fez menos substituições (equidade)', () => {
     const busy = teacher({ id: 't_busy', name: 'Busy', totalSubstitutionsCount: 10 });
     const free = teacher({ id: 't_free', name: 'Free', totalSubstitutionsCount: 0 });

@@ -7,8 +7,21 @@ import type {
   SubstitutionItem,
   DailySubstitutionPlan,
   SubstitutionCandidate,
+  HistoryRecord,
 } from '../types';
 import { normalizeText } from './text';
+import { MAX_AULAS_SEMANAIS, weeklyLessonsByTeacher, weeklySubstitutionCounts } from './workload';
+
+/**
+ * Carga ja comprometida na semana, usada para respeitar o teto de aulas semanais.
+ * Sem este contexto o teto nao e aplicado.
+ */
+export interface WeeklyLoadContext {
+  /** Aulas da grade mais eletivas de cada professor. */
+  lessonsByTeacher: Record<string, number>;
+  /** Substituições já oficializadas na semana, por professor. */
+  substitutionsByTeacher: Record<string, number>;
+}
 
 export function getEligibleCandidates(
   periodId: number,
@@ -18,7 +31,8 @@ export function getEligibleCandidates(
   allTeachers: Teacher[],
   allSlots: ScheduleSlot[],
   dailyAllocationsCount: Record<string, number>,
-  periodAllocatedTeacherIds: Set<string>
+  periodAllocatedTeacherIds: Set<string>,
+  weeklyLoad?: WeeklyLoadContext
 ): SubstitutionCandidate[] {
   const candidates: SubstitutionCandidate[] = [];
 
@@ -36,6 +50,24 @@ export function getEligibleCandidates(
     // 3. Não pode já ter sido alocado nesta mesma aula/período em outra turma
     if (periodAllocatedTeacherIds.has(teacher.id)) {
       continue;
+    }
+
+    // 3.1. Horários em que o professor nunca pode substituir (Ex: Adriana na 6ª aula)
+    if (teacher.blockedSubstitutionPeriods?.includes(periodId)) {
+      continue;
+    }
+
+    // 3.2. Teto de aulas semanais: a substituição não pode levar a carga da semana
+    // (grade + eletivas + substituições já feitas e já planejadas) acima do limite.
+    if (weeklyLoad) {
+      const cargaSemanal =
+        (weeklyLoad.lessonsByTeacher[teacher.id] ?? 0) +
+        (weeklyLoad.substitutionsByTeacher[teacher.id] ?? 0) +
+        (dailyAllocationsCount[teacher.id] ?? 0);
+
+      if (cargaSemanal >= MAX_AULAS_SEMANAIS) {
+        continue;
+      }
     }
 
     // 4. Verificar o slot do professor neste dia e período
@@ -147,10 +179,17 @@ export function generateDailyPlan(
   allTeachers: Teacher[],
   allSlots: ScheduleSlot[],
   allClasses: ClassGroup[],
-  periods: PeriodDefinition[]
+  periods: PeriodDefinition[],
+  history: HistoryRecord[] = []
 ): DailySubstitutionPlan {
   const substitutions: SubstitutionItem[] = [];
   const dailyAllocationsCount: Record<string, number> = {};
+
+  // Carga ja comprometida na semana, para nao ultrapassar o teto de aulas semanais.
+  const weeklyLoad: WeeklyLoadContext = {
+    lessonsByTeacher: weeklyLessonsByTeacher(allTeachers, allSlots),
+    substitutionsByTeacher: weeklySubstitutionCounts(history, date),
+  };
 
   allTeachers.forEach((t) => {
     dailyAllocationsCount[t.id] = 0;
@@ -221,7 +260,8 @@ export function generateDailyPlan(
       allTeachers,
       allSlots,
       dailyAllocationsCount,
-      periodSet
+      periodSet,
+      weeklyLoad
     );
 
     if (eligible.length > 0) {
