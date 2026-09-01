@@ -31,7 +31,6 @@ export interface Teacher {
   phone?: string;
   isExemptFromSubstitutions?: boolean; // Se true, não realiza substituições (Ex: Danilo, Pedro)
   exemptReason?: string;
-  isExemptFromElectives?: boolean; // Se true, não assume as aulas de eletiva da semana
   blockedSubstitutionPeriods?: number[]; // Aulas em que nunca pode ser escalado para substituir
   role?: StaffRole; // 'PROFESSOR' | 'COORDENADOR_AREA' (Adriana, Alexandre, Marcia) | 'EQUIPE_GESTORA' (Genilson, Débora, Renata)
 }
@@ -42,7 +41,12 @@ export interface ClassGroup {
   segment: 'Ensino Fundamental II' | 'Ensino Médio';
 }
 
-export type SlotType = 'AULA' | 'CURSO_FORMACAO' | 'LIVRE';
+// AULA            aula regular com turma; é o que gera necessidade de substituição
+// ELETIVA         aula de eletiva; conta na carga semanal, mas não tem turma fixa
+// ATIVIDADE       compromisso com alunos sem turma fixa (tutoria)
+// CURSO_FORMACAO  formação: Multiplica SP, ATPC, Escola de Gestão
+// LIVRE           horário vago; só aqui o professor pode ser escalado para substituir
+export type SlotType = 'AULA' | 'ELETIVA' | 'ATIVIDADE' | 'CURSO_FORMACAO' | 'LIVRE';
 
 export interface ScheduleSlot {
   id: string;

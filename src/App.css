@@ -1817,6 +1817,7 @@ input, select, textarea {
 .legend-aula { background: #FFFFFF; border: 2px solid var(--color-brand); }
 .legend-multiplica { background: #FAF5FF; border: 2px solid #9333EA; }
 .legend-curso { background: #F3E8FF; border: 2px solid #C084FC; }
+.legend-atividade { background: #FFF7ED; border: 2px solid #FB923C; }
 .legend-livre { background: #F8FAFC; border: 2px solid #CBD5E1; }
 
 /* Tabela Matricial Semanal (Individual) */
@@ -1893,9 +1894,20 @@ input, select, textarea {
   border-left: 4px solid var(--color-brand);
 }
 
-.slot-curso {
+/* A classe vem de slotType.toLowerCase(), por isso o nome com underscore. */
+.slot-curso_formacao {
   background: #FAF5FF;
   border-left: 4px solid #C084FC;
+}
+
+.slot-eletiva {
+  background: #FFF7ED;
+  border-left: 4px solid #FB923C;
+}
+
+.slot-atividade {
+  background: #F0FDFA;
+  border-left: 4px solid #2DD4BF;
 }
 
 .slot-multiplica {

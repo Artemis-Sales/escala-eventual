@@ -64,6 +64,9 @@ export const ManualSwapModal: React.FC<ManualSwapModalProps> = ({ item, onClose 
     } else if (slot?.type === 'AULA') {
       status = 'AULA';
       detail = `Em aula (${slot.subject || 'Lecionando'})`;
+    } else if (slot?.type === 'ELETIVA' || slot?.type === 'ATIVIDADE') {
+      status = 'AULA';
+      detail = slot.trainingName || (slot.type === 'ELETIVA' ? 'Eletiva' : 'Atividade');
     } else if (slot?.type === 'CURSO_FORMACAO') {
       if (slot.trainingName?.includes('Multiplica')) {
         status = 'MULTIPLICA';

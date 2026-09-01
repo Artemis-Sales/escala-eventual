@@ -75,15 +75,10 @@ export function getEligibleCandidates(
       (s) => s.teacherId === teacher.id && s.dayOfWeek === dayOfWeek && s.periodId === periodId
     );
 
-    if (slot) {
-      // Se estiver em aula regular com sua própria turma
-      if (slot.type === 'AULA') {
-        continue;
-      }
-      // Se estiver em curso de formação (Multiplica SP ou ATPC)
-      if (slot.type === 'CURSO_FORMACAO') {
-        continue;
-      }
+    // Só quem está com o horário livre pode substituir. Aula regular, eletiva, tutoria
+    // e formação (Multiplica SP, ATPC, Escola de Gestão) ocupam o professor.
+    if (slot && slot.type !== 'LIVRE') {
+      continue;
     }
 
     // 5. Determinar o Tier do Docente/Gestor

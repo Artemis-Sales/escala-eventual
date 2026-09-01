@@ -40,10 +40,10 @@ const CANONICAL_SUBJECTS: Record<string, string> = {
   'LINGUA INGLESA': 'Língua Inglesa',
   'LINGUA PORTUGUESA': 'Língua Portuguesa',
   'REDACAO E LEITURA': 'Redação e Leitura',
-  'ORIENTACAO DE ESTUDO – LINGUA…': 'Orientação de Estudo – Língua…',
+  'ORIENTACAO DE ESTUDO': 'Orientação de Estudo',
   // Ciencias da Natureza (Matematica entra aqui, conforme o modelo da escola)
   'MATEMATICA': 'Matemática',
-  'ORIENTACAO DE ESTUDO – MATEM…': 'Orientação de Estudo – Matem…',
+  'ORIENTACAO MATEMATICA': 'Orientação de Matemática',
   'BIOLOGIA': 'Biologia',
   'CIENCIAS': 'Ciências',
   'FISICA': 'Física',
@@ -98,15 +98,30 @@ function toTitleCase(subject: string): string {
     .join(' ');
 }
 
+// Algumas disciplinas aparecem com grafias demais para um dicionario de chaves exatas.
+// A orientacao de estudo, por exemplo, vem como "ORIENTAÇÃO MATEM - 7º ANO B",
+// "ORIENTAÇÃO MATEMÁTICA 8º ANO A" e "ORIENTAÇÃO – MATEM… 1ª SERIE A". A regra mais
+// especifica vem primeiro: a de matematica antes da generica.
+const SUBJECT_ALIASES: { pattern: RegExp; canonical: string }[] = [
+  { pattern: /^ORIENTACAO.*MATEM/, canonical: 'Orientação de Matemática' },
+  { pattern: /^ORIENTACAO DE ESTUDO/, canonical: 'Orientação de Estudo' },
+];
+
 /**
- * Devolve a grafia unica da disciplina: limpa o nome da turma, aplica o dicionario
- * oficial e, para nomes desconhecidos, cai num Title Case em portugues.
+ * Devolve a grafia unica da disciplina: limpa o nome da turma, aplica os apelidos
+ * conhecidos e o dicionario oficial e, para nomes desconhecidos, cai num Title Case
+ * em portugues.
  */
 export function canonicalSubjectName(raw: string | undefined | null): string {
   const clean = cleanSubjectName(raw);
   if (!clean) return '';
 
-  return CANONICAL_SUBJECTS[normalizeText(clean)] ?? toTitleCase(clean);
+  const normalized = normalizeText(clean);
+
+  const alias = SUBJECT_ALIASES.find((a) => a.pattern.test(normalized));
+  if (alias) return alias.canonical;
+
+  return CANONICAL_SUBJECTS[normalized] ?? toTitleCase(clean);
 }
 
 // Modelo de areas adotado pela escola:

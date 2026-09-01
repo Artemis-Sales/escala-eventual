@@ -6,32 +6,23 @@ import type { HistoryRecord, ScheduleSlot, Teacher } from '../types';
  */
 export const MAX_AULAS_SEMANAIS = 32;
 
-/**
- * Aulas de eletiva que todo professor assume por semana. Elas nao ocupam um horario
- * fixo na grade (por isso nao aparecem como slots e nao interferem na disponibilidade
- * para substituicao), mas contam na carga individual de cada professor.
- */
-export const ELETIVAS_POR_SEMANA = 2;
-
-/**
- * Quantas aulas de eletiva o professor assume na semana. A equipe gestora nao assume
- * eletivas, assim como quem estiver marcado com isExemptFromElectives.
- */
-export function electiveLessonsFor(teacher: Teacher): number {
-  if (teacher.role === 'EQUIPE_GESTORA') return 0;
-  if (teacher.isExemptFromElectives) return 0;
-
-  return ELETIVAS_POR_SEMANA;
+/** Aulas de eletiva marcadas na grade do professor. */
+export function electiveLessonsFor(teacher: Teacher, slots: ScheduleSlot[]): number {
+  return slots.filter((s) => s.teacherId === teacher.id && s.type === 'ELETIVA').length;
 }
 
-/** Aulas do professor que ocupam um horario na grade semanal. */
+/** Aulas regulares do professor, as que tem turma. */
 export function scheduledLessonsFor(teacher: Teacher, slots: ScheduleSlot[]): number {
   return slots.filter((s) => s.teacherId === teacher.id && s.type === 'AULA').length;
 }
 
-/** Carga semanal individual: aulas da grade mais as eletivas. */
+/**
+ * Carga semanal individual: aulas regulares mais as eletivas, ambas vindas da planilha
+ * oficial. Tutoria, ATPC e demais formacoes ocupam o professor, mas nao sao aulas que
+ * ele da, entao nao entram nesta conta nem no teto semanal.
+ */
 export function weeklyLessonsFor(teacher: Teacher, slots: ScheduleSlot[]): number {
-  return scheduledLessonsFor(teacher, slots) + electiveLessonsFor(teacher);
+  return scheduledLessonsFor(teacher, slots) + electiveLessonsFor(teacher, slots);
 }
 
 /** Segunda-feira da semana da data informada, usada para agrupar a carga semanal. */

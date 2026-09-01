@@ -65,10 +65,11 @@ interface SchoolContextType {
 const SchoolContext = createContext<SchoolContextType | undefined>(undefined);
 
 const LOCAL_STORAGE_KEY_TEACHERS = 'escala_escola_oficial_teachers_v5';
-// v6: a grade salva ate a v5 fundia as duas turmas de Desenvolvimento de Sistemas
-// (2ª e 3ª série A) numa so, deixando a 3ª série A sem nenhuma aula. Trocar a chave
-// recarrega a grade corrigida sem descartar historico nem contadores de substituicao.
-const LOCAL_STORAGE_KEY_SLOTS = 'escala_escola_oficial_slots_v6';
+// v7: grade regerada a partir da planilha "Agosto Atualizado", que passou a marcar
+// eletiva, tutoria, Multiplica SP, ATPC e Escola de Gestao — horarios que antes vinham
+// em branco e o sistema tratava como livres. Nao da para migrar a grade antiga, entao
+// a chave muda; historico e contadores de substituicao ficam preservados.
+const LOCAL_STORAGE_KEY_SLOTS = 'escala_escola_oficial_slots_v7';
 const LOCAL_STORAGE_KEY_HISTORY = 'escala_escola_oficial_history_v5';
 const LOCAL_STORAGE_KEY_DATA_VERSION = 'escala_escola_oficial_data_version';
 

@@ -350,10 +350,10 @@ export const WeeklyScheduleView: React.FC = () => {
                   </span>
                   <span className="mini-stat-label">
                     Aulas na Semana
-                    {electiveLessonsFor(selectedTeacher) > 0 && (
+                    {electiveLessonsFor(selectedTeacher, scheduleSlots) > 0 && (
                       <span className="mini-stat-note">
                         {' '}
-                        (inclui {electiveLessonsFor(selectedTeacher)} de eletiva)
+                        (inclui {electiveLessonsFor(selectedTeacher, scheduleSlots)} de eletiva)
                       </span>
                     )}
                   </span>
@@ -387,6 +387,10 @@ export const WeeklyScheduleView: React.FC = () => {
             <div className="legend-item">
               <div className="legend-box legend-curso"></div>
               <span>ATPC / Formação</span>
+            </div>
+            <div className="legend-item">
+              <div className="legend-box legend-atividade"></div>
+              <span>Eletiva / Tutoria</span>
             </div>
             <div className="legend-item">
               <div className="legend-box legend-livre"></div>
@@ -462,6 +466,19 @@ export const WeeklyScheduleView: React.FC = () => {
                                 <span className={`slot-blocked-badge ${isMultiplica ? 'badge-multiplica' : ''}`}>
                                   {isMultiplica ? 'Multiplica SP' : 'Bloqueado'}
                                 </span>
+                              </>
+                            )}
+
+                            {(slotType === 'ELETIVA' || slotType === 'ATIVIDADE') && (
+                              <>
+                                <div className="slot-training-title">
+                                  <Users size={13} />
+                                  <span>
+                                    {slot?.trainingName ||
+                                      (slotType === 'ELETIVA' ? 'Eletiva' : 'Atividade')}
+                                  </span>
+                                </div>
+                                <span className="slot-blocked-badge">Bloqueado</span>
                               </>
                             )}
 

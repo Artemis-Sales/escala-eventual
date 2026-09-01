@@ -30,9 +30,11 @@ function normalizeDayOfWeek(raw: unknown): DayOfWeek | null {
 function normalizeSlotType(raw: unknown): SlotType {
   const n = normalizeText(cellToString(raw));
   if (n === 'AULA') return 'AULA';
+  if (n.includes('ELETIVA')) return 'ELETIVA';
   if (n.startsWith('CURSO') || n.includes('FORMACAO') || n.includes('ATPC') || n.includes('MULTIPLICA')) {
     return 'CURSO_FORMACAO';
   }
+  if (n.includes('TUTORIA') || n === 'ATIVIDADE') return 'ATIVIDADE';
   return 'LIVRE';
 }
 

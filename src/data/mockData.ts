@@ -61,7 +61,7 @@ export const INITIAL_TEACHERS: Teacher[] = [
     "secondarySubjects": [
       "Projeto de Vida",
       "Física",
-      "Orientação de Estudo – Matem…"
+      "Orientação de Matemática"
     ],
     "totalSubstitutionsCount": 0,
     "color": "#7C3AED",
@@ -109,7 +109,7 @@ export const INITIAL_TEACHERS: Teacher[] = [
     "mainSubject": "Robótica",
     "knowledgeArea": "Parte Diversificada",
     "secondarySubjects": [
-      "Orientação de Estudo – Matem…"
+      "Orientação de Matemática"
     ],
     "totalSubstitutionsCount": 0,
     "color": "#DC2626",
@@ -241,8 +241,8 @@ export const INITIAL_TEACHERS: Teacher[] = [
   {
     "id": "t_14",
     "name": "RITA DE CASSIA ANTUNES",
-    "mainSubject": "Orientação de Estudo – Língua…",
-    "knowledgeArea": "Linguagens",
+    "mainSubject": "Orientação de Estudo",
+    "knowledgeArea": "Parte Diversificada",
     "secondarySubjects": [
       "Redação e Leitura"
     ],
@@ -320,8 +320,7 @@ export const INITIAL_TEACHERS: Teacher[] = [
     "color": "#059669",
     "phone": "",
     "isExemptFromSubstitutions": false,
-    "role": "PROFESSOR",
-    "isExemptFromElectives": true
+    "role": "PROFESSOR"
   },
   {
     "id": "t_20",
@@ -361,7 +360,7 @@ export const INITIAL_TEACHERS: Teacher[] = [
     "mainSubject": "Matemática",
     "knowledgeArea": "Ciências da Natureza",
     "secondarySubjects": [
-      "Orientação de Estudo – Matem…"
+      "Orientação de Estudo"
     ],
     "totalSubstitutionsCount": 0,
     "color": "#0891B2",
@@ -375,7 +374,7 @@ export const INITIAL_TEACHERS: Teacher[] = [
     "mainSubject": "Matemática",
     "knowledgeArea": "Ciências da Natureza",
     "secondarySubjects": [
-      "Orientação de Estudo – Matem…"
+      "Orientação de Estudo"
     ],
     "totalSubstitutionsCount": 0,
     "color": "#4F46E5",
@@ -477,7 +476,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_1",
     "dayOfWeek": "segunda",
     "periodId": 2,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP"
   },
   {
     "id": "slot_t_1_terca_2",
@@ -628,7 +628,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_1",
     "dayOfWeek": "sexta",
     "periodId": 5,
-    "type": "LIVRE"
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
   },
   {
     "id": "slot_t_1_segunda_6",
@@ -723,14 +724,16 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_1",
     "dayOfWeek": "quarta",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
   },
   {
     "id": "slot_t_1_quinta_8",
     "teacherId": "t_1",
     "dayOfWeek": "quinta",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC de Área"
   },
   {
     "id": "slot_t_1_sexta_8",
@@ -744,14 +747,16 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_1",
     "dayOfWeek": "segunda",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_1_terca_9",
     "teacherId": "t_1",
     "dayOfWeek": "terca",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_1_quarta_9",
@@ -765,7 +770,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_1",
     "dayOfWeek": "quinta",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_1_sexta_9",
@@ -897,7 +903,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_2",
     "dayOfWeek": "sexta",
     "periodId": 3,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP"
   },
   {
     "id": "slot_t_2_segunda_4",
@@ -940,7 +947,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_2",
     "dayOfWeek": "sexta",
     "periodId": 4,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP"
   },
   {
     "id": "slot_t_2_segunda_5",
@@ -958,7 +966,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "6A",
-    "subject": "Orientação de Estudo – Matem…"
+    "subject": "Orientação de Matemática"
   },
   {
     "id": "slot_t_2_quarta_5",
@@ -974,14 +982,15 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "6B",
-    "subject": "Orientação de Estudo – Matem…"
+    "subject": "Orientação de Matemática"
   },
   {
     "id": "slot_t_2_sexta_5",
     "teacherId": "t_2",
     "dayOfWeek": "sexta",
     "periodId": 5,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Multiplica SP / Eletiva"
   },
   {
     "id": "slot_t_2_segunda_6",
@@ -990,7 +999,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "Orientação de Estudo – Matem…"
+    "subject": "Orientação de Matemática"
   },
   {
     "id": "slot_t_2_terca_6",
@@ -999,7 +1008,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "6A",
-    "subject": "Orientação de Estudo – Matem…"
+    "subject": "Orientação de Matemática"
   },
   {
     "id": "slot_t_2_quarta_6",
@@ -1015,14 +1024,15 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "6B",
-    "subject": "Orientação de Estudo – Matem…"
+    "subject": "Orientação de Matemática"
   },
   {
     "id": "slot_t_2_sexta_6",
     "teacherId": "t_2",
     "dayOfWeek": "sexta",
     "periodId": 6,
-    "type": "LIVRE"
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
   },
   {
     "id": "slot_t_2_segunda_7",
@@ -1049,7 +1059,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "7B",
-    "subject": "Orientação de Estudo – Matem…"
+    "subject": "Orientação de Matemática"
   },
   {
     "id": "slot_t_2_quinta_7",
@@ -1079,14 +1089,16 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_2",
     "dayOfWeek": "terca",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC de Área"
   },
   {
     "id": "slot_t_2_quarta_8",
     "teacherId": "t_2",
     "dayOfWeek": "quarta",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
   },
   {
     "id": "slot_t_2_quinta_8",
@@ -1095,7 +1107,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "7A",
-    "subject": "Orientação de Estudo – Matem…"
+    "subject": "Orientação de Matemática"
   },
   {
     "id": "slot_t_2_sexta_8",
@@ -1109,14 +1121,16 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_2",
     "dayOfWeek": "segunda",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_2_terca_9",
     "teacherId": "t_2",
     "dayOfWeek": "terca",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_2_quarta_9",
@@ -1130,7 +1144,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_2",
     "dayOfWeek": "quinta",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_2_sexta_9",
@@ -1139,7 +1154,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 9,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "Orientação de Estudo – Matem…"
+    "subject": "Orientação de Matemática"
   },
   {
     "id": "slot_t_3_segunda_1",
@@ -1213,7 +1228,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_3",
     "dayOfWeek": "sexta",
     "periodId": 2,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Escola de Gestão"
   },
   {
     "id": "slot_t_3_segunda_3",
@@ -1252,7 +1268,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_3",
     "dayOfWeek": "sexta",
     "periodId": 3,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Escola de Gestão"
   },
   {
     "id": "slot_t_3_segunda_4",
@@ -1330,7 +1347,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_3",
     "dayOfWeek": "sexta",
     "periodId": 5,
-    "type": "LIVRE"
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
   },
   {
     "id": "slot_t_3_segunda_6",
@@ -1431,7 +1449,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_3",
     "dayOfWeek": "quarta",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
   },
   {
     "id": "slot_t_3_quinta_8",
@@ -1454,14 +1473,16 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_3",
     "dayOfWeek": "segunda",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_3_terca_9",
     "teacherId": "t_3",
     "dayOfWeek": "terca",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_3_quarta_9",
@@ -1475,7 +1496,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_3",
     "dayOfWeek": "quinta",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_3_sexta_9",
@@ -1792,7 +1814,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_4",
     "dayOfWeek": "quarta",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
   },
   {
     "id": "slot_t_4_quinta_8",
@@ -1815,14 +1838,16 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_4",
     "dayOfWeek": "segunda",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_4_terca_9",
     "teacherId": "t_4",
     "dayOfWeek": "terca",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_4_quarta_9",
@@ -1836,7 +1861,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_4",
     "dayOfWeek": "quinta",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_4_sexta_9",
@@ -1997,7 +2023,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_5",
     "dayOfWeek": "quarta",
     "periodId": 4,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP"
   },
   {
     "id": "slot_t_5_quinta_4",
@@ -2038,7 +2065,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_5",
     "dayOfWeek": "quarta",
     "periodId": 5,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP"
   },
   {
     "id": "slot_t_5_quinta_5",
@@ -2054,7 +2082,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_5",
     "dayOfWeek": "sexta",
     "periodId": 5,
-    "type": "LIVRE"
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
   },
   {
     "id": "slot_t_5_segunda_6",
@@ -2109,7 +2138,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_5",
     "dayOfWeek": "terca",
     "periodId": 7,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC de Área"
   },
   {
     "id": "slot_t_5_quarta_7",
@@ -2118,7 +2148,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "8A",
-    "subject": "Orientação de Estudo – Matem…"
+    "subject": "Orientação de Matemática"
   },
   {
     "id": "slot_t_5_quinta_7",
@@ -2152,14 +2182,15 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "8B",
-    "subject": "Orientação de Estudo – Matem…"
+    "subject": "Orientação de Matemática"
   },
   {
     "id": "slot_t_5_quarta_8",
     "teacherId": "t_5",
     "dayOfWeek": "quarta",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
   },
   {
     "id": "slot_t_5_quinta_8",
@@ -2182,14 +2213,16 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_5",
     "dayOfWeek": "segunda",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_5_terca_9",
     "teacherId": "t_5",
     "dayOfWeek": "terca",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_5_quarta_9",
@@ -2203,7 +2236,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_5",
     "dayOfWeek": "quinta",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_5_sexta_9",
@@ -2296,7 +2330,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_6",
     "dayOfWeek": "sexta",
     "periodId": 2,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Escola de Gestão"
   },
   {
     "id": "slot_t_6_segunda_3",
@@ -2333,7 +2368,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_6",
     "dayOfWeek": "sexta",
     "periodId": 3,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Escola de Gestão"
   },
   {
     "id": "slot_t_6_segunda_4",
@@ -2413,7 +2449,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_6",
     "dayOfWeek": "sexta",
     "periodId": 5,
-    "type": "LIVRE"
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
   },
   {
     "id": "slot_t_6_segunda_6",
@@ -2468,7 +2505,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_6",
     "dayOfWeek": "terca",
     "periodId": 7,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC de Área"
   },
   {
     "id": "slot_t_6_quarta_7",
@@ -2520,7 +2558,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_6",
     "dayOfWeek": "quarta",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
   },
   {
     "id": "slot_t_6_quinta_8",
@@ -2545,14 +2584,16 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_6",
     "dayOfWeek": "segunda",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_6_terca_9",
     "teacherId": "t_6",
     "dayOfWeek": "terca",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_6_quarta_9",
@@ -2650,7 +2691,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_7",
     "dayOfWeek": "quinta",
     "periodId": 2,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP"
   },
   {
     "id": "slot_t_7_sexta_2",
@@ -2691,7 +2733,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_7",
     "dayOfWeek": "quinta",
     "periodId": 3,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP"
   },
   {
     "id": "slot_t_7_sexta_3",
@@ -2746,7 +2789,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_7",
     "dayOfWeek": "segunda",
     "periodId": 5,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC de Área"
   },
   {
     "id": "slot_t_7_terca_5",
@@ -2776,7 +2820,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_7",
     "dayOfWeek": "sexta",
     "periodId": 5,
-    "type": "LIVRE"
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
   },
   {
     "id": "slot_t_7_segunda_6",
@@ -2887,7 +2932,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_7",
     "dayOfWeek": "quarta",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
   },
   {
     "id": "slot_t_7_quinta_8",
@@ -2912,14 +2958,16 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_7",
     "dayOfWeek": "segunda",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_7_terca_9",
     "teacherId": "t_7",
     "dayOfWeek": "terca",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_7_quarta_9",
@@ -3058,7 +3106,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_8",
     "dayOfWeek": "quinta",
     "periodId": 3,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP"
   },
   {
     "id": "slot_t_8_sexta_3",
@@ -3101,7 +3150,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_8",
     "dayOfWeek": "quinta",
     "periodId": 4,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP"
   },
   {
     "id": "slot_t_8_sexta_4",
@@ -3144,14 +3194,16 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_8",
     "dayOfWeek": "quinta",
     "periodId": 5,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP"
   },
   {
     "id": "slot_t_8_sexta_5",
     "teacherId": "t_8",
     "dayOfWeek": "sexta",
     "periodId": 5,
-    "type": "LIVRE"
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
   },
   {
     "id": "slot_t_8_segunda_6",
@@ -3256,14 +3308,16 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_8",
     "dayOfWeek": "quarta",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
   },
   {
     "id": "slot_t_8_quinta_8",
     "teacherId": "t_8",
     "dayOfWeek": "quinta",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC de Área"
   },
   {
     "id": "slot_t_8_sexta_8",
@@ -3279,14 +3333,16 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_8",
     "dayOfWeek": "segunda",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_8_terca_9",
     "teacherId": "t_8",
     "dayOfWeek": "terca",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_8_quarta_9",
@@ -3300,7 +3356,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_8",
     "dayOfWeek": "quinta",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_8_sexta_9",
@@ -3357,7 +3414,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_9",
     "dayOfWeek": "segunda",
     "periodId": 2,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP"
   },
   {
     "id": "slot_t_9_terca_2",
@@ -3398,7 +3456,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_9",
     "dayOfWeek": "segunda",
     "periodId": 3,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP"
   },
   {
     "id": "slot_t_9_terca_3",
@@ -3516,7 +3575,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_9",
     "dayOfWeek": "sexta",
     "periodId": 5,
-    "type": "LIVRE"
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
   },
   {
     "id": "slot_t_9_segunda_6",
@@ -3614,14 +3674,16 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_9",
     "dayOfWeek": "terca",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC de Área"
   },
   {
     "id": "slot_t_9_quarta_8",
     "teacherId": "t_9",
     "dayOfWeek": "quarta",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
   },
   {
     "id": "slot_t_9_quinta_8",
@@ -3646,14 +3708,16 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_9",
     "dayOfWeek": "segunda",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_9_terca_9",
     "teacherId": "t_9",
     "dayOfWeek": "terca",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_9_quarta_9",
@@ -3667,7 +3731,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_9",
     "dayOfWeek": "quinta",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_9_sexta_9",
@@ -3794,7 +3859,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_10",
     "dayOfWeek": "quinta",
     "periodId": 3,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP"
   },
   {
     "id": "slot_t_10_sexta_3",
@@ -3835,7 +3901,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_10",
     "dayOfWeek": "quinta",
     "periodId": 4,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP"
   },
   {
     "id": "slot_t_10_sexta_4",
@@ -3878,7 +3945,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_10",
     "dayOfWeek": "quinta",
     "periodId": 5,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP"
   },
   {
     "id": "slot_t_10_sexta_5",
@@ -3924,7 +3992,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_10",
     "dayOfWeek": "sexta",
     "periodId": 6,
-    "type": "LIVRE"
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
   },
   {
     "id": "slot_t_10_segunda_7",
@@ -3988,14 +4057,16 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_10",
     "dayOfWeek": "quarta",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
   },
   {
     "id": "slot_t_10_quinta_8",
     "teacherId": "t_10",
     "dayOfWeek": "quinta",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC de Área"
   },
   {
     "id": "slot_t_10_sexta_8",
@@ -4009,14 +4080,16 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_10",
     "dayOfWeek": "segunda",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_10_terca_9",
     "teacherId": "t_10",
     "dayOfWeek": "terca",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_10_quarta_9",
@@ -4030,7 +4103,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_10",
     "dayOfWeek": "quinta",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_10_sexta_9",
@@ -4117,7 +4191,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_11",
     "dayOfWeek": "sexta",
     "periodId": 2,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Escola de Gestão"
   },
   {
     "id": "slot_t_11_segunda_3",
@@ -4156,7 +4231,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_11",
     "dayOfWeek": "sexta",
     "periodId": 3,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Escola de Gestão"
   },
   {
     "id": "slot_t_11_segunda_4",
@@ -4232,7 +4308,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_11",
     "dayOfWeek": "sexta",
     "periodId": 5,
-    "type": "LIVRE"
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
   },
   {
     "id": "slot_t_11_segunda_6",
@@ -4283,7 +4360,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_11",
     "dayOfWeek": "terca",
     "periodId": 7,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC de Área"
   },
   {
     "id": "slot_t_11_quarta_7",
@@ -4320,14 +4398,16 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_11",
     "dayOfWeek": "terca",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC de Área"
   },
   {
     "id": "slot_t_11_quarta_8",
     "teacherId": "t_11",
     "dayOfWeek": "quarta",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
   },
   {
     "id": "slot_t_11_quinta_8",
@@ -4350,14 +4430,16 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_11",
     "dayOfWeek": "segunda",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_11_terca_9",
     "teacherId": "t_11",
     "dayOfWeek": "terca",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_11_quarta_9",
@@ -4371,7 +4453,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_11",
     "dayOfWeek": "quinta",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_11_sexta_9",
@@ -4668,7 +4751,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_12",
     "dayOfWeek": "quarta",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
   },
   {
     "id": "slot_t_12_quinta_8",
@@ -4691,14 +4775,16 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_12",
     "dayOfWeek": "segunda",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_12_terca_9",
     "teacherId": "t_12",
     "dayOfWeek": "terca",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_12_quarta_9",
@@ -4712,7 +4798,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_12",
     "dayOfWeek": "quinta",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_12_sexta_9",
@@ -4765,7 +4852,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_13",
     "dayOfWeek": "segunda",
     "periodId": 2,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP"
   },
   {
     "id": "slot_t_13_terca_2",
@@ -4804,7 +4892,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_13",
     "dayOfWeek": "segunda",
     "periodId": 3,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP"
   },
   {
     "id": "slot_t_13_terca_3",
@@ -4924,7 +5013,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_13",
     "dayOfWeek": "sexta",
     "periodId": 5,
-    "type": "LIVRE"
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
   },
   {
     "id": "slot_t_13_segunda_6",
@@ -4979,7 +5069,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_13",
     "dayOfWeek": "terca",
     "periodId": 7,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC de Área"
   },
   {
     "id": "slot_t_13_quarta_7",
@@ -5027,7 +5118,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_13",
     "dayOfWeek": "quarta",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
   },
   {
     "id": "slot_t_13_quinta_8",
@@ -5052,14 +5144,16 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_13",
     "dayOfWeek": "segunda",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_13_terca_9",
     "teacherId": "t_13",
     "dayOfWeek": "terca",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_13_quarta_9",
@@ -5073,7 +5167,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_13",
     "dayOfWeek": "quinta",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_13_sexta_9",
@@ -5098,7 +5193,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "9A",
-    "subject": "Orientação de Estudo – Língua…"
+    "subject": "Orientação de Estudo"
   },
   {
     "id": "slot_t_14_quarta_1",
@@ -5128,7 +5223,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_14",
     "dayOfWeek": "segunda",
     "periodId": 2,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP"
   },
   {
     "id": "slot_t_14_terca_2",
@@ -5137,7 +5233,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "9A",
-    "subject": "Orientação de Estudo – Língua…"
+    "subject": "Orientação de Estudo"
   },
   {
     "id": "slot_t_14_quarta_2",
@@ -5167,7 +5263,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_14",
     "dayOfWeek": "segunda",
     "periodId": 3,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP"
   },
   {
     "id": "slot_t_14_terca_3",
@@ -5176,7 +5273,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "Orientação de Estudo – Língua…"
+    "subject": "Orientação de Estudo"
   },
   {
     "id": "slot_t_14_quarta_3",
@@ -5201,7 +5298,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "7B",
-    "subject": "Orientação de Estudo – Língua…"
+    "subject": "Orientação de Estudo"
   },
   {
     "id": "slot_t_14_segunda_4",
@@ -5217,7 +5314,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "Orientação de Estudo – Língua…"
+    "subject": "Orientação de Estudo"
   },
   {
     "id": "slot_t_14_quarta_4",
@@ -5241,8 +5338,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "sexta",
     "periodId": 4,
     "type": "AULA",
-    "classId": "1EMA",
-    "subject": "Orientação de Estudo – Língua…"
+    "classId": "7B",
+    "subject": "Orientação de Estudo"
   },
   {
     "id": "slot_t_14_segunda_5",
@@ -5251,7 +5348,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "9B",
-    "subject": "Orientação de Estudo – Língua…"
+    "subject": "Orientação de Estudo"
   },
   {
     "id": "slot_t_14_terca_5",
@@ -5269,7 +5366,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "6B",
-    "subject": "Orientação de Estudo – Língua…"
+    "subject": "Orientação de Estudo"
   },
   {
     "id": "slot_t_14_quinta_5",
@@ -5283,7 +5380,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_14",
     "dayOfWeek": "sexta",
     "periodId": 5,
-    "type": "LIVRE"
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
   },
   {
     "id": "slot_t_14_segunda_6",
@@ -5292,7 +5390,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "9B",
-    "subject": "Orientação de Estudo – Língua…"
+    "subject": "Orientação de Estudo"
   },
   {
     "id": "slot_t_14_terca_6",
@@ -5310,7 +5408,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "6B",
-    "subject": "Orientação de Estudo – Língua…"
+    "subject": "Orientação de Estudo"
   },
   {
     "id": "slot_t_14_quinta_6",
@@ -5319,7 +5417,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "Orientação de Estudo – Língua…"
+    "subject": "Orientação de Estudo"
   },
   {
     "id": "slot_t_14_sexta_6",
@@ -5344,7 +5442,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "6A",
-    "subject": "Orientação de Estudo – Língua…"
+    "subject": "Orientação de Estudo"
   },
   {
     "id": "slot_t_14_quarta_7",
@@ -5353,7 +5451,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "Orientação de Estudo – Língua…"
+    "subject": "Orientação de Estudo"
   },
   {
     "id": "slot_t_14_quinta_7",
@@ -5362,7 +5460,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "7A",
-    "subject": "Orientação de Estudo – Língua…"
+    "subject": "Orientação de Estudo"
   },
   {
     "id": "slot_t_14_sexta_7",
@@ -5371,7 +5469,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "8A",
-    "subject": "Orientação de Estudo – Língua…"
+    "subject": "Orientação de Estudo"
   },
   {
     "id": "slot_t_14_segunda_8",
@@ -5389,21 +5487,23 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "6A",
-    "subject": "Orientação de Estudo – Língua…"
+    "subject": "Orientação de Estudo"
   },
   {
     "id": "slot_t_14_quarta_8",
     "teacherId": "t_14",
     "dayOfWeek": "quarta",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
   },
   {
     "id": "slot_t_14_quinta_8",
     "teacherId": "t_14",
     "dayOfWeek": "quinta",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC de Área"
   },
   {
     "id": "slot_t_14_sexta_8",
@@ -5412,21 +5512,23 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "Orientação de Estudo – Língua…"
+    "subject": "Orientação de Estudo"
   },
   {
     "id": "slot_t_14_segunda_9",
     "teacherId": "t_14",
     "dayOfWeek": "segunda",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_14_terca_9",
     "teacherId": "t_14",
     "dayOfWeek": "terca",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_14_quarta_9",
@@ -5449,7 +5551,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 9,
     "type": "AULA",
     "classId": "8B",
-    "subject": "Orientação de Estudo – Língua…"
+    "subject": "Orientação de Estudo"
   },
   {
     "id": "slot_t_15_segunda_1",
@@ -5658,7 +5760,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_15",
     "dayOfWeek": "sexta",
     "periodId": 5,
-    "type": "LIVRE"
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
   },
   {
     "id": "slot_t_15_segunda_6",
@@ -5759,14 +5862,16 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_15",
     "dayOfWeek": "quarta",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
   },
   {
     "id": "slot_t_15_quinta_8",
     "teacherId": "t_15",
     "dayOfWeek": "quinta",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC de Área"
   },
   {
     "id": "slot_t_15_sexta_8",
@@ -5782,14 +5887,16 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_15",
     "dayOfWeek": "segunda",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_15_terca_9",
     "teacherId": "t_15",
     "dayOfWeek": "terca",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_15_quarta_9",
@@ -6023,7 +6130,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_16",
     "dayOfWeek": "sexta",
     "periodId": 5,
-    "type": "LIVRE"
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
   },
   {
     "id": "slot_t_16_segunda_6",
@@ -6128,14 +6236,16 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_16",
     "dayOfWeek": "quarta",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
   },
   {
     "id": "slot_t_16_quinta_8",
     "teacherId": "t_16",
     "dayOfWeek": "quinta",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC de Área"
   },
   {
     "id": "slot_t_16_sexta_8",
@@ -6151,14 +6261,16 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_16",
     "dayOfWeek": "segunda",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_16_terca_9",
     "teacherId": "t_16",
     "dayOfWeek": "terca",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_16_quarta_9",
@@ -6172,7 +6284,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_16",
     "dayOfWeek": "quinta",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_16_sexta_9",
@@ -6311,7 +6424,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_17",
     "dayOfWeek": "segunda",
     "periodId": 4,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP"
   },
   {
     "id": "slot_t_17_terca_4",
@@ -6352,7 +6466,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_17",
     "dayOfWeek": "segunda",
     "periodId": 5,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP"
   },
   {
     "id": "slot_t_17_terca_5",
@@ -6384,7 +6499,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_17",
     "dayOfWeek": "sexta",
     "periodId": 5,
-    "type": "LIVRE"
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
   },
   {
     "id": "slot_t_17_segunda_6",
@@ -6437,7 +6553,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_17",
     "dayOfWeek": "terca",
     "periodId": 7,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC de Área"
   },
   {
     "id": "slot_t_17_quarta_7",
@@ -6487,7 +6604,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_17",
     "dayOfWeek": "quarta",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
   },
   {
     "id": "slot_t_17_quinta_8",
@@ -6512,14 +6630,16 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_17",
     "dayOfWeek": "segunda",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_17_terca_9",
     "teacherId": "t_17",
     "dayOfWeek": "terca",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_17_quarta_9",
@@ -6533,7 +6653,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_17",
     "dayOfWeek": "quinta",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_17_sexta_9",
@@ -6624,7 +6745,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_18",
     "dayOfWeek": "sexta",
     "periodId": 2,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP"
   },
   {
     "id": "slot_t_18_segunda_3",
@@ -6665,7 +6787,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_18",
     "dayOfWeek": "sexta",
     "periodId": 3,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP"
   },
   {
     "id": "slot_t_18_segunda_4",
@@ -6745,7 +6868,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_18",
     "dayOfWeek": "sexta",
     "periodId": 5,
-    "type": "LIVRE"
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
   },
   {
     "id": "slot_t_18_segunda_6",
@@ -6856,14 +6980,16 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_18",
     "dayOfWeek": "quarta",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
   },
   {
     "id": "slot_t_18_quinta_8",
     "teacherId": "t_18",
     "dayOfWeek": "quinta",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC de Área"
   },
   {
     "id": "slot_t_18_sexta_8",
@@ -6879,14 +7005,16 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_18",
     "dayOfWeek": "segunda",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_18_terca_9",
     "teacherId": "t_18",
     "dayOfWeek": "terca",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_18_quarta_9",
@@ -6900,7 +7028,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_18",
     "dayOfWeek": "quinta",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_18_sexta_9",
@@ -7215,7 +7344,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_19",
     "dayOfWeek": "segunda",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP"
   },
   {
     "id": "slot_t_19_terca_8",
@@ -7231,14 +7361,16 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_19",
     "dayOfWeek": "quarta",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
   },
   {
     "id": "slot_t_19_quinta_8",
     "teacherId": "t_19",
     "dayOfWeek": "quinta",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC de Área"
   },
   {
     "id": "slot_t_19_sexta_8",
@@ -7252,14 +7384,16 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_19",
     "dayOfWeek": "segunda",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP"
   },
   {
     "id": "slot_t_19_terca_9",
     "teacherId": "t_19",
     "dayOfWeek": "terca",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_19_quarta_9",
@@ -7273,7 +7407,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_19",
     "dayOfWeek": "quinta",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_19_sexta_9",
@@ -7353,7 +7488,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_20",
     "dayOfWeek": "quinta",
     "periodId": 2,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP"
   },
   {
     "id": "slot_t_20_sexta_2",
@@ -7394,7 +7530,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_20",
     "dayOfWeek": "quinta",
     "periodId": 3,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP"
   },
   {
     "id": "slot_t_20_sexta_3",
@@ -7451,7 +7588,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_20",
     "dayOfWeek": "segunda",
     "periodId": 5,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC de Área"
   },
   {
     "id": "slot_t_20_terca_5",
@@ -7483,7 +7621,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_20",
     "dayOfWeek": "sexta",
     "periodId": 5,
-    "type": "LIVRE"
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
   },
   {
     "id": "slot_t_20_segunda_6",
@@ -7592,7 +7731,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_20",
     "dayOfWeek": "quarta",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
   },
   {
     "id": "slot_t_20_quinta_8",
@@ -7617,14 +7757,16 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_20",
     "dayOfWeek": "segunda",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_20_terca_9",
     "teacherId": "t_20",
     "dayOfWeek": "terca",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_20_quarta_9",
@@ -7638,7 +7780,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_20",
     "dayOfWeek": "quinta",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_20_sexta_9",
@@ -7752,7 +7895,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_21",
     "dayOfWeek": "quarta",
     "periodId": 3,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP"
   },
   {
     "id": "slot_t_21_quinta_3",
@@ -7793,7 +7937,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_21",
     "dayOfWeek": "quarta",
     "periodId": 4,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP"
   },
   {
     "id": "slot_t_21_quinta_4",
@@ -7818,7 +7963,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_21",
     "dayOfWeek": "segunda",
     "periodId": 5,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC de Área"
   },
   {
     "id": "slot_t_21_terca_5",
@@ -7832,7 +7978,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_21",
     "dayOfWeek": "quarta",
     "periodId": 5,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP"
   },
   {
     "id": "slot_t_21_quinta_5",
@@ -7848,7 +7995,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_21",
     "dayOfWeek": "sexta",
     "periodId": 5,
-    "type": "LIVRE"
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
   },
   {
     "id": "slot_t_21_segunda_6",
@@ -7959,7 +8107,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_21",
     "dayOfWeek": "quarta",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
   },
   {
     "id": "slot_t_21_quinta_8",
@@ -7984,14 +8133,16 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_21",
     "dayOfWeek": "segunda",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_21_terca_9",
     "teacherId": "t_21",
     "dayOfWeek": "terca",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_21_quarta_9",
@@ -8005,7 +8156,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_21",
     "dayOfWeek": "quinta",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_21_sexta_9",
@@ -8059,7 +8211,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "9A",
-    "subject": "Orientação de Estudo – Matem…"
+    "subject": "Orientação de Estudo"
   },
   {
     "id": "slot_t_22_segunda_2",
@@ -8075,7 +8227,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_22",
     "dayOfWeek": "terca",
     "periodId": 2,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP"
   },
   {
     "id": "slot_t_22_quarta_2",
@@ -8102,7 +8255,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "9A",
-    "subject": "Orientação de Estudo – Matem…"
+    "subject": "Orientação de Estudo"
   },
   {
     "id": "slot_t_22_segunda_3",
@@ -8111,14 +8264,15 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "9B",
-    "subject": "Orientação de Estudo – Matem…"
+    "subject": "Orientação de Estudo"
   },
   {
     "id": "slot_t_22_terca_3",
     "teacherId": "t_22",
     "dayOfWeek": "terca",
     "periodId": 3,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP"
   },
   {
     "id": "slot_t_22_quarta_3",
@@ -8152,7 +8306,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 4,
     "type": "AULA",
     "classId": "9B",
-    "subject": "Orientação de Estudo – Matem…"
+    "subject": "Orientação de Estudo"
   },
   {
     "id": "slot_t_22_terca_4",
@@ -8191,7 +8345,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "Orientação de Estudo – Matem…"
+    "subject": "Orientação de Estudo"
   },
   {
     "id": "slot_t_22_terca_5",
@@ -8223,7 +8377,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_22",
     "dayOfWeek": "sexta",
     "periodId": 5,
-    "type": "LIVRE"
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
   },
   {
     "id": "slot_t_22_segunda_6",
@@ -8232,7 +8387,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "Orientação de Estudo – Matem…"
+    "subject": "Orientação de Estudo"
   },
   {
     "id": "slot_t_22_terca_6",
@@ -8289,7 +8444,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "Orientação de Estudo – Matem…"
+    "subject": "Orientação de Estudo"
   },
   {
     "id": "slot_t_22_quinta_7",
@@ -8321,14 +8476,16 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_22",
     "dayOfWeek": "terca",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC de Área"
   },
   {
     "id": "slot_t_22_quarta_8",
     "teacherId": "t_22",
     "dayOfWeek": "quarta",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
   },
   {
     "id": "slot_t_22_quinta_8",
@@ -8351,14 +8508,16 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_22",
     "dayOfWeek": "segunda",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_22_terca_9",
     "teacherId": "t_22",
     "dayOfWeek": "terca",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_22_quarta_9",
@@ -8372,7 +8531,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_22",
     "dayOfWeek": "quinta",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_22_sexta_9",
@@ -8428,7 +8588,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "segunda",
     "periodId": 2,
     "type": "AULA",
-    "classId": "6A",
+    "classId": "6B",
     "subject": "Matemática"
   },
   {
@@ -8588,7 +8748,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_23",
     "dayOfWeek": "sexta",
     "periodId": 5,
-    "type": "LIVRE"
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
   },
   {
     "id": "slot_t_23_segunda_6",
@@ -8636,7 +8797,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_23",
     "dayOfWeek": "segunda",
     "periodId": 7,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP"
   },
   {
     "id": "slot_t_23_terca_7",
@@ -8654,7 +8816,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "1EMB",
-    "subject": "Orientação de Estudo – Matem…"
+    "subject": "Orientação de Estudo"
   },
   {
     "id": "slot_t_23_quinta_7",
@@ -8677,21 +8839,24 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_23",
     "dayOfWeek": "segunda",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP"
   },
   {
     "id": "slot_t_23_terca_8",
     "teacherId": "t_23",
     "dayOfWeek": "terca",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC de Área"
   },
   {
     "id": "slot_t_23_quarta_8",
     "teacherId": "t_23",
     "dayOfWeek": "quarta",
     "periodId": 8,
-    "type": "LIVRE"
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
   },
   {
     "id": "slot_t_23_quinta_8",
@@ -8716,14 +8881,16 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_23",
     "dayOfWeek": "segunda",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_23_terca_9",
     "teacherId": "t_23",
     "dayOfWeek": "terca",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_23_quarta_9",
@@ -8737,7 +8904,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_23",
     "dayOfWeek": "quinta",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_23_sexta_9",

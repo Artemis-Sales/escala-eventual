@@ -144,6 +144,37 @@ describe('getEligibleCandidates', () => {
     expect(result[0].teacher.id).toBe('t_prof');
   });
 
+  // Só horário livre libera o professor: eletiva, tutoria e formação ocupam.
+  it('não escala quem tem qualquer compromisso no horário', () => {
+    const tipos = ['AULA', 'ELETIVA', 'ATIVIDADE', 'CURSO_FORMACAO'] as const;
+
+    tipos.forEach((type) => {
+      const ocupado = teacher({ id: 't_ocupado', name: 'Ocupado' });
+      const slots: ScheduleSlot[] = [
+        { id: 's1', teacherId: 't_ocupado', dayOfWeek: 'segunda', periodId: 1, type },
+      ];
+
+      const result = getEligibleCandidates(
+        1, 'segunda', absentTeacher, [], [ocupado], slots, {}, new Set()
+      );
+
+      expect(result, `tipo ${type} deveria bloquear`).toHaveLength(0);
+    });
+  });
+
+  it('escala quem está com o horário livre', () => {
+    const livre = teacher({ id: 't_livre', name: 'Livre' });
+    const slots: ScheduleSlot[] = [
+      { id: 's1', teacherId: 't_livre', dayOfWeek: 'segunda', periodId: 1, type: 'LIVRE' },
+    ];
+
+    const result = getEligibleCandidates(
+      1, 'segunda', absentTeacher, [], [livre], slots, {}, new Set()
+    );
+
+    expect(result).toHaveLength(1);
+  });
+
   // Regra: a Adriana nunca entra na 6a aula.
   it('não escala um professor num horário bloqueado para ele', () => {
     const bloqueado = teacher({ id: 't_bloq', name: 'Adriana', blockedSubstitutionPeriods: [6] });
