@@ -148,6 +148,47 @@ describe('dados oficiais', () => {
     ]);
   });
 
+  // A eletiva ocupa duas aulas seguidas — na planilha ela vem numa célula mesclada.
+  it('toda eletiva ocupa exatamente duas aulas', () => {
+    const porProfessorEDia = new Map<string, number[]>();
+
+    OFFICIAL_SCHEDULE_SLOTS.filter((s) => s.type === 'ELETIVA').forEach((s) => {
+      const chave = `${s.teacherId}_${s.dayOfWeek}`;
+      if (!porProfessorEDia.has(chave)) porProfessorEDia.set(chave, []);
+      porProfessorEDia.get(chave)!.push(s.periodId);
+    });
+
+    const blocosErrados = [...porProfessorEDia.entries()]
+      .filter(([, periodos]) => periodos.length !== 2)
+      .map(([chave, periodos]) => `${chave}: ${periodos.length} aula(s)`);
+
+    expect(blocosErrados).toEqual([]);
+    expect(porProfessorEDia.size).toBe(20);
+  });
+
+  it('as duas aulas da eletiva são seguidas', () => {
+    const porProfessorEDia = new Map<string, number[]>();
+
+    OFFICIAL_SCHEDULE_SLOTS.filter((s) => s.type === 'ELETIVA').forEach((s) => {
+      const chave = `${s.teacherId}_${s.dayOfWeek}`;
+      if (!porProfessorEDia.has(chave)) porProfessorEDia.set(chave, []);
+      porProfessorEDia.get(chave)!.push(s.periodId);
+    });
+
+    const naoSeguidas = [...porProfessorEDia.entries()]
+      .filter(([, p]) => Math.abs(p[0] - p[1]) !== 1)
+      .map(([chave]) => chave);
+
+    expect(naoSeguidas).toEqual([]);
+  });
+
+  it('todo professor com eletiva recebe 2 aulas na carga semanal', () => {
+    INITIAL_TEACHERS.forEach((t) => {
+      const eletivas = electiveLessonsFor(t, OFFICIAL_SCHEDULE_SLOTS);
+      expect(eletivas === 0 || eletivas === 2, `${t.name}: ${eletivas}`).toBe(true);
+    });
+  });
+
   it('a equipe gestora não tem aulas nem eletivas na grade', () => {
     const gestao = INITIAL_TEACHERS.filter((t) => t.role === 'EQUIPE_GESTORA');
 

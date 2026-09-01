@@ -6,7 +6,7 @@ import {
   periodsOverlappedBy,
   timeToMinutes,
 } from './multiplica';
-import { PERIODS_DEFINITION } from '../data/mockData';
+import { INITIAL_TEACHERS, OFFICIAL_SCHEDULE_SLOTS, PERIODS_DEFINITION } from '../data/mockData';
 
 describe('conversão de horários', () => {
   it('converte ida e volta', () => {
@@ -67,5 +67,46 @@ describe('periodsOverlappedBy', () => {
 
   it('nunca devolve horário fora da grade', () => {
     expect(periodsOverlappedBy('20:00', PERIODS_DEFINITION)).toEqual([]);
+  });
+});
+
+describe('horários gravados na grade oficial', () => {
+  // O horario de cada formacao e deduzido das aulas que ela cobre. Este teste garante
+  // que o horario gravado realmente corresponde a essas aulas.
+  it('todo curso registrado cobre exatamente as aulas em que está marcado', () => {
+    const porCurso = new Map<string, { periodos: number[]; inicio: string }>();
+
+    OFFICIAL_SCHEDULE_SLOTS.filter((s) => s.trainingStartTime).forEach((s) => {
+      const chave = `${s.teacherId}_${s.dayOfWeek}_${s.trainingStartTime}`;
+      if (!porCurso.has(chave)) {
+        porCurso.set(chave, { periodos: [], inicio: s.trainingStartTime! });
+      }
+      porCurso.get(chave)!.periodos.push(s.periodId);
+    });
+
+    const inconsistentes = [...porCurso.entries()]
+      .filter(([, { periodos, inicio }]) => {
+        const esperado = periodsOverlappedBy(inicio, PERIODS_DEFINITION);
+        return esperado.join(',') !== [...periodos].sort((a, b) => a - b).join(',');
+      })
+      .map(([chave]) => chave);
+
+    expect(inconsistentes).toEqual([]);
+    expect(porCurso.size).toBeGreaterThan(0);
+  });
+
+  it('o Multiplica do Alair é das 09:30 às 11:00', () => {
+    const alair = INITIAL_TEACHERS.find((t) => t.name.startsWith('ALAIR'))!;
+    const curso = OFFICIAL_SCHEDULE_SLOTS.filter(
+      (s) => s.teacherId === alair.id && s.trainingStartTime
+    );
+
+    expect(curso.length).toBeGreaterThan(0);
+    curso.forEach((s) => {
+      expect(s.trainingStartTime).toBe('09:30');
+      expect(s.trainingEndTime).toBe('11:00');
+    });
+
+    expect(curso.map((s) => s.periodId).sort()).toEqual([3, 4, 5]);
   });
 });
