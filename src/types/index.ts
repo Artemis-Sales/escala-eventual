@@ -69,6 +69,7 @@ export interface SubstitutionCandidate {
   tier: 1 | 2 | 3; // 1 = Regular, 2 = Coordenador de Área, 3 = Equipe Gestora
   substitutionsDone: number;
   dailySubsAllocatedToday: number;
+  ownLessonsToday: number; // Aulas que o professor já dá neste dia
   score: number;
 }
 

@@ -1,4 +1,4 @@
-import type { HistoryRecord, ScheduleSlot, Teacher } from '../types';
+import type { DayOfWeek, HistoryRecord, ScheduleSlot, Teacher } from '../types';
 
 /**
  * Teto de aulas que um professor pode dar na semana, somando a grade, as eletivas e
@@ -9,6 +9,23 @@ export const MAX_AULAS_SEMANAIS = 32;
 /** Aulas de eletiva marcadas na grade do professor. */
 export function electiveLessonsFor(teacher: Teacher, slots: ScheduleSlot[]): number {
   return slots.filter((s) => s.teacherId === teacher.id && s.type === 'ELETIVA').length;
+}
+
+/**
+ * Aulas que o professor da num dia especifico, contando as regulares e a eletiva.
+ * Usada para preferir, entre candidatos equivalentes, quem tem o dia mais leve.
+ */
+export function dailyLessonsFor(
+  teacher: Teacher,
+  slots: ScheduleSlot[],
+  dayOfWeek: DayOfWeek
+): number {
+  return slots.filter(
+    (s) =>
+      s.teacherId === teacher.id &&
+      s.dayOfWeek === dayOfWeek &&
+      (s.type === 'AULA' || s.type === 'ELETIVA')
+  ).length;
 }
 
 /** Aulas regulares do professor, as que tem turma. */

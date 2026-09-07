@@ -36,6 +36,15 @@ export function getEligibleCandidates(
 ): SubstitutionCandidate[] {
   const candidates: SubstitutionCandidate[] = [];
 
+  // Quantas aulas cada professor já dá neste dia, para preferir quem tem o dia mais leve.
+  const ownLessonsByTeacher: Record<string, number> = {};
+  for (const slot of allSlots) {
+    if (slot.dayOfWeek !== dayOfWeek) continue;
+    if (slot.type !== 'AULA' && slot.type !== 'ELETIVA') continue;
+
+    ownLessonsByTeacher[slot.teacherId] = (ownLessonsByTeacher[slot.teacherId] ?? 0) + 1;
+  }
+
   for (const teacher of allTeachers) {
     // 1. Professores isentos de realizar substituições (flag isento)
     if (teacher.isExemptFromSubstitutions) {
@@ -117,18 +126,14 @@ export function getEligibleCandidates(
     const subsDone = teacher.totalSubstitutionsCount || 0;
     const dailySubs = dailyAllocationsCount[teacher.id] || 0;
 
-    let affinityBonus = 0;
-    if (matchType === 'MESMA_MATERIA') affinityBonus = 40;
-    else if (matchType === 'MESMA_AREA') affinityBonus = 20;
-
     // Penalidade por Tier: Tier 2 (Coord. Área) = +500, Tier 3 (Equipe Gestora) = +1000
     let tierPenalty = 0;
     if (tier === 2) tierPenalty = 500;
     else if (tier === 3) tierPenalty = 1000;
 
-    // As substituições já feitas hoje não entram no score: elas são critério de
-    // desempate anterior a ele, aplicado na ordenação abaixo.
-    const score = tierPenalty + subsDone * 10 - affinityBonus;
+    // Afinidade, substituições já feitas hoje e aulas do dia não entram no score:
+    // são critérios de desempate anteriores a ele, aplicados na ordenação abaixo.
+    const score = tierPenalty + subsDone * 10;
 
     candidates.push({
       teacher,
@@ -136,6 +141,7 @@ export function getEligibleCandidates(
       tier,
       substitutionsDone: subsDone,
       dailySubsAllocatedToday: dailySubs,
+      ownLessonsToday: ownLessonsByTeacher[teacher.id] ?? 0,
       score,
     });
   }
@@ -148,7 +154,12 @@ export function getEligibleCandidates(
   //    gestora, que por isso podem ser acionados antes de alguém repetir.
   // 2. Entre quem já substituiu, prefere quem substituiu menos vezes hoje.
   // 3. Depois o Tier (Professor > Coord. de Área > Equipe Gestora).
-  // 4. Por fim o score (equidade no acumulado e afinidade com a disciplina).
+  // 4. Afinidade com a disciplina: mesma matéria, depois mesma área.
+  // 5. Quem tem menos aulas próprias no dia — a afinidade acima vence este critério.
+  // 6. Por fim o score (equidade no total de substituições já feitas).
+  const afinidade = (c: SubstitutionCandidate) =>
+    c.matchType === 'MESMA_MATERIA' ? 0 : c.matchType === 'MESMA_AREA' ? 1 : 2;
+
   return candidates.sort((a, b) => {
     const aJaSubstituiu = a.dailySubsAllocatedToday > 0 ? 1 : 0;
     const bJaSubstituiu = b.dailySubsAllocatedToday > 0 ? 1 : 0;
@@ -163,6 +174,15 @@ export function getEligibleCandidates(
     if (a.tier !== b.tier) {
       return a.tier - b.tier;
     }
+
+    if (afinidade(a) !== afinidade(b)) {
+      return afinidade(a) - afinidade(b);
+    }
+
+    if (a.ownLessonsToday !== b.ownLessonsToday) {
+      return a.ownLessonsToday - b.ownLessonsToday;
+    }
+
     return a.score - b.score;
   });
 }

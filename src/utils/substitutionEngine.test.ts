@@ -175,6 +175,92 @@ describe('getEligibleCandidates', () => {
     expect(result).toHaveLength(1);
   });
 
+  // Regra: entre candidatos equivalentes, prefere quem tem o dia mais leve.
+  it('prefere o professor com menos aulas próprias no dia', () => {
+    const comCinco = teacher({ id: 't_5', name: 'Cinco', mainSubject: 'História', knowledgeArea: 'Ciências Humanas' });
+    const comSeis = teacher({ id: 't_6', name: 'Seis', mainSubject: 'História', knowledgeArea: 'Ciências Humanas' });
+
+    // Ambos livres na 1ª aula; as demais aulas do dia é que diferem.
+    const slots: ScheduleSlot[] = [
+      ...Array.from({ length: 5 }, (_, i) => ({
+        id: `a${i}`, teacherId: 't_5', dayOfWeek: 'segunda' as const, periodId: i + 2,
+        type: 'AULA' as const, classId: '6A',
+      })),
+      ...Array.from({ length: 6 }, (_, i) => ({
+        id: `b${i}`, teacherId: 't_6', dayOfWeek: 'segunda' as const, periodId: i + 2,
+        type: 'AULA' as const, classId: '6B',
+      })),
+    ];
+
+    const result = getEligibleCandidates(
+      1, 'segunda', absentTeacher, [], [comSeis, comCinco], slots, {}, new Set()
+    );
+
+    expect(result[0].teacher.id).toBe('t_5');
+    expect(result[0].ownLessonsToday).toBe(5);
+    expect(result[1].ownLessonsToday).toBe(6);
+  });
+
+  it('a afinidade com a matéria vence a contagem de aulas do dia', () => {
+    // O ausente é de Matemática. O de 6 aulas dá a mesma matéria; o de 5, não.
+    const comSeisMesmaMateria = teacher({ id: 't_6', name: 'Seis', mainSubject: 'Matemática' });
+    const comCincoSemAfinidade = teacher({
+      id: 't_5', name: 'Cinco', mainSubject: 'História', knowledgeArea: 'Ciências Humanas',
+    });
+
+    const slots: ScheduleSlot[] = [
+      ...Array.from({ length: 5 }, (_, i) => ({
+        id: `a${i}`, teacherId: 't_5', dayOfWeek: 'segunda' as const, periodId: i + 2,
+        type: 'AULA' as const, classId: '6A',
+      })),
+      ...Array.from({ length: 6 }, (_, i) => ({
+        id: `b${i}`, teacherId: 't_6', dayOfWeek: 'segunda' as const, periodId: i + 2,
+        type: 'AULA' as const, classId: '6B',
+      })),
+    ];
+
+    const result = getEligibleCandidates(
+      1, 'segunda', absentTeacher, [], [comCincoSemAfinidade, comSeisMesmaMateria], slots, {}, new Set()
+    );
+
+    expect(result[0].teacher.id).toBe('t_6');
+    expect(result[0].matchType).toBe('MESMA_MATERIA');
+  });
+
+  it('conta a eletiva como aula própria do dia', () => {
+    const comEletiva = teacher({ id: 't_el', name: 'Com eletiva' });
+    const semNada = teacher({ id: 't_sem', name: 'Sem nada' });
+
+    const slots: ScheduleSlot[] = [
+      { id: 'e1', teacherId: 't_el', dayOfWeek: 'sexta', periodId: 5, type: 'ELETIVA' },
+      { id: 'e2', teacherId: 't_el', dayOfWeek: 'sexta', periodId: 6, type: 'ELETIVA' },
+    ];
+
+    const result = getEligibleCandidates(
+      1, 'sexta', absentTeacher, [], [comEletiva, semNada], slots, {}, new Set()
+    );
+
+    expect(result[0].teacher.id).toBe('t_sem');
+    expect(result.find((c) => c.teacher.id === 't_el')?.ownLessonsToday).toBe(2);
+  });
+
+  it('só desempata pelas aulas do dia dentro do mesmo tier', () => {
+    // Coordenador com o dia vazio não passa na frente de um professor cheio.
+    const coord = teacher({ id: 't_coord', name: 'Coord', role: 'COORDENADOR_AREA' });
+    const professorCheio = teacher({ id: 't_prof', name: 'Professor' });
+
+    const slots: ScheduleSlot[] = Array.from({ length: 6 }, (_, i) => ({
+      id: `p${i}`, teacherId: 't_prof', dayOfWeek: 'segunda' as const, periodId: i + 2,
+      type: 'AULA' as const, classId: '6A',
+    }));
+
+    const result = getEligibleCandidates(
+      1, 'segunda', absentTeacher, [], [coord, professorCheio], slots, {}, new Set()
+    );
+
+    expect(result[0].teacher.id).toBe('t_prof');
+  });
+
   // Regra: a Adriana nunca entra na 6a aula.
   it('não escala um professor num horário bloqueado para ele', () => {
     const bloqueado = teacher({ id: 't_bloq', name: 'Adriana', blockedSubstitutionPeriods: [6] });
