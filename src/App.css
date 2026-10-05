@@ -1626,6 +1626,9 @@ input, select, textarea {
   text-overflow: ellipsis;
 }
 
+/* Marcador de celula vazia. Fica de proposito abaixo do contraste minimo de texto:
+   e enfeite, esta com aria-hidden, e a informacao real e a celula nao ter aula.
+   Escurece-lo faria as celulas vazias competirem com as preenchidas na matriz. */
 .matrix-empty-slot {
   font-size: 0.76rem;
   color: #CBD5E1;

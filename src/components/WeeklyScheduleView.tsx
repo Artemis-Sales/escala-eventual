@@ -279,7 +279,9 @@ export const WeeklyScheduleView: React.FC = () => {
                               </div>
                             ) : (
                               <div className="matrix-empty-slot">
-                                <span>- - -</span>
+                                {/* Os traços são enfeite: a informação é a célula estar vazia.
+                                    Escondidos do leitor de tela, que já anuncia a célula vazia. */}
+                                <span aria-hidden="true">- - -</span>
                               </div>
                             )}
                           </td>
@@ -613,7 +615,9 @@ export const WeeklyScheduleView: React.FC = () => {
                               </>
                             ) : (
                               <div className="matrix-empty-slot">
-                                <span>- - -</span>
+                                {/* Os traços são enfeite: a informação é a célula estar vazia.
+                                    Escondidos do leitor de tela, que já anuncia a célula vazia. */}
+                                <span aria-hidden="true">- - -</span>
                               </div>
                             )}
                           </div>
