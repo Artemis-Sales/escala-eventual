@@ -10,7 +10,10 @@
   
   --text-primary: #0F172A;
   --text-secondary: #475569;
-  --text-muted: #94A3B8;
+  --text-muted: #636A74;
+  /* Texto secundario sobre as superficies escuras (header, banners). O cinza acima e
+     calibrado para papel e fica ilegivel sobre fundo escuro. */
+  --text-muted-dark: #A8B2C1;
 
   --color-brand: #2563EB;
   --color-brand-hover: #1D4ED8;

@@ -78,7 +78,7 @@ export const INITIAL_TEACHERS: Teacher[] = [
       "Projeto de Vida"
     ],
     "totalSubstitutionsCount": 0,
-    "color": "#059669",
+    "color": "#047857",
     "phone": "",
     "isExemptFromSubstitutions": false,
     "role": "COORDENADOR_AREA"
@@ -97,7 +97,7 @@ export const INITIAL_TEACHERS: Teacher[] = [
       "Redes de Computadores e Seg…"
     ],
     "totalSubstitutionsCount": 0,
-    "color": "#D97706",
+    "color": "#B45309",
     "phone": "",
     "isExemptFromSubstitutions": true,
     "exemptReason": "Professor do Curso Técnico (Não realiza substituições)",
@@ -128,7 +128,7 @@ export const INITIAL_TEACHERS: Teacher[] = [
       "Biologia"
     ],
     "totalSubstitutionsCount": 0,
-    "color": "#0891B2",
+    "color": "#0E7490",
     "phone": "",
     "isExemptFromSubstitutions": false,
     "role": "PROFESSOR"
@@ -199,7 +199,7 @@ export const INITIAL_TEACHERS: Teacher[] = [
       "Práticas Experimentais"
     ],
     "totalSubstitutionsCount": 0,
-    "color": "#059669",
+    "color": "#047857",
     "phone": "",
     "isExemptFromSubstitutions": false,
     "role": "COORDENADOR_AREA"
@@ -215,7 +215,7 @@ export const INITIAL_TEACHERS: Teacher[] = [
       "Versionamento de Código e Sistemas …"
     ],
     "totalSubstitutionsCount": 0,
-    "color": "#D97706",
+    "color": "#B45309",
     "phone": "",
     "isExemptFromSubstitutions": true,
     "exemptReason": "Professor do Curso Técnico (Não realiza substituições)",
@@ -247,7 +247,7 @@ export const INITIAL_TEACHERS: Teacher[] = [
       "Redação e Leitura"
     ],
     "totalSubstitutionsCount": 0,
-    "color": "#0891B2",
+    "color": "#0E7490",
     "phone": "",
     "isExemptFromSubstitutions": false,
     "role": "PROFESSOR"
@@ -318,7 +318,7 @@ export const INITIAL_TEACHERS: Teacher[] = [
     "knowledgeArea": "Linguagens",
     "secondarySubjects": [],
     "totalSubstitutionsCount": 0,
-    "color": "#059669",
+    "color": "#047857",
     "phone": "",
     "isExemptFromSubstitutions": false,
     "role": "PROFESSOR"
@@ -336,7 +336,7 @@ export const INITIAL_TEACHERS: Teacher[] = [
       "Projeto de Vida"
     ],
     "totalSubstitutionsCount": 0,
-    "color": "#D97706",
+    "color": "#B45309",
     "phone": "",
     "isExemptFromSubstitutions": false,
     "role": "PROFESSOR"
@@ -362,7 +362,7 @@ export const INITIAL_TEACHERS: Teacher[] = [
     "knowledgeArea": "Ciências da Natureza",
     "secondarySubjects": [],
     "totalSubstitutionsCount": 0,
-    "color": "#0891B2",
+    "color": "#0E7490",
     "phone": "",
     "isExemptFromSubstitutions": false,
     "role": "PROFESSOR"

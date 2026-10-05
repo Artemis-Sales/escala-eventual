@@ -19,7 +19,10 @@
   
   --text-primary: #0F172A;
   --text-secondary: #475569;
-  --text-muted: #94A3B8;
+  --text-muted: #636A74;
+  /* Texto secundario sobre as superficies escuras (header, banners). O cinza acima e
+     calibrado para papel e fica ilegivel sobre fundo escuro. */
+  --text-muted-dark: #A8B2C1;
 
   --radius-sm: 6px;
   --radius-md: 10px;
@@ -55,6 +58,15 @@ button {
 
 input, select, textarea {
   font-family: inherit;
+}
+
+/* Foco de teclado visivel em toda a aplicacao. Sem isto, quem navega por Tab — ou usa
+   leitor de tela — nao tem como saber onde esta. :focus-visible so aparece no foco vindo
+   do teclado, entao o clique de mouse continua sem anel. */
+:where(button, a, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
 }
 
 /* ========================================================================= */
@@ -146,7 +158,7 @@ input, select, textarea {
 
 .brand-subtitle {
   font-size: 0.86rem;
-  color: #94A3B8;
+  color: var(--text-muted-dark);
   margin-top: 2px;
 }
 
@@ -164,7 +176,7 @@ input, select, textarea {
   align-items: center;
   gap: 8px;
   padding: 12px 18px;
-  color: #94A3B8;
+  color: var(--text-muted-dark);
   font-size: 0.9rem;
   font-weight: 600;
   border-bottom: 3px solid transparent;
@@ -1116,7 +1128,7 @@ input, select, textarea {
 }
 
 .header-preview-clean .modal-subtitle {
-  color: #94A3B8;
+  color: var(--text-muted);
   font-size: 0.82rem;
   margin-top: 3px;
   display: flex;
@@ -1522,7 +1534,7 @@ input, select, textarea {
 
 .matrix-period-time {
   font-size: 0.72rem;
-  color: #94A3B8;
+  color: var(--text-muted-dark);
   font-weight: normal;
 }
 
@@ -1690,7 +1702,7 @@ input, select, textarea {
 }
 
 .badge-primary {
-  background: #3B82F6;
+  background: var(--color-brand);
   color: #FFFFFF;
   font-size: 0.76rem;
   font-weight: 700;
@@ -1705,6 +1717,13 @@ input, select, textarea {
   font-weight: 700;
   padding: 2px 8px;
   border-radius: var(--radius-full);
+}
+
+/* Os numeros destes dois banners ficam sobre fundo escuro, onde o azul da marca
+   nao alcanca contraste. Aqui eles usam um azul claro. */
+.profile-stats .text-primary,
+.class-banner-stats .text-primary {
+  color: #60A5FA;
 }
 
 .profile-stats {
@@ -1730,12 +1749,12 @@ input, select, textarea {
 
 .mini-stat-label {
   font-size: 0.7rem;
-  color: #94A3B8;
+  color: var(--text-muted-dark);
   text-transform: uppercase;
 }
 
 .mini-stat-note {
-  color: #64748B;
+  color: var(--text-muted-dark);
   text-transform: none;
 }
 
@@ -1780,7 +1799,7 @@ input, select, textarea {
 
 .class-banner-segment {
   font-size: 0.8rem;
-  color: #94A3B8;
+  color: var(--text-muted-dark);
 }
 
 .class-banner-stats {
@@ -2833,7 +2852,7 @@ input, select, textarea {
 }
 
 .multiplica-quick-chip:hover {
-  border-color: #94A3B8;
+  border-color: var(--text-muted);
 }
 
 .multiplica-quick-chip.active {
