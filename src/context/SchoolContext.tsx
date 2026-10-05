@@ -18,6 +18,7 @@ import {
 import { generateDailyPlan } from '../utils/substitutionEngine';
 import { randomTeacherColor } from '../utils/colors';
 import { canonicalSubjectName, resolveKnowledgeArea } from '../utils/subjects';
+import { applyCounterDelta, officializationDelta } from '../utils/equity';
 
 interface SchoolContextType {
   teachers: Teacher[];
@@ -297,25 +298,17 @@ export const SchoolProvider: React.FC<{ children: React.ReactNode }> = ({ childr
     updateSubstitutionItem(itemId, substituteTeacherId);
   };
 
+  // Oficializar é a única ação irreversível do app: ela grava no histórico e mexe nos
+  // contadores de substituição, que são a base da equidade. Um mesmo dia pode ser
+  // oficializado mais de uma vez (basta corrigir uma substituição e refazer), então a
+  // escala anterior daquela data é descontada e substituída, nunca somada por cima.
   const confirmAndSavePlan = () => {
     if (!currentPlan) return;
 
-    const teacherSubCounts: Record<string, number> = {};
-    currentPlan.substitutions.forEach((sub) => {
-      if (sub.substituteTeacherId) {
-        teacherSubCounts[sub.substituteTeacherId] =
-          (teacherSubCounts[sub.substituteTeacherId] || 0) + 1;
-      }
-    });
+    const anteriores = history.filter((h) => h.date === currentPlan.date);
+    const delta = officializationDelta(currentPlan, anteriores);
 
-    setTeachers((prev) =>
-      prev.map((t) => {
-        const countToAdd = teacherSubCounts[t.id] || 0;
-        return countToAdd > 0
-          ? { ...t, totalSubstitutionsCount: t.totalSubstitutionsCount + countToAdd }
-          : t;
-      })
-    );
+    setTeachers((prev) => applyCounterDelta(prev, delta));
 
     const absentNames = currentPlan.absentTeacherIds.map(
       (id) => teachers.find((t) => t.id === id)?.name || id
@@ -330,7 +323,7 @@ export const SchoolProvider: React.FC<{ children: React.ReactNode }> = ({ childr
     setCurrentPlan(officialPlan);
 
     const historyEntry: HistoryRecord = {
-      id: `hist-${Date.now()}`,
+      id: anteriores[0]?.id ?? `hist-${Date.now()}`,
       date: officialPlan.date,
       dayOfWeek: officialPlan.dayOfWeek,
       absentTeachersNames: absentNames,
@@ -338,7 +331,7 @@ export const SchoolProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       timestamp: new Date().toLocaleString('pt-BR'),
     };
 
-    setHistory((prev) => [historyEntry, ...prev]);
+    setHistory((prev) => [historyEntry, ...prev.filter((h) => h.date !== currentPlan.date)]);
   };
 
   const addTeacher = (teacherData: Omit<Teacher, 'id' | 'totalSubstitutionsCount'>) => {

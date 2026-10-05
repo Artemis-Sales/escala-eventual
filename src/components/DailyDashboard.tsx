@@ -44,6 +44,7 @@ export const DailyDashboard: React.FC = () => {
     currentPlan,
     confirmAndSavePlan,
     scheduleSlots,
+    history,
   } = useSchool();
 
   const [searchTeacher, setSearchTeacher] = useState('');
@@ -58,10 +59,21 @@ export const DailyDashboard: React.FC = () => {
   };
 
   const handleGenerate = () => {
-    if (absentTeacherIds.length === 0) {
-      alert('Por favor, selecione ao menos um professor faltante para gerar a escala.');
+    if (absentTeacherIds.length === 0) return; // o botão já fica desabilitado nesse caso
+
+    // Gerar de novo troca o que está na tela. A escala oficial continua valendo no
+    // histórico até ser oficializada outra vez, mas quem clica precisa saber disso.
+    if (
+      currentPlan?.isOfficial &&
+      !window.confirm(
+        'A escala deste dia já foi oficializada.\n\n' +
+          'Gerar outra substitui o que está na tela. A escala oficial e os contadores só ' +
+          'mudam se você oficializar a nova.\n\nGerar assim mesmo?'
+      )
+    ) {
       return;
     }
+
     generateSchedule();
 
     setTimeout(() => {
@@ -93,6 +105,22 @@ export const DailyDashboard: React.FC = () => {
 
   const handleConfirmSave = () => {
     if (!currentPlan) return;
+
+    const jaOficializada = history.some((h) => h.date === currentPlan.date);
+    const escalados = new Set(
+      currentPlan.substitutions.map((s) => s.substituteTeacherId).filter(Boolean)
+    ).size;
+
+    const aviso = jaOficializada
+      ? `Esta data já tem uma escala oficializada.\n\n` +
+        `A nova substitui a anterior no histórico, e os contadores de substituição são ` +
+        `recalculados — ninguém é contado duas vezes.\n\nOficializar a nova escala?`
+      : `Oficializar a escala do dia?\n\n` +
+        `Ela vai para o histórico e soma uma substituição para cada um dos ${escalados} ` +
+        `professores escalados. Essa ação não tem desfazer.`;
+
+    if (!window.confirm(aviso)) return;
+
     confirmAndSavePlan();
     showToast('✅ Escala oficializada com sucesso no histórico e contadores de professores atualizados!');
   };
