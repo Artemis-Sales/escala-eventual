@@ -104,6 +104,8 @@ function toTitleCase(subject: string): string {
 // especifica vem primeiro: a de matematica antes da generica.
 const SUBJECT_ALIASES: { pattern: RegExp; canonical: string }[] = [
   { pattern: /^ORIENTACAO.*MATEM/, canonical: 'Orientação de Matemática' },
+  // A planilha trunca o nome em "ORIENTAÇÃO DE ESTUDO – LÍNGUA…".
+  { pattern: /^ORIENTACAO.*LINGUA/, canonical: 'Orientação de Língua Portuguesa' },
   { pattern: /^ORIENTACAO DE ESTUDO/, canonical: 'Orientação de Estudo' },
 ];
 

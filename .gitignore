@@ -33,3 +33,8 @@ inspectTurmas.cjs
 
 # Configuracoes locais do Claude Code (especificas da maquina)
 .claude/settings.local.json
+
+# Horarios reais da escola em PDF (nomes de professores e turmas).
+# O gerador que os le (generatePdfData.mjs) fica versionado: a escola entrega o
+# horario nesse formato, entao ele e o pipeline de dados, nao um script pontual.
+*.pdf

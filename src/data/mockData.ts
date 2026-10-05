@@ -56,12 +56,12 @@ export const INITIAL_TEACHERS: Teacher[] = [
   {
     "id": "t_2",
     "name": "ALAIR JORGE CYRINO DO AMARAL",
-    "mainSubject": "Matemática",
+    "mainSubject": "Orientação de Matemática",
     "knowledgeArea": "Ciências da Natureza",
     "secondarySubjects": [
-      "Projeto de Vida",
       "Física",
-      "Orientação de Matemática"
+      "Matemática",
+      "Projeto de Vida"
     ],
     "totalSubstitutionsCount": 0,
     "color": "#7C3AED",
@@ -86,15 +86,15 @@ export const INITIAL_TEACHERS: Teacher[] = [
   {
     "id": "t_4",
     "name": "DANILO",
-    "mainSubject": "Modelagem e Desenvolviment…",
+    "mainSubject": "Lógica e Linguagens de Progr…",
     "knowledgeArea": "Parte Diversificada",
     "secondarySubjects": [
-      "Redes de Computadores e Seg…",
+      "Modelagem e Desenvolviment…",
       "Carreira e Competências para …",
-      "Projeto Multidisciplinar",
       "Inteligência Artificial",
-      "Lógica e Linguagens de Progr…",
-      "Processos de Desenvolviment…"
+      "Processos de Desenvolviment…",
+      "Projeto Multidisciplinar",
+      "Redes de Computadores e Seg…"
     ],
     "totalSubstitutionsCount": 0,
     "color": "#D97706",
@@ -120,12 +120,12 @@ export const INITIAL_TEACHERS: Teacher[] = [
   {
     "id": "t_6",
     "name": "ELISANGELA GREJO AZZELLA",
-    "mainSubject": "Química",
+    "mainSubject": "Física",
     "knowledgeArea": "Ciências da Natureza",
     "secondarySubjects": [
-      "Física",
-      "Biologia",
-      "Práticas Experimentais"
+      "Química",
+      "Práticas Experimentais",
+      "Biologia"
     ],
     "totalSubstitutionsCount": 0,
     "color": "#0891B2",
@@ -139,9 +139,9 @@ export const INITIAL_TEACHERS: Teacher[] = [
     "mainSubject": "Geografia",
     "knowledgeArea": "Ciências Humanas",
     "secondarySubjects": [
+      "Aprofundamento de Geografia",
       "Atualidades",
-      "Projeto de Vida",
-      "Aprofundamento de Geografia"
+      "Projeto de Vida"
     ],
     "totalSubstitutionsCount": 0,
     "color": "#4F46E5",
@@ -210,9 +210,9 @@ export const INITIAL_TEACHERS: Teacher[] = [
     "mainSubject": "Programação Mobile",
     "knowledgeArea": "Parte Diversificada",
     "secondarySubjects": [
-      "Versionamento de Código e Sistemas …",
+      "Programação Back-End",
       "Programação Front-End",
-      "Programação Back-End"
+      "Versionamento de Código e Sistemas …"
     ],
     "totalSubstitutionsCount": 0,
     "color": "#D97706",
@@ -241,8 +241,8 @@ export const INITIAL_TEACHERS: Teacher[] = [
   {
     "id": "t_14",
     "name": "RITA DE CASSIA ANTUNES",
-    "mainSubject": "Orientação de Estudo",
-    "knowledgeArea": "Parte Diversificada",
+    "mainSubject": "Orientação de Língua Portuguesa",
+    "knowledgeArea": "Linguagens",
     "secondarySubjects": [
       "Redação e Leitura"
     ],
@@ -255,10 +255,10 @@ export const INITIAL_TEACHERS: Teacher[] = [
   {
     "id": "t_15",
     "name": "ROODNEY GOMES NAZARETH",
-    "mainSubject": "Educação Física",
+    "mainSubject": "Esporte-Música-Arte",
     "knowledgeArea": "Linguagens",
     "secondarySubjects": [
-      "Esporte-Música-Arte"
+      "Educação Física"
     ],
     "totalSubstitutionsCount": 0,
     "color": "#4F46E5",
@@ -269,11 +269,12 @@ export const INITIAL_TEACHERS: Teacher[] = [
   {
     "id": "t_16",
     "name": "ROSANA CRISTINA DOS SANTOS",
-    "mainSubject": "Redação e Leitura",
+    "mainSubject": "Língua Portuguesa",
     "knowledgeArea": "Linguagens",
     "secondarySubjects": [
-      "Língua Portuguesa",
-      "Língua Inglesa"
+      "Redação e Leitura",
+      "Língua Inglesa",
+      "Orientação de Língua Portuguesa"
     ],
     "totalSubstitutionsCount": 0,
     "color": "#9333EA",
@@ -287,8 +288,8 @@ export const INITIAL_TEACHERS: Teacher[] = [
     "mainSubject": "Ciências",
     "knowledgeArea": "Ciências da Natureza",
     "secondarySubjects": [
-      "Práticas Experimentais",
-      "Biologia"
+      "Biologia",
+      "Práticas Experimentais"
     ],
     "totalSubstitutionsCount": 0,
     "color": "#2563EB",
@@ -325,14 +326,14 @@ export const INITIAL_TEACHERS: Teacher[] = [
   {
     "id": "t_20",
     "name": "VINICIUS BEZERRA RIBEIRO",
-    "mainSubject": "Sociologia",
+    "mainSubject": "Geografia",
     "knowledgeArea": "Ciências Humanas",
     "secondarySubjects": [
       "Filosofia",
-      "Projeto de Vida",
-      "Geografia",
+      "Sociologia",
       "Aprofundamento de Filosofia",
-      "Aprofundamento de Sociologia"
+      "Aprofundamento de Sociologia",
+      "Projeto de Vida"
     ],
     "totalSubstitutionsCount": 0,
     "color": "#D97706",
@@ -359,9 +360,7 @@ export const INITIAL_TEACHERS: Teacher[] = [
     "name": "WESLEY DE JESUS OLIVEIRA",
     "mainSubject": "Matemática",
     "knowledgeArea": "Ciências da Natureza",
-    "secondarySubjects": [
-      "Orientação de Estudo"
-    ],
+    "secondarySubjects": [],
     "totalSubstitutionsCount": 0,
     "color": "#0891B2",
     "phone": "",
@@ -374,7 +373,7 @@ export const INITIAL_TEACHERS: Teacher[] = [
     "mainSubject": "Matemática",
     "knowledgeArea": "Ciências da Natureza",
     "secondarySubjects": [
-      "Orientação de Estudo"
+      "Orientação de Matemática"
     ],
     "totalSubstitutionsCount": 0,
     "color": "#4F46E5",
@@ -435,41 +434,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_1",
     "dayOfWeek": "segunda",
     "periodId": 1,
-    "type": "AULA",
-    "classId": "7B",
-    "subject": "Educação Física"
-  },
-  {
-    "id": "slot_t_1_terca_1",
-    "teacherId": "t_1",
-    "dayOfWeek": "terca",
-    "periodId": 1,
     "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_1_quarta_1",
-    "teacherId": "t_1",
-    "dayOfWeek": "quarta",
-    "periodId": 1,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_1_quinta_1",
-    "teacherId": "t_1",
-    "dayOfWeek": "quinta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "7A",
-    "subject": "Educação Física"
-  },
-  {
-    "id": "slot_t_1_sexta_1",
-    "teacherId": "t_1",
-    "dayOfWeek": "sexta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "9B",
-    "subject": "Educação Física"
   },
   {
     "id": "slot_t_1_segunda_2",
@@ -482,40 +447,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingEndTime": "09:30"
   },
   {
-    "id": "slot_t_1_terca_2",
-    "teacherId": "t_1",
-    "dayOfWeek": "terca",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "8A",
-    "subject": "Educação Física"
-  },
-  {
-    "id": "slot_t_1_quarta_2",
-    "teacherId": "t_1",
-    "dayOfWeek": "quarta",
-    "periodId": 2,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_1_quinta_2",
-    "teacherId": "t_1",
-    "dayOfWeek": "quinta",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "6B",
-    "subject": "Educação Física"
-  },
-  {
-    "id": "slot_t_1_sexta_2",
-    "teacherId": "t_1",
-    "dayOfWeek": "sexta",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "8A",
-    "subject": "Educação Física"
-  },
-  {
     "id": "slot_t_1_segunda_3",
     "teacherId": "t_1",
     "dayOfWeek": "segunda",
@@ -526,75 +457,13 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingEndTime": "09:30"
   },
   {
-    "id": "slot_t_1_terca_3",
-    "teacherId": "t_1",
-    "dayOfWeek": "terca",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "6A",
-    "subject": "Educação Física"
-  },
-  {
-    "id": "slot_t_1_quarta_3",
-    "teacherId": "t_1",
-    "dayOfWeek": "quarta",
-    "periodId": 3,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_1_quinta_3",
-    "teacherId": "t_1",
-    "dayOfWeek": "quinta",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "6A",
-    "subject": "Educação Física"
-  },
-  {
-    "id": "slot_t_1_sexta_3",
-    "teacherId": "t_1",
-    "dayOfWeek": "sexta",
-    "periodId": 3,
-    "type": "LIVRE"
-  },
-  {
     "id": "slot_t_1_segunda_4",
     "teacherId": "t_1",
     "dayOfWeek": "segunda",
     "periodId": 4,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_1_terca_4",
-    "teacherId": "t_1",
-    "dayOfWeek": "terca",
-    "periodId": 4,
     "type": "AULA",
     "classId": "9B",
     "subject": "Educação Física"
-  },
-  {
-    "id": "slot_t_1_quarta_4",
-    "teacherId": "t_1",
-    "dayOfWeek": "quarta",
-    "periodId": 4,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_1_quinta_4",
-    "teacherId": "t_1",
-    "dayOfWeek": "quinta",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "9A",
-    "subject": "Educação Física"
-  },
-  {
-    "id": "slot_t_1_sexta_4",
-    "teacherId": "t_1",
-    "dayOfWeek": "sexta",
-    "periodId": 4,
-    "type": "LIVRE"
   },
   {
     "id": "slot_t_1_segunda_5",
@@ -602,39 +471,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "segunda",
     "periodId": 5,
     "type": "AULA",
-    "classId": "6B",
+    "classId": "6A",
     "subject": "Educação Física"
-  },
-  {
-    "id": "slot_t_1_terca_5",
-    "teacherId": "t_1",
-    "dayOfWeek": "terca",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "9A",
-    "subject": "Educação Física"
-  },
-  {
-    "id": "slot_t_1_quarta_5",
-    "teacherId": "t_1",
-    "dayOfWeek": "quarta",
-    "periodId": 5,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_1_quinta_5",
-    "teacherId": "t_1",
-    "dayOfWeek": "quinta",
-    "periodId": 5,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_1_sexta_5",
-    "teacherId": "t_1",
-    "dayOfWeek": "sexta",
-    "periodId": 5,
-    "type": "ELETIVA",
-    "trainingName": "Eletiva"
   },
   {
     "id": "slot_t_1_segunda_6",
@@ -644,35 +482,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "LIVRE"
   },
   {
-    "id": "slot_t_1_terca_6",
-    "teacherId": "t_1",
-    "dayOfWeek": "terca",
-    "periodId": 6,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_1_quarta_6",
-    "teacherId": "t_1",
-    "dayOfWeek": "quarta",
-    "periodId": 6,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_1_quinta_6",
-    "teacherId": "t_1",
-    "dayOfWeek": "quinta",
-    "periodId": 6,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_1_sexta_6",
-    "teacherId": "t_1",
-    "dayOfWeek": "sexta",
-    "periodId": 6,
-    "type": "ELETIVA",
-    "trainingName": "Eletiva"
-  },
-  {
     "id": "slot_t_1_segunda_7",
     "teacherId": "t_1",
     "dayOfWeek": "segunda",
@@ -680,71 +489,9 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "LIVRE"
   },
   {
-    "id": "slot_t_1_terca_7",
-    "teacherId": "t_1",
-    "dayOfWeek": "terca",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "7B",
-    "subject": "Educação Física"
-  },
-  {
-    "id": "slot_t_1_quarta_7",
-    "teacherId": "t_1",
-    "dayOfWeek": "quarta",
-    "periodId": 7,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_1_quinta_7",
-    "teacherId": "t_1",
-    "dayOfWeek": "quinta",
-    "periodId": 7,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_1_sexta_7",
-    "teacherId": "t_1",
-    "dayOfWeek": "sexta",
-    "periodId": 7,
-    "type": "LIVRE"
-  },
-  {
     "id": "slot_t_1_segunda_8",
     "teacherId": "t_1",
     "dayOfWeek": "segunda",
-    "periodId": 8,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_1_terca_8",
-    "teacherId": "t_1",
-    "dayOfWeek": "terca",
-    "periodId": 8,
-    "type": "AULA",
-    "classId": "7A",
-    "subject": "Educação Física"
-  },
-  {
-    "id": "slot_t_1_quarta_8",
-    "teacherId": "t_1",
-    "dayOfWeek": "quarta",
-    "periodId": 8,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC Geral"
-  },
-  {
-    "id": "slot_t_1_quinta_8",
-    "teacherId": "t_1",
-    "dayOfWeek": "quinta",
-    "periodId": 8,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC de Área"
-  },
-  {
-    "id": "slot_t_1_sexta_8",
-    "teacherId": "t_1",
-    "dayOfWeek": "sexta",
     "periodId": 8,
     "type": "LIVRE"
   },
@@ -757,12 +504,137 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingName": "Tutoria"
   },
   {
+    "id": "slot_t_1_terca_1",
+    "teacherId": "t_1",
+    "dayOfWeek": "terca",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "8A",
+    "subject": "Educação Física"
+  },
+  {
+    "id": "slot_t_1_terca_2",
+    "teacherId": "t_1",
+    "dayOfWeek": "terca",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "6B",
+    "subject": "Educação Física"
+  },
+  {
+    "id": "slot_t_1_terca_3",
+    "teacherId": "t_1",
+    "dayOfWeek": "terca",
+    "periodId": 3,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_1_terca_4",
+    "teacherId": "t_1",
+    "dayOfWeek": "terca",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "9A",
+    "subject": "Educação Física"
+  },
+  {
+    "id": "slot_t_1_terca_5",
+    "teacherId": "t_1",
+    "dayOfWeek": "terca",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "9B",
+    "subject": "Educação Física"
+  },
+  {
+    "id": "slot_t_1_terca_6",
+    "teacherId": "t_1",
+    "dayOfWeek": "terca",
+    "periodId": 6,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_1_terca_7",
+    "teacherId": "t_1",
+    "dayOfWeek": "terca",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "7A",
+    "subject": "Educação Física"
+  },
+  {
+    "id": "slot_t_1_terca_8",
+    "teacherId": "t_1",
+    "dayOfWeek": "terca",
+    "periodId": 8,
+    "type": "AULA",
+    "classId": "7B",
+    "subject": "Educação Física"
+  },
+  {
     "id": "slot_t_1_terca_9",
     "teacherId": "t_1",
     "dayOfWeek": "terca",
     "periodId": 9,
     "type": "ATIVIDADE",
     "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_1_quarta_1",
+    "teacherId": "t_1",
+    "dayOfWeek": "quarta",
+    "periodId": 1,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_1_quarta_2",
+    "teacherId": "t_1",
+    "dayOfWeek": "quarta",
+    "periodId": 2,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_1_quarta_3",
+    "teacherId": "t_1",
+    "dayOfWeek": "quarta",
+    "periodId": 3,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_1_quarta_4",
+    "teacherId": "t_1",
+    "dayOfWeek": "quarta",
+    "periodId": 4,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_1_quarta_5",
+    "teacherId": "t_1",
+    "dayOfWeek": "quarta",
+    "periodId": 5,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_1_quarta_6",
+    "teacherId": "t_1",
+    "dayOfWeek": "quarta",
+    "periodId": 6,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_1_quarta_7",
+    "teacherId": "t_1",
+    "dayOfWeek": "quarta",
+    "periodId": 7,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_1_quarta_8",
+    "teacherId": "t_1",
+    "dayOfWeek": "quarta",
+    "periodId": 8,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
   },
   {
     "id": "slot_t_1_quarta_9",
@@ -773,12 +645,139 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingName": "ATPC Geral"
   },
   {
+    "id": "slot_t_1_quinta_1",
+    "teacherId": "t_1",
+    "dayOfWeek": "quinta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "6B",
+    "subject": "Educação Física"
+  },
+  {
+    "id": "slot_t_1_quinta_2",
+    "teacherId": "t_1",
+    "dayOfWeek": "quinta",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "7A",
+    "subject": "Educação Física"
+  },
+  {
+    "id": "slot_t_1_quinta_3",
+    "teacherId": "t_1",
+    "dayOfWeek": "quinta",
+    "periodId": 3,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_1_quinta_4",
+    "teacherId": "t_1",
+    "dayOfWeek": "quinta",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "9A",
+    "subject": "Educação Física"
+  },
+  {
+    "id": "slot_t_1_quinta_5",
+    "teacherId": "t_1",
+    "dayOfWeek": "quinta",
+    "periodId": 5,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_1_quinta_6",
+    "teacherId": "t_1",
+    "dayOfWeek": "quinta",
+    "periodId": 6,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_1_quinta_7",
+    "teacherId": "t_1",
+    "dayOfWeek": "quinta",
+    "periodId": 7,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_1_quinta_8",
+    "teacherId": "t_1",
+    "dayOfWeek": "quinta",
+    "periodId": 8,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC de Área"
+  },
+  {
     "id": "slot_t_1_quinta_9",
     "teacherId": "t_1",
     "dayOfWeek": "quinta",
     "periodId": 9,
     "type": "ATIVIDADE",
     "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_1_sexta_1",
+    "teacherId": "t_1",
+    "dayOfWeek": "sexta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "6A",
+    "subject": "Educação Física"
+  },
+  {
+    "id": "slot_t_1_sexta_2",
+    "teacherId": "t_1",
+    "dayOfWeek": "sexta",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "8A",
+    "subject": "Educação Física"
+  },
+  {
+    "id": "slot_t_1_sexta_3",
+    "teacherId": "t_1",
+    "dayOfWeek": "sexta",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "7B",
+    "subject": "Educação Física"
+  },
+  {
+    "id": "slot_t_1_sexta_4",
+    "teacherId": "t_1",
+    "dayOfWeek": "sexta",
+    "periodId": 4,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_1_sexta_5",
+    "teacherId": "t_1",
+    "dayOfWeek": "sexta",
+    "periodId": 5,
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
+  },
+  {
+    "id": "slot_t_1_sexta_6",
+    "teacherId": "t_1",
+    "dayOfWeek": "sexta",
+    "periodId": 6,
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
+  },
+  {
+    "id": "slot_t_1_sexta_7",
+    "teacherId": "t_1",
+    "dayOfWeek": "sexta",
+    "periodId": 7,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_1_sexta_8",
+    "teacherId": "t_1",
+    "dayOfWeek": "sexta",
+    "periodId": 8,
+    "type": "LIVRE"
   },
   {
     "id": "slot_t_1_sexta_9",
@@ -793,40 +792,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "segunda",
     "periodId": 1,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_2_terca_1",
-    "teacherId": "t_2",
-    "dayOfWeek": "terca",
-    "periodId": 1,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_2_quarta_1",
-    "teacherId": "t_2",
-    "dayOfWeek": "quarta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "6B",
-    "subject": "Projeto de Vida"
-  },
-  {
-    "id": "slot_t_2_quinta_1",
-    "teacherId": "t_2",
-    "dayOfWeek": "quinta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "1EMB",
-    "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_2_sexta_1",
-    "teacherId": "t_2",
-    "dayOfWeek": "sexta",
-    "periodId": 1,
-    "type": "LIVRE"
+    "classId": "7B",
+    "subject": "Orientação de Matemática"
   },
   {
     "id": "slot_t_2_segunda_2",
@@ -838,11 +805,148 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Matemática"
   },
   {
+    "id": "slot_t_2_segunda_3",
+    "teacherId": "t_2",
+    "dayOfWeek": "segunda",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "9A",
+    "subject": "Orientação de Matemática"
+  },
+  {
+    "id": "slot_t_2_segunda_4",
+    "teacherId": "t_2",
+    "dayOfWeek": "segunda",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "9A",
+    "subject": "Orientação de Matemática"
+  },
+  {
+    "id": "slot_t_2_segunda_5",
+    "teacherId": "t_2",
+    "dayOfWeek": "segunda",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "3EMB",
+    "subject": "Orientação de Matemática"
+  },
+  {
+    "id": "slot_t_2_segunda_6",
+    "teacherId": "t_2",
+    "dayOfWeek": "segunda",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "3EMB",
+    "subject": "Orientação de Matemática"
+  },
+  {
+    "id": "slot_t_2_segunda_7",
+    "teacherId": "t_2",
+    "dayOfWeek": "segunda",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "1EMA",
+    "subject": "Física"
+  },
+  {
+    "id": "slot_t_2_segunda_8",
+    "teacherId": "t_2",
+    "dayOfWeek": "segunda",
+    "periodId": 8,
+    "type": "AULA",
+    "classId": "1EMA",
+    "subject": "Física"
+  },
+  {
+    "id": "slot_t_2_segunda_9",
+    "teacherId": "t_2",
+    "dayOfWeek": "segunda",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_2_terca_1",
+    "teacherId": "t_2",
+    "dayOfWeek": "terca",
+    "periodId": 1,
+    "type": "LIVRE"
+  },
+  {
     "id": "slot_t_2_terca_2",
     "teacherId": "t_2",
     "dayOfWeek": "terca",
     "periodId": 2,
     "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_2_terca_3",
+    "teacherId": "t_2",
+    "dayOfWeek": "terca",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "6A",
+    "subject": "Orientação de Matemática"
+  },
+  {
+    "id": "slot_t_2_terca_4",
+    "teacherId": "t_2",
+    "dayOfWeek": "terca",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "6A",
+    "subject": "Orientação de Matemática"
+  },
+  {
+    "id": "slot_t_2_terca_5",
+    "teacherId": "t_2",
+    "dayOfWeek": "terca",
+    "periodId": 5,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_2_terca_6",
+    "teacherId": "t_2",
+    "dayOfWeek": "terca",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "6B",
+    "subject": "Projeto de Vida"
+  },
+  {
+    "id": "slot_t_2_terca_7",
+    "teacherId": "t_2",
+    "dayOfWeek": "terca",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "2EMA_DS",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_2_terca_8",
+    "teacherId": "t_2",
+    "dayOfWeek": "terca",
+    "periodId": 8,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC de Área"
+  },
+  {
+    "id": "slot_t_2_terca_9",
+    "teacherId": "t_2",
+    "dayOfWeek": "terca",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_2_quarta_1",
+    "teacherId": "t_2",
+    "dayOfWeek": "quarta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "2EMB",
+    "subject": "Orientação de Matemática"
   },
   {
     "id": "slot_t_2_quarta_2",
@@ -854,47 +958,79 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Matemática"
   },
   {
+    "id": "slot_t_2_quarta_3",
+    "teacherId": "t_2",
+    "dayOfWeek": "quarta",
+    "periodId": 3,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_2_quarta_4",
+    "teacherId": "t_2",
+    "dayOfWeek": "quarta",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "1EMA",
+    "subject": "Orientação de Matemática"
+  },
+  {
+    "id": "slot_t_2_quarta_5",
+    "teacherId": "t_2",
+    "dayOfWeek": "quarta",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "1EMB",
+    "subject": "Física"
+  },
+  {
+    "id": "slot_t_2_quarta_6",
+    "teacherId": "t_2",
+    "dayOfWeek": "quarta",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "1EMB",
+    "subject": "Física"
+  },
+  {
+    "id": "slot_t_2_quarta_7",
+    "teacherId": "t_2",
+    "dayOfWeek": "quarta",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "3EMB",
+    "subject": "Orientação de Matemática"
+  },
+  {
+    "id": "slot_t_2_quarta_8",
+    "teacherId": "t_2",
+    "dayOfWeek": "quarta",
+    "periodId": 8,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
+  },
+  {
+    "id": "slot_t_2_quarta_9",
+    "teacherId": "t_2",
+    "dayOfWeek": "quarta",
+    "periodId": 9,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
+  },
+  {
+    "id": "slot_t_2_quinta_1",
+    "teacherId": "t_2",
+    "dayOfWeek": "quinta",
+    "periodId": 1,
+    "type": "LIVRE"
+  },
+  {
     "id": "slot_t_2_quinta_2",
     "teacherId": "t_2",
     "dayOfWeek": "quinta",
     "periodId": 2,
     "type": "AULA",
-    "classId": "1EMB",
-    "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_2_sexta_2",
-    "teacherId": "t_2",
-    "dayOfWeek": "sexta",
-    "periodId": 2,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_2_segunda_3",
-    "teacherId": "t_2",
-    "dayOfWeek": "segunda",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "1EMB",
-    "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_2_terca_3",
-    "teacherId": "t_2",
-    "dayOfWeek": "terca",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "1EMA",
-    "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_2_quarta_3",
-    "teacherId": "t_2",
-    "dayOfWeek": "quarta",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "1EMB",
-    "subject": "Física"
+    "classId": "6B",
+    "subject": "Orientação de Matemática"
   },
   {
     "id": "slot_t_2_quinta_3",
@@ -902,8 +1038,69 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "quinta",
     "periodId": 3,
     "type": "AULA",
-    "classId": "1EMA",
+    "classId": "6B",
+    "subject": "Orientação de Matemática"
+  },
+  {
+    "id": "slot_t_2_quinta_4",
+    "teacherId": "t_2",
+    "dayOfWeek": "quinta",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "2EMA_DS",
     "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_2_quinta_5",
+    "teacherId": "t_2",
+    "dayOfWeek": "quinta",
+    "periodId": 5,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_2_quinta_6",
+    "teacherId": "t_2",
+    "dayOfWeek": "quinta",
+    "periodId": 6,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_2_quinta_7",
+    "teacherId": "t_2",
+    "dayOfWeek": "quinta",
+    "periodId": 7,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_2_quinta_8",
+    "teacherId": "t_2",
+    "dayOfWeek": "quinta",
+    "periodId": 8,
+    "type": "AULA",
+    "classId": "7A",
+    "subject": "Orientação de Matemática"
+  },
+  {
+    "id": "slot_t_2_quinta_9",
+    "teacherId": "t_2",
+    "dayOfWeek": "quinta",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_2_sexta_1",
+    "teacherId": "t_2",
+    "dayOfWeek": "sexta",
+    "periodId": 1,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_2_sexta_2",
+    "teacherId": "t_2",
+    "dayOfWeek": "sexta",
+    "periodId": 2,
+    "type": "LIVRE"
   },
   {
     "id": "slot_t_2_sexta_3",
@@ -916,42 +1113,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingEndTime": "11:00"
   },
   {
-    "id": "slot_t_2_segunda_4",
-    "teacherId": "t_2",
-    "dayOfWeek": "segunda",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "1EMB",
-    "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_2_terca_4",
-    "teacherId": "t_2",
-    "dayOfWeek": "terca",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "1EMA",
-    "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_2_quarta_4",
-    "teacherId": "t_2",
-    "dayOfWeek": "quarta",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "1EMB",
-    "subject": "Física"
-  },
-  {
-    "id": "slot_t_2_quinta_4",
-    "teacherId": "t_2",
-    "dayOfWeek": "quinta",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "1EMA",
-    "subject": "Matemática"
-  },
-  {
     "id": "slot_t_2_sexta_4",
     "teacherId": "t_2",
     "dayOfWeek": "sexta",
@@ -960,40 +1121,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingName": "Multiplica SP",
     "trainingStartTime": "09:30",
     "trainingEndTime": "11:00"
-  },
-  {
-    "id": "slot_t_2_segunda_5",
-    "teacherId": "t_2",
-    "dayOfWeek": "segunda",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "6A",
-    "subject": "Projeto de Vida"
-  },
-  {
-    "id": "slot_t_2_terca_5",
-    "teacherId": "t_2",
-    "dayOfWeek": "terca",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "6A",
-    "subject": "Orientação de Matemática"
-  },
-  {
-    "id": "slot_t_2_quarta_5",
-    "teacherId": "t_2",
-    "dayOfWeek": "quarta",
-    "periodId": 5,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_2_quinta_5",
-    "teacherId": "t_2",
-    "dayOfWeek": "quinta",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "6B",
-    "subject": "Orientação de Matemática"
   },
   {
     "id": "slot_t_2_sexta_5",
@@ -1006,40 +1133,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingEndTime": "11:00"
   },
   {
-    "id": "slot_t_2_segunda_6",
-    "teacherId": "t_2",
-    "dayOfWeek": "segunda",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "1EMA",
-    "subject": "Orientação de Matemática"
-  },
-  {
-    "id": "slot_t_2_terca_6",
-    "teacherId": "t_2",
-    "dayOfWeek": "terca",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "6A",
-    "subject": "Orientação de Matemática"
-  },
-  {
-    "id": "slot_t_2_quarta_6",
-    "teacherId": "t_2",
-    "dayOfWeek": "quarta",
-    "periodId": 6,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_2_quinta_6",
-    "teacherId": "t_2",
-    "dayOfWeek": "quinta",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "6B",
-    "subject": "Orientação de Matemática"
-  },
-  {
     "id": "slot_t_2_sexta_6",
     "teacherId": "t_2",
     "dayOfWeek": "sexta",
@@ -1048,118 +1141,22 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingName": "Eletiva"
   },
   {
-    "id": "slot_t_2_segunda_7",
-    "teacherId": "t_2",
-    "dayOfWeek": "segunda",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "1EMA",
-    "subject": "Física"
-  },
-  {
-    "id": "slot_t_2_terca_7",
-    "teacherId": "t_2",
-    "dayOfWeek": "terca",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_2_quarta_7",
-    "teacherId": "t_2",
-    "dayOfWeek": "quarta",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "7B",
-    "subject": "Orientação de Matemática"
-  },
-  {
-    "id": "slot_t_2_quinta_7",
-    "teacherId": "t_2",
-    "dayOfWeek": "quinta",
-    "periodId": 7,
-    "type": "LIVRE"
-  },
-  {
     "id": "slot_t_2_sexta_7",
     "teacherId": "t_2",
     "dayOfWeek": "sexta",
     "periodId": 7,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_2_segunda_8",
-    "teacherId": "t_2",
-    "dayOfWeek": "segunda",
-    "periodId": 8,
     "type": "AULA",
-    "classId": "1EMA",
-    "subject": "Física"
-  },
-  {
-    "id": "slot_t_2_terca_8",
-    "teacherId": "t_2",
-    "dayOfWeek": "terca",
-    "periodId": 8,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC de Área"
-  },
-  {
-    "id": "slot_t_2_quarta_8",
-    "teacherId": "t_2",
-    "dayOfWeek": "quarta",
-    "periodId": 8,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC Geral"
-  },
-  {
-    "id": "slot_t_2_quinta_8",
-    "teacherId": "t_2",
-    "dayOfWeek": "quinta",
-    "periodId": 8,
-    "type": "AULA",
-    "classId": "7A",
-    "subject": "Orientação de Matemática"
+    "classId": "6A",
+    "subject": "Projeto de Vida"
   },
   {
     "id": "slot_t_2_sexta_8",
     "teacherId": "t_2",
     "dayOfWeek": "sexta",
     "periodId": 8,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_2_segunda_9",
-    "teacherId": "t_2",
-    "dayOfWeek": "segunda",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
-    "id": "slot_t_2_terca_9",
-    "teacherId": "t_2",
-    "dayOfWeek": "terca",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
-    "id": "slot_t_2_quarta_9",
-    "teacherId": "t_2",
-    "dayOfWeek": "quarta",
-    "periodId": 9,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC Geral"
-  },
-  {
-    "id": "slot_t_2_quinta_9",
-    "teacherId": "t_2",
-    "dayOfWeek": "quinta",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
+    "type": "AULA",
+    "classId": "9B",
+    "subject": "Orientação de Matemática"
   },
   {
     "id": "slot_t_2_sexta_9",
@@ -1167,7 +1164,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "sexta",
     "periodId": 9,
     "type": "AULA",
-    "classId": "2EMB",
+    "classId": "9B",
     "subject": "Orientação de Matemática"
   },
   {
@@ -1180,34 +1177,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "História"
   },
   {
-    "id": "slot_t_3_terca_1",
-    "teacherId": "t_3",
-    "dayOfWeek": "terca",
-    "periodId": 1,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_3_quarta_1",
-    "teacherId": "t_3",
-    "dayOfWeek": "quarta",
-    "periodId": 1,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_3_quinta_1",
-    "teacherId": "t_3",
-    "dayOfWeek": "quinta",
-    "periodId": 1,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_3_sexta_1",
-    "teacherId": "t_3",
-    "dayOfWeek": "sexta",
-    "periodId": 1,
-    "type": "LIVRE"
-  },
-  {
     "id": "slot_t_3_segunda_2",
     "teacherId": "t_3",
     "dayOfWeek": "segunda",
@@ -1217,110 +1186,16 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "História"
   },
   {
-    "id": "slot_t_3_terca_2",
-    "teacherId": "t_3",
-    "dayOfWeek": "terca",
-    "periodId": 2,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_3_quarta_2",
-    "teacherId": "t_3",
-    "dayOfWeek": "quarta",
-    "periodId": 2,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_3_quinta_2",
-    "teacherId": "t_3",
-    "dayOfWeek": "quinta",
-    "periodId": 2,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_3_sexta_2",
-    "teacherId": "t_3",
-    "dayOfWeek": "sexta",
-    "periodId": 2,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "Escola de Gestão"
-  },
-  {
     "id": "slot_t_3_segunda_3",
     "teacherId": "t_3",
     "dayOfWeek": "segunda",
     "periodId": 3,
-    "type": "AULA",
-    "classId": "3EMA_DS",
-    "subject": "História"
-  },
-  {
-    "id": "slot_t_3_terca_3",
-    "teacherId": "t_3",
-    "dayOfWeek": "terca",
-    "periodId": 3,
     "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_3_quarta_3",
-    "teacherId": "t_3",
-    "dayOfWeek": "quarta",
-    "periodId": 3,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_3_quinta_3",
-    "teacherId": "t_3",
-    "dayOfWeek": "quinta",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "2EMB",
-    "subject": "História"
-  },
-  {
-    "id": "slot_t_3_sexta_3",
-    "teacherId": "t_3",
-    "dayOfWeek": "sexta",
-    "periodId": 3,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "Escola de Gestão"
   },
   {
     "id": "slot_t_3_segunda_4",
     "teacherId": "t_3",
     "dayOfWeek": "segunda",
-    "periodId": 4,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_3_terca_4",
-    "teacherId": "t_3",
-    "dayOfWeek": "terca",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "História"
-  },
-  {
-    "id": "slot_t_3_quarta_4",
-    "teacherId": "t_3",
-    "dayOfWeek": "quarta",
-    "periodId": 4,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_3_quinta_4",
-    "teacherId": "t_3",
-    "dayOfWeek": "quinta",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "2EMB",
-    "subject": "História"
-  },
-  {
-    "id": "slot_t_3_sexta_4",
-    "teacherId": "t_3",
-    "dayOfWeek": "sexta",
     "periodId": 4,
     "type": "LIVRE"
   },
@@ -1332,77 +1207,11 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "LIVRE"
   },
   {
-    "id": "slot_t_3_terca_5",
-    "teacherId": "t_3",
-    "dayOfWeek": "terca",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "História"
-  },
-  {
-    "id": "slot_t_3_quarta_5",
-    "teacherId": "t_3",
-    "dayOfWeek": "quarta",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "1EMA",
-    "subject": "História"
-  },
-  {
-    "id": "slot_t_3_quinta_5",
-    "teacherId": "t_3",
-    "dayOfWeek": "quinta",
-    "periodId": 5,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_3_sexta_5",
-    "teacherId": "t_3",
-    "dayOfWeek": "sexta",
-    "periodId": 5,
-    "type": "ELETIVA",
-    "trainingName": "Eletiva"
-  },
-  {
     "id": "slot_t_3_segunda_6",
     "teacherId": "t_3",
     "dayOfWeek": "segunda",
     "periodId": 6,
     "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_3_terca_6",
-    "teacherId": "t_3",
-    "dayOfWeek": "terca",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "3EMB",
-    "subject": "Projeto de Vida"
-  },
-  {
-    "id": "slot_t_3_quarta_6",
-    "teacherId": "t_3",
-    "dayOfWeek": "quarta",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "1EMA",
-    "subject": "História"
-  },
-  {
-    "id": "slot_t_3_quinta_6",
-    "teacherId": "t_3",
-    "dayOfWeek": "quinta",
-    "periodId": 6,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_3_sexta_6",
-    "teacherId": "t_3",
-    "dayOfWeek": "sexta",
-    "periodId": 6,
-    "type": "ELETIVA",
-    "trainingName": "Eletiva"
   },
   {
     "id": "slot_t_3_segunda_7",
@@ -1412,74 +1221,9 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "LIVRE"
   },
   {
-    "id": "slot_t_3_terca_7",
-    "teacherId": "t_3",
-    "dayOfWeek": "terca",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "3EMA_DS",
-    "subject": "História"
-  },
-  {
-    "id": "slot_t_3_quarta_7",
-    "teacherId": "t_3",
-    "dayOfWeek": "quarta",
-    "periodId": 7,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_3_quinta_7",
-    "teacherId": "t_3",
-    "dayOfWeek": "quinta",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "1EMB",
-    "subject": "História"
-  },
-  {
-    "id": "slot_t_3_sexta_7",
-    "teacherId": "t_3",
-    "dayOfWeek": "sexta",
-    "periodId": 7,
-    "type": "LIVRE"
-  },
-  {
     "id": "slot_t_3_segunda_8",
     "teacherId": "t_3",
     "dayOfWeek": "segunda",
-    "periodId": 8,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_3_terca_8",
-    "teacherId": "t_3",
-    "dayOfWeek": "terca",
-    "periodId": 8,
-    "type": "AULA",
-    "classId": "2EMB",
-    "subject": "Projeto de Vida"
-  },
-  {
-    "id": "slot_t_3_quarta_8",
-    "teacherId": "t_3",
-    "dayOfWeek": "quarta",
-    "periodId": 8,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC Geral"
-  },
-  {
-    "id": "slot_t_3_quinta_8",
-    "teacherId": "t_3",
-    "dayOfWeek": "quinta",
-    "periodId": 8,
-    "type": "AULA",
-    "classId": "1EMB",
-    "subject": "História"
-  },
-  {
-    "id": "slot_t_3_sexta_8",
-    "teacherId": "t_3",
-    "dayOfWeek": "sexta",
     "periodId": 8,
     "type": "LIVRE"
   },
@@ -1492,12 +1236,139 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingName": "Tutoria"
   },
   {
+    "id": "slot_t_3_terca_1",
+    "teacherId": "t_3",
+    "dayOfWeek": "terca",
+    "periodId": 1,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_3_terca_2",
+    "teacherId": "t_3",
+    "dayOfWeek": "terca",
+    "periodId": 2,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_3_terca_3",
+    "teacherId": "t_3",
+    "dayOfWeek": "terca",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "1EMA",
+    "subject": "História"
+  },
+  {
+    "id": "slot_t_3_terca_4",
+    "teacherId": "t_3",
+    "dayOfWeek": "terca",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "1EMA",
+    "subject": "História"
+  },
+  {
+    "id": "slot_t_3_terca_5",
+    "teacherId": "t_3",
+    "dayOfWeek": "terca",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "2EMA_DS",
+    "subject": "História"
+  },
+  {
+    "id": "slot_t_3_terca_6",
+    "teacherId": "t_3",
+    "dayOfWeek": "terca",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "2EMA_DS",
+    "subject": "História"
+  },
+  {
+    "id": "slot_t_3_terca_7",
+    "teacherId": "t_3",
+    "dayOfWeek": "terca",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "3EMA_DS",
+    "subject": "História"
+  },
+  {
+    "id": "slot_t_3_terca_8",
+    "teacherId": "t_3",
+    "dayOfWeek": "terca",
+    "periodId": 8,
+    "type": "AULA",
+    "classId": "3EMA_DS",
+    "subject": "História"
+  },
+  {
     "id": "slot_t_3_terca_9",
     "teacherId": "t_3",
     "dayOfWeek": "terca",
     "periodId": 9,
     "type": "ATIVIDADE",
     "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_3_quarta_1",
+    "teacherId": "t_3",
+    "dayOfWeek": "quarta",
+    "periodId": 1,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_3_quarta_2",
+    "teacherId": "t_3",
+    "dayOfWeek": "quarta",
+    "periodId": 2,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_3_quarta_3",
+    "teacherId": "t_3",
+    "dayOfWeek": "quarta",
+    "periodId": 3,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_3_quarta_4",
+    "teacherId": "t_3",
+    "dayOfWeek": "quarta",
+    "periodId": 4,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_3_quarta_5",
+    "teacherId": "t_3",
+    "dayOfWeek": "quarta",
+    "periodId": 5,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_3_quarta_6",
+    "teacherId": "t_3",
+    "dayOfWeek": "quarta",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "2EMB",
+    "subject": "Projeto de Vida"
+  },
+  {
+    "id": "slot_t_3_quarta_7",
+    "teacherId": "t_3",
+    "dayOfWeek": "quarta",
+    "periodId": 7,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_3_quarta_8",
+    "teacherId": "t_3",
+    "dayOfWeek": "quarta",
+    "periodId": 8,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
   },
   {
     "id": "slot_t_3_quarta_9",
@@ -1508,12 +1379,138 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingName": "ATPC Geral"
   },
   {
+    "id": "slot_t_3_quinta_1",
+    "teacherId": "t_3",
+    "dayOfWeek": "quinta",
+    "periodId": 1,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_3_quinta_2",
+    "teacherId": "t_3",
+    "dayOfWeek": "quinta",
+    "periodId": 2,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_3_quinta_3",
+    "teacherId": "t_3",
+    "dayOfWeek": "quinta",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "2EMB",
+    "subject": "História"
+  },
+  {
+    "id": "slot_t_3_quinta_4",
+    "teacherId": "t_3",
+    "dayOfWeek": "quinta",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "2EMB",
+    "subject": "História"
+  },
+  {
+    "id": "slot_t_3_quinta_5",
+    "teacherId": "t_3",
+    "dayOfWeek": "quinta",
+    "periodId": 5,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_3_quinta_6",
+    "teacherId": "t_3",
+    "dayOfWeek": "quinta",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "3EMB",
+    "subject": "Projeto de Vida"
+  },
+  {
+    "id": "slot_t_3_quinta_7",
+    "teacherId": "t_3",
+    "dayOfWeek": "quinta",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "1EMB",
+    "subject": "História"
+  },
+  {
+    "id": "slot_t_3_quinta_8",
+    "teacherId": "t_3",
+    "dayOfWeek": "quinta",
+    "periodId": 8,
+    "type": "AULA",
+    "classId": "1EMB",
+    "subject": "História"
+  },
+  {
     "id": "slot_t_3_quinta_9",
     "teacherId": "t_3",
     "dayOfWeek": "quinta",
     "periodId": 9,
     "type": "ATIVIDADE",
     "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_3_sexta_1",
+    "teacherId": "t_3",
+    "dayOfWeek": "sexta",
+    "periodId": 1,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_3_sexta_2",
+    "teacherId": "t_3",
+    "dayOfWeek": "sexta",
+    "periodId": 2,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Escola de Gestão"
+  },
+  {
+    "id": "slot_t_3_sexta_3",
+    "teacherId": "t_3",
+    "dayOfWeek": "sexta",
+    "periodId": 3,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Escola de Gestão"
+  },
+  {
+    "id": "slot_t_3_sexta_4",
+    "teacherId": "t_3",
+    "dayOfWeek": "sexta",
+    "periodId": 4,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_3_sexta_5",
+    "teacherId": "t_3",
+    "dayOfWeek": "sexta",
+    "periodId": 5,
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
+  },
+  {
+    "id": "slot_t_3_sexta_6",
+    "teacherId": "t_3",
+    "dayOfWeek": "sexta",
+    "periodId": 6,
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
+  },
+  {
+    "id": "slot_t_3_sexta_7",
+    "teacherId": "t_3",
+    "dayOfWeek": "sexta",
+    "periodId": 7,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_3_sexta_8",
+    "teacherId": "t_3",
+    "dayOfWeek": "sexta",
+    "periodId": 8,
+    "type": "LIVRE"
   },
   {
     "id": "slot_t_3_sexta_9",
@@ -1528,8 +1525,75 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "segunda",
     "periodId": 1,
     "type": "AULA",
+    "classId": "2EMA_DS",
+    "subject": "Processos de Desenvolviment…"
+  },
+  {
+    "id": "slot_t_4_segunda_2",
+    "teacherId": "t_4",
+    "dayOfWeek": "segunda",
+    "periodId": 2,
+    "type": "AULA",
     "classId": "3EMA_DS",
-    "subject": "Modelagem e Desenvolviment…"
+    "subject": "Projeto Multidisciplinar"
+  },
+  {
+    "id": "slot_t_4_segunda_3",
+    "teacherId": "t_4",
+    "dayOfWeek": "segunda",
+    "periodId": 3,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_4_segunda_4",
+    "teacherId": "t_4",
+    "dayOfWeek": "segunda",
+    "periodId": 4,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_4_segunda_5",
+    "teacherId": "t_4",
+    "dayOfWeek": "segunda",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "2EMA_DS",
+    "subject": "Lógica e Linguagens de Progr…"
+  },
+  {
+    "id": "slot_t_4_segunda_6",
+    "teacherId": "t_4",
+    "dayOfWeek": "segunda",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "2EMA_DS",
+    "subject": "Lógica e Linguagens de Progr…"
+  },
+  {
+    "id": "slot_t_4_segunda_7",
+    "teacherId": "t_4",
+    "dayOfWeek": "segunda",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "2EMA_DS",
+    "subject": "Redes de Computadores e Seg…"
+  },
+  {
+    "id": "slot_t_4_segunda_8",
+    "teacherId": "t_4",
+    "dayOfWeek": "segunda",
+    "periodId": 8,
+    "type": "AULA",
+    "classId": "2EMA_DS",
+    "subject": "Redes de Computadores e Seg…"
+  },
+  {
+    "id": "slot_t_4_segunda_9",
+    "teacherId": "t_4",
+    "dayOfWeek": "segunda",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_4_terca_1",
@@ -1539,44 +1603,73 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "LIVRE"
   },
   {
-    "id": "slot_t_4_quarta_1",
+    "id": "slot_t_4_terca_2",
     "teacherId": "t_4",
-    "dayOfWeek": "quarta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "Redes de Computadores e Seg…"
-  },
-  {
-    "id": "slot_t_4_quinta_1",
-    "teacherId": "t_4",
-    "dayOfWeek": "quinta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "Carreira e Competências para …"
-  },
-  {
-    "id": "slot_t_4_sexta_1",
-    "teacherId": "t_4",
-    "dayOfWeek": "sexta",
-    "periodId": 1,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_4_segunda_2",
-    "teacherId": "t_4",
-    "dayOfWeek": "segunda",
+    "dayOfWeek": "terca",
     "periodId": 2,
     "type": "AULA",
     "classId": "3EMA_DS",
     "subject": "Modelagem e Desenvolviment…"
   },
   {
-    "id": "slot_t_4_terca_2",
+    "id": "slot_t_4_terca_3",
     "teacherId": "t_4",
     "dayOfWeek": "terca",
-    "periodId": 2,
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "3EMA_DS",
+    "subject": "Modelagem e Desenvolviment…"
+  },
+  {
+    "id": "slot_t_4_terca_4",
+    "teacherId": "t_4",
+    "dayOfWeek": "terca",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "3EMA_DS",
+    "subject": "Inteligência Artificial"
+  },
+  {
+    "id": "slot_t_4_terca_5",
+    "teacherId": "t_4",
+    "dayOfWeek": "terca",
+    "periodId": 5,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_4_terca_6",
+    "teacherId": "t_4",
+    "dayOfWeek": "terca",
+    "periodId": 6,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_4_terca_7",
+    "teacherId": "t_4",
+    "dayOfWeek": "terca",
+    "periodId": 7,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_4_terca_8",
+    "teacherId": "t_4",
+    "dayOfWeek": "terca",
+    "periodId": 8,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_4_terca_9",
+    "teacherId": "t_4",
+    "dayOfWeek": "terca",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_4_quarta_1",
+    "teacherId": "t_4",
+    "dayOfWeek": "quarta",
+    "periodId": 1,
     "type": "AULA",
     "classId": "2EMA_DS",
     "subject": "Carreira e Competências para …"
@@ -1589,38 +1682,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "LIVRE"
   },
   {
-    "id": "slot_t_4_quinta_2",
-    "teacherId": "t_4",
-    "dayOfWeek": "quinta",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "Carreira e Competências para …"
-  },
-  {
-    "id": "slot_t_4_sexta_2",
-    "teacherId": "t_4",
-    "dayOfWeek": "sexta",
-    "periodId": 2,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_4_segunda_3",
-    "teacherId": "t_4",
-    "dayOfWeek": "segunda",
-    "periodId": 3,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_4_terca_3",
-    "teacherId": "t_4",
-    "dayOfWeek": "terca",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "3EMA_DS",
-    "subject": "Projeto Multidisciplinar"
-  },
-  {
     "id": "slot_t_4_quarta_3",
     "teacherId": "t_4",
     "dayOfWeek": "quarta",
@@ -1628,76 +1689,10 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "LIVRE"
   },
   {
-    "id": "slot_t_4_quinta_3",
-    "teacherId": "t_4",
-    "dayOfWeek": "quinta",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "Redes de Computadores e Seg…"
-  },
-  {
-    "id": "slot_t_4_sexta_3",
-    "teacherId": "t_4",
-    "dayOfWeek": "sexta",
-    "periodId": 3,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_4_segunda_4",
-    "teacherId": "t_4",
-    "dayOfWeek": "segunda",
-    "periodId": 4,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_4_terca_4",
-    "teacherId": "t_4",
-    "dayOfWeek": "terca",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "3EMA_DS",
-    "subject": "Inteligência Artificial"
-  },
-  {
     "id": "slot_t_4_quarta_4",
     "teacherId": "t_4",
     "dayOfWeek": "quarta",
     "periodId": 4,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_4_quinta_4",
-    "teacherId": "t_4",
-    "dayOfWeek": "quinta",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "3EMA_DS",
-    "subject": "Inteligência Artificial"
-  },
-  {
-    "id": "slot_t_4_sexta_4",
-    "teacherId": "t_4",
-    "dayOfWeek": "sexta",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "Redes de Computadores e Seg…"
-  },
-  {
-    "id": "slot_t_4_segunda_5",
-    "teacherId": "t_4",
-    "dayOfWeek": "segunda",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "Lógica e Linguagens de Progr…"
-  },
-  {
-    "id": "slot_t_4_terca_5",
-    "teacherId": "t_4",
-    "dayOfWeek": "terca",
-    "periodId": 5,
     "type": "LIVRE"
   },
   {
@@ -1710,10 +1705,139 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Lógica e Linguagens de Progr…"
   },
   {
+    "id": "slot_t_4_quarta_6",
+    "teacherId": "t_4",
+    "dayOfWeek": "quarta",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "2EMA_DS",
+    "subject": "Lógica e Linguagens de Progr…"
+  },
+  {
+    "id": "slot_t_4_quarta_7",
+    "teacherId": "t_4",
+    "dayOfWeek": "quarta",
+    "periodId": 7,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_4_quarta_8",
+    "teacherId": "t_4",
+    "dayOfWeek": "quarta",
+    "periodId": 8,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
+  },
+  {
+    "id": "slot_t_4_quarta_9",
+    "teacherId": "t_4",
+    "dayOfWeek": "quarta",
+    "periodId": 9,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
+  },
+  {
+    "id": "slot_t_4_quinta_1",
+    "teacherId": "t_4",
+    "dayOfWeek": "quinta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "2EMA_DS",
+    "subject": "Redes de Computadores e Seg…"
+  },
+  {
+    "id": "slot_t_4_quinta_2",
+    "teacherId": "t_4",
+    "dayOfWeek": "quinta",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "2EMA_DS",
+    "subject": "Carreira e Competências para …"
+  },
+  {
+    "id": "slot_t_4_quinta_3",
+    "teacherId": "t_4",
+    "dayOfWeek": "quinta",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "2EMA_DS",
+    "subject": "Carreira e Competências para …"
+  },
+  {
+    "id": "slot_t_4_quinta_4",
+    "teacherId": "t_4",
+    "dayOfWeek": "quinta",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "3EMA_DS",
+    "subject": "Inteligência Artificial"
+  },
+  {
     "id": "slot_t_4_quinta_5",
     "teacherId": "t_4",
     "dayOfWeek": "quinta",
     "periodId": 5,
+    "type": "AULA",
+    "classId": "2EMA_DS",
+    "subject": "Processos de Desenvolviment…"
+  },
+  {
+    "id": "slot_t_4_quinta_6",
+    "teacherId": "t_4",
+    "dayOfWeek": "quinta",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "2EMA_DS",
+    "subject": "Processos de Desenvolviment…"
+  },
+  {
+    "id": "slot_t_4_quinta_7",
+    "teacherId": "t_4",
+    "dayOfWeek": "quinta",
+    "periodId": 7,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_4_quinta_8",
+    "teacherId": "t_4",
+    "dayOfWeek": "quinta",
+    "periodId": 8,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_4_quinta_9",
+    "teacherId": "t_4",
+    "dayOfWeek": "quinta",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_4_sexta_1",
+    "teacherId": "t_4",
+    "dayOfWeek": "sexta",
+    "periodId": 1,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_4_sexta_2",
+    "teacherId": "t_4",
+    "dayOfWeek": "sexta",
+    "periodId": 2,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_4_sexta_3",
+    "teacherId": "t_4",
+    "dayOfWeek": "sexta",
+    "periodId": 3,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_4_sexta_4",
+    "teacherId": "t_4",
+    "dayOfWeek": "sexta",
+    "periodId": 4,
     "type": "AULA",
     "classId": "3EMA_DS",
     "subject": "Inteligência Artificial"
@@ -1728,40 +1852,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Projeto Multidisciplinar"
   },
   {
-    "id": "slot_t_4_segunda_6",
-    "teacherId": "t_4",
-    "dayOfWeek": "segunda",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "Lógica e Linguagens de Progr…"
-  },
-  {
-    "id": "slot_t_4_terca_6",
-    "teacherId": "t_4",
-    "dayOfWeek": "terca",
-    "periodId": 6,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_4_quarta_6",
-    "teacherId": "t_4",
-    "dayOfWeek": "quarta",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "Lógica e Linguagens de Progr…"
-  },
-  {
-    "id": "slot_t_4_quinta_6",
-    "teacherId": "t_4",
-    "dayOfWeek": "quinta",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "Processos de Desenvolviment…"
-  },
-  {
     "id": "slot_t_4_sexta_6",
     "teacherId": "t_4",
     "dayOfWeek": "sexta",
@@ -1769,36 +1859,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "AULA",
     "classId": "3EMA_DS",
     "subject": "Projeto Multidisciplinar"
-  },
-  {
-    "id": "slot_t_4_segunda_7",
-    "teacherId": "t_4",
-    "dayOfWeek": "segunda",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "Processos de Desenvolviment…"
-  },
-  {
-    "id": "slot_t_4_terca_7",
-    "teacherId": "t_4",
-    "dayOfWeek": "terca",
-    "periodId": 7,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_4_quarta_7",
-    "teacherId": "t_4",
-    "dayOfWeek": "quarta",
-    "periodId": 7,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_4_quinta_7",
-    "teacherId": "t_4",
-    "dayOfWeek": "quinta",
-    "periodId": 7,
-    "type": "LIVRE"
   },
   {
     "id": "slot_t_4_sexta_7",
@@ -1810,37 +1870,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Modelagem e Desenvolviment…"
   },
   {
-    "id": "slot_t_4_segunda_8",
-    "teacherId": "t_4",
-    "dayOfWeek": "segunda",
-    "periodId": 8,
-    "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "Processos de Desenvolviment…"
-  },
-  {
-    "id": "slot_t_4_terca_8",
-    "teacherId": "t_4",
-    "dayOfWeek": "terca",
-    "periodId": 8,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_4_quarta_8",
-    "teacherId": "t_4",
-    "dayOfWeek": "quarta",
-    "periodId": 8,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC Geral"
-  },
-  {
-    "id": "slot_t_4_quinta_8",
-    "teacherId": "t_4",
-    "dayOfWeek": "quinta",
-    "periodId": 8,
-    "type": "LIVRE"
-  },
-  {
     "id": "slot_t_4_sexta_8",
     "teacherId": "t_4",
     "dayOfWeek": "sexta",
@@ -1848,38 +1877,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "AULA",
     "classId": "3EMA_DS",
     "subject": "Modelagem e Desenvolviment…"
-  },
-  {
-    "id": "slot_t_4_segunda_9",
-    "teacherId": "t_4",
-    "dayOfWeek": "segunda",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
-    "id": "slot_t_4_terca_9",
-    "teacherId": "t_4",
-    "dayOfWeek": "terca",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
-    "id": "slot_t_4_quarta_9",
-    "teacherId": "t_4",
-    "dayOfWeek": "quarta",
-    "periodId": 9,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC Geral"
-  },
-  {
-    "id": "slot_t_4_quinta_9",
-    "teacherId": "t_4",
-    "dayOfWeek": "quinta",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_4_sexta_9",
@@ -1898,80 +1895,12 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Robótica"
   },
   {
-    "id": "slot_t_5_terca_1",
-    "teacherId": "t_5",
-    "dayOfWeek": "terca",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "7A",
-    "subject": "Robótica"
-  },
-  {
-    "id": "slot_t_5_quarta_1",
-    "teacherId": "t_5",
-    "dayOfWeek": "quarta",
-    "periodId": 1,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_5_quinta_1",
-    "teacherId": "t_5",
-    "dayOfWeek": "quinta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "9A",
-    "subject": "Robótica"
-  },
-  {
-    "id": "slot_t_5_sexta_1",
-    "teacherId": "t_5",
-    "dayOfWeek": "sexta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "6B",
-    "subject": "Robótica"
-  },
-  {
     "id": "slot_t_5_segunda_2",
     "teacherId": "t_5",
     "dayOfWeek": "segunda",
     "periodId": 2,
     "type": "AULA",
     "classId": "9B",
-    "subject": "Robótica"
-  },
-  {
-    "id": "slot_t_5_terca_2",
-    "teacherId": "t_5",
-    "dayOfWeek": "terca",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "7A",
-    "subject": "Robótica"
-  },
-  {
-    "id": "slot_t_5_quarta_2",
-    "teacherId": "t_5",
-    "dayOfWeek": "quarta",
-    "periodId": 2,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_5_quinta_2",
-    "teacherId": "t_5",
-    "dayOfWeek": "quinta",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "9A",
-    "subject": "Robótica"
-  },
-  {
-    "id": "slot_t_5_sexta_2",
-    "teacherId": "t_5",
-    "dayOfWeek": "sexta",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "6B",
     "subject": "Robótica"
   },
   {
@@ -1984,83 +1913,12 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Robótica"
   },
   {
-    "id": "slot_t_5_terca_3",
-    "teacherId": "t_5",
-    "dayOfWeek": "terca",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "2EMB",
-    "subject": "Robótica"
-  },
-  {
-    "id": "slot_t_5_quarta_3",
-    "teacherId": "t_5",
-    "dayOfWeek": "quarta",
-    "periodId": 3,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_5_quinta_3",
-    "teacherId": "t_5",
-    "dayOfWeek": "quinta",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "8B",
-    "subject": "Robótica"
-  },
-  {
-    "id": "slot_t_5_sexta_3",
-    "teacherId": "t_5",
-    "dayOfWeek": "sexta",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "3EMB",
-    "subject": "Robótica"
-  },
-  {
     "id": "slot_t_5_segunda_4",
     "teacherId": "t_5",
     "dayOfWeek": "segunda",
     "periodId": 4,
     "type": "AULA",
     "classId": "8A",
-    "subject": "Robótica"
-  },
-  {
-    "id": "slot_t_5_terca_4",
-    "teacherId": "t_5",
-    "dayOfWeek": "terca",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "2EMB",
-    "subject": "Robótica"
-  },
-  {
-    "id": "slot_t_5_quarta_4",
-    "teacherId": "t_5",
-    "dayOfWeek": "quarta",
-    "periodId": 4,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "Multiplica SP",
-    "trainingStartTime": "10:00",
-    "trainingEndTime": "11:30"
-  },
-  {
-    "id": "slot_t_5_quinta_4",
-    "teacherId": "t_5",
-    "dayOfWeek": "quinta",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "8B",
-    "subject": "Robótica"
-  },
-  {
-    "id": "slot_t_5_sexta_4",
-    "teacherId": "t_5",
-    "dayOfWeek": "sexta",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "3EMB",
     "subject": "Robótica"
   },
   {
@@ -2073,11 +1931,143 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Robótica"
   },
   {
+    "id": "slot_t_5_segunda_6",
+    "teacherId": "t_5",
+    "dayOfWeek": "segunda",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "1EMB",
+    "subject": "Robótica"
+  },
+  {
+    "id": "slot_t_5_segunda_7",
+    "teacherId": "t_5",
+    "dayOfWeek": "segunda",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "7B",
+    "subject": "Robótica"
+  },
+  {
+    "id": "slot_t_5_segunda_8",
+    "teacherId": "t_5",
+    "dayOfWeek": "segunda",
+    "periodId": 8,
+    "type": "AULA",
+    "classId": "7B",
+    "subject": "Robótica"
+  },
+  {
+    "id": "slot_t_5_segunda_9",
+    "teacherId": "t_5",
+    "dayOfWeek": "segunda",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_5_terca_1",
+    "teacherId": "t_5",
+    "dayOfWeek": "terca",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "7A",
+    "subject": "Robótica"
+  },
+  {
+    "id": "slot_t_5_terca_2",
+    "teacherId": "t_5",
+    "dayOfWeek": "terca",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "7A",
+    "subject": "Robótica"
+  },
+  {
+    "id": "slot_t_5_terca_3",
+    "teacherId": "t_5",
+    "dayOfWeek": "terca",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "2EMB",
+    "subject": "Robótica"
+  },
+  {
+    "id": "slot_t_5_terca_4",
+    "teacherId": "t_5",
+    "dayOfWeek": "terca",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "2EMB",
+    "subject": "Robótica"
+  },
+  {
     "id": "slot_t_5_terca_5",
     "teacherId": "t_5",
     "dayOfWeek": "terca",
     "periodId": 5,
     "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_5_terca_6",
+    "teacherId": "t_5",
+    "dayOfWeek": "terca",
+    "periodId": 6,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_5_terca_7",
+    "teacherId": "t_5",
+    "dayOfWeek": "terca",
+    "periodId": 7,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC de Área"
+  },
+  {
+    "id": "slot_t_5_terca_8",
+    "teacherId": "t_5",
+    "dayOfWeek": "terca",
+    "periodId": 8,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_5_terca_9",
+    "teacherId": "t_5",
+    "dayOfWeek": "terca",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_5_quarta_1",
+    "teacherId": "t_5",
+    "dayOfWeek": "quarta",
+    "periodId": 1,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_5_quarta_2",
+    "teacherId": "t_5",
+    "dayOfWeek": "quarta",
+    "periodId": 2,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_5_quarta_3",
+    "teacherId": "t_5",
+    "dayOfWeek": "quarta",
+    "periodId": 3,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_5_quarta_4",
+    "teacherId": "t_5",
+    "dayOfWeek": "quarta",
+    "periodId": 4,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP",
+    "trainingStartTime": "10:00",
+    "trainingEndTime": "11:30"
   },
   {
     "id": "slot_t_5_quarta_5",
@@ -2090,78 +2080,13 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingEndTime": "11:30"
   },
   {
-    "id": "slot_t_5_quinta_5",
-    "teacherId": "t_5",
-    "dayOfWeek": "quinta",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "1EMA",
-    "subject": "Robótica"
-  },
-  {
-    "id": "slot_t_5_sexta_5",
-    "teacherId": "t_5",
-    "dayOfWeek": "sexta",
-    "periodId": 5,
-    "type": "ELETIVA",
-    "trainingName": "Eletiva"
-  },
-  {
-    "id": "slot_t_5_segunda_6",
-    "teacherId": "t_5",
-    "dayOfWeek": "segunda",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "1EMB",
-    "subject": "Robótica"
-  },
-  {
-    "id": "slot_t_5_terca_6",
-    "teacherId": "t_5",
-    "dayOfWeek": "terca",
-    "periodId": 6,
-    "type": "LIVRE"
-  },
-  {
     "id": "slot_t_5_quarta_6",
     "teacherId": "t_5",
     "dayOfWeek": "quarta",
     "periodId": 6,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_5_quinta_6",
-    "teacherId": "t_5",
-    "dayOfWeek": "quinta",
-    "periodId": 6,
     "type": "AULA",
-    "classId": "1EMA",
-    "subject": "Robótica"
-  },
-  {
-    "id": "slot_t_5_sexta_6",
-    "teacherId": "t_5",
-    "dayOfWeek": "sexta",
-    "periodId": 6,
-    "type": "ELETIVA",
-    "trainingName": "Eletiva"
-  },
-  {
-    "id": "slot_t_5_segunda_7",
-    "teacherId": "t_5",
-    "dayOfWeek": "segunda",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "7B",
-    "subject": "Robótica"
-  },
-  {
-    "id": "slot_t_5_terca_7",
-    "teacherId": "t_5",
-    "dayOfWeek": "terca",
-    "periodId": 7,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC de Área"
+    "classId": "8B",
+    "subject": "Orientação de Matemática"
   },
   {
     "id": "slot_t_5_quarta_7",
@@ -2173,6 +2098,76 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Orientação de Matemática"
   },
   {
+    "id": "slot_t_5_quarta_8",
+    "teacherId": "t_5",
+    "dayOfWeek": "quarta",
+    "periodId": 8,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
+  },
+  {
+    "id": "slot_t_5_quarta_9",
+    "teacherId": "t_5",
+    "dayOfWeek": "quarta",
+    "periodId": 9,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
+  },
+  {
+    "id": "slot_t_5_quinta_1",
+    "teacherId": "t_5",
+    "dayOfWeek": "quinta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "9A",
+    "subject": "Robótica"
+  },
+  {
+    "id": "slot_t_5_quinta_2",
+    "teacherId": "t_5",
+    "dayOfWeek": "quinta",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "9A",
+    "subject": "Robótica"
+  },
+  {
+    "id": "slot_t_5_quinta_3",
+    "teacherId": "t_5",
+    "dayOfWeek": "quinta",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "8B",
+    "subject": "Robótica"
+  },
+  {
+    "id": "slot_t_5_quinta_4",
+    "teacherId": "t_5",
+    "dayOfWeek": "quinta",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "8B",
+    "subject": "Robótica"
+  },
+  {
+    "id": "slot_t_5_quinta_5",
+    "teacherId": "t_5",
+    "dayOfWeek": "quinta",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "1EMA",
+    "subject": "Robótica"
+  },
+  {
+    "id": "slot_t_5_quinta_6",
+    "teacherId": "t_5",
+    "dayOfWeek": "quinta",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "1EMA",
+    "subject": "Robótica"
+  },
+  {
     "id": "slot_t_5_quinta_7",
     "teacherId": "t_5",
     "dayOfWeek": "quinta",
@@ -2180,39 +2175,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "AULA",
     "classId": "6A",
     "subject": "Robótica"
-  },
-  {
-    "id": "slot_t_5_sexta_7",
-    "teacherId": "t_5",
-    "dayOfWeek": "sexta",
-    "periodId": 7,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_5_segunda_8",
-    "teacherId": "t_5",
-    "dayOfWeek": "segunda",
-    "periodId": 8,
-    "type": "AULA",
-    "classId": "7B",
-    "subject": "Robótica"
-  },
-  {
-    "id": "slot_t_5_terca_8",
-    "teacherId": "t_5",
-    "dayOfWeek": "terca",
-    "periodId": 8,
-    "type": "AULA",
-    "classId": "8B",
-    "subject": "Orientação de Matemática"
-  },
-  {
-    "id": "slot_t_5_quarta_8",
-    "teacherId": "t_5",
-    "dayOfWeek": "quarta",
-    "periodId": 8,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC Geral"
   },
   {
     "id": "slot_t_5_quinta_8",
@@ -2224,43 +2186,78 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Robótica"
   },
   {
-    "id": "slot_t_5_sexta_8",
-    "teacherId": "t_5",
-    "dayOfWeek": "sexta",
-    "periodId": 8,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_5_segunda_9",
-    "teacherId": "t_5",
-    "dayOfWeek": "segunda",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
-    "id": "slot_t_5_terca_9",
-    "teacherId": "t_5",
-    "dayOfWeek": "terca",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
-    "id": "slot_t_5_quarta_9",
-    "teacherId": "t_5",
-    "dayOfWeek": "quarta",
-    "periodId": 9,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC Geral"
-  },
-  {
     "id": "slot_t_5_quinta_9",
     "teacherId": "t_5",
     "dayOfWeek": "quinta",
     "periodId": 9,
     "type": "ATIVIDADE",
     "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_5_sexta_1",
+    "teacherId": "t_5",
+    "dayOfWeek": "sexta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "6B",
+    "subject": "Robótica"
+  },
+  {
+    "id": "slot_t_5_sexta_2",
+    "teacherId": "t_5",
+    "dayOfWeek": "sexta",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "6B",
+    "subject": "Robótica"
+  },
+  {
+    "id": "slot_t_5_sexta_3",
+    "teacherId": "t_5",
+    "dayOfWeek": "sexta",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "3EMB",
+    "subject": "Robótica"
+  },
+  {
+    "id": "slot_t_5_sexta_4",
+    "teacherId": "t_5",
+    "dayOfWeek": "sexta",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "3EMB",
+    "subject": "Robótica"
+  },
+  {
+    "id": "slot_t_5_sexta_5",
+    "teacherId": "t_5",
+    "dayOfWeek": "sexta",
+    "periodId": 5,
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
+  },
+  {
+    "id": "slot_t_5_sexta_6",
+    "teacherId": "t_5",
+    "dayOfWeek": "sexta",
+    "periodId": 6,
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
+  },
+  {
+    "id": "slot_t_5_sexta_7",
+    "teacherId": "t_5",
+    "dayOfWeek": "sexta",
+    "periodId": 7,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_5_sexta_8",
+    "teacherId": "t_5",
+    "dayOfWeek": "sexta",
+    "periodId": 8,
+    "type": "LIVRE"
   },
   {
     "id": "slot_t_5_sexta_9",
@@ -2279,40 +2276,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Química"
   },
   {
-    "id": "slot_t_6_terca_1",
-    "teacherId": "t_6",
-    "dayOfWeek": "terca",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "2EMB",
-    "subject": "Física"
-  },
-  {
-    "id": "slot_t_6_quarta_1",
-    "teacherId": "t_6",
-    "dayOfWeek": "quarta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "1EMA",
-    "subject": "Química"
-  },
-  {
-    "id": "slot_t_6_quinta_1",
-    "teacherId": "t_6",
-    "dayOfWeek": "quinta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "2EMB",
-    "subject": "Biologia"
-  },
-  {
-    "id": "slot_t_6_sexta_1",
-    "teacherId": "t_6",
-    "dayOfWeek": "sexta",
-    "periodId": 1,
-    "type": "LIVRE"
-  },
-  {
     "id": "slot_t_6_segunda_2",
     "teacherId": "t_6",
     "dayOfWeek": "segunda",
@@ -2322,77 +2285,13 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Química"
   },
   {
-    "id": "slot_t_6_terca_2",
-    "teacherId": "t_6",
-    "dayOfWeek": "terca",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "2EMB",
-    "subject": "Física"
-  },
-  {
-    "id": "slot_t_6_quarta_2",
-    "teacherId": "t_6",
-    "dayOfWeek": "quarta",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "1EMA",
-    "subject": "Química"
-  },
-  {
-    "id": "slot_t_6_quinta_2",
-    "teacherId": "t_6",
-    "dayOfWeek": "quinta",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "2EMB",
-    "subject": "Biologia"
-  },
-  {
-    "id": "slot_t_6_sexta_2",
-    "teacherId": "t_6",
-    "dayOfWeek": "sexta",
-    "periodId": 2,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "Escola de Gestão"
-  },
-  {
     "id": "slot_t_6_segunda_3",
     "teacherId": "t_6",
     "dayOfWeek": "segunda",
     "periodId": 3,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_6_terca_3",
-    "teacherId": "t_6",
-    "dayOfWeek": "terca",
-    "periodId": 3,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_6_quarta_3",
-    "teacherId": "t_6",
-    "dayOfWeek": "quarta",
-    "periodId": 3,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_6_quinta_3",
-    "teacherId": "t_6",
-    "dayOfWeek": "quinta",
-    "periodId": 3,
     "type": "AULA",
-    "classId": "3EMB",
-    "subject": "Práticas Experimentais"
-  },
-  {
-    "id": "slot_t_6_sexta_3",
-    "teacherId": "t_6",
-    "dayOfWeek": "sexta",
-    "periodId": 3,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "Escola de Gestão"
+    "classId": "3EMA_DS",
+    "subject": "Física"
   },
   {
     "id": "slot_t_6_segunda_4",
@@ -2404,19 +2303,218 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Física"
   },
   {
+    "id": "slot_t_6_segunda_5",
+    "teacherId": "t_6",
+    "dayOfWeek": "segunda",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "1EMA",
+    "subject": "Práticas Experimentais"
+  },
+  {
+    "id": "slot_t_6_segunda_6",
+    "teacherId": "t_6",
+    "dayOfWeek": "segunda",
+    "periodId": 6,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_6_segunda_7",
+    "teacherId": "t_6",
+    "dayOfWeek": "segunda",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "1EMB",
+    "subject": "Química"
+  },
+  {
+    "id": "slot_t_6_segunda_8",
+    "teacherId": "t_6",
+    "dayOfWeek": "segunda",
+    "periodId": 8,
+    "type": "AULA",
+    "classId": "1EMB",
+    "subject": "Química"
+  },
+  {
+    "id": "slot_t_6_segunda_9",
+    "teacherId": "t_6",
+    "dayOfWeek": "segunda",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_6_terca_1",
+    "teacherId": "t_6",
+    "dayOfWeek": "terca",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "2EMB",
+    "subject": "Física"
+  },
+  {
+    "id": "slot_t_6_terca_2",
+    "teacherId": "t_6",
+    "dayOfWeek": "terca",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "2EMB",
+    "subject": "Física"
+  },
+  {
+    "id": "slot_t_6_terca_3",
+    "teacherId": "t_6",
+    "dayOfWeek": "terca",
+    "periodId": 3,
+    "type": "LIVRE"
+  },
+  {
     "id": "slot_t_6_terca_4",
     "teacherId": "t_6",
     "dayOfWeek": "terca",
     "periodId": 4,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_6_terca_5",
+    "teacherId": "t_6",
+    "dayOfWeek": "terca",
+    "periodId": 5,
     "type": "AULA",
-    "classId": "1EMB",
-    "subject": "Práticas Experimentais"
+    "classId": "3EMB",
+    "subject": "Física"
+  },
+  {
+    "id": "slot_t_6_terca_6",
+    "teacherId": "t_6",
+    "dayOfWeek": "terca",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "3EMB",
+    "subject": "Física"
+  },
+  {
+    "id": "slot_t_6_terca_7",
+    "teacherId": "t_6",
+    "dayOfWeek": "terca",
+    "periodId": 7,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC de Área"
+  },
+  {
+    "id": "slot_t_6_terca_8",
+    "teacherId": "t_6",
+    "dayOfWeek": "terca",
+    "periodId": 8,
+    "type": "AULA",
+    "classId": "2EMA_DS",
+    "subject": "Biologia"
+  },
+  {
+    "id": "slot_t_6_terca_9",
+    "teacherId": "t_6",
+    "dayOfWeek": "terca",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_6_quarta_1",
+    "teacherId": "t_6",
+    "dayOfWeek": "quarta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "1EMA",
+    "subject": "Química"
+  },
+  {
+    "id": "slot_t_6_quarta_2",
+    "teacherId": "t_6",
+    "dayOfWeek": "quarta",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "1EMA",
+    "subject": "Química"
+  },
+  {
+    "id": "slot_t_6_quarta_3",
+    "teacherId": "t_6",
+    "dayOfWeek": "quarta",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "2EMA_DS",
+    "subject": "Química"
   },
   {
     "id": "slot_t_6_quarta_4",
     "teacherId": "t_6",
     "dayOfWeek": "quarta",
     "periodId": 4,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_6_quarta_5",
+    "teacherId": "t_6",
+    "dayOfWeek": "quarta",
+    "periodId": 5,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_6_quarta_6",
+    "teacherId": "t_6",
+    "dayOfWeek": "quarta",
+    "periodId": 6,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_6_quarta_7",
+    "teacherId": "t_6",
+    "dayOfWeek": "quarta",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "2EMB",
+    "subject": "Práticas Experimentais"
+  },
+  {
+    "id": "slot_t_6_quarta_8",
+    "teacherId": "t_6",
+    "dayOfWeek": "quarta",
+    "periodId": 8,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
+  },
+  {
+    "id": "slot_t_6_quarta_9",
+    "teacherId": "t_6",
+    "dayOfWeek": "quarta",
+    "periodId": 9,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
+  },
+  {
+    "id": "slot_t_6_quinta_1",
+    "teacherId": "t_6",
+    "dayOfWeek": "quinta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "2EMB",
+    "subject": "Biologia"
+  },
+  {
+    "id": "slot_t_6_quinta_2",
+    "teacherId": "t_6",
+    "dayOfWeek": "quinta",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "2EMB",
+    "subject": "Biologia"
+  },
+  {
+    "id": "slot_t_6_quinta_3",
+    "teacherId": "t_6",
+    "dayOfWeek": "quinta",
+    "periodId": 3,
     "type": "LIVRE"
   },
   {
@@ -2429,75 +2527,12 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Práticas Experimentais"
   },
   {
-    "id": "slot_t_6_sexta_4",
-    "teacherId": "t_6",
-    "dayOfWeek": "sexta",
-    "periodId": 4,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_6_segunda_5",
-    "teacherId": "t_6",
-    "dayOfWeek": "segunda",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "1EMA",
-    "subject": "Práticas Experimentais"
-  },
-  {
-    "id": "slot_t_6_terca_5",
-    "teacherId": "t_6",
-    "dayOfWeek": "terca",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "3EMB",
-    "subject": "Física"
-  },
-  {
-    "id": "slot_t_6_quarta_5",
-    "teacherId": "t_6",
-    "dayOfWeek": "quarta",
-    "periodId": 5,
-    "type": "LIVRE"
-  },
-  {
     "id": "slot_t_6_quinta_5",
     "teacherId": "t_6",
     "dayOfWeek": "quinta",
     "periodId": 5,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_6_sexta_5",
-    "teacherId": "t_6",
-    "dayOfWeek": "sexta",
-    "periodId": 5,
-    "type": "ELETIVA",
-    "trainingName": "Eletiva"
-  },
-  {
-    "id": "slot_t_6_segunda_6",
-    "teacherId": "t_6",
-    "dayOfWeek": "segunda",
-    "periodId": 6,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_6_terca_6",
-    "teacherId": "t_6",
-    "dayOfWeek": "terca",
-    "periodId": 6,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "Biologia"
-  },
-  {
-    "id": "slot_t_6_quarta_6",
-    "teacherId": "t_6",
-    "dayOfWeek": "quarta",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "2EMB",
+    "classId": "3EMB",
     "subject": "Práticas Experimentais"
   },
   {
@@ -2508,82 +2543,13 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "LIVRE"
   },
   {
-    "id": "slot_t_6_sexta_6",
-    "teacherId": "t_6",
-    "dayOfWeek": "sexta",
-    "periodId": 6,
-    "type": "ELETIVA",
-    "trainingName": "Eletiva"
-  },
-  {
-    "id": "slot_t_6_segunda_7",
-    "teacherId": "t_6",
-    "dayOfWeek": "segunda",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "1EMB",
-    "subject": "Química"
-  },
-  {
-    "id": "slot_t_6_terca_7",
-    "teacherId": "t_6",
-    "dayOfWeek": "terca",
-    "periodId": 7,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC de Área"
-  },
-  {
-    "id": "slot_t_6_quarta_7",
-    "teacherId": "t_6",
-    "dayOfWeek": "quarta",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "Biologia"
-  },
-  {
     "id": "slot_t_6_quinta_7",
     "teacherId": "t_6",
     "dayOfWeek": "quinta",
     "periodId": 7,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "Química"
-  },
-  {
-    "id": "slot_t_6_sexta_7",
-    "teacherId": "t_6",
-    "dayOfWeek": "sexta",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "3EMB",
-    "subject": "Física"
-  },
-  {
-    "id": "slot_t_6_segunda_8",
-    "teacherId": "t_6",
-    "dayOfWeek": "segunda",
-    "periodId": 8,
-    "type": "AULA",
-    "classId": "1EMB",
-    "subject": "Química"
-  },
-  {
-    "id": "slot_t_6_terca_8",
-    "teacherId": "t_6",
-    "dayOfWeek": "terca",
-    "periodId": 8,
-    "type": "AULA",
-    "classId": "3EMA_DS",
-    "subject": "Física"
-  },
-  {
-    "id": "slot_t_6_quarta_8",
-    "teacherId": "t_6",
-    "dayOfWeek": "quarta",
-    "periodId": 8,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC Geral"
+    "subject": "Biologia"
   },
   {
     "id": "slot_t_6_quinta_8",
@@ -2595,6 +2561,68 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Química"
   },
   {
+    "id": "slot_t_6_quinta_9",
+    "teacherId": "t_6",
+    "dayOfWeek": "quinta",
+    "periodId": 9,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_6_sexta_1",
+    "teacherId": "t_6",
+    "dayOfWeek": "sexta",
+    "periodId": 1,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_6_sexta_2",
+    "teacherId": "t_6",
+    "dayOfWeek": "sexta",
+    "periodId": 2,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Escola de Gestão"
+  },
+  {
+    "id": "slot_t_6_sexta_3",
+    "teacherId": "t_6",
+    "dayOfWeek": "sexta",
+    "periodId": 3,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Escola de Gestão"
+  },
+  {
+    "id": "slot_t_6_sexta_4",
+    "teacherId": "t_6",
+    "dayOfWeek": "sexta",
+    "periodId": 4,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_6_sexta_5",
+    "teacherId": "t_6",
+    "dayOfWeek": "sexta",
+    "periodId": 5,
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
+  },
+  {
+    "id": "slot_t_6_sexta_6",
+    "teacherId": "t_6",
+    "dayOfWeek": "sexta",
+    "periodId": 6,
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
+  },
+  {
+    "id": "slot_t_6_sexta_7",
+    "teacherId": "t_6",
+    "dayOfWeek": "sexta",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "1EMB",
+    "subject": "Práticas Experimentais"
+  },
+  {
     "id": "slot_t_6_sexta_8",
     "teacherId": "t_6",
     "dayOfWeek": "sexta",
@@ -2602,37 +2630,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "AULA",
     "classId": "2EMA_DS",
     "subject": "Física"
-  },
-  {
-    "id": "slot_t_6_segunda_9",
-    "teacherId": "t_6",
-    "dayOfWeek": "segunda",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
-    "id": "slot_t_6_terca_9",
-    "teacherId": "t_6",
-    "dayOfWeek": "terca",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
-    "id": "slot_t_6_quarta_9",
-    "teacherId": "t_6",
-    "dayOfWeek": "quarta",
-    "periodId": 9,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC Geral"
-  },
-  {
-    "id": "slot_t_6_quinta_9",
-    "teacherId": "t_6",
-    "dayOfWeek": "quinta",
-    "periodId": 9,
-    "type": "LIVRE"
   },
   {
     "id": "slot_t_6_sexta_9",
@@ -2653,38 +2650,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Geografia"
   },
   {
-    "id": "slot_t_7_terca_1",
-    "teacherId": "t_7",
-    "dayOfWeek": "terca",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "3EMB",
-    "subject": "Atualidades"
-  },
-  {
-    "id": "slot_t_7_quarta_1",
-    "teacherId": "t_7",
-    "dayOfWeek": "quarta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "8A",
-    "subject": "Geografia"
-  },
-  {
-    "id": "slot_t_7_quinta_1",
-    "teacherId": "t_7",
-    "dayOfWeek": "quinta",
-    "periodId": 1,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_7_sexta_1",
-    "teacherId": "t_7",
-    "dayOfWeek": "sexta",
-    "periodId": 1,
-    "type": "LIVRE"
-  },
-  {
     "id": "slot_t_7_segunda_2",
     "teacherId": "t_7",
     "dayOfWeek": "segunda",
@@ -2692,41 +2657,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "AULA",
     "classId": "1EMB",
     "subject": "Geografia"
-  },
-  {
-    "id": "slot_t_7_terca_2",
-    "teacherId": "t_7",
-    "dayOfWeek": "terca",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "3EMB",
-    "subject": "Atualidades"
-  },
-  {
-    "id": "slot_t_7_quarta_2",
-    "teacherId": "t_7",
-    "dayOfWeek": "quarta",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "9B",
-    "subject": "Geografia"
-  },
-  {
-    "id": "slot_t_7_quinta_2",
-    "teacherId": "t_7",
-    "dayOfWeek": "quinta",
-    "periodId": 2,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "Multiplica SP",
-    "trainingStartTime": "08:00",
-    "trainingEndTime": "09:30"
-  },
-  {
-    "id": "slot_t_7_sexta_2",
-    "teacherId": "t_7",
-    "dayOfWeek": "sexta",
-    "periodId": 2,
-    "type": "LIVRE"
   },
   {
     "id": "slot_t_7_segunda_3",
@@ -2738,47 +2668,82 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Geografia"
   },
   {
-    "id": "slot_t_7_terca_3",
-    "teacherId": "t_7",
-    "dayOfWeek": "terca",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "Geografia"
-  },
-  {
-    "id": "slot_t_7_quarta_3",
-    "teacherId": "t_7",
-    "dayOfWeek": "quarta",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "8B",
-    "subject": "Geografia"
-  },
-  {
-    "id": "slot_t_7_quinta_3",
-    "teacherId": "t_7",
-    "dayOfWeek": "quinta",
-    "periodId": 3,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "Multiplica SP",
-    "trainingStartTime": "08:00",
-    "trainingEndTime": "09:30"
-  },
-  {
-    "id": "slot_t_7_sexta_3",
-    "teacherId": "t_7",
-    "dayOfWeek": "sexta",
-    "periodId": 3,
-    "type": "LIVRE"
-  },
-  {
     "id": "slot_t_7_segunda_4",
     "teacherId": "t_7",
     "dayOfWeek": "segunda",
     "periodId": 4,
     "type": "AULA",
     "classId": "1EMA",
+    "subject": "Geografia"
+  },
+  {
+    "id": "slot_t_7_segunda_5",
+    "teacherId": "t_7",
+    "dayOfWeek": "segunda",
+    "periodId": 5,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC de Área"
+  },
+  {
+    "id": "slot_t_7_segunda_6",
+    "teacherId": "t_7",
+    "dayOfWeek": "segunda",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "8A",
+    "subject": "Geografia"
+  },
+  {
+    "id": "slot_t_7_segunda_7",
+    "teacherId": "t_7",
+    "dayOfWeek": "segunda",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "9A",
+    "subject": "Geografia"
+  },
+  {
+    "id": "slot_t_7_segunda_8",
+    "teacherId": "t_7",
+    "dayOfWeek": "segunda",
+    "periodId": 8,
+    "type": "AULA",
+    "classId": "9A",
+    "subject": "Geografia"
+  },
+  {
+    "id": "slot_t_7_segunda_9",
+    "teacherId": "t_7",
+    "dayOfWeek": "segunda",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_7_terca_1",
+    "teacherId": "t_7",
+    "dayOfWeek": "terca",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "3EMB",
+    "subject": "Atualidades"
+  },
+  {
+    "id": "slot_t_7_terca_2",
+    "teacherId": "t_7",
+    "dayOfWeek": "terca",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "3EMB",
+    "subject": "Atualidades"
+  },
+  {
+    "id": "slot_t_7_terca_3",
+    "teacherId": "t_7",
+    "dayOfWeek": "terca",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "9A",
     "subject": "Geografia"
   },
   {
@@ -2791,116 +2756,19 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Geografia"
   },
   {
-    "id": "slot_t_7_quarta_4",
-    "teacherId": "t_7",
-    "dayOfWeek": "quarta",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "9A",
-    "subject": "Geografia"
-  },
-  {
-    "id": "slot_t_7_quinta_4",
-    "teacherId": "t_7",
-    "dayOfWeek": "quinta",
-    "periodId": 4,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_7_sexta_4",
-    "teacherId": "t_7",
-    "dayOfWeek": "sexta",
-    "periodId": 4,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_7_segunda_5",
-    "teacherId": "t_7",
-    "dayOfWeek": "segunda",
-    "periodId": 5,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC de Área"
-  },
-  {
     "id": "slot_t_7_terca_5",
     "teacherId": "t_7",
     "dayOfWeek": "terca",
     "periodId": 5,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_7_quarta_5",
-    "teacherId": "t_7",
-    "dayOfWeek": "quarta",
-    "periodId": 5,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_7_quinta_5",
-    "teacherId": "t_7",
-    "dayOfWeek": "quinta",
-    "periodId": 5,
     "type": "AULA",
-    "classId": "8A",
-    "subject": "Geografia"
-  },
-  {
-    "id": "slot_t_7_sexta_5",
-    "teacherId": "t_7",
-    "dayOfWeek": "sexta",
-    "periodId": 5,
-    "type": "ELETIVA",
-    "trainingName": "Eletiva"
-  },
-  {
-    "id": "slot_t_7_segunda_6",
-    "teacherId": "t_7",
-    "dayOfWeek": "segunda",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "8A",
-    "subject": "Geografia"
+    "classId": "9A",
+    "subject": "Projeto de Vida"
   },
   {
     "id": "slot_t_7_terca_6",
     "teacherId": "t_7",
     "dayOfWeek": "terca",
     "periodId": 6,
-    "type": "AULA",
-    "classId": "9A",
-    "subject": "Geografia"
-  },
-  {
-    "id": "slot_t_7_quarta_6",
-    "teacherId": "t_7",
-    "dayOfWeek": "quarta",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "9A",
-    "subject": "Projeto de Vida"
-  },
-  {
-    "id": "slot_t_7_quinta_6",
-    "teacherId": "t_7",
-    "dayOfWeek": "quinta",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "9B",
-    "subject": "Geografia"
-  },
-  {
-    "id": "slot_t_7_sexta_6",
-    "teacherId": "t_7",
-    "dayOfWeek": "sexta",
-    "periodId": 6,
-    "type": "ELETIVA",
-    "trainingName": "Eletiva"
-  },
-  {
-    "id": "slot_t_7_segunda_7",
-    "teacherId": "t_7",
-    "dayOfWeek": "segunda",
-    "periodId": 7,
     "type": "AULA",
     "classId": "9B",
     "subject": "Geografia"
@@ -2911,42 +2779,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "terca",
     "periodId": 7,
     "type": "AULA",
-    "classId": "9A",
-    "subject": "Geografia"
-  },
-  {
-    "id": "slot_t_7_quarta_7",
-    "teacherId": "t_7",
-    "dayOfWeek": "quarta",
-    "periodId": 7,
-    "type": "AULA",
     "classId": "9B",
     "subject": "Projeto de Vida"
-  },
-  {
-    "id": "slot_t_7_quinta_7",
-    "teacherId": "t_7",
-    "dayOfWeek": "quinta",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "2EMB",
-    "subject": "Geografia"
-  },
-  {
-    "id": "slot_t_7_sexta_7",
-    "teacherId": "t_7",
-    "dayOfWeek": "sexta",
-    "periodId": 7,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_7_segunda_8",
-    "teacherId": "t_7",
-    "dayOfWeek": "segunda",
-    "periodId": 8,
-    "type": "AULA",
-    "classId": "8B",
-    "subject": "Geografia"
   },
   {
     "id": "slot_t_7_terca_8",
@@ -2954,8 +2788,69 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "terca",
     "periodId": 8,
     "type": "AULA",
-    "classId": "2EMA_DS",
+    "classId": "2EMB",
     "subject": "Geografia"
+  },
+  {
+    "id": "slot_t_7_terca_9",
+    "teacherId": "t_7",
+    "dayOfWeek": "terca",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_7_quarta_1",
+    "teacherId": "t_7",
+    "dayOfWeek": "quarta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "9B",
+    "subject": "Geografia"
+  },
+  {
+    "id": "slot_t_7_quarta_2",
+    "teacherId": "t_7",
+    "dayOfWeek": "quarta",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "8A",
+    "subject": "Geografia"
+  },
+  {
+    "id": "slot_t_7_quarta_3",
+    "teacherId": "t_7",
+    "dayOfWeek": "quarta",
+    "periodId": 3,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_7_quarta_4",
+    "teacherId": "t_7",
+    "dayOfWeek": "quarta",
+    "periodId": 4,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_7_quarta_5",
+    "teacherId": "t_7",
+    "dayOfWeek": "quarta",
+    "periodId": 5,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_7_quarta_6",
+    "teacherId": "t_7",
+    "dayOfWeek": "quarta",
+    "periodId": 6,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_7_quarta_7",
+    "teacherId": "t_7",
+    "dayOfWeek": "quarta",
+    "periodId": 7,
+    "type": "LIVRE"
   },
   {
     "id": "slot_t_7_quarta_8",
@@ -2964,6 +2859,71 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "CURSO_FORMACAO",
     "trainingName": "ATPC Geral"
+  },
+  {
+    "id": "slot_t_7_quarta_9",
+    "teacherId": "t_7",
+    "dayOfWeek": "quarta",
+    "periodId": 9,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
+  },
+  {
+    "id": "slot_t_7_quinta_1",
+    "teacherId": "t_7",
+    "dayOfWeek": "quinta",
+    "periodId": 1,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_7_quinta_2",
+    "teacherId": "t_7",
+    "dayOfWeek": "quinta",
+    "periodId": 2,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP",
+    "trainingStartTime": "08:00",
+    "trainingEndTime": "09:30"
+  },
+  {
+    "id": "slot_t_7_quinta_3",
+    "teacherId": "t_7",
+    "dayOfWeek": "quinta",
+    "periodId": 3,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP",
+    "trainingStartTime": "08:00",
+    "trainingEndTime": "09:30"
+  },
+  {
+    "id": "slot_t_7_quinta_4",
+    "teacherId": "t_7",
+    "dayOfWeek": "quinta",
+    "periodId": 4,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_7_quinta_5",
+    "teacherId": "t_7",
+    "dayOfWeek": "quinta",
+    "periodId": 5,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_7_quinta_6",
+    "teacherId": "t_7",
+    "dayOfWeek": "quinta",
+    "periodId": 6,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_7_quinta_7",
+    "teacherId": "t_7",
+    "dayOfWeek": "quinta",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "8A",
+    "subject": "Geografia"
   },
   {
     "id": "slot_t_7_quinta_8",
@@ -2975,6 +2935,74 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Geografia"
   },
   {
+    "id": "slot_t_7_quinta_9",
+    "teacherId": "t_7",
+    "dayOfWeek": "quinta",
+    "periodId": 9,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_7_sexta_1",
+    "teacherId": "t_7",
+    "dayOfWeek": "sexta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "8B",
+    "subject": "Geografia"
+  },
+  {
+    "id": "slot_t_7_sexta_2",
+    "teacherId": "t_7",
+    "dayOfWeek": "sexta",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "8B",
+    "subject": "Geografia"
+  },
+  {
+    "id": "slot_t_7_sexta_3",
+    "teacherId": "t_7",
+    "dayOfWeek": "sexta",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "2EMA_DS",
+    "subject": "Geografia"
+  },
+  {
+    "id": "slot_t_7_sexta_4",
+    "teacherId": "t_7",
+    "dayOfWeek": "sexta",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "9B",
+    "subject": "Geografia"
+  },
+  {
+    "id": "slot_t_7_sexta_5",
+    "teacherId": "t_7",
+    "dayOfWeek": "sexta",
+    "periodId": 5,
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
+  },
+  {
+    "id": "slot_t_7_sexta_6",
+    "teacherId": "t_7",
+    "dayOfWeek": "sexta",
+    "periodId": 6,
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
+  },
+  {
+    "id": "slot_t_7_sexta_7",
+    "teacherId": "t_7",
+    "dayOfWeek": "sexta",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "2EMA_DS",
+    "subject": "Geografia"
+  },
+  {
     "id": "slot_t_7_sexta_8",
     "teacherId": "t_7",
     "dayOfWeek": "sexta",
@@ -2982,37 +3010,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "AULA",
     "classId": "3EMB",
     "subject": "Aprofundamento de Geografia"
-  },
-  {
-    "id": "slot_t_7_segunda_9",
-    "teacherId": "t_7",
-    "dayOfWeek": "segunda",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
-    "id": "slot_t_7_terca_9",
-    "teacherId": "t_7",
-    "dayOfWeek": "terca",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
-    "id": "slot_t_7_quarta_9",
-    "teacherId": "t_7",
-    "dayOfWeek": "quarta",
-    "periodId": 9,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC Geral"
-  },
-  {
-    "id": "slot_t_7_quinta_9",
-    "teacherId": "t_7",
-    "dayOfWeek": "quinta",
-    "periodId": 9,
-    "type": "LIVRE"
   },
   {
     "id": "slot_t_7_sexta_9",
@@ -3028,82 +3025,18 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_8",
     "dayOfWeek": "segunda",
     "periodId": 1,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_8_terca_1",
-    "teacherId": "t_8",
-    "dayOfWeek": "terca",
-    "periodId": 1,
     "type": "AULA",
-    "classId": "3EMA_DS",
+    "classId": "9A",
     "subject": "Língua Portuguesa"
-  },
-  {
-    "id": "slot_t_8_quarta_1",
-    "teacherId": "t_8",
-    "dayOfWeek": "quarta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "3EMB",
-    "subject": "Língua Portuguesa"
-  },
-  {
-    "id": "slot_t_8_quinta_1",
-    "teacherId": "t_8",
-    "dayOfWeek": "quinta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "3EMA_DS",
-    "subject": "Língua Portuguesa"
-  },
-  {
-    "id": "slot_t_8_sexta_1",
-    "teacherId": "t_8",
-    "dayOfWeek": "sexta",
-    "periodId": 1,
-    "type": "LIVRE"
   },
   {
     "id": "slot_t_8_segunda_2",
     "teacherId": "t_8",
     "dayOfWeek": "segunda",
     "periodId": 2,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_8_terca_2",
-    "teacherId": "t_8",
-    "dayOfWeek": "terca",
-    "periodId": 2,
     "type": "AULA",
-    "classId": "3EMA_DS",
+    "classId": "9A",
     "subject": "Língua Portuguesa"
-  },
-  {
-    "id": "slot_t_8_quarta_2",
-    "teacherId": "t_8",
-    "dayOfWeek": "quarta",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "3EMB",
-    "subject": "Língua Portuguesa"
-  },
-  {
-    "id": "slot_t_8_quinta_2",
-    "teacherId": "t_8",
-    "dayOfWeek": "quinta",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "3EMA_DS",
-    "subject": "Língua Portuguesa"
-  },
-  {
-    "id": "slot_t_8_sexta_2",
-    "teacherId": "t_8",
-    "dayOfWeek": "sexta",
-    "periodId": 2,
-    "type": "LIVRE"
   },
   {
     "id": "slot_t_8_segunda_3",
@@ -3112,43 +3045,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "Língua Portuguesa"
-  },
-  {
-    "id": "slot_t_8_terca_3",
-    "teacherId": "t_8",
-    "dayOfWeek": "terca",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "9A",
-    "subject": "Língua Portuguesa"
-  },
-  {
-    "id": "slot_t_8_quarta_3",
-    "teacherId": "t_8",
-    "dayOfWeek": "quarta",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "9B",
-    "subject": "Língua Portuguesa"
-  },
-  {
-    "id": "slot_t_8_quinta_3",
-    "teacherId": "t_8",
-    "dayOfWeek": "quinta",
-    "periodId": 3,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "Multiplica SP",
-    "trainingStartTime": "09:30",
-    "trainingEndTime": "11:00"
-  },
-  {
-    "id": "slot_t_8_sexta_3",
-    "teacherId": "t_8",
-    "dayOfWeek": "sexta",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "9B",
     "subject": "Língua Portuguesa"
   },
   {
@@ -3161,43 +3057,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Língua Portuguesa"
   },
   {
-    "id": "slot_t_8_terca_4",
-    "teacherId": "t_8",
-    "dayOfWeek": "terca",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "9A",
-    "subject": "Língua Portuguesa"
-  },
-  {
-    "id": "slot_t_8_quarta_4",
-    "teacherId": "t_8",
-    "dayOfWeek": "quarta",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "9B",
-    "subject": "Língua Portuguesa"
-  },
-  {
-    "id": "slot_t_8_quinta_4",
-    "teacherId": "t_8",
-    "dayOfWeek": "quinta",
-    "periodId": 4,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "Multiplica SP",
-    "trainingStartTime": "09:30",
-    "trainingEndTime": "11:00"
-  },
-  {
-    "id": "slot_t_8_sexta_4",
-    "teacherId": "t_8",
-    "dayOfWeek": "sexta",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "9B",
-    "subject": "Língua Portuguesa"
-  },
-  {
     "id": "slot_t_8_segunda_5",
     "teacherId": "t_8",
     "dayOfWeek": "segunda",
@@ -3205,42 +3064,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "AULA",
     "classId": "3EMA_DS",
     "subject": "Redação e Leitura"
-  },
-  {
-    "id": "slot_t_8_terca_5",
-    "teacherId": "t_8",
-    "dayOfWeek": "terca",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "9B",
-    "subject": "Redação e Leitura"
-  },
-  {
-    "id": "slot_t_8_quarta_5",
-    "teacherId": "t_8",
-    "dayOfWeek": "quarta",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "9A",
-    "subject": "Língua Portuguesa"
-  },
-  {
-    "id": "slot_t_8_quinta_5",
-    "teacherId": "t_8",
-    "dayOfWeek": "quinta",
-    "periodId": 5,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "Multiplica SP",
-    "trainingStartTime": "09:30",
-    "trainingEndTime": "11:00"
-  },
-  {
-    "id": "slot_t_8_sexta_5",
-    "teacherId": "t_8",
-    "dayOfWeek": "sexta",
-    "periodId": 5,
-    "type": "ELETIVA",
-    "trainingName": "Eletiva"
   },
   {
     "id": "slot_t_8_segunda_6",
@@ -3252,44 +3075,80 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Redação e Leitura"
   },
   {
-    "id": "slot_t_8_terca_6",
+    "id": "slot_t_8_segunda_7",
+    "teacherId": "t_8",
+    "dayOfWeek": "segunda",
+    "periodId": 7,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_8_segunda_8",
+    "teacherId": "t_8",
+    "dayOfWeek": "segunda",
+    "periodId": 8,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_8_segunda_9",
+    "teacherId": "t_8",
+    "dayOfWeek": "segunda",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_8_terca_1",
     "teacherId": "t_8",
     "dayOfWeek": "terca",
-    "periodId": 6,
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "9A",
+    "subject": "Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_8_terca_2",
+    "teacherId": "t_8",
+    "dayOfWeek": "terca",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "9A",
+    "subject": "Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_8_terca_3",
+    "teacherId": "t_8",
+    "dayOfWeek": "terca",
+    "periodId": 3,
     "type": "AULA",
     "classId": "9B",
     "subject": "Redação e Leitura"
   },
   {
-    "id": "slot_t_8_quarta_6",
+    "id": "slot_t_8_terca_4",
     "teacherId": "t_8",
-    "dayOfWeek": "quarta",
-    "periodId": 6,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_8_quinta_6",
-    "teacherId": "t_8",
-    "dayOfWeek": "quinta",
-    "periodId": 6,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_8_sexta_6",
-    "teacherId": "t_8",
-    "dayOfWeek": "sexta",
-    "periodId": 6,
-    "type": "ELETIVA",
-    "trainingName": "Eletiva"
-  },
-  {
-    "id": "slot_t_8_segunda_7",
-    "teacherId": "t_8",
-    "dayOfWeek": "segunda",
-    "periodId": 7,
+    "dayOfWeek": "terca",
+    "periodId": 4,
     "type": "AULA",
-    "classId": "9A",
+    "classId": "9B",
     "subject": "Redação e Leitura"
+  },
+  {
+    "id": "slot_t_8_terca_5",
+    "teacherId": "t_8",
+    "dayOfWeek": "terca",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "3EMA_DS",
+    "subject": "Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_8_terca_6",
+    "teacherId": "t_8",
+    "dayOfWeek": "terca",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "3EMA_DS",
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_8_terca_7",
@@ -3298,38 +3157,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "3EMB",
-    "subject": "Redação e Leitura"
-  },
-  {
-    "id": "slot_t_8_quarta_7",
-    "teacherId": "t_8",
-    "dayOfWeek": "quarta",
-    "periodId": 7,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_8_quinta_7",
-    "teacherId": "t_8",
-    "dayOfWeek": "quinta",
-    "periodId": 7,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_8_sexta_7",
-    "teacherId": "t_8",
-    "dayOfWeek": "sexta",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "2EMB",
-    "subject": "Redação e Leitura"
-  },
-  {
-    "id": "slot_t_8_segunda_8",
-    "teacherId": "t_8",
-    "dayOfWeek": "segunda",
-    "periodId": 8,
-    "type": "AULA",
-    "classId": "9A",
     "subject": "Redação e Leitura"
   },
   {
@@ -3342,6 +3169,71 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Redação e Leitura"
   },
   {
+    "id": "slot_t_8_terca_9",
+    "teacherId": "t_8",
+    "dayOfWeek": "terca",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_8_quarta_1",
+    "teacherId": "t_8",
+    "dayOfWeek": "quarta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "3EMB",
+    "subject": "Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_8_quarta_2",
+    "teacherId": "t_8",
+    "dayOfWeek": "quarta",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "3EMB",
+    "subject": "Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_8_quarta_3",
+    "teacherId": "t_8",
+    "dayOfWeek": "quarta",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "9B",
+    "subject": "Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_8_quarta_4",
+    "teacherId": "t_8",
+    "dayOfWeek": "quarta",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "9B",
+    "subject": "Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_8_quarta_5",
+    "teacherId": "t_8",
+    "dayOfWeek": "quarta",
+    "periodId": 5,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_8_quarta_6",
+    "teacherId": "t_8",
+    "dayOfWeek": "quarta",
+    "periodId": 6,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_8_quarta_7",
+    "teacherId": "t_8",
+    "dayOfWeek": "quarta",
+    "periodId": 7,
+    "type": "LIVRE"
+  },
+  {
     "id": "slot_t_8_quarta_8",
     "teacherId": "t_8",
     "dayOfWeek": "quarta",
@@ -3350,12 +3242,149 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingName": "ATPC Geral"
   },
   {
+    "id": "slot_t_8_quarta_9",
+    "teacherId": "t_8",
+    "dayOfWeek": "quarta",
+    "periodId": 9,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
+  },
+  {
+    "id": "slot_t_8_quinta_1",
+    "teacherId": "t_8",
+    "dayOfWeek": "quinta",
+    "periodId": 1,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_8_quinta_2",
+    "teacherId": "t_8",
+    "dayOfWeek": "quinta",
+    "periodId": 2,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_8_quinta_3",
+    "teacherId": "t_8",
+    "dayOfWeek": "quinta",
+    "periodId": 3,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP",
+    "trainingStartTime": "09:30",
+    "trainingEndTime": "11:00"
+  },
+  {
+    "id": "slot_t_8_quinta_4",
+    "teacherId": "t_8",
+    "dayOfWeek": "quinta",
+    "periodId": 4,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP",
+    "trainingStartTime": "09:30",
+    "trainingEndTime": "11:00"
+  },
+  {
+    "id": "slot_t_8_quinta_5",
+    "teacherId": "t_8",
+    "dayOfWeek": "quinta",
+    "periodId": 5,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP",
+    "trainingStartTime": "09:30",
+    "trainingEndTime": "11:00"
+  },
+  {
+    "id": "slot_t_8_quinta_6",
+    "teacherId": "t_8",
+    "dayOfWeek": "quinta",
+    "periodId": 6,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_8_quinta_7",
+    "teacherId": "t_8",
+    "dayOfWeek": "quinta",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "3EMA_DS",
+    "subject": "Língua Portuguesa"
+  },
+  {
     "id": "slot_t_8_quinta_8",
     "teacherId": "t_8",
     "dayOfWeek": "quinta",
     "periodId": 8,
     "type": "CURSO_FORMACAO",
     "trainingName": "ATPC de Área"
+  },
+  {
+    "id": "slot_t_8_quinta_9",
+    "teacherId": "t_8",
+    "dayOfWeek": "quinta",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_8_sexta_1",
+    "teacherId": "t_8",
+    "dayOfWeek": "sexta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "9B",
+    "subject": "Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_8_sexta_2",
+    "teacherId": "t_8",
+    "dayOfWeek": "sexta",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "9B",
+    "subject": "Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_8_sexta_3",
+    "teacherId": "t_8",
+    "dayOfWeek": "sexta",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "9A",
+    "subject": "Redação e Leitura"
+  },
+  {
+    "id": "slot_t_8_sexta_4",
+    "teacherId": "t_8",
+    "dayOfWeek": "sexta",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "9A",
+    "subject": "Redação e Leitura"
+  },
+  {
+    "id": "slot_t_8_sexta_5",
+    "teacherId": "t_8",
+    "dayOfWeek": "sexta",
+    "periodId": 5,
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
+  },
+  {
+    "id": "slot_t_8_sexta_6",
+    "teacherId": "t_8",
+    "dayOfWeek": "sexta",
+    "periodId": 6,
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
+  },
+  {
+    "id": "slot_t_8_sexta_7",
+    "teacherId": "t_8",
+    "dayOfWeek": "sexta",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "2EMB",
+    "subject": "Redação e Leitura"
   },
   {
     "id": "slot_t_8_sexta_8",
@@ -3367,44 +3396,12 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Redação e Leitura"
   },
   {
-    "id": "slot_t_8_segunda_9",
-    "teacherId": "t_8",
-    "dayOfWeek": "segunda",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
-    "id": "slot_t_8_terca_9",
-    "teacherId": "t_8",
-    "dayOfWeek": "terca",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
-    "id": "slot_t_8_quarta_9",
-    "teacherId": "t_8",
-    "dayOfWeek": "quarta",
-    "periodId": 9,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC Geral"
-  },
-  {
-    "id": "slot_t_8_quinta_9",
-    "teacherId": "t_8",
-    "dayOfWeek": "quinta",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
     "id": "slot_t_8_sexta_9",
     "teacherId": "t_8",
     "dayOfWeek": "sexta",
     "periodId": 9,
     "type": "AULA",
-    "classId": "9A",
+    "classId": "3EMA_DS",
     "subject": "Língua Portuguesa"
   },
   {
@@ -3413,40 +3410,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "segunda",
     "periodId": 1,
     "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_9_terca_1",
-    "teacherId": "t_9",
-    "dayOfWeek": "terca",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "7B",
-    "subject": "Educação Financeira"
-  },
-  {
-    "id": "slot_t_9_quarta_1",
-    "teacherId": "t_9",
-    "dayOfWeek": "quarta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "7A",
-    "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_9_quinta_1",
-    "teacherId": "t_9",
-    "dayOfWeek": "quinta",
-    "periodId": 1,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_9_sexta_1",
-    "teacherId": "t_9",
-    "dayOfWeek": "sexta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "1EMB",
-    "subject": "Educação Financeira"
   },
   {
     "id": "slot_t_9_segunda_2",
@@ -3459,40 +3422,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingEndTime": "09:30"
   },
   {
-    "id": "slot_t_9_terca_2",
-    "teacherId": "t_9",
-    "dayOfWeek": "terca",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "7B",
-    "subject": "Educação Financeira"
-  },
-  {
-    "id": "slot_t_9_quarta_2",
-    "teacherId": "t_9",
-    "dayOfWeek": "quarta",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "7A",
-    "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_9_quinta_2",
-    "teacherId": "t_9",
-    "dayOfWeek": "quinta",
-    "periodId": 2,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_9_sexta_2",
-    "teacherId": "t_9",
-    "dayOfWeek": "sexta",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "1EMB",
-    "subject": "Educação Financeira"
-  },
-  {
     "id": "slot_t_9_segunda_3",
     "teacherId": "t_9",
     "dayOfWeek": "segunda",
@@ -3503,79 +3432,11 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingEndTime": "09:30"
   },
   {
-    "id": "slot_t_9_terca_3",
-    "teacherId": "t_9",
-    "dayOfWeek": "terca",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "8B",
-    "subject": "Educação Financeira"
-  },
-  {
-    "id": "slot_t_9_quarta_3",
-    "teacherId": "t_9",
-    "dayOfWeek": "quarta",
-    "periodId": 3,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_9_quinta_3",
-    "teacherId": "t_9",
-    "dayOfWeek": "quinta",
-    "periodId": 3,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_9_sexta_3",
-    "teacherId": "t_9",
-    "dayOfWeek": "sexta",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "2EMB",
-    "subject": "Matemática"
-  },
-  {
     "id": "slot_t_9_segunda_4",
     "teacherId": "t_9",
     "dayOfWeek": "segunda",
     "periodId": 4,
-    "type": "AULA",
-    "classId": "7A",
-    "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_9_terca_4",
-    "teacherId": "t_9",
-    "dayOfWeek": "terca",
-    "periodId": 4,
     "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_9_quarta_4",
-    "teacherId": "t_9",
-    "dayOfWeek": "quarta",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "2EMB",
-    "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_9_quinta_4",
-    "teacherId": "t_9",
-    "dayOfWeek": "quinta",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "Educação Financeira"
-  },
-  {
-    "id": "slot_t_9_sexta_4",
-    "teacherId": "t_9",
-    "dayOfWeek": "sexta",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "2EMB",
-    "subject": "Matemática"
   },
   {
     "id": "slot_t_9_segunda_5",
@@ -3587,79 +3448,11 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Educação Financeira"
   },
   {
-    "id": "slot_t_9_terca_5",
-    "teacherId": "t_9",
-    "dayOfWeek": "terca",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "8A",
-    "subject": "Educação Financeira"
-  },
-  {
-    "id": "slot_t_9_quarta_5",
-    "teacherId": "t_9",
-    "dayOfWeek": "quarta",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "2EMB",
-    "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_9_quinta_5",
-    "teacherId": "t_9",
-    "dayOfWeek": "quinta",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "Educação Financeira"
-  },
-  {
-    "id": "slot_t_9_sexta_5",
-    "teacherId": "t_9",
-    "dayOfWeek": "sexta",
-    "periodId": 5,
-    "type": "ELETIVA",
-    "trainingName": "Eletiva"
-  },
-  {
     "id": "slot_t_9_segunda_6",
     "teacherId": "t_9",
     "dayOfWeek": "segunda",
     "periodId": 6,
     "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_9_terca_6",
-    "teacherId": "t_9",
-    "dayOfWeek": "terca",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "8A",
-    "subject": "Educação Financeira"
-  },
-  {
-    "id": "slot_t_9_quarta_6",
-    "teacherId": "t_9",
-    "dayOfWeek": "quarta",
-    "periodId": 6,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_9_quinta_6",
-    "teacherId": "t_9",
-    "dayOfWeek": "quinta",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "7A",
-    "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_9_sexta_6",
-    "teacherId": "t_9",
-    "dayOfWeek": "sexta",
-    "periodId": 6,
-    "type": "ELETIVA",
-    "trainingName": "Eletiva"
   },
   {
     "id": "slot_t_9_segunda_7",
@@ -3668,40 +3461,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "2EMB",
-    "subject": "Educação Financeira"
-  },
-  {
-    "id": "slot_t_9_terca_7",
-    "teacherId": "t_9",
-    "dayOfWeek": "terca",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "2EMB",
-    "subject": "Empreendedorismo"
-  },
-  {
-    "id": "slot_t_9_quarta_7",
-    "teacherId": "t_9",
-    "dayOfWeek": "quarta",
-    "periodId": 7,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_9_quinta_7",
-    "teacherId": "t_9",
-    "dayOfWeek": "quinta",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "1EMA",
-    "subject": "Educação Financeira"
-  },
-  {
-    "id": "slot_t_9_sexta_7",
-    "teacherId": "t_9",
-    "dayOfWeek": "sexta",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "7A",
     "subject": "Educação Financeira"
   },
   {
@@ -3714,6 +3473,77 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Educação Financeira"
   },
   {
+    "id": "slot_t_9_segunda_9",
+    "teacherId": "t_9",
+    "dayOfWeek": "segunda",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_9_terca_1",
+    "teacherId": "t_9",
+    "dayOfWeek": "terca",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "7B",
+    "subject": "Educação Financeira"
+  },
+  {
+    "id": "slot_t_9_terca_2",
+    "teacherId": "t_9",
+    "dayOfWeek": "terca",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "7B",
+    "subject": "Educação Financeira"
+  },
+  {
+    "id": "slot_t_9_terca_3",
+    "teacherId": "t_9",
+    "dayOfWeek": "terca",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "2EMA_DS",
+    "subject": "Educação Financeira"
+  },
+  {
+    "id": "slot_t_9_terca_4",
+    "teacherId": "t_9",
+    "dayOfWeek": "terca",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "2EMA_DS",
+    "subject": "Educação Financeira"
+  },
+  {
+    "id": "slot_t_9_terca_5",
+    "teacherId": "t_9",
+    "dayOfWeek": "terca",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "8A",
+    "subject": "Educação Financeira"
+  },
+  {
+    "id": "slot_t_9_terca_6",
+    "teacherId": "t_9",
+    "dayOfWeek": "terca",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "8A",
+    "subject": "Educação Financeira"
+  },
+  {
+    "id": "slot_t_9_terca_7",
+    "teacherId": "t_9",
+    "dayOfWeek": "terca",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "2EMB",
+    "subject": "Empreendedorismo"
+  },
+  {
     "id": "slot_t_9_terca_8",
     "teacherId": "t_9",
     "dayOfWeek": "terca",
@@ -3722,12 +3552,142 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingName": "ATPC de Área"
   },
   {
+    "id": "slot_t_9_terca_9",
+    "teacherId": "t_9",
+    "dayOfWeek": "terca",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_9_quarta_1",
+    "teacherId": "t_9",
+    "dayOfWeek": "quarta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "7A",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_9_quarta_2",
+    "teacherId": "t_9",
+    "dayOfWeek": "quarta",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "7A",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_9_quarta_3",
+    "teacherId": "t_9",
+    "dayOfWeek": "quarta",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "8B",
+    "subject": "Educação Financeira"
+  },
+  {
+    "id": "slot_t_9_quarta_4",
+    "teacherId": "t_9",
+    "dayOfWeek": "quarta",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "2EMB",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_9_quarta_5",
+    "teacherId": "t_9",
+    "dayOfWeek": "quarta",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "2EMB",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_9_quarta_6",
+    "teacherId": "t_9",
+    "dayOfWeek": "quarta",
+    "periodId": 6,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_9_quarta_7",
+    "teacherId": "t_9",
+    "dayOfWeek": "quarta",
+    "periodId": 7,
+    "type": "LIVRE"
+  },
+  {
     "id": "slot_t_9_quarta_8",
     "teacherId": "t_9",
     "dayOfWeek": "quarta",
     "periodId": 8,
     "type": "CURSO_FORMACAO",
     "trainingName": "ATPC Geral"
+  },
+  {
+    "id": "slot_t_9_quarta_9",
+    "teacherId": "t_9",
+    "dayOfWeek": "quarta",
+    "periodId": 9,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
+  },
+  {
+    "id": "slot_t_9_quinta_1",
+    "teacherId": "t_9",
+    "dayOfWeek": "quinta",
+    "periodId": 1,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_9_quinta_2",
+    "teacherId": "t_9",
+    "dayOfWeek": "quinta",
+    "periodId": 2,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_9_quinta_3",
+    "teacherId": "t_9",
+    "dayOfWeek": "quinta",
+    "periodId": 3,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_9_quinta_4",
+    "teacherId": "t_9",
+    "dayOfWeek": "quinta",
+    "periodId": 4,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_9_quinta_5",
+    "teacherId": "t_9",
+    "dayOfWeek": "quinta",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "7A",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_9_quinta_6",
+    "teacherId": "t_9",
+    "dayOfWeek": "quinta",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "7A",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_9_quinta_7",
+    "teacherId": "t_9",
+    "dayOfWeek": "quinta",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "1EMA",
+    "subject": "Educação Financeira"
   },
   {
     "id": "slot_t_9_quinta_8",
@@ -3739,6 +3699,75 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Educação Financeira"
   },
   {
+    "id": "slot_t_9_quinta_9",
+    "teacherId": "t_9",
+    "dayOfWeek": "quinta",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_9_sexta_1",
+    "teacherId": "t_9",
+    "dayOfWeek": "sexta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "1EMB",
+    "subject": "Educação Financeira"
+  },
+  {
+    "id": "slot_t_9_sexta_2",
+    "teacherId": "t_9",
+    "dayOfWeek": "sexta",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "1EMB",
+    "subject": "Educação Financeira"
+  },
+  {
+    "id": "slot_t_9_sexta_3",
+    "teacherId": "t_9",
+    "dayOfWeek": "sexta",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "2EMB",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_9_sexta_4",
+    "teacherId": "t_9",
+    "dayOfWeek": "sexta",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "2EMB",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_9_sexta_5",
+    "teacherId": "t_9",
+    "dayOfWeek": "sexta",
+    "periodId": 5,
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
+  },
+  {
+    "id": "slot_t_9_sexta_6",
+    "teacherId": "t_9",
+    "dayOfWeek": "sexta",
+    "periodId": 6,
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
+  },
+  {
+    "id": "slot_t_9_sexta_7",
+    "teacherId": "t_9",
+    "dayOfWeek": "sexta",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "7A",
+    "subject": "Educação Financeira"
+  },
+  {
     "id": "slot_t_9_sexta_8",
     "teacherId": "t_9",
     "dayOfWeek": "sexta",
@@ -3746,38 +3775,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "AULA",
     "classId": "7A",
     "subject": "Educação Financeira"
-  },
-  {
-    "id": "slot_t_9_segunda_9",
-    "teacherId": "t_9",
-    "dayOfWeek": "segunda",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
-    "id": "slot_t_9_terca_9",
-    "teacherId": "t_9",
-    "dayOfWeek": "terca",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
-    "id": "slot_t_9_quarta_9",
-    "teacherId": "t_9",
-    "dayOfWeek": "quarta",
-    "periodId": 9,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC Geral"
-  },
-  {
-    "id": "slot_t_9_quinta_9",
-    "teacherId": "t_9",
-    "dayOfWeek": "quinta",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_9_sexta_9",
@@ -3798,80 +3795,12 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Língua Inglesa"
   },
   {
-    "id": "slot_t_10_terca_1",
-    "teacherId": "t_10",
-    "dayOfWeek": "terca",
-    "periodId": 1,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_10_quarta_1",
-    "teacherId": "t_10",
-    "dayOfWeek": "quarta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "7B",
-    "subject": "Língua Inglesa"
-  },
-  {
-    "id": "slot_t_10_quinta_1",
-    "teacherId": "t_10",
-    "dayOfWeek": "quinta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "9B",
-    "subject": "Língua Inglesa"
-  },
-  {
-    "id": "slot_t_10_sexta_1",
-    "teacherId": "t_10",
-    "dayOfWeek": "sexta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "3EMB",
-    "subject": "Língua Inglesa"
-  },
-  {
     "id": "slot_t_10_segunda_2",
     "teacherId": "t_10",
     "dayOfWeek": "segunda",
     "periodId": 2,
     "type": "AULA",
     "classId": "8A",
-    "subject": "Língua Inglesa"
-  },
-  {
-    "id": "slot_t_10_terca_2",
-    "teacherId": "t_10",
-    "dayOfWeek": "terca",
-    "periodId": 2,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_10_quarta_2",
-    "teacherId": "t_10",
-    "dayOfWeek": "quarta",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "7B",
-    "subject": "Língua Inglesa"
-  },
-  {
-    "id": "slot_t_10_quinta_2",
-    "teacherId": "t_10",
-    "dayOfWeek": "quinta",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "9B",
-    "subject": "Língua Inglesa"
-  },
-  {
-    "id": "slot_t_10_sexta_2",
-    "teacherId": "t_10",
-    "dayOfWeek": "sexta",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "3EMB",
     "subject": "Língua Inglesa"
   },
   {
@@ -3884,6 +3813,73 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Língua Inglesa"
   },
   {
+    "id": "slot_t_10_segunda_4",
+    "teacherId": "t_10",
+    "dayOfWeek": "segunda",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "2EMB",
+    "subject": "Língua Inglesa"
+  },
+  {
+    "id": "slot_t_10_segunda_5",
+    "teacherId": "t_10",
+    "dayOfWeek": "segunda",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "9A",
+    "subject": "Língua Inglesa"
+  },
+  {
+    "id": "slot_t_10_segunda_6",
+    "teacherId": "t_10",
+    "dayOfWeek": "segunda",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "9A",
+    "subject": "Língua Inglesa"
+  },
+  {
+    "id": "slot_t_10_segunda_7",
+    "teacherId": "t_10",
+    "dayOfWeek": "segunda",
+    "periodId": 7,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_10_segunda_8",
+    "teacherId": "t_10",
+    "dayOfWeek": "segunda",
+    "periodId": 8,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_10_segunda_9",
+    "teacherId": "t_10",
+    "dayOfWeek": "segunda",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_10_terca_1",
+    "teacherId": "t_10",
+    "dayOfWeek": "terca",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "3EMA_DS",
+    "subject": "Língua Inglesa"
+  },
+  {
+    "id": "slot_t_10_terca_2",
+    "teacherId": "t_10",
+    "dayOfWeek": "terca",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "2EMA_DS",
+    "subject": "Língua Inglesa"
+  },
+  {
     "id": "slot_t_10_terca_3",
     "teacherId": "t_10",
     "dayOfWeek": "terca",
@@ -3891,12 +3887,149 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "LIVRE"
   },
   {
+    "id": "slot_t_10_terca_4",
+    "teacherId": "t_10",
+    "dayOfWeek": "terca",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "1EMB",
+    "subject": "Língua Inglesa"
+  },
+  {
+    "id": "slot_t_10_terca_5",
+    "teacherId": "t_10",
+    "dayOfWeek": "terca",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "1EMB",
+    "subject": "Língua Inglesa"
+  },
+  {
+    "id": "slot_t_10_terca_6",
+    "teacherId": "t_10",
+    "dayOfWeek": "terca",
+    "periodId": 6,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_10_terca_7",
+    "teacherId": "t_10",
+    "dayOfWeek": "terca",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "1EMA",
+    "subject": "Língua Inglesa"
+  },
+  {
+    "id": "slot_t_10_terca_8",
+    "teacherId": "t_10",
+    "dayOfWeek": "terca",
+    "periodId": 8,
+    "type": "AULA",
+    "classId": "1EMA",
+    "subject": "Língua Inglesa"
+  },
+  {
+    "id": "slot_t_10_terca_9",
+    "teacherId": "t_10",
+    "dayOfWeek": "terca",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_10_quarta_1",
+    "teacherId": "t_10",
+    "dayOfWeek": "quarta",
+    "periodId": 1,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_10_quarta_2",
+    "teacherId": "t_10",
+    "dayOfWeek": "quarta",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "7B",
+    "subject": "Língua Inglesa"
+  },
+  {
     "id": "slot_t_10_quarta_3",
     "teacherId": "t_10",
     "dayOfWeek": "quarta",
     "periodId": 3,
     "type": "AULA",
+    "classId": "7B",
+    "subject": "Língua Inglesa"
+  },
+  {
+    "id": "slot_t_10_quarta_4",
+    "teacherId": "t_10",
+    "dayOfWeek": "quarta",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "8B",
+    "subject": "Língua Inglesa"
+  },
+  {
+    "id": "slot_t_10_quarta_5",
+    "teacherId": "t_10",
+    "dayOfWeek": "quarta",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "8B",
+    "subject": "Língua Inglesa"
+  },
+  {
+    "id": "slot_t_10_quarta_6",
+    "teacherId": "t_10",
+    "dayOfWeek": "quarta",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "3EMA_DS",
+    "subject": "Língua Inglesa"
+  },
+  {
+    "id": "slot_t_10_quarta_7",
+    "teacherId": "t_10",
+    "dayOfWeek": "quarta",
+    "periodId": 7,
+    "type": "AULA",
     "classId": "2EMA_DS",
+    "subject": "Língua Inglesa"
+  },
+  {
+    "id": "slot_t_10_quarta_8",
+    "teacherId": "t_10",
+    "dayOfWeek": "quarta",
+    "periodId": 8,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
+  },
+  {
+    "id": "slot_t_10_quarta_9",
+    "teacherId": "t_10",
+    "dayOfWeek": "quarta",
+    "periodId": 9,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
+  },
+  {
+    "id": "slot_t_10_quinta_1",
+    "teacherId": "t_10",
+    "dayOfWeek": "quinta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "9B",
+    "subject": "Língua Inglesa"
+  },
+  {
+    "id": "slot_t_10_quinta_2",
+    "teacherId": "t_10",
+    "dayOfWeek": "quinta",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "9B",
     "subject": "Língua Inglesa"
   },
   {
@@ -3910,40 +4043,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingEndTime": "11:00"
   },
   {
-    "id": "slot_t_10_sexta_3",
-    "teacherId": "t_10",
-    "dayOfWeek": "sexta",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "7A",
-    "subject": "Língua Inglesa"
-  },
-  {
-    "id": "slot_t_10_segunda_4",
-    "teacherId": "t_10",
-    "dayOfWeek": "segunda",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "2EMB",
-    "subject": "Língua Inglesa"
-  },
-  {
-    "id": "slot_t_10_terca_4",
-    "teacherId": "t_10",
-    "dayOfWeek": "terca",
-    "periodId": 4,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_10_quarta_4",
-    "teacherId": "t_10",
-    "dayOfWeek": "quarta",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "8B",
-    "subject": "Língua Inglesa"
-  },
-  {
     "id": "slot_t_10_quinta_4",
     "teacherId": "t_10",
     "dayOfWeek": "quinta",
@@ -3952,42 +4051,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingName": "Multiplica SP",
     "trainingStartTime": "09:30",
     "trainingEndTime": "11:00"
-  },
-  {
-    "id": "slot_t_10_sexta_4",
-    "teacherId": "t_10",
-    "dayOfWeek": "sexta",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "7A",
-    "subject": "Língua Inglesa"
-  },
-  {
-    "id": "slot_t_10_segunda_5",
-    "teacherId": "t_10",
-    "dayOfWeek": "segunda",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "9A",
-    "subject": "Língua Inglesa"
-  },
-  {
-    "id": "slot_t_10_terca_5",
-    "teacherId": "t_10",
-    "dayOfWeek": "terca",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "1EMB",
-    "subject": "Língua Inglesa"
-  },
-  {
-    "id": "slot_t_10_quarta_5",
-    "teacherId": "t_10",
-    "dayOfWeek": "quarta",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "8B",
-    "subject": "Língua Inglesa"
   },
   {
     "id": "slot_t_10_quinta_5",
@@ -4000,39 +4063,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingEndTime": "11:00"
   },
   {
-    "id": "slot_t_10_sexta_5",
-    "teacherId": "t_10",
-    "dayOfWeek": "sexta",
-    "periodId": 5,
-    "type": "ELETIVA",
-    "trainingName": "Eletiva"
-  },
-  {
-    "id": "slot_t_10_segunda_6",
-    "teacherId": "t_10",
-    "dayOfWeek": "segunda",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "9A",
-    "subject": "Língua Inglesa"
-  },
-  {
-    "id": "slot_t_10_terca_6",
-    "teacherId": "t_10",
-    "dayOfWeek": "terca",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "1EMB",
-    "subject": "Língua Inglesa"
-  },
-  {
-    "id": "slot_t_10_quarta_6",
-    "teacherId": "t_10",
-    "dayOfWeek": "quarta",
-    "periodId": 6,
-    "type": "LIVRE"
-  },
-  {
     "id": "slot_t_10_quinta_6",
     "teacherId": "t_10",
     "dayOfWeek": "quinta",
@@ -4040,77 +4070,11 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "LIVRE"
   },
   {
-    "id": "slot_t_10_sexta_6",
-    "teacherId": "t_10",
-    "dayOfWeek": "sexta",
-    "periodId": 6,
-    "type": "ELETIVA",
-    "trainingName": "Eletiva"
-  },
-  {
-    "id": "slot_t_10_segunda_7",
-    "teacherId": "t_10",
-    "dayOfWeek": "segunda",
-    "periodId": 7,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_10_terca_7",
-    "teacherId": "t_10",
-    "dayOfWeek": "terca",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "1EMA",
-    "subject": "Língua Inglesa"
-  },
-  {
-    "id": "slot_t_10_quarta_7",
-    "teacherId": "t_10",
-    "dayOfWeek": "quarta",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "3EMA_DS",
-    "subject": "Língua Inglesa"
-  },
-  {
     "id": "slot_t_10_quinta_7",
     "teacherId": "t_10",
     "dayOfWeek": "quinta",
     "periodId": 7,
     "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_10_sexta_7",
-    "teacherId": "t_10",
-    "dayOfWeek": "sexta",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "Língua Inglesa"
-  },
-  {
-    "id": "slot_t_10_segunda_8",
-    "teacherId": "t_10",
-    "dayOfWeek": "segunda",
-    "periodId": 8,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_10_terca_8",
-    "teacherId": "t_10",
-    "dayOfWeek": "terca",
-    "periodId": 8,
-    "type": "AULA",
-    "classId": "1EMA",
-    "subject": "Língua Inglesa"
-  },
-  {
-    "id": "slot_t_10_quarta_8",
-    "teacherId": "t_10",
-    "dayOfWeek": "quarta",
-    "periodId": 8,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC Geral"
   },
   {
     "id": "slot_t_10_quinta_8",
@@ -4121,37 +4085,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingName": "ATPC de Área"
   },
   {
-    "id": "slot_t_10_sexta_8",
-    "teacherId": "t_10",
-    "dayOfWeek": "sexta",
-    "periodId": 8,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_10_segunda_9",
-    "teacherId": "t_10",
-    "dayOfWeek": "segunda",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
-    "id": "slot_t_10_terca_9",
-    "teacherId": "t_10",
-    "dayOfWeek": "terca",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
-    "id": "slot_t_10_quarta_9",
-    "teacherId": "t_10",
-    "dayOfWeek": "quarta",
-    "periodId": 9,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC Geral"
-  },
-  {
     "id": "slot_t_10_quinta_9",
     "teacherId": "t_10",
     "dayOfWeek": "quinta",
@@ -4160,13 +4093,77 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingName": "Tutoria"
   },
   {
+    "id": "slot_t_10_sexta_1",
+    "teacherId": "t_10",
+    "dayOfWeek": "sexta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "3EMB",
+    "subject": "Língua Inglesa"
+  },
+  {
+    "id": "slot_t_10_sexta_2",
+    "teacherId": "t_10",
+    "dayOfWeek": "sexta",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "3EMB",
+    "subject": "Língua Inglesa"
+  },
+  {
+    "id": "slot_t_10_sexta_3",
+    "teacherId": "t_10",
+    "dayOfWeek": "sexta",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "7A",
+    "subject": "Língua Inglesa"
+  },
+  {
+    "id": "slot_t_10_sexta_4",
+    "teacherId": "t_10",
+    "dayOfWeek": "sexta",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "7A",
+    "subject": "Língua Inglesa"
+  },
+  {
+    "id": "slot_t_10_sexta_5",
+    "teacherId": "t_10",
+    "dayOfWeek": "sexta",
+    "periodId": 5,
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
+  },
+  {
+    "id": "slot_t_10_sexta_6",
+    "teacherId": "t_10",
+    "dayOfWeek": "sexta",
+    "periodId": 6,
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
+  },
+  {
+    "id": "slot_t_10_sexta_7",
+    "teacherId": "t_10",
+    "dayOfWeek": "sexta",
+    "periodId": 7,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_10_sexta_8",
+    "teacherId": "t_10",
+    "dayOfWeek": "sexta",
+    "periodId": 8,
+    "type": "LIVRE"
+  },
+  {
     "id": "slot_t_10_sexta_9",
     "teacherId": "t_10",
     "dayOfWeek": "sexta",
     "periodId": 9,
-    "type": "AULA",
-    "classId": "3EMA_DS",
-    "subject": "Língua Inglesa"
+    "type": "LIVRE"
   },
   {
     "id": "slot_t_11_segunda_1",
@@ -4178,149 +4175,25 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Ciências"
   },
   {
-    "id": "slot_t_11_terca_1",
-    "teacherId": "t_11",
-    "dayOfWeek": "terca",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "6A",
-    "subject": "Práticas Experimentais"
-  },
-  {
-    "id": "slot_t_11_quarta_1",
-    "teacherId": "t_11",
-    "dayOfWeek": "quarta",
-    "periodId": 1,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_11_quinta_1",
-    "teacherId": "t_11",
-    "dayOfWeek": "quinta",
-    "periodId": 1,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_11_sexta_1",
-    "teacherId": "t_11",
-    "dayOfWeek": "sexta",
-    "periodId": 1,
-    "type": "LIVRE"
-  },
-  {
     "id": "slot_t_11_segunda_2",
     "teacherId": "t_11",
     "dayOfWeek": "segunda",
     "periodId": 2,
     "type": "AULA",
-    "classId": "6B",
-    "subject": "Ciências"
-  },
-  {
-    "id": "slot_t_11_terca_2",
-    "teacherId": "t_11",
-    "dayOfWeek": "terca",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "6B",
-    "subject": "Ciências"
-  },
-  {
-    "id": "slot_t_11_quarta_2",
-    "teacherId": "t_11",
-    "dayOfWeek": "quarta",
-    "periodId": 2,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_11_quinta_2",
-    "teacherId": "t_11",
-    "dayOfWeek": "quinta",
-    "periodId": 2,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_11_sexta_2",
-    "teacherId": "t_11",
-    "dayOfWeek": "sexta",
-    "periodId": 2,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "Escola de Gestão"
+    "classId": "6A",
+    "subject": "Práticas Experimentais"
   },
   {
     "id": "slot_t_11_segunda_3",
     "teacherId": "t_11",
     "dayOfWeek": "segunda",
     "periodId": 3,
-    "type": "AULA",
-    "classId": "6A",
-    "subject": "Ciências"
-  },
-  {
-    "id": "slot_t_11_terca_3",
-    "teacherId": "t_11",
-    "dayOfWeek": "terca",
-    "periodId": 3,
     "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_11_quarta_3",
-    "teacherId": "t_11",
-    "dayOfWeek": "quarta",
-    "periodId": 3,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_11_quinta_3",
-    "teacherId": "t_11",
-    "dayOfWeek": "quinta",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "7A",
-    "subject": "Ciências"
-  },
-  {
-    "id": "slot_t_11_sexta_3",
-    "teacherId": "t_11",
-    "dayOfWeek": "sexta",
-    "periodId": 3,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "Escola de Gestão"
   },
   {
     "id": "slot_t_11_segunda_4",
     "teacherId": "t_11",
     "dayOfWeek": "segunda",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "6A",
-    "subject": "Ciências"
-  },
-  {
-    "id": "slot_t_11_terca_4",
-    "teacherId": "t_11",
-    "dayOfWeek": "terca",
-    "periodId": 4,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_11_quarta_4",
-    "teacherId": "t_11",
-    "dayOfWeek": "quarta",
-    "periodId": 4,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_11_quinta_4",
-    "teacherId": "t_11",
-    "dayOfWeek": "quinta",
-    "periodId": 4,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_11_sexta_4",
-    "teacherId": "t_11",
-    "dayOfWeek": "sexta",
     "periodId": 4,
     "type": "LIVRE"
   },
@@ -4332,75 +4205,11 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "LIVRE"
   },
   {
-    "id": "slot_t_11_terca_5",
-    "teacherId": "t_11",
-    "dayOfWeek": "terca",
-    "periodId": 5,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_11_quarta_5",
-    "teacherId": "t_11",
-    "dayOfWeek": "quarta",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "7A",
-    "subject": "Práticas Experimentais"
-  },
-  {
-    "id": "slot_t_11_quinta_5",
-    "teacherId": "t_11",
-    "dayOfWeek": "quinta",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "7A",
-    "subject": "Ciências"
-  },
-  {
-    "id": "slot_t_11_sexta_5",
-    "teacherId": "t_11",
-    "dayOfWeek": "sexta",
-    "periodId": 5,
-    "type": "ELETIVA",
-    "trainingName": "Eletiva"
-  },
-  {
     "id": "slot_t_11_segunda_6",
     "teacherId": "t_11",
     "dayOfWeek": "segunda",
     "periodId": 6,
     "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_11_terca_6",
-    "teacherId": "t_11",
-    "dayOfWeek": "terca",
-    "periodId": 6,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_11_quarta_6",
-    "teacherId": "t_11",
-    "dayOfWeek": "quarta",
-    "periodId": 6,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_11_quinta_6",
-    "teacherId": "t_11",
-    "dayOfWeek": "quinta",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "6A",
-    "subject": "Ciências"
-  },
-  {
-    "id": "slot_t_11_sexta_6",
-    "teacherId": "t_11",
-    "dayOfWeek": "sexta",
-    "periodId": 6,
-    "type": "ELETIVA",
-    "trainingName": "Eletiva"
   },
   {
     "id": "slot_t_11_segunda_7",
@@ -4410,72 +4219,9 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "LIVRE"
   },
   {
-    "id": "slot_t_11_terca_7",
-    "teacherId": "t_11",
-    "dayOfWeek": "terca",
-    "periodId": 7,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC de Área"
-  },
-  {
-    "id": "slot_t_11_quarta_7",
-    "teacherId": "t_11",
-    "dayOfWeek": "quarta",
-    "periodId": 7,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_11_quinta_7",
-    "teacherId": "t_11",
-    "dayOfWeek": "quinta",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "6B",
-    "subject": "Práticas Experimentais"
-  },
-  {
-    "id": "slot_t_11_sexta_7",
-    "teacherId": "t_11",
-    "dayOfWeek": "sexta",
-    "periodId": 7,
-    "type": "LIVRE"
-  },
-  {
     "id": "slot_t_11_segunda_8",
     "teacherId": "t_11",
     "dayOfWeek": "segunda",
-    "periodId": 8,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_11_terca_8",
-    "teacherId": "t_11",
-    "dayOfWeek": "terca",
-    "periodId": 8,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC de Área"
-  },
-  {
-    "id": "slot_t_11_quarta_8",
-    "teacherId": "t_11",
-    "dayOfWeek": "quarta",
-    "periodId": 8,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC Geral"
-  },
-  {
-    "id": "slot_t_11_quinta_8",
-    "teacherId": "t_11",
-    "dayOfWeek": "quinta",
-    "periodId": 8,
-    "type": "AULA",
-    "classId": "6B",
-    "subject": "Ciências"
-  },
-  {
-    "id": "slot_t_11_sexta_8",
-    "teacherId": "t_11",
-    "dayOfWeek": "sexta",
     "periodId": 8,
     "type": "LIVRE"
   },
@@ -4488,12 +4234,137 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingName": "Tutoria"
   },
   {
+    "id": "slot_t_11_terca_1",
+    "teacherId": "t_11",
+    "dayOfWeek": "terca",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "6A",
+    "subject": "Ciências"
+  },
+  {
+    "id": "slot_t_11_terca_2",
+    "teacherId": "t_11",
+    "dayOfWeek": "terca",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "6A",
+    "subject": "Ciências"
+  },
+  {
+    "id": "slot_t_11_terca_3",
+    "teacherId": "t_11",
+    "dayOfWeek": "terca",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "6B",
+    "subject": "Ciências"
+  },
+  {
+    "id": "slot_t_11_terca_4",
+    "teacherId": "t_11",
+    "dayOfWeek": "terca",
+    "periodId": 4,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_11_terca_5",
+    "teacherId": "t_11",
+    "dayOfWeek": "terca",
+    "periodId": 5,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_11_terca_6",
+    "teacherId": "t_11",
+    "dayOfWeek": "terca",
+    "periodId": 6,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_11_terca_7",
+    "teacherId": "t_11",
+    "dayOfWeek": "terca",
+    "periodId": 7,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC de Área"
+  },
+  {
+    "id": "slot_t_11_terca_8",
+    "teacherId": "t_11",
+    "dayOfWeek": "terca",
+    "periodId": 8,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC de Área"
+  },
+  {
     "id": "slot_t_11_terca_9",
     "teacherId": "t_11",
     "dayOfWeek": "terca",
     "periodId": 9,
     "type": "ATIVIDADE",
     "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_11_quarta_1",
+    "teacherId": "t_11",
+    "dayOfWeek": "quarta",
+    "periodId": 1,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_11_quarta_2",
+    "teacherId": "t_11",
+    "dayOfWeek": "quarta",
+    "periodId": 2,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_11_quarta_3",
+    "teacherId": "t_11",
+    "dayOfWeek": "quarta",
+    "periodId": 3,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_11_quarta_4",
+    "teacherId": "t_11",
+    "dayOfWeek": "quarta",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "6B",
+    "subject": "Ciências"
+  },
+  {
+    "id": "slot_t_11_quarta_5",
+    "teacherId": "t_11",
+    "dayOfWeek": "quarta",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "7A",
+    "subject": "Ciências"
+  },
+  {
+    "id": "slot_t_11_quarta_6",
+    "teacherId": "t_11",
+    "dayOfWeek": "quarta",
+    "periodId": 6,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_11_quarta_7",
+    "teacherId": "t_11",
+    "dayOfWeek": "quarta",
+    "periodId": 7,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_11_quarta_8",
+    "teacherId": "t_11",
+    "dayOfWeek": "quarta",
+    "periodId": 8,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
   },
   {
     "id": "slot_t_11_quarta_9",
@@ -4504,12 +4375,138 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingName": "ATPC Geral"
   },
   {
+    "id": "slot_t_11_quinta_1",
+    "teacherId": "t_11",
+    "dayOfWeek": "quinta",
+    "periodId": 1,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_11_quinta_2",
+    "teacherId": "t_11",
+    "dayOfWeek": "quinta",
+    "periodId": 2,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_11_quinta_3",
+    "teacherId": "t_11",
+    "dayOfWeek": "quinta",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "7A",
+    "subject": "Ciências"
+  },
+  {
+    "id": "slot_t_11_quinta_4",
+    "teacherId": "t_11",
+    "dayOfWeek": "quinta",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "6A",
+    "subject": "Ciências"
+  },
+  {
+    "id": "slot_t_11_quinta_5",
+    "teacherId": "t_11",
+    "dayOfWeek": "quinta",
+    "periodId": 5,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_11_quinta_6",
+    "teacherId": "t_11",
+    "dayOfWeek": "quinta",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "6B",
+    "subject": "Ciências"
+  },
+  {
+    "id": "slot_t_11_quinta_7",
+    "teacherId": "t_11",
+    "dayOfWeek": "quinta",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "7A",
+    "subject": "Práticas Experimentais"
+  },
+  {
+    "id": "slot_t_11_quinta_8",
+    "teacherId": "t_11",
+    "dayOfWeek": "quinta",
+    "periodId": 8,
+    "type": "AULA",
+    "classId": "6B",
+    "subject": "Práticas Experimentais"
+  },
+  {
     "id": "slot_t_11_quinta_9",
     "teacherId": "t_11",
     "dayOfWeek": "quinta",
     "periodId": 9,
     "type": "ATIVIDADE",
     "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_11_sexta_1",
+    "teacherId": "t_11",
+    "dayOfWeek": "sexta",
+    "periodId": 1,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_11_sexta_2",
+    "teacherId": "t_11",
+    "dayOfWeek": "sexta",
+    "periodId": 2,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Escola de Gestão"
+  },
+  {
+    "id": "slot_t_11_sexta_3",
+    "teacherId": "t_11",
+    "dayOfWeek": "sexta",
+    "periodId": 3,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Escola de Gestão"
+  },
+  {
+    "id": "slot_t_11_sexta_4",
+    "teacherId": "t_11",
+    "dayOfWeek": "sexta",
+    "periodId": 4,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_11_sexta_5",
+    "teacherId": "t_11",
+    "dayOfWeek": "sexta",
+    "periodId": 5,
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
+  },
+  {
+    "id": "slot_t_11_sexta_6",
+    "teacherId": "t_11",
+    "dayOfWeek": "sexta",
+    "periodId": 6,
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
+  },
+  {
+    "id": "slot_t_11_sexta_7",
+    "teacherId": "t_11",
+    "dayOfWeek": "sexta",
+    "periodId": 7,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_11_sexta_8",
+    "teacherId": "t_11",
+    "dayOfWeek": "sexta",
+    "periodId": 8,
+    "type": "LIVRE"
   },
   {
     "id": "slot_t_11_sexta_9",
@@ -4526,42 +4523,69 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "LIVRE"
   },
   {
-    "id": "slot_t_12_terca_1",
-    "teacherId": "t_12",
-    "dayOfWeek": "terca",
-    "periodId": 1,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_12_quarta_1",
-    "teacherId": "t_12",
-    "dayOfWeek": "quarta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "3EMA_DS",
-    "subject": "Programação Mobile"
-  },
-  {
-    "id": "slot_t_12_quinta_1",
-    "teacherId": "t_12",
-    "dayOfWeek": "quinta",
-    "periodId": 1,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_12_sexta_1",
-    "teacherId": "t_12",
-    "dayOfWeek": "sexta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "3EMA_DS",
-    "subject": "Versionamento de Código e Sistemas …"
-  },
-  {
     "id": "slot_t_12_segunda_2",
     "teacherId": "t_12",
     "dayOfWeek": "segunda",
     "periodId": 2,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_12_segunda_3",
+    "teacherId": "t_12",
+    "dayOfWeek": "segunda",
+    "periodId": 3,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_12_segunda_4",
+    "teacherId": "t_12",
+    "dayOfWeek": "segunda",
+    "periodId": 4,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_12_segunda_5",
+    "teacherId": "t_12",
+    "dayOfWeek": "segunda",
+    "periodId": 5,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_12_segunda_6",
+    "teacherId": "t_12",
+    "dayOfWeek": "segunda",
+    "periodId": 6,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_12_segunda_7",
+    "teacherId": "t_12",
+    "dayOfWeek": "segunda",
+    "periodId": 7,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_12_segunda_8",
+    "teacherId": "t_12",
+    "dayOfWeek": "segunda",
+    "periodId": 8,
+    "type": "AULA",
+    "classId": "3EMA_DS",
+    "subject": "Programação Back-End"
+  },
+  {
+    "id": "slot_t_12_segunda_9",
+    "teacherId": "t_12",
+    "dayOfWeek": "segunda",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_12_terca_1",
+    "teacherId": "t_12",
+    "dayOfWeek": "terca",
+    "periodId": 1,
     "type": "LIVRE"
   },
   {
@@ -4572,43 +4596,72 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "LIVRE"
   },
   {
+    "id": "slot_t_12_terca_3",
+    "teacherId": "t_12",
+    "dayOfWeek": "terca",
+    "periodId": 3,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_12_terca_4",
+    "teacherId": "t_12",
+    "dayOfWeek": "terca",
+    "periodId": 4,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_12_terca_5",
+    "teacherId": "t_12",
+    "dayOfWeek": "terca",
+    "periodId": 5,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_12_terca_6",
+    "teacherId": "t_12",
+    "dayOfWeek": "terca",
+    "periodId": 6,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_12_terca_7",
+    "teacherId": "t_12",
+    "dayOfWeek": "terca",
+    "periodId": 7,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_12_terca_8",
+    "teacherId": "t_12",
+    "dayOfWeek": "terca",
+    "periodId": 8,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_12_terca_9",
+    "teacherId": "t_12",
+    "dayOfWeek": "terca",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_12_quarta_1",
+    "teacherId": "t_12",
+    "dayOfWeek": "quarta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "3EMA_DS",
+    "subject": "Programação Front-End"
+  },
+  {
     "id": "slot_t_12_quarta_2",
     "teacherId": "t_12",
     "dayOfWeek": "quarta",
     "periodId": 2,
     "type": "AULA",
     "classId": "3EMA_DS",
-    "subject": "Programação Mobile"
-  },
-  {
-    "id": "slot_t_12_quinta_2",
-    "teacherId": "t_12",
-    "dayOfWeek": "quinta",
-    "periodId": 2,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_12_sexta_2",
-    "teacherId": "t_12",
-    "dayOfWeek": "sexta",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "3EMA_DS",
-    "subject": "Programação Mobile"
-  },
-  {
-    "id": "slot_t_12_segunda_3",
-    "teacherId": "t_12",
-    "dayOfWeek": "segunda",
-    "periodId": 3,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_12_terca_3",
-    "teacherId": "t_12",
-    "dayOfWeek": "terca",
-    "periodId": 3,
-    "type": "LIVRE"
+    "subject": "Programação Front-End"
   },
   {
     "id": "slot_t_12_quarta_3",
@@ -4620,40 +4673,76 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Versionamento de Código e Sistemas …"
   },
   {
-    "id": "slot_t_12_quinta_3",
+    "id": "slot_t_12_quarta_4",
     "teacherId": "t_12",
-    "dayOfWeek": "quinta",
-    "periodId": 3,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_12_sexta_3",
-    "teacherId": "t_12",
-    "dayOfWeek": "sexta",
-    "periodId": 3,
+    "dayOfWeek": "quarta",
+    "periodId": 4,
     "type": "AULA",
     "classId": "3EMA_DS",
     "subject": "Programação Mobile"
   },
   {
-    "id": "slot_t_12_segunda_4",
-    "teacherId": "t_12",
-    "dayOfWeek": "segunda",
-    "periodId": 4,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_12_terca_4",
-    "teacherId": "t_12",
-    "dayOfWeek": "terca",
-    "periodId": 4,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_12_quarta_4",
+    "id": "slot_t_12_quarta_5",
     "teacherId": "t_12",
     "dayOfWeek": "quarta",
-    "periodId": 4,
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "3EMA_DS",
+    "subject": "Programação Mobile"
+  },
+  {
+    "id": "slot_t_12_quarta_6",
+    "teacherId": "t_12",
+    "dayOfWeek": "quarta",
+    "periodId": 6,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_12_quarta_7",
+    "teacherId": "t_12",
+    "dayOfWeek": "quarta",
+    "periodId": 7,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_12_quarta_8",
+    "teacherId": "t_12",
+    "dayOfWeek": "quarta",
+    "periodId": 8,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
+  },
+  {
+    "id": "slot_t_12_quarta_9",
+    "teacherId": "t_12",
+    "dayOfWeek": "quarta",
+    "periodId": 9,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
+  },
+  {
+    "id": "slot_t_12_quinta_1",
+    "teacherId": "t_12",
+    "dayOfWeek": "quinta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "3EMA_DS",
+    "subject": "Programação Mobile"
+  },
+  {
+    "id": "slot_t_12_quinta_2",
+    "teacherId": "t_12",
+    "dayOfWeek": "quinta",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "3EMA_DS",
+    "subject": "Programação Mobile"
+  },
+  {
+    "id": "slot_t_12_quinta_3",
+    "teacherId": "t_12",
+    "dayOfWeek": "quinta",
+    "periodId": 3,
     "type": "AULA",
     "classId": "3EMA_DS",
     "subject": "Versionamento de Código e Sistemas …"
@@ -4666,40 +4755,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "LIVRE"
   },
   {
-    "id": "slot_t_12_sexta_4",
-    "teacherId": "t_12",
-    "dayOfWeek": "sexta",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "3EMA_DS",
-    "subject": "Programação Front-End"
-  },
-  {
-    "id": "slot_t_12_segunda_5",
-    "teacherId": "t_12",
-    "dayOfWeek": "segunda",
-    "periodId": 5,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_12_terca_5",
-    "teacherId": "t_12",
-    "dayOfWeek": "terca",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "3EMA_DS",
-    "subject": "Programação Back-End"
-  },
-  {
-    "id": "slot_t_12_quarta_5",
-    "teacherId": "t_12",
-    "dayOfWeek": "quarta",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "3EMA_DS",
-    "subject": "Programação Front-End"
-  },
-  {
     "id": "slot_t_12_quinta_5",
     "teacherId": "t_12",
     "dayOfWeek": "quinta",
@@ -4707,70 +4762,10 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "LIVRE"
   },
   {
-    "id": "slot_t_12_sexta_5",
-    "teacherId": "t_12",
-    "dayOfWeek": "sexta",
-    "periodId": 5,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_12_segunda_6",
-    "teacherId": "t_12",
-    "dayOfWeek": "segunda",
-    "periodId": 6,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_12_terca_6",
-    "teacherId": "t_12",
-    "dayOfWeek": "terca",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "3EMA_DS",
-    "subject": "Programação Back-End"
-  },
-  {
-    "id": "slot_t_12_quarta_6",
-    "teacherId": "t_12",
-    "dayOfWeek": "quarta",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "3EMA_DS",
-    "subject": "Programação Front-End"
-  },
-  {
     "id": "slot_t_12_quinta_6",
     "teacherId": "t_12",
     "dayOfWeek": "quinta",
     "periodId": 6,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_12_sexta_6",
-    "teacherId": "t_12",
-    "dayOfWeek": "sexta",
-    "periodId": 6,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_12_segunda_7",
-    "teacherId": "t_12",
-    "dayOfWeek": "segunda",
-    "periodId": 7,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_12_terca_7",
-    "teacherId": "t_12",
-    "dayOfWeek": "terca",
-    "periodId": 7,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_12_quarta_7",
-    "teacherId": "t_12",
-    "dayOfWeek": "quarta",
-    "periodId": 7,
     "type": "LIVRE"
   },
   {
@@ -4781,73 +4776,13 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "LIVRE"
   },
   {
-    "id": "slot_t_12_sexta_7",
-    "teacherId": "t_12",
-    "dayOfWeek": "sexta",
-    "periodId": 7,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_12_segunda_8",
-    "teacherId": "t_12",
-    "dayOfWeek": "segunda",
-    "periodId": 8,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_12_terca_8",
-    "teacherId": "t_12",
-    "dayOfWeek": "terca",
-    "periodId": 8,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_12_quarta_8",
-    "teacherId": "t_12",
-    "dayOfWeek": "quarta",
-    "periodId": 8,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC Geral"
-  },
-  {
     "id": "slot_t_12_quinta_8",
     "teacherId": "t_12",
     "dayOfWeek": "quinta",
     "periodId": 8,
     "type": "AULA",
     "classId": "3EMA_DS",
-    "subject": "Programação Back-End"
-  },
-  {
-    "id": "slot_t_12_sexta_8",
-    "teacherId": "t_12",
-    "dayOfWeek": "sexta",
-    "periodId": 8,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_12_segunda_9",
-    "teacherId": "t_12",
-    "dayOfWeek": "segunda",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
-    "id": "slot_t_12_terca_9",
-    "teacherId": "t_12",
-    "dayOfWeek": "terca",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
-    "id": "slot_t_12_quarta_9",
-    "teacherId": "t_12",
-    "dayOfWeek": "quarta",
-    "periodId": 9,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC Geral"
+    "subject": "Programação Front-End"
   },
   {
     "id": "slot_t_12_quinta_9",
@@ -4856,6 +4791,68 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 9,
     "type": "ATIVIDADE",
     "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_12_sexta_1",
+    "teacherId": "t_12",
+    "dayOfWeek": "sexta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "3EMA_DS",
+    "subject": "Versionamento de Código e Sistemas …"
+  },
+  {
+    "id": "slot_t_12_sexta_2",
+    "teacherId": "t_12",
+    "dayOfWeek": "sexta",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "3EMA_DS",
+    "subject": "Programação Back-End"
+  },
+  {
+    "id": "slot_t_12_sexta_3",
+    "teacherId": "t_12",
+    "dayOfWeek": "sexta",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "3EMA_DS",
+    "subject": "Programação Back-End"
+  },
+  {
+    "id": "slot_t_12_sexta_4",
+    "teacherId": "t_12",
+    "dayOfWeek": "sexta",
+    "periodId": 4,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_12_sexta_5",
+    "teacherId": "t_12",
+    "dayOfWeek": "sexta",
+    "periodId": 5,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_12_sexta_6",
+    "teacherId": "t_12",
+    "dayOfWeek": "sexta",
+    "periodId": 6,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_12_sexta_7",
+    "teacherId": "t_12",
+    "dayOfWeek": "sexta",
+    "periodId": 7,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_12_sexta_8",
+    "teacherId": "t_12",
+    "dayOfWeek": "sexta",
+    "periodId": 8,
+    "type": "LIVRE"
   },
   {
     "id": "slot_t_12_sexta_9",
@@ -4872,38 +4869,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "LIVRE"
   },
   {
-    "id": "slot_t_13_terca_1",
-    "teacherId": "t_13",
-    "dayOfWeek": "terca",
-    "periodId": 1,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_13_quarta_1",
-    "teacherId": "t_13",
-    "dayOfWeek": "quarta",
-    "periodId": 1,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_13_quinta_1",
-    "teacherId": "t_13",
-    "dayOfWeek": "quinta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "8A",
-    "subject": "Tecnologia e Inovação"
-  },
-  {
-    "id": "slot_t_13_sexta_1",
-    "teacherId": "t_13",
-    "dayOfWeek": "sexta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "7B",
-    "subject": "Ciências"
-  },
-  {
     "id": "slot_t_13_segunda_2",
     "teacherId": "t_13",
     "dayOfWeek": "segunda",
@@ -4912,38 +4877,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingName": "Multiplica SP",
     "trainingStartTime": "08:00",
     "trainingEndTime": "09:30"
-  },
-  {
-    "id": "slot_t_13_terca_2",
-    "teacherId": "t_13",
-    "dayOfWeek": "terca",
-    "periodId": 2,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_13_quarta_2",
-    "teacherId": "t_13",
-    "dayOfWeek": "quarta",
-    "periodId": 2,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_13_quinta_2",
-    "teacherId": "t_13",
-    "dayOfWeek": "quinta",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "8A",
-    "subject": "Tecnologia e Inovação"
-  },
-  {
-    "id": "slot_t_13_sexta_2",
-    "teacherId": "t_13",
-    "dayOfWeek": "sexta",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "7B",
-    "subject": "Ciências"
   },
   {
     "id": "slot_t_13_segunda_3",
@@ -4956,12 +4889,139 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingEndTime": "09:30"
   },
   {
+    "id": "slot_t_13_segunda_4",
+    "teacherId": "t_13",
+    "dayOfWeek": "segunda",
+    "periodId": 4,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_13_segunda_5",
+    "teacherId": "t_13",
+    "dayOfWeek": "segunda",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "2EMB",
+    "subject": "Programação"
+  },
+  {
+    "id": "slot_t_13_segunda_6",
+    "teacherId": "t_13",
+    "dayOfWeek": "segunda",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "2EMB",
+    "subject": "Programação"
+  },
+  {
+    "id": "slot_t_13_segunda_7",
+    "teacherId": "t_13",
+    "dayOfWeek": "segunda",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "7A",
+    "subject": "Projeto de Vida"
+  },
+  {
+    "id": "slot_t_13_segunda_8",
+    "teacherId": "t_13",
+    "dayOfWeek": "segunda",
+    "periodId": 8,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_13_segunda_9",
+    "teacherId": "t_13",
+    "dayOfWeek": "segunda",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_13_terca_1",
+    "teacherId": "t_13",
+    "dayOfWeek": "terca",
+    "periodId": 1,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_13_terca_2",
+    "teacherId": "t_13",
+    "dayOfWeek": "terca",
+    "periodId": 2,
+    "type": "LIVRE"
+  },
+  {
     "id": "slot_t_13_terca_3",
     "teacherId": "t_13",
     "dayOfWeek": "terca",
     "periodId": 3,
     "type": "AULA",
     "classId": "7A",
+    "subject": "Tecnologia e Inovação"
+  },
+  {
+    "id": "slot_t_13_terca_4",
+    "teacherId": "t_13",
+    "dayOfWeek": "terca",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "7A",
+    "subject": "Tecnologia e Inovação"
+  },
+  {
+    "id": "slot_t_13_terca_5",
+    "teacherId": "t_13",
+    "dayOfWeek": "terca",
+    "periodId": 5,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_13_terca_6",
+    "teacherId": "t_13",
+    "dayOfWeek": "terca",
+    "periodId": 6,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_13_terca_7",
+    "teacherId": "t_13",
+    "dayOfWeek": "terca",
+    "periodId": 7,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC de Área"
+  },
+  {
+    "id": "slot_t_13_terca_8",
+    "teacherId": "t_13",
+    "dayOfWeek": "terca",
+    "periodId": 8,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_13_terca_9",
+    "teacherId": "t_13",
+    "dayOfWeek": "terca",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_13_quarta_1",
+    "teacherId": "t_13",
+    "dayOfWeek": "quarta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "7B",
+    "subject": "Ciências"
+  },
+  {
+    "id": "slot_t_13_quarta_2",
+    "teacherId": "t_13",
+    "dayOfWeek": "quarta",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "6B",
     "subject": "Tecnologia e Inovação"
   },
   {
@@ -4974,46 +5034,76 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Tecnologia e Inovação"
   },
   {
+    "id": "slot_t_13_quarta_4",
+    "teacherId": "t_13",
+    "dayOfWeek": "quarta",
+    "periodId": 4,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_13_quarta_5",
+    "teacherId": "t_13",
+    "dayOfWeek": "quarta",
+    "periodId": 5,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_13_quarta_6",
+    "teacherId": "t_13",
+    "dayOfWeek": "quarta",
+    "periodId": 6,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_13_quarta_7",
+    "teacherId": "t_13",
+    "dayOfWeek": "quarta",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "7B",
+    "subject": "Ciências"
+  },
+  {
+    "id": "slot_t_13_quarta_8",
+    "teacherId": "t_13",
+    "dayOfWeek": "quarta",
+    "periodId": 8,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
+  },
+  {
+    "id": "slot_t_13_quarta_9",
+    "teacherId": "t_13",
+    "dayOfWeek": "quarta",
+    "periodId": 9,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
+  },
+  {
+    "id": "slot_t_13_quinta_1",
+    "teacherId": "t_13",
+    "dayOfWeek": "quinta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "8A",
+    "subject": "Tecnologia e Inovação"
+  },
+  {
+    "id": "slot_t_13_quinta_2",
+    "teacherId": "t_13",
+    "dayOfWeek": "quinta",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "8A",
+    "subject": "Tecnologia e Inovação"
+  },
+  {
     "id": "slot_t_13_quinta_3",
     "teacherId": "t_13",
     "dayOfWeek": "quinta",
     "periodId": 3,
     "type": "AULA",
     "classId": "9B",
-    "subject": "Tecnologia e Inovação"
-  },
-  {
-    "id": "slot_t_13_sexta_3",
-    "teacherId": "t_13",
-    "dayOfWeek": "sexta",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "6A",
-    "subject": "Tecnologia e Inovação"
-  },
-  {
-    "id": "slot_t_13_segunda_4",
-    "teacherId": "t_13",
-    "dayOfWeek": "segunda",
-    "periodId": 4,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_13_terca_4",
-    "teacherId": "t_13",
-    "dayOfWeek": "terca",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "7A",
-    "subject": "Tecnologia e Inovação"
-  },
-  {
-    "id": "slot_t_13_quarta_4",
-    "teacherId": "t_13",
-    "dayOfWeek": "quarta",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "6B",
     "subject": "Tecnologia e Inovação"
   },
   {
@@ -5026,40 +5116,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Tecnologia e Inovação"
   },
   {
-    "id": "slot_t_13_sexta_4",
-    "teacherId": "t_13",
-    "dayOfWeek": "sexta",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "6A",
-    "subject": "Tecnologia e Inovação"
-  },
-  {
-    "id": "slot_t_13_segunda_5",
-    "teacherId": "t_13",
-    "dayOfWeek": "segunda",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "2EMB",
-    "subject": "Programação"
-  },
-  {
-    "id": "slot_t_13_terca_5",
-    "teacherId": "t_13",
-    "dayOfWeek": "terca",
-    "periodId": 5,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_13_quarta_5",
-    "teacherId": "t_13",
-    "dayOfWeek": "quarta",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "7B",
-    "subject": "Ciências"
-  },
-  {
     "id": "slot_t_13_quinta_5",
     "teacherId": "t_13",
     "dayOfWeek": "quinta",
@@ -5067,39 +5123,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "AULA",
     "classId": "7B",
     "subject": "Tecnologia e Inovação"
-  },
-  {
-    "id": "slot_t_13_sexta_5",
-    "teacherId": "t_13",
-    "dayOfWeek": "sexta",
-    "periodId": 5,
-    "type": "ELETIVA",
-    "trainingName": "Eletiva"
-  },
-  {
-    "id": "slot_t_13_segunda_6",
-    "teacherId": "t_13",
-    "dayOfWeek": "segunda",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "2EMB",
-    "subject": "Programação"
-  },
-  {
-    "id": "slot_t_13_terca_6",
-    "teacherId": "t_13",
-    "dayOfWeek": "terca",
-    "periodId": 6,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_13_quarta_6",
-    "teacherId": "t_13",
-    "dayOfWeek": "quarta",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "7B",
-    "subject": "Projeto de Vida"
   },
   {
     "id": "slot_t_13_quinta_6",
@@ -5111,38 +5134,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Tecnologia e Inovação"
   },
   {
-    "id": "slot_t_13_sexta_6",
-    "teacherId": "t_13",
-    "dayOfWeek": "sexta",
-    "periodId": 6,
-    "type": "ELETIVA",
-    "trainingName": "Eletiva"
-  },
-  {
-    "id": "slot_t_13_segunda_7",
-    "teacherId": "t_13",
-    "dayOfWeek": "segunda",
-    "periodId": 7,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_13_terca_7",
-    "teacherId": "t_13",
-    "dayOfWeek": "terca",
-    "periodId": 7,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC de Área"
-  },
-  {
-    "id": "slot_t_13_quarta_7",
-    "teacherId": "t_13",
-    "dayOfWeek": "quarta",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "7A",
-    "subject": "Projeto de Vida"
-  },
-  {
     "id": "slot_t_13_quinta_7",
     "teacherId": "t_13",
     "dayOfWeek": "quinta",
@@ -5150,37 +5141,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "AULA",
     "classId": "8B",
     "subject": "Tecnologia e Inovação"
-  },
-  {
-    "id": "slot_t_13_sexta_7",
-    "teacherId": "t_13",
-    "dayOfWeek": "sexta",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "9A",
-    "subject": "Tecnologia e Inovação"
-  },
-  {
-    "id": "slot_t_13_segunda_8",
-    "teacherId": "t_13",
-    "dayOfWeek": "segunda",
-    "periodId": 8,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_13_terca_8",
-    "teacherId": "t_13",
-    "dayOfWeek": "terca",
-    "periodId": 8,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_13_quarta_8",
-    "teacherId": "t_13",
-    "dayOfWeek": "quarta",
-    "periodId": 8,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC Geral"
   },
   {
     "id": "slot_t_13_quinta_8",
@@ -5192,6 +5152,75 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Tecnologia e Inovação"
   },
   {
+    "id": "slot_t_13_quinta_9",
+    "teacherId": "t_13",
+    "dayOfWeek": "quinta",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_13_sexta_1",
+    "teacherId": "t_13",
+    "dayOfWeek": "sexta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "7B",
+    "subject": "Projeto de Vida"
+  },
+  {
+    "id": "slot_t_13_sexta_2",
+    "teacherId": "t_13",
+    "dayOfWeek": "sexta",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "6A",
+    "subject": "Tecnologia e Inovação"
+  },
+  {
+    "id": "slot_t_13_sexta_3",
+    "teacherId": "t_13",
+    "dayOfWeek": "sexta",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "6A",
+    "subject": "Tecnologia e Inovação"
+  },
+  {
+    "id": "slot_t_13_sexta_4",
+    "teacherId": "t_13",
+    "dayOfWeek": "sexta",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "7B",
+    "subject": "Ciências"
+  },
+  {
+    "id": "slot_t_13_sexta_5",
+    "teacherId": "t_13",
+    "dayOfWeek": "sexta",
+    "periodId": 5,
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
+  },
+  {
+    "id": "slot_t_13_sexta_6",
+    "teacherId": "t_13",
+    "dayOfWeek": "sexta",
+    "periodId": 6,
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
+  },
+  {
+    "id": "slot_t_13_sexta_7",
+    "teacherId": "t_13",
+    "dayOfWeek": "sexta",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "7B",
+    "subject": "Práticas Experimentais"
+  },
+  {
     "id": "slot_t_13_sexta_8",
     "teacherId": "t_13",
     "dayOfWeek": "sexta",
@@ -5201,45 +5230,13 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Tecnologia e Inovação"
   },
   {
-    "id": "slot_t_13_segunda_9",
-    "teacherId": "t_13",
-    "dayOfWeek": "segunda",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
-    "id": "slot_t_13_terca_9",
-    "teacherId": "t_13",
-    "dayOfWeek": "terca",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
-    "id": "slot_t_13_quarta_9",
-    "teacherId": "t_13",
-    "dayOfWeek": "quarta",
-    "periodId": 9,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC Geral"
-  },
-  {
-    "id": "slot_t_13_quinta_9",
-    "teacherId": "t_13",
-    "dayOfWeek": "quinta",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
     "id": "slot_t_13_sexta_9",
     "teacherId": "t_13",
     "dayOfWeek": "sexta",
     "periodId": 9,
     "type": "AULA",
-    "classId": "7B",
-    "subject": "Práticas Experimentais"
+    "classId": "9A",
+    "subject": "Tecnologia e Inovação"
   },
   {
     "id": "slot_t_14_segunda_1",
@@ -5247,38 +5244,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "segunda",
     "periodId": 1,
     "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_14_terca_1",
-    "teacherId": "t_14",
-    "dayOfWeek": "terca",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "9A",
-    "subject": "Orientação de Estudo"
-  },
-  {
-    "id": "slot_t_14_quarta_1",
-    "teacherId": "t_14",
-    "dayOfWeek": "quarta",
-    "periodId": 1,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_14_quinta_1",
-    "teacherId": "t_14",
-    "dayOfWeek": "quinta",
-    "periodId": 1,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_14_sexta_1",
-    "teacherId": "t_14",
-    "dayOfWeek": "sexta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "Redação e Leitura"
   },
   {
     "id": "slot_t_14_segunda_2",
@@ -5291,38 +5256,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingEndTime": "09:30"
   },
   {
-    "id": "slot_t_14_terca_2",
-    "teacherId": "t_14",
-    "dayOfWeek": "terca",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "9A",
-    "subject": "Orientação de Estudo"
-  },
-  {
-    "id": "slot_t_14_quarta_2",
-    "teacherId": "t_14",
-    "dayOfWeek": "quarta",
-    "periodId": 2,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_14_quinta_2",
-    "teacherId": "t_14",
-    "dayOfWeek": "quinta",
-    "periodId": 2,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_14_sexta_2",
-    "teacherId": "t_14",
-    "dayOfWeek": "sexta",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "Redação e Leitura"
-  },
-  {
     "id": "slot_t_14_segunda_3",
     "teacherId": "t_14",
     "dayOfWeek": "segunda",
@@ -5333,79 +5266,13 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingEndTime": "09:30"
   },
   {
-    "id": "slot_t_14_terca_3",
-    "teacherId": "t_14",
-    "dayOfWeek": "terca",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "3EMB",
-    "subject": "Orientação de Estudo"
-  },
-  {
-    "id": "slot_t_14_quarta_3",
-    "teacherId": "t_14",
-    "dayOfWeek": "quarta",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "7B",
-    "subject": "Redação e Leitura"
-  },
-  {
-    "id": "slot_t_14_quinta_3",
-    "teacherId": "t_14",
-    "dayOfWeek": "quinta",
-    "periodId": 3,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_14_sexta_3",
-    "teacherId": "t_14",
-    "dayOfWeek": "sexta",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "7B",
-    "subject": "Orientação de Estudo"
-  },
-  {
     "id": "slot_t_14_segunda_4",
     "teacherId": "t_14",
     "dayOfWeek": "segunda",
     "periodId": 4,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_14_terca_4",
-    "teacherId": "t_14",
-    "dayOfWeek": "terca",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "3EMB",
-    "subject": "Orientação de Estudo"
-  },
-  {
-    "id": "slot_t_14_quarta_4",
-    "teacherId": "t_14",
-    "dayOfWeek": "quarta",
-    "periodId": 4,
     "type": "AULA",
     "classId": "7B",
-    "subject": "Redação e Leitura"
-  },
-  {
-    "id": "slot_t_14_quinta_4",
-    "teacherId": "t_14",
-    "dayOfWeek": "quinta",
-    "periodId": 4,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_14_sexta_4",
-    "teacherId": "t_14",
-    "dayOfWeek": "sexta",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "7B",
-    "subject": "Orientação de Estudo"
+    "subject": "Orientação de Língua Portuguesa"
   },
   {
     "id": "slot_t_14_segunda_5",
@@ -5414,40 +5281,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "9B",
-    "subject": "Orientação de Estudo"
-  },
-  {
-    "id": "slot_t_14_terca_5",
-    "teacherId": "t_14",
-    "dayOfWeek": "terca",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "8B",
-    "subject": "Redação e Leitura"
-  },
-  {
-    "id": "slot_t_14_quarta_5",
-    "teacherId": "t_14",
-    "dayOfWeek": "quarta",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "6B",
-    "subject": "Orientação de Estudo"
-  },
-  {
-    "id": "slot_t_14_quinta_5",
-    "teacherId": "t_14",
-    "dayOfWeek": "quinta",
-    "periodId": 5,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_14_sexta_5",
-    "teacherId": "t_14",
-    "dayOfWeek": "sexta",
-    "periodId": 5,
-    "type": "ELETIVA",
-    "trainingName": "Eletiva"
+    "subject": "Orientação de Língua Portuguesa"
   },
   {
     "id": "slot_t_14_segunda_6",
@@ -5456,42 +5290,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "9B",
-    "subject": "Orientação de Estudo"
-  },
-  {
-    "id": "slot_t_14_terca_6",
-    "teacherId": "t_14",
-    "dayOfWeek": "terca",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "8B",
-    "subject": "Redação e Leitura"
-  },
-  {
-    "id": "slot_t_14_quarta_6",
-    "teacherId": "t_14",
-    "dayOfWeek": "quarta",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "6B",
-    "subject": "Orientação de Estudo"
-  },
-  {
-    "id": "slot_t_14_quinta_6",
-    "teacherId": "t_14",
-    "dayOfWeek": "quinta",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "3EMB",
-    "subject": "Orientação de Estudo"
-  },
-  {
-    "id": "slot_t_14_sexta_6",
-    "teacherId": "t_14",
-    "dayOfWeek": "sexta",
-    "periodId": 6,
-    "type": "ELETIVA",
-    "trainingName": "Eletiva"
+    "subject": "Orientação de Língua Portuguesa"
   },
   {
     "id": "slot_t_14_segunda_7",
@@ -5503,42 +5302,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Redação e Leitura"
   },
   {
-    "id": "slot_t_14_terca_7",
-    "teacherId": "t_14",
-    "dayOfWeek": "terca",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "6A",
-    "subject": "Orientação de Estudo"
-  },
-  {
-    "id": "slot_t_14_quarta_7",
-    "teacherId": "t_14",
-    "dayOfWeek": "quarta",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "2EMB",
-    "subject": "Orientação de Estudo"
-  },
-  {
-    "id": "slot_t_14_quinta_7",
-    "teacherId": "t_14",
-    "dayOfWeek": "quinta",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "7A",
-    "subject": "Orientação de Estudo"
-  },
-  {
-    "id": "slot_t_14_sexta_7",
-    "teacherId": "t_14",
-    "dayOfWeek": "sexta",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "8A",
-    "subject": "Orientação de Estudo"
-  },
-  {
     "id": "slot_t_14_segunda_8",
     "teacherId": "t_14",
     "dayOfWeek": "segunda",
@@ -5546,40 +5309,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "AULA",
     "classId": "8A",
     "subject": "Redação e Leitura"
-  },
-  {
-    "id": "slot_t_14_terca_8",
-    "teacherId": "t_14",
-    "dayOfWeek": "terca",
-    "periodId": 8,
-    "type": "AULA",
-    "classId": "6A",
-    "subject": "Orientação de Estudo"
-  },
-  {
-    "id": "slot_t_14_quarta_8",
-    "teacherId": "t_14",
-    "dayOfWeek": "quarta",
-    "periodId": 8,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC Geral"
-  },
-  {
-    "id": "slot_t_14_quinta_8",
-    "teacherId": "t_14",
-    "dayOfWeek": "quinta",
-    "periodId": 8,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC de Área"
-  },
-  {
-    "id": "slot_t_14_sexta_8",
-    "teacherId": "t_14",
-    "dayOfWeek": "sexta",
-    "periodId": 8,
-    "type": "AULA",
-    "classId": "1EMB",
-    "subject": "Orientação de Estudo"
   },
   {
     "id": "slot_t_14_segunda_9",
@@ -5590,12 +5319,149 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingName": "Tutoria"
   },
   {
+    "id": "slot_t_14_terca_1",
+    "teacherId": "t_14",
+    "dayOfWeek": "terca",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "1EMB",
+    "subject": "Orientação de Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_14_terca_2",
+    "teacherId": "t_14",
+    "dayOfWeek": "terca",
+    "periodId": 2,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_14_terca_3",
+    "teacherId": "t_14",
+    "dayOfWeek": "terca",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "3EMB",
+    "subject": "Orientação de Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_14_terca_4",
+    "teacherId": "t_14",
+    "dayOfWeek": "terca",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "3EMB",
+    "subject": "Orientação de Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_14_terca_5",
+    "teacherId": "t_14",
+    "dayOfWeek": "terca",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "8B",
+    "subject": "Redação e Leitura"
+  },
+  {
+    "id": "slot_t_14_terca_6",
+    "teacherId": "t_14",
+    "dayOfWeek": "terca",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "8B",
+    "subject": "Redação e Leitura"
+  },
+  {
+    "id": "slot_t_14_terca_7",
+    "teacherId": "t_14",
+    "dayOfWeek": "terca",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "9A",
+    "subject": "Orientação de Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_14_terca_8",
+    "teacherId": "t_14",
+    "dayOfWeek": "terca",
+    "periodId": 8,
+    "type": "AULA",
+    "classId": "9A",
+    "subject": "Orientação de Língua Portuguesa"
+  },
+  {
     "id": "slot_t_14_terca_9",
     "teacherId": "t_14",
     "dayOfWeek": "terca",
     "periodId": 9,
     "type": "ATIVIDADE",
     "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_14_quarta_1",
+    "teacherId": "t_14",
+    "dayOfWeek": "quarta",
+    "periodId": 1,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_14_quarta_2",
+    "teacherId": "t_14",
+    "dayOfWeek": "quarta",
+    "periodId": 2,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_14_quarta_3",
+    "teacherId": "t_14",
+    "dayOfWeek": "quarta",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "8A",
+    "subject": "Orientação de Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_14_quarta_4",
+    "teacherId": "t_14",
+    "dayOfWeek": "quarta",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "7B",
+    "subject": "Redação e Leitura"
+  },
+  {
+    "id": "slot_t_14_quarta_5",
+    "teacherId": "t_14",
+    "dayOfWeek": "quarta",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "7B",
+    "subject": "Redação e Leitura"
+  },
+  {
+    "id": "slot_t_14_quarta_6",
+    "teacherId": "t_14",
+    "dayOfWeek": "quarta",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "7A",
+    "subject": "Orientação de Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_14_quarta_7",
+    "teacherId": "t_14",
+    "dayOfWeek": "quarta",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "1EMA",
+    "subject": "Orientação de Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_14_quarta_8",
+    "teacherId": "t_14",
+    "dayOfWeek": "quarta",
+    "periodId": 8,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
   },
   {
     "id": "slot_t_14_quarta_9",
@@ -5606,6 +5472,67 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingName": "ATPC Geral"
   },
   {
+    "id": "slot_t_14_quinta_1",
+    "teacherId": "t_14",
+    "dayOfWeek": "quinta",
+    "periodId": 1,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_14_quinta_2",
+    "teacherId": "t_14",
+    "dayOfWeek": "quinta",
+    "periodId": 2,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_14_quinta_3",
+    "teacherId": "t_14",
+    "dayOfWeek": "quinta",
+    "periodId": 3,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_14_quinta_4",
+    "teacherId": "t_14",
+    "dayOfWeek": "quinta",
+    "periodId": 4,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_14_quinta_5",
+    "teacherId": "t_14",
+    "dayOfWeek": "quinta",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "1EMB",
+    "subject": "Redação e Leitura"
+  },
+  {
+    "id": "slot_t_14_quinta_6",
+    "teacherId": "t_14",
+    "dayOfWeek": "quinta",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "1EMB",
+    "subject": "Redação e Leitura"
+  },
+  {
+    "id": "slot_t_14_quinta_7",
+    "teacherId": "t_14",
+    "dayOfWeek": "quinta",
+    "periodId": 7,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_14_quinta_8",
+    "teacherId": "t_14",
+    "dayOfWeek": "quinta",
+    "periodId": 8,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC de Área"
+  },
+  {
     "id": "slot_t_14_quinta_9",
     "teacherId": "t_14",
     "dayOfWeek": "quinta",
@@ -5613,56 +5540,92 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "LIVRE"
   },
   {
+    "id": "slot_t_14_sexta_1",
+    "teacherId": "t_14",
+    "dayOfWeek": "sexta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "2EMA_DS",
+    "subject": "Redação e Leitura"
+  },
+  {
+    "id": "slot_t_14_sexta_2",
+    "teacherId": "t_14",
+    "dayOfWeek": "sexta",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "2EMA_DS",
+    "subject": "Redação e Leitura"
+  },
+  {
+    "id": "slot_t_14_sexta_3",
+    "teacherId": "t_14",
+    "dayOfWeek": "sexta",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "1EMA",
+    "subject": "Redação e Leitura"
+  },
+  {
+    "id": "slot_t_14_sexta_4",
+    "teacherId": "t_14",
+    "dayOfWeek": "sexta",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "1EMA",
+    "subject": "Redação e Leitura"
+  },
+  {
+    "id": "slot_t_14_sexta_5",
+    "teacherId": "t_14",
+    "dayOfWeek": "sexta",
+    "periodId": 5,
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
+  },
+  {
+    "id": "slot_t_14_sexta_6",
+    "teacherId": "t_14",
+    "dayOfWeek": "sexta",
+    "periodId": 6,
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
+  },
+  {
+    "id": "slot_t_14_sexta_7",
+    "teacherId": "t_14",
+    "dayOfWeek": "sexta",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "3EMB",
+    "subject": "Orientação de Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_14_sexta_8",
+    "teacherId": "t_14",
+    "dayOfWeek": "sexta",
+    "periodId": 8,
+    "type": "AULA",
+    "classId": "8B",
+    "subject": "Orientação de Língua Portuguesa"
+  },
+  {
     "id": "slot_t_14_sexta_9",
     "teacherId": "t_14",
     "dayOfWeek": "sexta",
     "periodId": 9,
     "type": "AULA",
-    "classId": "8B",
-    "subject": "Orientação de Estudo"
+    "classId": "2EMB",
+    "subject": "Orientação de Língua Portuguesa"
   },
   {
     "id": "slot_t_15_segunda_1",
     "teacherId": "t_15",
     "dayOfWeek": "segunda",
     "periodId": 1,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_15_terca_1",
-    "teacherId": "t_15",
-    "dayOfWeek": "terca",
-    "periodId": 1,
     "type": "AULA",
-    "classId": "1EMB",
+    "classId": "3EMA_DS",
     "subject": "Educação Física"
-  },
-  {
-    "id": "slot_t_15_quarta_1",
-    "teacherId": "t_15",
-    "dayOfWeek": "quarta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "8B",
-    "subject": "Esporte-Música-Arte"
-  },
-  {
-    "id": "slot_t_15_quinta_1",
-    "teacherId": "t_15",
-    "dayOfWeek": "quinta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "7B",
-    "subject": "Esporte-Música-Arte"
-  },
-  {
-    "id": "slot_t_15_sexta_1",
-    "teacherId": "t_15",
-    "dayOfWeek": "sexta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "2EMB",
-    "subject": "Esporte-Música-Arte"
   },
   {
     "id": "slot_t_15_segunda_2",
@@ -5670,8 +5633,71 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "segunda",
     "periodId": 2,
     "type": "AULA",
+    "classId": "8B",
+    "subject": "Educação Física"
+  },
+  {
+    "id": "slot_t_15_segunda_3",
+    "teacherId": "t_15",
+    "dayOfWeek": "segunda",
+    "periodId": 3,
+    "type": "AULA",
     "classId": "7A",
     "subject": "Esporte-Música-Arte"
+  },
+  {
+    "id": "slot_t_15_segunda_4",
+    "teacherId": "t_15",
+    "dayOfWeek": "segunda",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "7A",
+    "subject": "Esporte-Música-Arte"
+  },
+  {
+    "id": "slot_t_15_segunda_5",
+    "teacherId": "t_15",
+    "dayOfWeek": "segunda",
+    "periodId": 5,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_15_segunda_6",
+    "teacherId": "t_15",
+    "dayOfWeek": "segunda",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "1EMA",
+    "subject": "Educação Física"
+  },
+  {
+    "id": "slot_t_15_segunda_7",
+    "teacherId": "t_15",
+    "dayOfWeek": "segunda",
+    "periodId": 7,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_15_segunda_8",
+    "teacherId": "t_15",
+    "dayOfWeek": "segunda",
+    "periodId": 8,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_15_segunda_9",
+    "teacherId": "t_15",
+    "dayOfWeek": "segunda",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_15_terca_1",
+    "teacherId": "t_15",
+    "dayOfWeek": "terca",
+    "periodId": 1,
+    "type": "LIVRE"
   },
   {
     "id": "slot_t_15_terca_2",
@@ -5681,12 +5707,147 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "LIVRE"
   },
   {
+    "id": "slot_t_15_terca_3",
+    "teacherId": "t_15",
+    "dayOfWeek": "terca",
+    "periodId": 3,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_15_terca_4",
+    "teacherId": "t_15",
+    "dayOfWeek": "terca",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "6B",
+    "subject": "Esporte-Música-Arte"
+  },
+  {
+    "id": "slot_t_15_terca_5",
+    "teacherId": "t_15",
+    "dayOfWeek": "terca",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "6B",
+    "subject": "Esporte-Música-Arte"
+  },
+  {
+    "id": "slot_t_15_terca_6",
+    "teacherId": "t_15",
+    "dayOfWeek": "terca",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "1EMB",
+    "subject": "Educação Física"
+  },
+  {
+    "id": "slot_t_15_terca_7",
+    "teacherId": "t_15",
+    "dayOfWeek": "terca",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "8B",
+    "subject": "Esporte-Música-Arte"
+  },
+  {
+    "id": "slot_t_15_terca_8",
+    "teacherId": "t_15",
+    "dayOfWeek": "terca",
+    "periodId": 8,
+    "type": "AULA",
+    "classId": "8B",
+    "subject": "Esporte-Música-Arte"
+  },
+  {
+    "id": "slot_t_15_terca_9",
+    "teacherId": "t_15",
+    "dayOfWeek": "terca",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_15_quarta_1",
+    "teacherId": "t_15",
+    "dayOfWeek": "quarta",
+    "periodId": 1,
+    "type": "LIVRE"
+  },
+  {
     "id": "slot_t_15_quarta_2",
     "teacherId": "t_15",
     "dayOfWeek": "quarta",
     "periodId": 2,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_15_quarta_3",
+    "teacherId": "t_15",
+    "dayOfWeek": "quarta",
+    "periodId": 3,
     "type": "AULA",
-    "classId": "8B",
+    "classId": "1EMA",
+    "subject": "Educação Física"
+  },
+  {
+    "id": "slot_t_15_quarta_4",
+    "teacherId": "t_15",
+    "dayOfWeek": "quarta",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "2EMA_DS",
+    "subject": "Educação Física"
+  },
+  {
+    "id": "slot_t_15_quarta_5",
+    "teacherId": "t_15",
+    "dayOfWeek": "quarta",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "6A",
+    "subject": "Esporte-Música-Arte"
+  },
+  {
+    "id": "slot_t_15_quarta_6",
+    "teacherId": "t_15",
+    "dayOfWeek": "quarta",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "6A",
+    "subject": "Esporte-Música-Arte"
+  },
+  {
+    "id": "slot_t_15_quarta_7",
+    "teacherId": "t_15",
+    "dayOfWeek": "quarta",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "1EMB",
+    "subject": "Educação Física"
+  },
+  {
+    "id": "slot_t_15_quarta_8",
+    "teacherId": "t_15",
+    "dayOfWeek": "quarta",
+    "periodId": 8,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
+  },
+  {
+    "id": "slot_t_15_quarta_9",
+    "teacherId": "t_15",
+    "dayOfWeek": "quarta",
+    "periodId": 9,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
+  },
+  {
+    "id": "slot_t_15_quinta_1",
+    "teacherId": "t_15",
+    "dayOfWeek": "quinta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "7B",
     "subject": "Esporte-Música-Arte"
   },
   {
@@ -5699,78 +5860,12 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Esporte-Música-Arte"
   },
   {
-    "id": "slot_t_15_sexta_2",
-    "teacherId": "t_15",
-    "dayOfWeek": "sexta",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "2EMB",
-    "subject": "Esporte-Música-Arte"
-  },
-  {
-    "id": "slot_t_15_segunda_3",
-    "teacherId": "t_15",
-    "dayOfWeek": "segunda",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "7A",
-    "subject": "Esporte-Música-Arte"
-  },
-  {
-    "id": "slot_t_15_terca_3",
-    "teacherId": "t_15",
-    "dayOfWeek": "terca",
-    "periodId": 3,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_15_quarta_3",
-    "teacherId": "t_15",
-    "dayOfWeek": "quarta",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "2EMB",
-    "subject": "Educação Física"
-  },
-  {
     "id": "slot_t_15_quinta_3",
     "teacherId": "t_15",
     "dayOfWeek": "quinta",
     "periodId": 3,
     "type": "AULA",
-    "classId": "8A",
-    "subject": "Esporte-Música-Arte"
-  },
-  {
-    "id": "slot_t_15_sexta_3",
-    "teacherId": "t_15",
-    "dayOfWeek": "sexta",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "1EMA",
-    "subject": "Educação Física"
-  },
-  {
-    "id": "slot_t_15_segunda_4",
-    "teacherId": "t_15",
-    "dayOfWeek": "segunda",
-    "periodId": 4,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_15_terca_4",
-    "teacherId": "t_15",
-    "dayOfWeek": "terca",
-    "periodId": 4,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_15_quarta_4",
-    "teacherId": "t_15",
-    "dayOfWeek": "quarta",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "2EMA_DS",
+    "classId": "3EMB",
     "subject": "Educação Física"
   },
   {
@@ -5783,75 +5878,12 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Esporte-Música-Arte"
   },
   {
-    "id": "slot_t_15_sexta_4",
-    "teacherId": "t_15",
-    "dayOfWeek": "sexta",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "8B",
-    "subject": "Educação Física"
-  },
-  {
-    "id": "slot_t_15_segunda_5",
-    "teacherId": "t_15",
-    "dayOfWeek": "segunda",
-    "periodId": 5,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_15_terca_5",
-    "teacherId": "t_15",
-    "dayOfWeek": "terca",
-    "periodId": 5,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_15_quarta_5",
-    "teacherId": "t_15",
-    "dayOfWeek": "quarta",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "6A",
-    "subject": "Esporte-Música-Arte"
-  },
-  {
     "id": "slot_t_15_quinta_5",
     "teacherId": "t_15",
     "dayOfWeek": "quinta",
     "periodId": 5,
     "type": "AULA",
-    "classId": "3EMB",
-    "subject": "Educação Física"
-  },
-  {
-    "id": "slot_t_15_sexta_5",
-    "teacherId": "t_15",
-    "dayOfWeek": "sexta",
-    "periodId": 5,
-    "type": "ELETIVA",
-    "trainingName": "Eletiva"
-  },
-  {
-    "id": "slot_t_15_segunda_6",
-    "teacherId": "t_15",
-    "dayOfWeek": "segunda",
-    "periodId": 6,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_15_terca_6",
-    "teacherId": "t_15",
-    "dayOfWeek": "terca",
-    "periodId": 6,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_15_quarta_6",
-    "teacherId": "t_15",
-    "dayOfWeek": "quarta",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "6A",
+    "classId": "8A",
     "subject": "Esporte-Música-Arte"
   },
   {
@@ -5864,75 +5896,13 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Educação Física"
   },
   {
-    "id": "slot_t_15_sexta_6",
-    "teacherId": "t_15",
-    "dayOfWeek": "sexta",
-    "periodId": 6,
-    "type": "ELETIVA",
-    "trainingName": "Eletiva"
-  },
-  {
-    "id": "slot_t_15_segunda_7",
-    "teacherId": "t_15",
-    "dayOfWeek": "segunda",
-    "periodId": 7,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_15_terca_7",
-    "teacherId": "t_15",
-    "dayOfWeek": "terca",
-    "periodId": 7,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_15_quarta_7",
-    "teacherId": "t_15",
-    "dayOfWeek": "quarta",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "1EMA",
-    "subject": "Educação Física"
-  },
-  {
     "id": "slot_t_15_quinta_7",
     "teacherId": "t_15",
     "dayOfWeek": "quinta",
     "periodId": 7,
     "type": "AULA",
-    "classId": "3EMA_DS",
+    "classId": "2EMB",
     "subject": "Educação Física"
-  },
-  {
-    "id": "slot_t_15_sexta_7",
-    "teacherId": "t_15",
-    "dayOfWeek": "sexta",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "6B",
-    "subject": "Esporte-Música-Arte"
-  },
-  {
-    "id": "slot_t_15_segunda_8",
-    "teacherId": "t_15",
-    "dayOfWeek": "segunda",
-    "periodId": 8,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_15_terca_8",
-    "teacherId": "t_15",
-    "dayOfWeek": "terca",
-    "periodId": 8,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_15_quarta_8",
-    "teacherId": "t_15",
-    "dayOfWeek": "quarta",
-    "periodId": 8,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC Geral"
   },
   {
     "id": "slot_t_15_quinta_8",
@@ -5943,39 +5913,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingName": "ATPC de Área"
   },
   {
-    "id": "slot_t_15_sexta_8",
-    "teacherId": "t_15",
-    "dayOfWeek": "sexta",
-    "periodId": 8,
-    "type": "AULA",
-    "classId": "6B",
-    "subject": "Esporte-Música-Arte"
-  },
-  {
-    "id": "slot_t_15_segunda_9",
-    "teacherId": "t_15",
-    "dayOfWeek": "segunda",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
-    "id": "slot_t_15_terca_9",
-    "teacherId": "t_15",
-    "dayOfWeek": "terca",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
-    "id": "slot_t_15_quarta_9",
-    "teacherId": "t_15",
-    "dayOfWeek": "quarta",
-    "periodId": 9,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC Geral"
-  },
-  {
     "id": "slot_t_15_quinta_9",
     "teacherId": "t_15",
     "dayOfWeek": "quinta",
@@ -5983,99 +5920,87 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "LIVRE"
   },
   {
+    "id": "slot_t_15_sexta_1",
+    "teacherId": "t_15",
+    "dayOfWeek": "sexta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "2EMB",
+    "subject": "Esporte-Música-Arte"
+  },
+  {
+    "id": "slot_t_15_sexta_2",
+    "teacherId": "t_15",
+    "dayOfWeek": "sexta",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "2EMB",
+    "subject": "Esporte-Música-Arte"
+  },
+  {
+    "id": "slot_t_15_sexta_3",
+    "teacherId": "t_15",
+    "dayOfWeek": "sexta",
+    "periodId": 3,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_15_sexta_4",
+    "teacherId": "t_15",
+    "dayOfWeek": "sexta",
+    "periodId": 4,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_15_sexta_5",
+    "teacherId": "t_15",
+    "dayOfWeek": "sexta",
+    "periodId": 5,
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
+  },
+  {
+    "id": "slot_t_15_sexta_6",
+    "teacherId": "t_15",
+    "dayOfWeek": "sexta",
+    "periodId": 6,
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
+  },
+  {
+    "id": "slot_t_15_sexta_7",
+    "teacherId": "t_15",
+    "dayOfWeek": "sexta",
+    "periodId": 7,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_15_sexta_8",
+    "teacherId": "t_15",
+    "dayOfWeek": "sexta",
+    "periodId": 8,
+    "type": "LIVRE"
+  },
+  {
     "id": "slot_t_15_sexta_9",
     "teacherId": "t_15",
     "dayOfWeek": "sexta",
     "periodId": 9,
-    "type": "AULA",
-    "classId": "1EMB",
-    "subject": "Educação Física"
+    "type": "LIVRE"
   },
   {
     "id": "slot_t_16_segunda_1",
     "teacherId": "t_16",
     "dayOfWeek": "segunda",
     "periodId": 1,
-    "type": "AULA",
-    "classId": "1EMA",
-    "subject": "Redação e Leitura"
-  },
-  {
-    "id": "slot_t_16_terca_1",
-    "teacherId": "t_16",
-    "dayOfWeek": "terca",
-    "periodId": 1,
     "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_16_quarta_1",
-    "teacherId": "t_16",
-    "dayOfWeek": "quarta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "6A",
-    "subject": "Língua Portuguesa"
-  },
-  {
-    "id": "slot_t_16_quinta_1",
-    "teacherId": "t_16",
-    "dayOfWeek": "quinta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "6A",
-    "subject": "Língua Inglesa"
-  },
-  {
-    "id": "slot_t_16_sexta_1",
-    "teacherId": "t_16",
-    "dayOfWeek": "sexta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "7A",
-    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_16_segunda_2",
     "teacherId": "t_16",
     "dayOfWeek": "segunda",
     "periodId": 2,
-    "type": "AULA",
-    "classId": "1EMA",
-    "subject": "Redação e Leitura"
-  },
-  {
-    "id": "slot_t_16_terca_2",
-    "teacherId": "t_16",
-    "dayOfWeek": "terca",
-    "periodId": 2,
     "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_16_quarta_2",
-    "teacherId": "t_16",
-    "dayOfWeek": "quarta",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "6A",
-    "subject": "Língua Portuguesa"
-  },
-  {
-    "id": "slot_t_16_quinta_2",
-    "teacherId": "t_16",
-    "dayOfWeek": "quinta",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "6A",
-    "subject": "Língua Inglesa"
-  },
-  {
-    "id": "slot_t_16_sexta_2",
-    "teacherId": "t_16",
-    "dayOfWeek": "sexta",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "7A",
-    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_16_segunda_3",
@@ -6087,11 +6012,147 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Redação e Leitura"
   },
   {
+    "id": "slot_t_16_segunda_4",
+    "teacherId": "t_16",
+    "dayOfWeek": "segunda",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "6B",
+    "subject": "Redação e Leitura"
+  },
+  {
+    "id": "slot_t_16_segunda_5",
+    "teacherId": "t_16",
+    "dayOfWeek": "segunda",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "7A",
+    "subject": "Redação e Leitura"
+  },
+  {
+    "id": "slot_t_16_segunda_6",
+    "teacherId": "t_16",
+    "dayOfWeek": "segunda",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "7A",
+    "subject": "Redação e Leitura"
+  },
+  {
+    "id": "slot_t_16_segunda_7",
+    "teacherId": "t_16",
+    "dayOfWeek": "segunda",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "6A",
+    "subject": "Redação e Leitura"
+  },
+  {
+    "id": "slot_t_16_segunda_8",
+    "teacherId": "t_16",
+    "dayOfWeek": "segunda",
+    "periodId": 8,
+    "type": "AULA",
+    "classId": "6A",
+    "subject": "Redação e Leitura"
+  },
+  {
+    "id": "slot_t_16_segunda_9",
+    "teacherId": "t_16",
+    "dayOfWeek": "segunda",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_16_terca_1",
+    "teacherId": "t_16",
+    "dayOfWeek": "terca",
+    "periodId": 1,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_16_terca_2",
+    "teacherId": "t_16",
+    "dayOfWeek": "terca",
+    "periodId": 2,
+    "type": "LIVRE"
+  },
+  {
     "id": "slot_t_16_terca_3",
     "teacherId": "t_16",
     "dayOfWeek": "terca",
     "periodId": 3,
     "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_16_terca_4",
+    "teacherId": "t_16",
+    "dayOfWeek": "terca",
+    "periodId": 4,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_16_terca_5",
+    "teacherId": "t_16",
+    "dayOfWeek": "terca",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "6A",
+    "subject": "Orientação de Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_16_terca_6",
+    "teacherId": "t_16",
+    "dayOfWeek": "terca",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "6A",
+    "subject": "Orientação de Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_16_terca_7",
+    "teacherId": "t_16",
+    "dayOfWeek": "terca",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "6B",
+    "subject": "Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_16_terca_8",
+    "teacherId": "t_16",
+    "dayOfWeek": "terca",
+    "periodId": 8,
+    "type": "AULA",
+    "classId": "6B",
+    "subject": "Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_16_terca_9",
+    "teacherId": "t_16",
+    "dayOfWeek": "terca",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_16_quarta_1",
+    "teacherId": "t_16",
+    "dayOfWeek": "quarta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "6A",
+    "subject": "Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_16_quarta_2",
+    "teacherId": "t_16",
+    "dayOfWeek": "quarta",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "6A",
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_16_quarta_3",
@@ -6103,12 +6164,144 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Língua Portuguesa"
   },
   {
+    "id": "slot_t_16_quarta_4",
+    "teacherId": "t_16",
+    "dayOfWeek": "quarta",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "7A",
+    "subject": "Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_16_quarta_5",
+    "teacherId": "t_16",
+    "dayOfWeek": "quarta",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "6B",
+    "subject": "Orientação de Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_16_quarta_6",
+    "teacherId": "t_16",
+    "dayOfWeek": "quarta",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "6B",
+    "subject": "Orientação de Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_16_quarta_7",
+    "teacherId": "t_16",
+    "dayOfWeek": "quarta",
+    "periodId": 7,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_16_quarta_8",
+    "teacherId": "t_16",
+    "dayOfWeek": "quarta",
+    "periodId": 8,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
+  },
+  {
+    "id": "slot_t_16_quarta_9",
+    "teacherId": "t_16",
+    "dayOfWeek": "quarta",
+    "periodId": 9,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
+  },
+  {
+    "id": "slot_t_16_quinta_1",
+    "teacherId": "t_16",
+    "dayOfWeek": "quinta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "6A",
+    "subject": "Língua Inglesa"
+  },
+  {
+    "id": "slot_t_16_quinta_2",
+    "teacherId": "t_16",
+    "dayOfWeek": "quinta",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "6A",
+    "subject": "Língua Inglesa"
+  },
+  {
     "id": "slot_t_16_quinta_3",
     "teacherId": "t_16",
     "dayOfWeek": "quinta",
     "periodId": 3,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_16_quinta_4",
+    "teacherId": "t_16",
+    "dayOfWeek": "quinta",
+    "periodId": 4,
     "type": "AULA",
     "classId": "6B",
+    "subject": "Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_16_quinta_5",
+    "teacherId": "t_16",
+    "dayOfWeek": "quinta",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "6B",
+    "subject": "Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_16_quinta_6",
+    "teacherId": "t_16",
+    "dayOfWeek": "quinta",
+    "periodId": 6,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_16_quinta_7",
+    "teacherId": "t_16",
+    "dayOfWeek": "quinta",
+    "periodId": 7,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_16_quinta_8",
+    "teacherId": "t_16",
+    "dayOfWeek": "quinta",
+    "periodId": 8,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC de Área"
+  },
+  {
+    "id": "slot_t_16_quinta_9",
+    "teacherId": "t_16",
+    "dayOfWeek": "quinta",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_16_sexta_1",
+    "teacherId": "t_16",
+    "dayOfWeek": "sexta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "7A",
+    "subject": "Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_16_sexta_2",
+    "teacherId": "t_16",
+    "dayOfWeek": "sexta",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "7A",
     "subject": "Língua Portuguesa"
   },
   {
@@ -6121,40 +6314,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Língua Inglesa"
   },
   {
-    "id": "slot_t_16_segunda_4",
-    "teacherId": "t_16",
-    "dayOfWeek": "segunda",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "6B",
-    "subject": "Redação e Leitura"
-  },
-  {
-    "id": "slot_t_16_terca_4",
-    "teacherId": "t_16",
-    "dayOfWeek": "terca",
-    "periodId": 4,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_16_quarta_4",
-    "teacherId": "t_16",
-    "dayOfWeek": "quarta",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "7A",
-    "subject": "Língua Portuguesa"
-  },
-  {
-    "id": "slot_t_16_quinta_4",
-    "teacherId": "t_16",
-    "dayOfWeek": "quinta",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "6B",
-    "subject": "Língua Portuguesa"
-  },
-  {
     "id": "slot_t_16_sexta_4",
     "teacherId": "t_16",
     "dayOfWeek": "sexta",
@@ -6162,38 +6321,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "AULA",
     "classId": "6B",
     "subject": "Língua Inglesa"
-  },
-  {
-    "id": "slot_t_16_segunda_5",
-    "teacherId": "t_16",
-    "dayOfWeek": "segunda",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "7A",
-    "subject": "Redação e Leitura"
-  },
-  {
-    "id": "slot_t_16_terca_5",
-    "teacherId": "t_16",
-    "dayOfWeek": "terca",
-    "periodId": 5,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_16_quarta_5",
-    "teacherId": "t_16",
-    "dayOfWeek": "quarta",
-    "periodId": 5,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_16_quinta_5",
-    "teacherId": "t_16",
-    "dayOfWeek": "quinta",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "1EMB",
-    "subject": "Redação e Leitura"
   },
   {
     "id": "slot_t_16_sexta_5",
@@ -6204,38 +6331,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingName": "Eletiva"
   },
   {
-    "id": "slot_t_16_segunda_6",
-    "teacherId": "t_16",
-    "dayOfWeek": "segunda",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "7A",
-    "subject": "Redação e Leitura"
-  },
-  {
-    "id": "slot_t_16_terca_6",
-    "teacherId": "t_16",
-    "dayOfWeek": "terca",
-    "periodId": 6,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_16_quarta_6",
-    "teacherId": "t_16",
-    "dayOfWeek": "quarta",
-    "periodId": 6,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_16_quinta_6",
-    "teacherId": "t_16",
-    "dayOfWeek": "quinta",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "1EMB",
-    "subject": "Redação e Leitura"
-  },
-  {
     "id": "slot_t_16_sexta_6",
     "teacherId": "t_16",
     "dayOfWeek": "sexta",
@@ -6244,79 +6339,11 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingName": "Eletiva"
   },
   {
-    "id": "slot_t_16_segunda_7",
-    "teacherId": "t_16",
-    "dayOfWeek": "segunda",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "6A",
-    "subject": "Redação e Leitura"
-  },
-  {
-    "id": "slot_t_16_terca_7",
-    "teacherId": "t_16",
-    "dayOfWeek": "terca",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "6B",
-    "subject": "Língua Portuguesa"
-  },
-  {
-    "id": "slot_t_16_quarta_7",
-    "teacherId": "t_16",
-    "dayOfWeek": "quarta",
-    "periodId": 7,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_16_quinta_7",
-    "teacherId": "t_16",
-    "dayOfWeek": "quinta",
-    "periodId": 7,
-    "type": "LIVRE"
-  },
-  {
     "id": "slot_t_16_sexta_7",
     "teacherId": "t_16",
     "dayOfWeek": "sexta",
     "periodId": 7,
-    "type": "AULA",
-    "classId": "6A",
-    "subject": "Língua Portuguesa"
-  },
-  {
-    "id": "slot_t_16_segunda_8",
-    "teacherId": "t_16",
-    "dayOfWeek": "segunda",
-    "periodId": 8,
-    "type": "AULA",
-    "classId": "6A",
-    "subject": "Redação e Leitura"
-  },
-  {
-    "id": "slot_t_16_terca_8",
-    "teacherId": "t_16",
-    "dayOfWeek": "terca",
-    "periodId": 8,
-    "type": "AULA",
-    "classId": "6B",
-    "subject": "Língua Portuguesa"
-  },
-  {
-    "id": "slot_t_16_quarta_8",
-    "teacherId": "t_16",
-    "dayOfWeek": "quarta",
-    "periodId": 8,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC Geral"
-  },
-  {
-    "id": "slot_t_16_quinta_8",
-    "teacherId": "t_16",
-    "dayOfWeek": "quinta",
-    "periodId": 8,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC de Área"
+    "type": "LIVRE"
   },
   {
     "id": "slot_t_16_sexta_8",
@@ -6328,82 +6355,18 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Língua Portuguesa"
   },
   {
-    "id": "slot_t_16_segunda_9",
-    "teacherId": "t_16",
-    "dayOfWeek": "segunda",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
-    "id": "slot_t_16_terca_9",
-    "teacherId": "t_16",
-    "dayOfWeek": "terca",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
-    "id": "slot_t_16_quarta_9",
-    "teacherId": "t_16",
-    "dayOfWeek": "quarta",
-    "periodId": 9,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC Geral"
-  },
-  {
-    "id": "slot_t_16_quinta_9",
-    "teacherId": "t_16",
-    "dayOfWeek": "quinta",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
     "id": "slot_t_16_sexta_9",
     "teacherId": "t_16",
     "dayOfWeek": "sexta",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "AULA",
+    "classId": "6A",
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_17_segunda_1",
     "teacherId": "t_17",
     "dayOfWeek": "segunda",
-    "periodId": 1,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_17_terca_1",
-    "teacherId": "t_17",
-    "dayOfWeek": "terca",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "8B",
-    "subject": "Ciências"
-  },
-  {
-    "id": "slot_t_17_quarta_1",
-    "teacherId": "t_17",
-    "dayOfWeek": "quarta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "9B",
-    "subject": "Ciências"
-  },
-  {
-    "id": "slot_t_17_quinta_1",
-    "teacherId": "t_17",
-    "dayOfWeek": "quinta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "8B",
-    "subject": "Ciências"
-  },
-  {
-    "id": "slot_t_17_sexta_1",
-    "teacherId": "t_17",
-    "dayOfWeek": "sexta",
     "periodId": 1,
     "type": "LIVRE"
   },
@@ -6415,81 +6378,11 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "LIVRE"
   },
   {
-    "id": "slot_t_17_terca_2",
-    "teacherId": "t_17",
-    "dayOfWeek": "terca",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "8B",
-    "subject": "Ciências"
-  },
-  {
-    "id": "slot_t_17_quarta_2",
-    "teacherId": "t_17",
-    "dayOfWeek": "quarta",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "8A",
-    "subject": "Práticas Experimentais"
-  },
-  {
-    "id": "slot_t_17_quinta_2",
-    "teacherId": "t_17",
-    "dayOfWeek": "quinta",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "8B",
-    "subject": "Ciências"
-  },
-  {
-    "id": "slot_t_17_sexta_2",
-    "teacherId": "t_17",
-    "dayOfWeek": "sexta",
-    "periodId": 2,
-    "type": "LIVRE"
-  },
-  {
     "id": "slot_t_17_segunda_3",
     "teacherId": "t_17",
     "dayOfWeek": "segunda",
     "periodId": 3,
     "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_17_terca_3",
-    "teacherId": "t_17",
-    "dayOfWeek": "terca",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "8A",
-    "subject": "Ciências"
-  },
-  {
-    "id": "slot_t_17_quarta_3",
-    "teacherId": "t_17",
-    "dayOfWeek": "quarta",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "9A",
-    "subject": "Práticas Experimentais"
-  },
-  {
-    "id": "slot_t_17_quinta_3",
-    "teacherId": "t_17",
-    "dayOfWeek": "quinta",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "1EMB",
-    "subject": "Biologia"
-  },
-  {
-    "id": "slot_t_17_sexta_3",
-    "teacherId": "t_17",
-    "dayOfWeek": "sexta",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "9A",
-    "subject": "Ciências"
   },
   {
     "id": "slot_t_17_segunda_4",
@@ -6502,40 +6395,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingEndTime": "11:30"
   },
   {
-    "id": "slot_t_17_terca_4",
-    "teacherId": "t_17",
-    "dayOfWeek": "terca",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "8A",
-    "subject": "Ciências"
-  },
-  {
-    "id": "slot_t_17_quarta_4",
-    "teacherId": "t_17",
-    "dayOfWeek": "quarta",
-    "periodId": 4,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_17_quinta_4",
-    "teacherId": "t_17",
-    "dayOfWeek": "quinta",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "1EMB",
-    "subject": "Biologia"
-  },
-  {
-    "id": "slot_t_17_sexta_4",
-    "teacherId": "t_17",
-    "dayOfWeek": "sexta",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "9A",
-    "subject": "Ciências"
-  },
-  {
     "id": "slot_t_17_segunda_5",
     "teacherId": "t_17",
     "dayOfWeek": "segunda",
@@ -6546,39 +6405,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingEndTime": "11:30"
   },
   {
-    "id": "slot_t_17_terca_5",
-    "teacherId": "t_17",
-    "dayOfWeek": "terca",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "1EMA",
-    "subject": "Biologia"
-  },
-  {
-    "id": "slot_t_17_quarta_5",
-    "teacherId": "t_17",
-    "dayOfWeek": "quarta",
-    "periodId": 5,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_17_quinta_5",
-    "teacherId": "t_17",
-    "dayOfWeek": "quinta",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "9B",
-    "subject": "Ciências"
-  },
-  {
-    "id": "slot_t_17_sexta_5",
-    "teacherId": "t_17",
-    "dayOfWeek": "sexta",
-    "periodId": 5,
-    "type": "ELETIVA",
-    "trainingName": "Eletiva"
-  },
-  {
     "id": "slot_t_17_segunda_6",
     "teacherId": "t_17",
     "dayOfWeek": "segunda",
@@ -6586,73 +6412,9 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "LIVRE"
   },
   {
-    "id": "slot_t_17_terca_6",
-    "teacherId": "t_17",
-    "dayOfWeek": "terca",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "1EMA",
-    "subject": "Biologia"
-  },
-  {
-    "id": "slot_t_17_quarta_6",
-    "teacherId": "t_17",
-    "dayOfWeek": "quarta",
-    "periodId": 6,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_17_quinta_6",
-    "teacherId": "t_17",
-    "dayOfWeek": "quinta",
-    "periodId": 6,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_17_sexta_6",
-    "teacherId": "t_17",
-    "dayOfWeek": "sexta",
-    "periodId": 6,
-    "type": "ELETIVA",
-    "trainingName": "Eletiva"
-  },
-  {
     "id": "slot_t_17_segunda_7",
     "teacherId": "t_17",
     "dayOfWeek": "segunda",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "8B",
-    "subject": "Práticas Experimentais"
-  },
-  {
-    "id": "slot_t_17_terca_7",
-    "teacherId": "t_17",
-    "dayOfWeek": "terca",
-    "periodId": 7,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC de Área"
-  },
-  {
-    "id": "slot_t_17_quarta_7",
-    "teacherId": "t_17",
-    "dayOfWeek": "quarta",
-    "periodId": 7,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_17_quinta_7",
-    "teacherId": "t_17",
-    "dayOfWeek": "quinta",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "9A",
-    "subject": "Ciências"
-  },
-  {
-    "id": "slot_t_17_sexta_7",
-    "teacherId": "t_17",
-    "dayOfWeek": "sexta",
     "periodId": 7,
     "type": "AULA",
     "classId": "9B",
@@ -6664,14 +6426,149 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "segunda",
     "periodId": 8,
     "type": "AULA",
-    "classId": "9B",
+    "classId": "8B",
     "subject": "Práticas Experimentais"
+  },
+  {
+    "id": "slot_t_17_segunda_9",
+    "teacherId": "t_17",
+    "dayOfWeek": "segunda",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_17_terca_1",
+    "teacherId": "t_17",
+    "dayOfWeek": "terca",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "8B",
+    "subject": "Ciências"
+  },
+  {
+    "id": "slot_t_17_terca_2",
+    "teacherId": "t_17",
+    "dayOfWeek": "terca",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "8B",
+    "subject": "Ciências"
+  },
+  {
+    "id": "slot_t_17_terca_3",
+    "teacherId": "t_17",
+    "dayOfWeek": "terca",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "8A",
+    "subject": "Ciências"
+  },
+  {
+    "id": "slot_t_17_terca_4",
+    "teacherId": "t_17",
+    "dayOfWeek": "terca",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "8A",
+    "subject": "Ciências"
+  },
+  {
+    "id": "slot_t_17_terca_5",
+    "teacherId": "t_17",
+    "dayOfWeek": "terca",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "1EMA",
+    "subject": "Biologia"
+  },
+  {
+    "id": "slot_t_17_terca_6",
+    "teacherId": "t_17",
+    "dayOfWeek": "terca",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "1EMA",
+    "subject": "Biologia"
+  },
+  {
+    "id": "slot_t_17_terca_7",
+    "teacherId": "t_17",
+    "dayOfWeek": "terca",
+    "periodId": 7,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC de Área"
   },
   {
     "id": "slot_t_17_terca_8",
     "teacherId": "t_17",
     "dayOfWeek": "terca",
     "periodId": 8,
+    "type": "AULA",
+    "classId": "9B",
+    "subject": "Ciências"
+  },
+  {
+    "id": "slot_t_17_terca_9",
+    "teacherId": "t_17",
+    "dayOfWeek": "terca",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_17_quarta_1",
+    "teacherId": "t_17",
+    "dayOfWeek": "quarta",
+    "periodId": 1,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_17_quarta_2",
+    "teacherId": "t_17",
+    "dayOfWeek": "quarta",
+    "periodId": 2,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_17_quarta_3",
+    "teacherId": "t_17",
+    "dayOfWeek": "quarta",
+    "periodId": 3,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_17_quarta_4",
+    "teacherId": "t_17",
+    "dayOfWeek": "quarta",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "9A",
+    "subject": "Ciências"
+  },
+  {
+    "id": "slot_t_17_quarta_5",
+    "teacherId": "t_17",
+    "dayOfWeek": "quarta",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "9A",
+    "subject": "Práticas Experimentais"
+  },
+  {
+    "id": "slot_t_17_quarta_6",
+    "teacherId": "t_17",
+    "dayOfWeek": "quarta",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "8A",
+    "subject": "Práticas Experimentais"
+  },
+  {
+    "id": "slot_t_17_quarta_7",
+    "teacherId": "t_17",
+    "dayOfWeek": "quarta",
+    "periodId": 7,
     "type": "AULA",
     "classId": "9B",
     "subject": "Ciências"
@@ -6685,10 +6582,142 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingName": "ATPC Geral"
   },
   {
+    "id": "slot_t_17_quarta_9",
+    "teacherId": "t_17",
+    "dayOfWeek": "quarta",
+    "periodId": 9,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
+  },
+  {
+    "id": "slot_t_17_quinta_1",
+    "teacherId": "t_17",
+    "dayOfWeek": "quinta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "8B",
+    "subject": "Ciências"
+  },
+  {
+    "id": "slot_t_17_quinta_2",
+    "teacherId": "t_17",
+    "dayOfWeek": "quinta",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "8B",
+    "subject": "Ciências"
+  },
+  {
+    "id": "slot_t_17_quinta_3",
+    "teacherId": "t_17",
+    "dayOfWeek": "quinta",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "1EMB",
+    "subject": "Biologia"
+  },
+  {
+    "id": "slot_t_17_quinta_4",
+    "teacherId": "t_17",
+    "dayOfWeek": "quinta",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "1EMB",
+    "subject": "Biologia"
+  },
+  {
+    "id": "slot_t_17_quinta_5",
+    "teacherId": "t_17",
+    "dayOfWeek": "quinta",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "9B",
+    "subject": "Ciências"
+  },
+  {
+    "id": "slot_t_17_quinta_6",
+    "teacherId": "t_17",
+    "dayOfWeek": "quinta",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "9B",
+    "subject": "Práticas Experimentais"
+  },
+  {
+    "id": "slot_t_17_quinta_7",
+    "teacherId": "t_17",
+    "dayOfWeek": "quinta",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "9A",
+    "subject": "Ciências"
+  },
+  {
     "id": "slot_t_17_quinta_8",
     "teacherId": "t_17",
     "dayOfWeek": "quinta",
     "periodId": 8,
+    "type": "AULA",
+    "classId": "9A",
+    "subject": "Ciências"
+  },
+  {
+    "id": "slot_t_17_quinta_9",
+    "teacherId": "t_17",
+    "dayOfWeek": "quinta",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_17_sexta_1",
+    "teacherId": "t_17",
+    "dayOfWeek": "sexta",
+    "periodId": 1,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_17_sexta_2",
+    "teacherId": "t_17",
+    "dayOfWeek": "sexta",
+    "periodId": 2,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_17_sexta_3",
+    "teacherId": "t_17",
+    "dayOfWeek": "sexta",
+    "periodId": 3,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_17_sexta_4",
+    "teacherId": "t_17",
+    "dayOfWeek": "sexta",
+    "periodId": 4,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_17_sexta_5",
+    "teacherId": "t_17",
+    "dayOfWeek": "sexta",
+    "periodId": 5,
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
+  },
+  {
+    "id": "slot_t_17_sexta_6",
+    "teacherId": "t_17",
+    "dayOfWeek": "sexta",
+    "periodId": 6,
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
+  },
+  {
+    "id": "slot_t_17_sexta_7",
+    "teacherId": "t_17",
+    "dayOfWeek": "sexta",
+    "periodId": 7,
     "type": "AULA",
     "classId": "9A",
     "subject": "Ciências"
@@ -6701,38 +6730,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "AULA",
     "classId": "8A",
     "subject": "Ciências"
-  },
-  {
-    "id": "slot_t_17_segunda_9",
-    "teacherId": "t_17",
-    "dayOfWeek": "segunda",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
-    "id": "slot_t_17_terca_9",
-    "teacherId": "t_17",
-    "dayOfWeek": "terca",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
-    "id": "slot_t_17_quarta_9",
-    "teacherId": "t_17",
-    "dayOfWeek": "quarta",
-    "periodId": 9,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC Geral"
-  },
-  {
-    "id": "slot_t_17_quinta_9",
-    "teacherId": "t_17",
-    "dayOfWeek": "quinta",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_17_sexta_9",
@@ -6753,38 +6750,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Arte"
   },
   {
-    "id": "slot_t_18_terca_1",
-    "teacherId": "t_18",
-    "dayOfWeek": "terca",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "6B",
-    "subject": "Arte"
-  },
-  {
-    "id": "slot_t_18_quarta_1",
-    "teacherId": "t_18",
-    "dayOfWeek": "quarta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "1EMB",
-    "subject": "Arte"
-  },
-  {
-    "id": "slot_t_18_quinta_1",
-    "teacherId": "t_18",
-    "dayOfWeek": "quinta",
-    "periodId": 1,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_18_sexta_1",
-    "teacherId": "t_18",
-    "dayOfWeek": "sexta",
-    "periodId": 1,
-    "type": "LIVRE"
-  },
-  {
     "id": "slot_t_18_segunda_2",
     "teacherId": "t_18",
     "dayOfWeek": "segunda",
@@ -6792,6 +6757,75 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "AULA",
     "classId": "7B",
     "subject": "Arte"
+  },
+  {
+    "id": "slot_t_18_segunda_3",
+    "teacherId": "t_18",
+    "dayOfWeek": "segunda",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "7B",
+    "subject": "Arte"
+  },
+  {
+    "id": "slot_t_18_segunda_4",
+    "teacherId": "t_18",
+    "dayOfWeek": "segunda",
+    "periodId": 4,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_18_segunda_5",
+    "teacherId": "t_18",
+    "dayOfWeek": "segunda",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "6B",
+    "subject": "Arte"
+  },
+  {
+    "id": "slot_t_18_segunda_6",
+    "teacherId": "t_18",
+    "dayOfWeek": "segunda",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "6B",
+    "subject": "Arte"
+  },
+  {
+    "id": "slot_t_18_segunda_7",
+    "teacherId": "t_18",
+    "dayOfWeek": "segunda",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "3EMB",
+    "subject": "Esporte-Música-Arte"
+  },
+  {
+    "id": "slot_t_18_segunda_8",
+    "teacherId": "t_18",
+    "dayOfWeek": "segunda",
+    "periodId": 8,
+    "type": "AULA",
+    "classId": "3EMB",
+    "subject": "Esporte-Música-Arte"
+  },
+  {
+    "id": "slot_t_18_segunda_9",
+    "teacherId": "t_18",
+    "dayOfWeek": "segunda",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_18_terca_1",
+    "teacherId": "t_18",
+    "dayOfWeek": "terca",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "9B",
+    "subject": "Esporte-Música-Arte"
   },
   {
     "id": "slot_t_18_terca_2",
@@ -6803,19 +6837,218 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Esporte-Música-Arte"
   },
   {
+    "id": "slot_t_18_terca_3",
+    "teacherId": "t_18",
+    "dayOfWeek": "terca",
+    "periodId": 3,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_18_terca_4",
+    "teacherId": "t_18",
+    "dayOfWeek": "terca",
+    "periodId": 4,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_18_terca_5",
+    "teacherId": "t_18",
+    "dayOfWeek": "terca",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "7A",
+    "subject": "Arte"
+  },
+  {
+    "id": "slot_t_18_terca_6",
+    "teacherId": "t_18",
+    "dayOfWeek": "terca",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "7A",
+    "subject": "Arte"
+  },
+  {
+    "id": "slot_t_18_terca_7",
+    "teacherId": "t_18",
+    "dayOfWeek": "terca",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "1EMB",
+    "subject": "Arte"
+  },
+  {
+    "id": "slot_t_18_terca_8",
+    "teacherId": "t_18",
+    "dayOfWeek": "terca",
+    "periodId": 8,
+    "type": "AULA",
+    "classId": "1EMB",
+    "subject": "Arte"
+  },
+  {
+    "id": "slot_t_18_terca_9",
+    "teacherId": "t_18",
+    "dayOfWeek": "terca",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_18_quarta_1",
+    "teacherId": "t_18",
+    "dayOfWeek": "quarta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "1EMB",
+    "subject": "Esporte-Música-Arte"
+  },
+  {
     "id": "slot_t_18_quarta_2",
     "teacherId": "t_18",
     "dayOfWeek": "quarta",
     "periodId": 2,
     "type": "AULA",
     "classId": "1EMB",
+    "subject": "Esporte-Música-Arte"
+  },
+  {
+    "id": "slot_t_18_quarta_3",
+    "teacherId": "t_18",
+    "dayOfWeek": "quarta",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "9A",
+    "subject": "Esporte-Música-Arte"
+  },
+  {
+    "id": "slot_t_18_quarta_4",
+    "teacherId": "t_18",
+    "dayOfWeek": "quarta",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "8A",
     "subject": "Arte"
+  },
+  {
+    "id": "slot_t_18_quarta_5",
+    "teacherId": "t_18",
+    "dayOfWeek": "quarta",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "1EMA",
+    "subject": "Arte"
+  },
+  {
+    "id": "slot_t_18_quarta_6",
+    "teacherId": "t_18",
+    "dayOfWeek": "quarta",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "1EMA",
+    "subject": "Arte"
+  },
+  {
+    "id": "slot_t_18_quarta_7",
+    "teacherId": "t_18",
+    "dayOfWeek": "quarta",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "9A",
+    "subject": "Arte"
+  },
+  {
+    "id": "slot_t_18_quarta_8",
+    "teacherId": "t_18",
+    "dayOfWeek": "quarta",
+    "periodId": 8,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
+  },
+  {
+    "id": "slot_t_18_quarta_9",
+    "teacherId": "t_18",
+    "dayOfWeek": "quarta",
+    "periodId": 9,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
+  },
+  {
+    "id": "slot_t_18_quinta_1",
+    "teacherId": "t_18",
+    "dayOfWeek": "quinta",
+    "periodId": 1,
+    "type": "LIVRE"
   },
   {
     "id": "slot_t_18_quinta_2",
     "teacherId": "t_18",
     "dayOfWeek": "quinta",
     "periodId": 2,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_18_quinta_3",
+    "teacherId": "t_18",
+    "dayOfWeek": "quinta",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "9A",
+    "subject": "Esporte-Música-Arte"
+  },
+  {
+    "id": "slot_t_18_quinta_4",
+    "teacherId": "t_18",
+    "dayOfWeek": "quinta",
+    "periodId": 4,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_18_quinta_5",
+    "teacherId": "t_18",
+    "dayOfWeek": "quinta",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "6A",
+    "subject": "Arte"
+  },
+  {
+    "id": "slot_t_18_quinta_6",
+    "teacherId": "t_18",
+    "dayOfWeek": "quinta",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "6A",
+    "subject": "Arte"
+  },
+  {
+    "id": "slot_t_18_quinta_7",
+    "teacherId": "t_18",
+    "dayOfWeek": "quinta",
+    "periodId": 7,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_18_quinta_8",
+    "teacherId": "t_18",
+    "dayOfWeek": "quinta",
+    "periodId": 8,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC de Área"
+  },
+  {
+    "id": "slot_t_18_quinta_9",
+    "teacherId": "t_18",
+    "dayOfWeek": "quinta",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_18_sexta_1",
+    "teacherId": "t_18",
+    "dayOfWeek": "sexta",
+    "periodId": 1,
     "type": "LIVRE"
   },
   {
@@ -6829,40 +7062,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingEndTime": "09:30"
   },
   {
-    "id": "slot_t_18_segunda_3",
-    "teacherId": "t_18",
-    "dayOfWeek": "segunda",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "7B",
-    "subject": "Arte"
-  },
-  {
-    "id": "slot_t_18_terca_3",
-    "teacherId": "t_18",
-    "dayOfWeek": "terca",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "9B",
-    "subject": "Esporte-Música-Arte"
-  },
-  {
-    "id": "slot_t_18_quarta_3",
-    "teacherId": "t_18",
-    "dayOfWeek": "quarta",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "1EMA",
-    "subject": "Esporte-Música-Arte"
-  },
-  {
-    "id": "slot_t_18_quinta_3",
-    "teacherId": "t_18",
-    "dayOfWeek": "quinta",
-    "periodId": 3,
-    "type": "LIVRE"
-  },
-  {
     "id": "slot_t_18_sexta_3",
     "teacherId": "t_18",
     "dayOfWeek": "sexta",
@@ -6873,77 +7072,11 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingEndTime": "09:30"
   },
   {
-    "id": "slot_t_18_segunda_4",
-    "teacherId": "t_18",
-    "dayOfWeek": "segunda",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "9A",
-    "subject": "Esporte-Música-Arte"
-  },
-  {
-    "id": "slot_t_18_terca_4",
-    "teacherId": "t_18",
-    "dayOfWeek": "terca",
-    "periodId": 4,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_18_quarta_4",
-    "teacherId": "t_18",
-    "dayOfWeek": "quarta",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "1EMA",
-    "subject": "Esporte-Música-Arte"
-  },
-  {
-    "id": "slot_t_18_quinta_4",
-    "teacherId": "t_18",
-    "dayOfWeek": "quinta",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "6A",
-    "subject": "Arte"
-  },
-  {
     "id": "slot_t_18_sexta_4",
     "teacherId": "t_18",
     "dayOfWeek": "sexta",
     "periodId": 4,
     "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_18_segunda_5",
-    "teacherId": "t_18",
-    "dayOfWeek": "segunda",
-    "periodId": 5,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_18_terca_5",
-    "teacherId": "t_18",
-    "dayOfWeek": "terca",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "7A",
-    "subject": "Arte"
-  },
-  {
-    "id": "slot_t_18_quarta_5",
-    "teacherId": "t_18",
-    "dayOfWeek": "quarta",
-    "periodId": 5,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_18_quinta_5",
-    "teacherId": "t_18",
-    "dayOfWeek": "quinta",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "6A",
-    "subject": "Arte"
   },
   {
     "id": "slot_t_18_sexta_5",
@@ -6954,42 +7087,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingName": "Eletiva"
   },
   {
-    "id": "slot_t_18_segunda_6",
-    "teacherId": "t_18",
-    "dayOfWeek": "segunda",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "6B",
-    "subject": "Arte"
-  },
-  {
-    "id": "slot_t_18_terca_6",
-    "teacherId": "t_18",
-    "dayOfWeek": "terca",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "7A",
-    "subject": "Arte"
-  },
-  {
-    "id": "slot_t_18_quarta_6",
-    "teacherId": "t_18",
-    "dayOfWeek": "quarta",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "8A",
-    "subject": "Arte"
-  },
-  {
-    "id": "slot_t_18_quinta_6",
-    "teacherId": "t_18",
-    "dayOfWeek": "quinta",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "9A",
-    "subject": "Arte"
-  },
-  {
     "id": "slot_t_18_sexta_6",
     "teacherId": "t_18",
     "dayOfWeek": "sexta",
@@ -6998,81 +7095,13 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingName": "Eletiva"
   },
   {
-    "id": "slot_t_18_segunda_7",
-    "teacherId": "t_18",
-    "dayOfWeek": "segunda",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "3EMB",
-    "subject": "Esporte-Música-Arte"
-  },
-  {
-    "id": "slot_t_18_terca_7",
-    "teacherId": "t_18",
-    "dayOfWeek": "terca",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "1EMB",
-    "subject": "Esporte-Música-Arte"
-  },
-  {
-    "id": "slot_t_18_quarta_7",
-    "teacherId": "t_18",
-    "dayOfWeek": "quarta",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "9A",
-    "subject": "Esporte-Música-Arte"
-  },
-  {
-    "id": "slot_t_18_quinta_7",
-    "teacherId": "t_18",
-    "dayOfWeek": "quinta",
-    "periodId": 7,
-    "type": "LIVRE"
-  },
-  {
     "id": "slot_t_18_sexta_7",
     "teacherId": "t_18",
     "dayOfWeek": "sexta",
     "periodId": 7,
     "type": "AULA",
-    "classId": "1EMA",
+    "classId": "9B",
     "subject": "Arte"
-  },
-  {
-    "id": "slot_t_18_segunda_8",
-    "teacherId": "t_18",
-    "dayOfWeek": "segunda",
-    "periodId": 8,
-    "type": "AULA",
-    "classId": "3EMB",
-    "subject": "Esporte-Música-Arte"
-  },
-  {
-    "id": "slot_t_18_terca_8",
-    "teacherId": "t_18",
-    "dayOfWeek": "terca",
-    "periodId": 8,
-    "type": "AULA",
-    "classId": "1EMB",
-    "subject": "Esporte-Música-Arte"
-  },
-  {
-    "id": "slot_t_18_quarta_8",
-    "teacherId": "t_18",
-    "dayOfWeek": "quarta",
-    "periodId": 8,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC Geral"
-  },
-  {
-    "id": "slot_t_18_quinta_8",
-    "teacherId": "t_18",
-    "dayOfWeek": "quinta",
-    "periodId": 8,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC de Área"
   },
   {
     "id": "slot_t_18_sexta_8",
@@ -7081,39 +7110,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "1EMA",
-    "subject": "Arte"
-  },
-  {
-    "id": "slot_t_18_segunda_9",
-    "teacherId": "t_18",
-    "dayOfWeek": "segunda",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
-    "id": "slot_t_18_terca_9",
-    "teacherId": "t_18",
-    "dayOfWeek": "terca",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
-    "id": "slot_t_18_quarta_9",
-    "teacherId": "t_18",
-    "dayOfWeek": "quarta",
-    "periodId": 9,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC Geral"
-  },
-  {
-    "id": "slot_t_18_quinta_9",
-    "teacherId": "t_18",
-    "dayOfWeek": "quinta",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
+    "subject": "Esporte-Música-Arte"
   },
   {
     "id": "slot_t_18_sexta_9",
@@ -7121,8 +7118,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "sexta",
     "periodId": 9,
     "type": "AULA",
-    "classId": "9B",
-    "subject": "Arte"
+    "classId": "1EMA",
+    "subject": "Esporte-Música-Arte"
   },
   {
     "id": "slot_t_19_segunda_1",
@@ -7132,79 +7129,11 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "LIVRE"
   },
   {
-    "id": "slot_t_19_terca_1",
-    "teacherId": "t_19",
-    "dayOfWeek": "terca",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "1EMA",
-    "subject": "Língua Portuguesa"
-  },
-  {
-    "id": "slot_t_19_quarta_1",
-    "teacherId": "t_19",
-    "dayOfWeek": "quarta",
-    "periodId": 1,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_19_quinta_1",
-    "teacherId": "t_19",
-    "dayOfWeek": "quinta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "1EMA",
-    "subject": "Língua Portuguesa"
-  },
-  {
-    "id": "slot_t_19_sexta_1",
-    "teacherId": "t_19",
-    "dayOfWeek": "sexta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "8B",
-    "subject": "Língua Portuguesa"
-  },
-  {
     "id": "slot_t_19_segunda_2",
     "teacherId": "t_19",
     "dayOfWeek": "segunda",
     "periodId": 2,
     "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_19_terca_2",
-    "teacherId": "t_19",
-    "dayOfWeek": "terca",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "1EMA",
-    "subject": "Língua Portuguesa"
-  },
-  {
-    "id": "slot_t_19_quarta_2",
-    "teacherId": "t_19",
-    "dayOfWeek": "quarta",
-    "periodId": 2,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_19_quinta_2",
-    "teacherId": "t_19",
-    "dayOfWeek": "quinta",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "1EMA",
-    "subject": "Língua Portuguesa"
-  },
-  {
-    "id": "slot_t_19_sexta_2",
-    "teacherId": "t_19",
-    "dayOfWeek": "sexta",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "8B",
-    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_19_segunda_3",
@@ -7213,40 +7142,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "Língua Portuguesa"
-  },
-  {
-    "id": "slot_t_19_terca_3",
-    "teacherId": "t_19",
-    "dayOfWeek": "terca",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "7B",
-    "subject": "Língua Portuguesa"
-  },
-  {
-    "id": "slot_t_19_quarta_3",
-    "teacherId": "t_19",
-    "dayOfWeek": "quarta",
-    "periodId": 3,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_19_quinta_3",
-    "teacherId": "t_19",
-    "dayOfWeek": "quinta",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "7B",
-    "subject": "Língua Portuguesa"
-  },
-  {
-    "id": "slot_t_19_sexta_3",
-    "teacherId": "t_19",
-    "dayOfWeek": "sexta",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "1EMB",
     "subject": "Língua Portuguesa"
   },
   {
@@ -7259,82 +7154,12 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Língua Portuguesa"
   },
   {
-    "id": "slot_t_19_terca_4",
-    "teacherId": "t_19",
-    "dayOfWeek": "terca",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "7B",
-    "subject": "Língua Portuguesa"
-  },
-  {
-    "id": "slot_t_19_quarta_4",
-    "teacherId": "t_19",
-    "dayOfWeek": "quarta",
-    "periodId": 4,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_19_quinta_4",
-    "teacherId": "t_19",
-    "dayOfWeek": "quinta",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "7B",
-    "subject": "Língua Portuguesa"
-  },
-  {
-    "id": "slot_t_19_sexta_4",
-    "teacherId": "t_19",
-    "dayOfWeek": "sexta",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "1EMB",
-    "subject": "Língua Portuguesa"
-  },
-  {
     "id": "slot_t_19_segunda_5",
     "teacherId": "t_19",
     "dayOfWeek": "segunda",
     "periodId": 5,
     "type": "AULA",
     "classId": "8A",
-    "subject": "Língua Portuguesa"
-  },
-  {
-    "id": "slot_t_19_terca_5",
-    "teacherId": "t_19",
-    "dayOfWeek": "terca",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "2EMB",
-    "subject": "Língua Portuguesa"
-  },
-  {
-    "id": "slot_t_19_quarta_5",
-    "teacherId": "t_19",
-    "dayOfWeek": "quarta",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "1EMB",
-    "subject": "Língua Portuguesa"
-  },
-  {
-    "id": "slot_t_19_quinta_5",
-    "teacherId": "t_19",
-    "dayOfWeek": "quinta",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "2EMB",
-    "subject": "Língua Portuguesa"
-  },
-  {
-    "id": "slot_t_19_sexta_5",
-    "teacherId": "t_19",
-    "dayOfWeek": "sexta",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "2EMA_DS",
     "subject": "Língua Portuguesa"
   },
   {
@@ -7347,79 +7172,9 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Língua Portuguesa"
   },
   {
-    "id": "slot_t_19_terca_6",
-    "teacherId": "t_19",
-    "dayOfWeek": "terca",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "2EMB",
-    "subject": "Língua Portuguesa"
-  },
-  {
-    "id": "slot_t_19_quarta_6",
-    "teacherId": "t_19",
-    "dayOfWeek": "quarta",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "1EMB",
-    "subject": "Língua Portuguesa"
-  },
-  {
-    "id": "slot_t_19_quinta_6",
-    "teacherId": "t_19",
-    "dayOfWeek": "quinta",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "2EMB",
-    "subject": "Língua Portuguesa"
-  },
-  {
-    "id": "slot_t_19_sexta_6",
-    "teacherId": "t_19",
-    "dayOfWeek": "sexta",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "Língua Portuguesa"
-  },
-  {
     "id": "slot_t_19_segunda_7",
     "teacherId": "t_19",
     "dayOfWeek": "segunda",
-    "periodId": 7,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_19_terca_7",
-    "teacherId": "t_19",
-    "dayOfWeek": "terca",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "8A",
-    "subject": "Língua Portuguesa"
-  },
-  {
-    "id": "slot_t_19_quarta_7",
-    "teacherId": "t_19",
-    "dayOfWeek": "quarta",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "8B",
-    "subject": "Língua Portuguesa"
-  },
-  {
-    "id": "slot_t_19_quinta_7",
-    "teacherId": "t_19",
-    "dayOfWeek": "quinta",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "8A",
-    "subject": "Língua Portuguesa"
-  },
-  {
-    "id": "slot_t_19_sexta_7",
-    "teacherId": "t_19",
-    "dayOfWeek": "sexta",
     "periodId": 7,
     "type": "LIVRE"
   },
@@ -7434,12 +7189,148 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingEndTime": "15:50"
   },
   {
+    "id": "slot_t_19_segunda_9",
+    "teacherId": "t_19",
+    "dayOfWeek": "segunda",
+    "periodId": 9,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP",
+    "trainingStartTime": "14:20",
+    "trainingEndTime": "15:50"
+  },
+  {
+    "id": "slot_t_19_terca_1",
+    "teacherId": "t_19",
+    "dayOfWeek": "terca",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "1EMA",
+    "subject": "Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_19_terca_2",
+    "teacherId": "t_19",
+    "dayOfWeek": "terca",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "1EMA",
+    "subject": "Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_19_terca_3",
+    "teacherId": "t_19",
+    "dayOfWeek": "terca",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "7B",
+    "subject": "Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_19_terca_4",
+    "teacherId": "t_19",
+    "dayOfWeek": "terca",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "7B",
+    "subject": "Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_19_terca_5",
+    "teacherId": "t_19",
+    "dayOfWeek": "terca",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "2EMB",
+    "subject": "Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_19_terca_6",
+    "teacherId": "t_19",
+    "dayOfWeek": "terca",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "2EMB",
+    "subject": "Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_19_terca_7",
+    "teacherId": "t_19",
+    "dayOfWeek": "terca",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "8A",
+    "subject": "Língua Portuguesa"
+  },
+  {
     "id": "slot_t_19_terca_8",
     "teacherId": "t_19",
     "dayOfWeek": "terca",
     "periodId": 8,
     "type": "AULA",
     "classId": "8A",
+    "subject": "Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_19_terca_9",
+    "teacherId": "t_19",
+    "dayOfWeek": "terca",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_19_quarta_1",
+    "teacherId": "t_19",
+    "dayOfWeek": "quarta",
+    "periodId": 1,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_19_quarta_2",
+    "teacherId": "t_19",
+    "dayOfWeek": "quarta",
+    "periodId": 2,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_19_quarta_3",
+    "teacherId": "t_19",
+    "dayOfWeek": "quarta",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "1EMB",
+    "subject": "Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_19_quarta_4",
+    "teacherId": "t_19",
+    "dayOfWeek": "quarta",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "1EMB",
+    "subject": "Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_19_quarta_5",
+    "teacherId": "t_19",
+    "dayOfWeek": "quarta",
+    "periodId": 5,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_19_quarta_6",
+    "teacherId": "t_19",
+    "dayOfWeek": "quarta",
+    "periodId": 6,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_19_quarta_7",
+    "teacherId": "t_19",
+    "dayOfWeek": "quarta",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "8B",
     "subject": "Língua Portuguesa"
   },
   {
@@ -7451,45 +7342,81 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingName": "ATPC Geral"
   },
   {
-    "id": "slot_t_19_quinta_8",
-    "teacherId": "t_19",
-    "dayOfWeek": "quinta",
-    "periodId": 8,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC de Área"
-  },
-  {
-    "id": "slot_t_19_sexta_8",
-    "teacherId": "t_19",
-    "dayOfWeek": "sexta",
-    "periodId": 8,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_19_segunda_9",
-    "teacherId": "t_19",
-    "dayOfWeek": "segunda",
-    "periodId": 9,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "Multiplica SP",
-    "trainingStartTime": "14:20",
-    "trainingEndTime": "15:50"
-  },
-  {
-    "id": "slot_t_19_terca_9",
-    "teacherId": "t_19",
-    "dayOfWeek": "terca",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
     "id": "slot_t_19_quarta_9",
     "teacherId": "t_19",
     "dayOfWeek": "quarta",
     "periodId": 9,
     "type": "CURSO_FORMACAO",
     "trainingName": "ATPC Geral"
+  },
+  {
+    "id": "slot_t_19_quinta_1",
+    "teacherId": "t_19",
+    "dayOfWeek": "quinta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "1EMA",
+    "subject": "Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_19_quinta_2",
+    "teacherId": "t_19",
+    "dayOfWeek": "quinta",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "1EMA",
+    "subject": "Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_19_quinta_3",
+    "teacherId": "t_19",
+    "dayOfWeek": "quinta",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "7B",
+    "subject": "Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_19_quinta_4",
+    "teacherId": "t_19",
+    "dayOfWeek": "quinta",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "7B",
+    "subject": "Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_19_quinta_5",
+    "teacherId": "t_19",
+    "dayOfWeek": "quinta",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "2EMB",
+    "subject": "Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_19_quinta_6",
+    "teacherId": "t_19",
+    "dayOfWeek": "quinta",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "2EMB",
+    "subject": "Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_19_quinta_7",
+    "teacherId": "t_19",
+    "dayOfWeek": "quinta",
+    "periodId": 7,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_19_quinta_8",
+    "teacherId": "t_19",
+    "dayOfWeek": "quinta",
+    "periodId": 8,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC de Área"
   },
   {
     "id": "slot_t_19_quinta_9",
@@ -7500,140 +7427,108 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingName": "Tutoria"
   },
   {
+    "id": "slot_t_19_sexta_1",
+    "teacherId": "t_19",
+    "dayOfWeek": "sexta",
+    "periodId": 1,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_19_sexta_2",
+    "teacherId": "t_19",
+    "dayOfWeek": "sexta",
+    "periodId": 2,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_19_sexta_3",
+    "teacherId": "t_19",
+    "dayOfWeek": "sexta",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "8B",
+    "subject": "Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_19_sexta_4",
+    "teacherId": "t_19",
+    "dayOfWeek": "sexta",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "8B",
+    "subject": "Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_19_sexta_5",
+    "teacherId": "t_19",
+    "dayOfWeek": "sexta",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "2EMA_DS",
+    "subject": "Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_19_sexta_6",
+    "teacherId": "t_19",
+    "dayOfWeek": "sexta",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "2EMA_DS",
+    "subject": "Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_19_sexta_7",
+    "teacherId": "t_19",
+    "dayOfWeek": "sexta",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "8A",
+    "subject": "Língua Portuguesa"
+  },
+  {
+    "id": "slot_t_19_sexta_8",
+    "teacherId": "t_19",
+    "dayOfWeek": "sexta",
+    "periodId": 8,
+    "type": "AULA",
+    "classId": "1EMB",
+    "subject": "Língua Portuguesa"
+  },
+  {
     "id": "slot_t_19_sexta_9",
     "teacherId": "t_19",
     "dayOfWeek": "sexta",
     "periodId": 9,
-    "type": "LIVRE"
+    "type": "AULA",
+    "classId": "1EMB",
+    "subject": "Língua Portuguesa"
   },
   {
     "id": "slot_t_20_segunda_1",
     "teacherId": "t_20",
     "dayOfWeek": "segunda",
     "periodId": 1,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_20_terca_1",
-    "teacherId": "t_20",
-    "dayOfWeek": "terca",
-    "periodId": 1,
     "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "Sociologia"
-  },
-  {
-    "id": "slot_t_20_quarta_1",
-    "teacherId": "t_20",
-    "dayOfWeek": "quarta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "2EMB",
-    "subject": "Sociologia"
-  },
-  {
-    "id": "slot_t_20_quinta_1",
-    "teacherId": "t_20",
-    "dayOfWeek": "quinta",
-    "periodId": 1,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_20_sexta_1",
-    "teacherId": "t_20",
-    "dayOfWeek": "sexta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "1EMA",
-    "subject": "Filosofia"
+    "classId": "6A",
+    "subject": "Geografia"
   },
   {
     "id": "slot_t_20_segunda_2",
     "teacherId": "t_20",
     "dayOfWeek": "segunda",
     "periodId": 2,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_20_terca_2",
-    "teacherId": "t_20",
-    "dayOfWeek": "terca",
-    "periodId": 2,
     "type": "AULA",
-    "classId": "1EMB",
-    "subject": "Filosofia"
-  },
-  {
-    "id": "slot_t_20_quarta_2",
-    "teacherId": "t_20",
-    "dayOfWeek": "quarta",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "2EMB",
-    "subject": "Sociologia"
-  },
-  {
-    "id": "slot_t_20_quinta_2",
-    "teacherId": "t_20",
-    "dayOfWeek": "quinta",
-    "periodId": 2,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "Multiplica SP",
-    "trainingStartTime": "08:00",
-    "trainingEndTime": "09:30"
-  },
-  {
-    "id": "slot_t_20_sexta_2",
-    "teacherId": "t_20",
-    "dayOfWeek": "sexta",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "1EMA",
-    "subject": "Filosofia"
+    "classId": "7A",
+    "subject": "Geografia"
   },
   {
     "id": "slot_t_20_segunda_3",
     "teacherId": "t_20",
     "dayOfWeek": "segunda",
     "periodId": 3,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_20_terca_3",
-    "teacherId": "t_20",
-    "dayOfWeek": "terca",
-    "periodId": 3,
     "type": "AULA",
-    "classId": "1EMB",
-    "subject": "Filosofia"
-  },
-  {
-    "id": "slot_t_20_quarta_3",
-    "teacherId": "t_20",
-    "dayOfWeek": "quarta",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "8A",
+    "classId": "8B",
     "subject": "Projeto de Vida"
-  },
-  {
-    "id": "slot_t_20_quinta_3",
-    "teacherId": "t_20",
-    "dayOfWeek": "quinta",
-    "periodId": 3,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "Multiplica SP",
-    "trainingStartTime": "08:00",
-    "trainingEndTime": "09:30"
-  },
-  {
-    "id": "slot_t_20_sexta_3",
-    "teacherId": "t_20",
-    "dayOfWeek": "sexta",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "2EMA_DS",
-    "subject": "Sociologia"
   },
   {
     "id": "slot_t_20_segunda_4",
@@ -7641,40 +7536,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "segunda",
     "periodId": 4,
     "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_20_terca_4",
-    "teacherId": "t_20",
-    "dayOfWeek": "terca",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "6A",
-    "subject": "Geografia"
-  },
-  {
-    "id": "slot_t_20_quarta_4",
-    "teacherId": "t_20",
-    "dayOfWeek": "quarta",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "6A",
-    "subject": "Geografia"
-  },
-  {
-    "id": "slot_t_20_quinta_4",
-    "teacherId": "t_20",
-    "dayOfWeek": "quinta",
-    "periodId": 4,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_20_sexta_4",
-    "teacherId": "t_20",
-    "dayOfWeek": "sexta",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "7B",
-    "subject": "Geografia"
   },
   {
     "id": "slot_t_20_segunda_5",
@@ -7685,77 +7546,13 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingName": "ATPC de Área"
   },
   {
-    "id": "slot_t_20_terca_5",
-    "teacherId": "t_20",
-    "dayOfWeek": "terca",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "6B",
-    "subject": "Geografia"
-  },
-  {
-    "id": "slot_t_20_quarta_5",
-    "teacherId": "t_20",
-    "dayOfWeek": "quarta",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "3EMB",
-    "subject": "Aprofundamento de Filosofia"
-  },
-  {
-    "id": "slot_t_20_quinta_5",
-    "teacherId": "t_20",
-    "dayOfWeek": "quinta",
-    "periodId": 5,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_20_sexta_5",
-    "teacherId": "t_20",
-    "dayOfWeek": "sexta",
-    "periodId": 5,
-    "type": "ELETIVA",
-    "trainingName": "Eletiva"
-  },
-  {
     "id": "slot_t_20_segunda_6",
     "teacherId": "t_20",
     "dayOfWeek": "segunda",
     "periodId": 6,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_20_terca_6",
-    "teacherId": "t_20",
-    "dayOfWeek": "terca",
-    "periodId": 6,
     "type": "AULA",
-    "classId": "6B",
+    "classId": "7B",
     "subject": "Geografia"
-  },
-  {
-    "id": "slot_t_20_quarta_6",
-    "teacherId": "t_20",
-    "dayOfWeek": "quarta",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "3EMB",
-    "subject": "Aprofundamento de Filosofia"
-  },
-  {
-    "id": "slot_t_20_quinta_6",
-    "teacherId": "t_20",
-    "dayOfWeek": "quinta",
-    "periodId": 6,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_20_sexta_6",
-    "teacherId": "t_20",
-    "dayOfWeek": "sexta",
-    "periodId": 6,
-    "type": "ELETIVA",
-    "trainingName": "Eletiva"
   },
   {
     "id": "slot_t_20_segunda_7",
@@ -7763,43 +7560,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "segunda",
     "periodId": 7,
     "type": "AULA",
-    "classId": "7A",
-    "subject": "Geografia"
-  },
-  {
-    "id": "slot_t_20_terca_7",
-    "teacherId": "t_20",
-    "dayOfWeek": "terca",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "7A",
-    "subject": "Geografia"
-  },
-  {
-    "id": "slot_t_20_quarta_7",
-    "teacherId": "t_20",
-    "dayOfWeek": "quarta",
-    "periodId": 7,
-    "type": "AULA",
     "classId": "6B",
-    "subject": "Geografia"
-  },
-  {
-    "id": "slot_t_20_quinta_7",
-    "teacherId": "t_20",
-    "dayOfWeek": "quinta",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "3EMB",
-    "subject": "Aprofundamento de Sociologia"
-  },
-  {
-    "id": "slot_t_20_sexta_7",
-    "teacherId": "t_20",
-    "dayOfWeek": "sexta",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "7B",
     "subject": "Geografia"
   },
   {
@@ -7812,12 +7573,150 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Geografia"
   },
   {
+    "id": "slot_t_20_segunda_9",
+    "teacherId": "t_20",
+    "dayOfWeek": "segunda",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_20_terca_1",
+    "teacherId": "t_20",
+    "dayOfWeek": "terca",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "2EMA_DS",
+    "subject": "Sociologia"
+  },
+  {
+    "id": "slot_t_20_terca_2",
+    "teacherId": "t_20",
+    "dayOfWeek": "terca",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "1EMB",
+    "subject": "Filosofia"
+  },
+  {
+    "id": "slot_t_20_terca_3",
+    "teacherId": "t_20",
+    "dayOfWeek": "terca",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "1EMB",
+    "subject": "Filosofia"
+  },
+  {
+    "id": "slot_t_20_terca_4",
+    "teacherId": "t_20",
+    "dayOfWeek": "terca",
+    "periodId": 4,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_20_terca_5",
+    "teacherId": "t_20",
+    "dayOfWeek": "terca",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "7B",
+    "subject": "Geografia"
+  },
+  {
+    "id": "slot_t_20_terca_6",
+    "teacherId": "t_20",
+    "dayOfWeek": "terca",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "7B",
+    "subject": "Geografia"
+  },
+  {
+    "id": "slot_t_20_terca_7",
+    "teacherId": "t_20",
+    "dayOfWeek": "terca",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "6A",
+    "subject": "Geografia"
+  },
+  {
     "id": "slot_t_20_terca_8",
     "teacherId": "t_20",
     "dayOfWeek": "terca",
     "periodId": 8,
     "type": "AULA",
-    "classId": "7B",
+    "classId": "6A",
+    "subject": "Geografia"
+  },
+  {
+    "id": "slot_t_20_terca_9",
+    "teacherId": "t_20",
+    "dayOfWeek": "terca",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_20_quarta_1",
+    "teacherId": "t_20",
+    "dayOfWeek": "quarta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "8A",
+    "subject": "Projeto de Vida"
+  },
+  {
+    "id": "slot_t_20_quarta_2",
+    "teacherId": "t_20",
+    "dayOfWeek": "quarta",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "2EMB",
+    "subject": "Sociologia"
+  },
+  {
+    "id": "slot_t_20_quarta_3",
+    "teacherId": "t_20",
+    "dayOfWeek": "quarta",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "2EMB",
+    "subject": "Sociologia"
+  },
+  {
+    "id": "slot_t_20_quarta_4",
+    "teacherId": "t_20",
+    "dayOfWeek": "quarta",
+    "periodId": 4,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_20_quarta_5",
+    "teacherId": "t_20",
+    "dayOfWeek": "quarta",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "3EMB",
+    "subject": "Aprofundamento de Filosofia"
+  },
+  {
+    "id": "slot_t_20_quarta_6",
+    "teacherId": "t_20",
+    "dayOfWeek": "quarta",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "3EMB",
+    "subject": "Aprofundamento de Filosofia"
+  },
+  {
+    "id": "slot_t_20_quarta_7",
+    "teacherId": "t_20",
+    "dayOfWeek": "quarta",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "7A",
     "subject": "Geografia"
   },
   {
@@ -7829,6 +7728,71 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingName": "ATPC Geral"
   },
   {
+    "id": "slot_t_20_quarta_9",
+    "teacherId": "t_20",
+    "dayOfWeek": "quarta",
+    "periodId": 9,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
+  },
+  {
+    "id": "slot_t_20_quinta_1",
+    "teacherId": "t_20",
+    "dayOfWeek": "quinta",
+    "periodId": 1,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_20_quinta_2",
+    "teacherId": "t_20",
+    "dayOfWeek": "quinta",
+    "periodId": 2,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP",
+    "trainingStartTime": "08:00",
+    "trainingEndTime": "09:30"
+  },
+  {
+    "id": "slot_t_20_quinta_3",
+    "teacherId": "t_20",
+    "dayOfWeek": "quinta",
+    "periodId": 3,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP",
+    "trainingStartTime": "08:00",
+    "trainingEndTime": "09:30"
+  },
+  {
+    "id": "slot_t_20_quinta_4",
+    "teacherId": "t_20",
+    "dayOfWeek": "quinta",
+    "periodId": 4,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_20_quinta_5",
+    "teacherId": "t_20",
+    "dayOfWeek": "quinta",
+    "periodId": 5,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_20_quinta_6",
+    "teacherId": "t_20",
+    "dayOfWeek": "quinta",
+    "periodId": 6,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_20_quinta_7",
+    "teacherId": "t_20",
+    "dayOfWeek": "quinta",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "3EMB",
+    "subject": "Aprofundamento de Sociologia"
+  },
+  {
     "id": "slot_t_20_quinta_8",
     "teacherId": "t_20",
     "dayOfWeek": "quinta",
@@ -7836,39 +7800,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "AULA",
     "classId": "3EMB",
     "subject": "Aprofundamento de Sociologia"
-  },
-  {
-    "id": "slot_t_20_sexta_8",
-    "teacherId": "t_20",
-    "dayOfWeek": "sexta",
-    "periodId": 8,
-    "type": "AULA",
-    "classId": "8B",
-    "subject": "Projeto de Vida"
-  },
-  {
-    "id": "slot_t_20_segunda_9",
-    "teacherId": "t_20",
-    "dayOfWeek": "segunda",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
-    "id": "slot_t_20_terca_9",
-    "teacherId": "t_20",
-    "dayOfWeek": "terca",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
-    "id": "slot_t_20_quarta_9",
-    "teacherId": "t_20",
-    "dayOfWeek": "quarta",
-    "periodId": 9,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC Geral"
   },
   {
     "id": "slot_t_20_quinta_9",
@@ -7879,12 +7810,78 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingName": "Tutoria"
   },
   {
+    "id": "slot_t_20_sexta_1",
+    "teacherId": "t_20",
+    "dayOfWeek": "sexta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "1EMA",
+    "subject": "Filosofia"
+  },
+  {
+    "id": "slot_t_20_sexta_2",
+    "teacherId": "t_20",
+    "dayOfWeek": "sexta",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "1EMA",
+    "subject": "Filosofia"
+  },
+  {
+    "id": "slot_t_20_sexta_3",
+    "teacherId": "t_20",
+    "dayOfWeek": "sexta",
+    "periodId": 3,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_20_sexta_4",
+    "teacherId": "t_20",
+    "dayOfWeek": "sexta",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "2EMA_DS",
+    "subject": "Sociologia"
+  },
+  {
+    "id": "slot_t_20_sexta_5",
+    "teacherId": "t_20",
+    "dayOfWeek": "sexta",
+    "periodId": 5,
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
+  },
+  {
+    "id": "slot_t_20_sexta_6",
+    "teacherId": "t_20",
+    "dayOfWeek": "sexta",
+    "periodId": 6,
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
+  },
+  {
+    "id": "slot_t_20_sexta_7",
+    "teacherId": "t_20",
+    "dayOfWeek": "sexta",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "6B",
+    "subject": "Geografia"
+  },
+  {
+    "id": "slot_t_20_sexta_8",
+    "teacherId": "t_20",
+    "dayOfWeek": "sexta",
+    "periodId": 8,
+    "type": "LIVRE"
+  },
+  {
     "id": "slot_t_20_sexta_9",
     "teacherId": "t_20",
     "dayOfWeek": "sexta",
     "periodId": 9,
     "type": "AULA",
-    "classId": "6A",
+    "classId": "6B",
     "subject": "Geografia"
   },
   {
@@ -7892,9 +7889,75 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_21",
     "dayOfWeek": "segunda",
     "periodId": 1,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_21_segunda_2",
+    "teacherId": "t_21",
+    "dayOfWeek": "segunda",
+    "periodId": 2,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_21_segunda_3",
+    "teacherId": "t_21",
+    "dayOfWeek": "segunda",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "9B",
+    "subject": "História"
+  },
+  {
+    "id": "slot_t_21_segunda_4",
+    "teacherId": "t_21",
+    "dayOfWeek": "segunda",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "8B",
+    "subject": "História"
+  },
+  {
+    "id": "slot_t_21_segunda_5",
+    "teacherId": "t_21",
+    "dayOfWeek": "segunda",
+    "periodId": 5,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC de Área"
+  },
+  {
+    "id": "slot_t_21_segunda_6",
+    "teacherId": "t_21",
+    "dayOfWeek": "segunda",
+    "periodId": 6,
     "type": "AULA",
     "classId": "6A",
     "subject": "História"
+  },
+  {
+    "id": "slot_t_21_segunda_7",
+    "teacherId": "t_21",
+    "dayOfWeek": "segunda",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "8B",
+    "subject": "História"
+  },
+  {
+    "id": "slot_t_21_segunda_8",
+    "teacherId": "t_21",
+    "dayOfWeek": "segunda",
+    "periodId": 8,
+    "type": "AULA",
+    "classId": "6B",
+    "subject": "História"
+  },
+  {
+    "id": "slot_t_21_segunda_9",
+    "teacherId": "t_21",
+    "dayOfWeek": "segunda",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_21_terca_1",
@@ -7904,40 +7967,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "LIVRE"
   },
   {
-    "id": "slot_t_21_quarta_1",
-    "teacherId": "t_21",
-    "dayOfWeek": "quarta",
-    "periodId": 1,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_21_quinta_1",
-    "teacherId": "t_21",
-    "dayOfWeek": "quinta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "6B",
-    "subject": "História"
-  },
-  {
-    "id": "slot_t_21_sexta_1",
-    "teacherId": "t_21",
-    "dayOfWeek": "sexta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "8A",
-    "subject": "História"
-  },
-  {
-    "id": "slot_t_21_segunda_2",
-    "teacherId": "t_21",
-    "dayOfWeek": "segunda",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "8B",
-    "subject": "História"
-  },
-  {
     "id": "slot_t_21_terca_2",
     "teacherId": "t_21",
     "dayOfWeek": "terca",
@@ -7945,45 +7974,76 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "LIVRE"
   },
   {
-    "id": "slot_t_21_quarta_2",
-    "teacherId": "t_21",
-    "dayOfWeek": "quarta",
-    "periodId": 2,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_21_quinta_2",
-    "teacherId": "t_21",
-    "dayOfWeek": "quinta",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "7A",
-    "subject": "História"
-  },
-  {
-    "id": "slot_t_21_sexta_2",
-    "teacherId": "t_21",
-    "dayOfWeek": "sexta",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "9B",
-    "subject": "História"
-  },
-  {
-    "id": "slot_t_21_segunda_3",
-    "teacherId": "t_21",
-    "dayOfWeek": "segunda",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "9A",
-    "subject": "História"
-  },
-  {
     "id": "slot_t_21_terca_3",
     "teacherId": "t_21",
     "dayOfWeek": "terca",
     "periodId": 3,
     "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_21_terca_4",
+    "teacherId": "t_21",
+    "dayOfWeek": "terca",
+    "periodId": 4,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_21_terca_5",
+    "teacherId": "t_21",
+    "dayOfWeek": "terca",
+    "periodId": 5,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_21_terca_6",
+    "teacherId": "t_21",
+    "dayOfWeek": "terca",
+    "periodId": 6,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_21_terca_7",
+    "teacherId": "t_21",
+    "dayOfWeek": "terca",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "7B",
+    "subject": "História"
+  },
+  {
+    "id": "slot_t_21_terca_8",
+    "teacherId": "t_21",
+    "dayOfWeek": "terca",
+    "periodId": 8,
+    "type": "AULA",
+    "classId": "7A",
+    "subject": "História"
+  },
+  {
+    "id": "slot_t_21_terca_9",
+    "teacherId": "t_21",
+    "dayOfWeek": "terca",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_21_quarta_1",
+    "teacherId": "t_21",
+    "dayOfWeek": "quarta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "6B",
+    "subject": "História"
+  },
+  {
+    "id": "slot_t_21_quarta_2",
+    "teacherId": "t_21",
+    "dayOfWeek": "quarta",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "9B",
+    "subject": "História"
   },
   {
     "id": "slot_t_21_quarta_3",
@@ -7996,40 +8056,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingEndTime": "11:00"
   },
   {
-    "id": "slot_t_21_quinta_3",
-    "teacherId": "t_21",
-    "dayOfWeek": "quinta",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "9A",
-    "subject": "História"
-  },
-  {
-    "id": "slot_t_21_sexta_3",
-    "teacherId": "t_21",
-    "dayOfWeek": "sexta",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "8B",
-    "subject": "História"
-  },
-  {
-    "id": "slot_t_21_segunda_4",
-    "teacherId": "t_21",
-    "dayOfWeek": "segunda",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "7B",
-    "subject": "História"
-  },
-  {
-    "id": "slot_t_21_terca_4",
-    "teacherId": "t_21",
-    "dayOfWeek": "terca",
-    "periodId": 4,
-    "type": "LIVRE"
-  },
-  {
     "id": "slot_t_21_quarta_4",
     "teacherId": "t_21",
     "dayOfWeek": "quarta",
@@ -8038,39 +8064,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingName": "Multiplica SP",
     "trainingStartTime": "09:30",
     "trainingEndTime": "11:00"
-  },
-  {
-    "id": "slot_t_21_quinta_4",
-    "teacherId": "t_21",
-    "dayOfWeek": "quinta",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "7A",
-    "subject": "História"
-  },
-  {
-    "id": "slot_t_21_sexta_4",
-    "teacherId": "t_21",
-    "dayOfWeek": "sexta",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "8A",
-    "subject": "História"
-  },
-  {
-    "id": "slot_t_21_segunda_5",
-    "teacherId": "t_21",
-    "dayOfWeek": "segunda",
-    "periodId": 5,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC de Área"
-  },
-  {
-    "id": "slot_t_21_terca_5",
-    "teacherId": "t_21",
-    "dayOfWeek": "terca",
-    "periodId": 5,
-    "type": "LIVRE"
   },
   {
     "id": "slot_t_21_quarta_5",
@@ -8083,80 +8076,12 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingEndTime": "11:00"
   },
   {
-    "id": "slot_t_21_quinta_5",
-    "teacherId": "t_21",
-    "dayOfWeek": "quinta",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "8B",
-    "subject": "História"
-  },
-  {
-    "id": "slot_t_21_sexta_5",
-    "teacherId": "t_21",
-    "dayOfWeek": "sexta",
-    "periodId": 5,
-    "type": "ELETIVA",
-    "trainingName": "Eletiva"
-  },
-  {
-    "id": "slot_t_21_segunda_6",
-    "teacherId": "t_21",
-    "dayOfWeek": "segunda",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "6A",
-    "subject": "História"
-  },
-  {
-    "id": "slot_t_21_terca_6",
-    "teacherId": "t_21",
-    "dayOfWeek": "terca",
-    "periodId": 6,
-    "type": "LIVRE"
-  },
-  {
     "id": "slot_t_21_quarta_6",
     "teacherId": "t_21",
     "dayOfWeek": "quarta",
     "periodId": 6,
     "type": "AULA",
-    "classId": "7A",
-    "subject": "História"
-  },
-  {
-    "id": "slot_t_21_quinta_6",
-    "teacherId": "t_21",
-    "dayOfWeek": "quinta",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "8A",
-    "subject": "História"
-  },
-  {
-    "id": "slot_t_21_sexta_6",
-    "teacherId": "t_21",
-    "dayOfWeek": "sexta",
-    "periodId": 6,
-    "type": "ELETIVA",
-    "trainingName": "Eletiva"
-  },
-  {
-    "id": "slot_t_21_segunda_7",
-    "teacherId": "t_21",
-    "dayOfWeek": "segunda",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "6B",
-    "subject": "História"
-  },
-  {
-    "id": "slot_t_21_terca_7",
-    "teacherId": "t_21",
-    "dayOfWeek": "terca",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "9B",
+    "classId": "9A",
     "subject": "História"
   },
   {
@@ -8169,82 +8094,12 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "História"
   },
   {
-    "id": "slot_t_21_quinta_7",
-    "teacherId": "t_21",
-    "dayOfWeek": "quinta",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "7B",
-    "subject": "História"
-  },
-  {
-    "id": "slot_t_21_sexta_7",
-    "teacherId": "t_21",
-    "dayOfWeek": "sexta",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "1EMB",
-    "subject": "Projeto de Vida"
-  },
-  {
-    "id": "slot_t_21_segunda_8",
-    "teacherId": "t_21",
-    "dayOfWeek": "segunda",
-    "periodId": 8,
-    "type": "AULA",
-    "classId": "6B",
-    "subject": "História"
-  },
-  {
-    "id": "slot_t_21_terca_8",
-    "teacherId": "t_21",
-    "dayOfWeek": "terca",
-    "periodId": 8,
-    "type": "AULA",
-    "classId": "9A",
-    "subject": "História"
-  },
-  {
     "id": "slot_t_21_quarta_8",
     "teacherId": "t_21",
     "dayOfWeek": "quarta",
     "periodId": 8,
     "type": "CURSO_FORMACAO",
     "trainingName": "ATPC Geral"
-  },
-  {
-    "id": "slot_t_21_quinta_8",
-    "teacherId": "t_21",
-    "dayOfWeek": "quinta",
-    "periodId": 8,
-    "type": "AULA",
-    "classId": "7B",
-    "subject": "História"
-  },
-  {
-    "id": "slot_t_21_sexta_8",
-    "teacherId": "t_21",
-    "dayOfWeek": "sexta",
-    "periodId": 8,
-    "type": "AULA",
-    "classId": "9B",
-    "subject": "História"
-  },
-  {
-    "id": "slot_t_21_segunda_9",
-    "teacherId": "t_21",
-    "dayOfWeek": "segunda",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
-    "id": "slot_t_21_terca_9",
-    "teacherId": "t_21",
-    "dayOfWeek": "terca",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_21_quarta_9",
@@ -8255,6 +8110,78 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingName": "ATPC Geral"
   },
   {
+    "id": "slot_t_21_quinta_1",
+    "teacherId": "t_21",
+    "dayOfWeek": "quinta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "7A",
+    "subject": "História"
+  },
+  {
+    "id": "slot_t_21_quinta_2",
+    "teacherId": "t_21",
+    "dayOfWeek": "quinta",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "1EMB",
+    "subject": "Projeto de Vida"
+  },
+  {
+    "id": "slot_t_21_quinta_3",
+    "teacherId": "t_21",
+    "dayOfWeek": "quinta",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "8A",
+    "subject": "História"
+  },
+  {
+    "id": "slot_t_21_quinta_4",
+    "teacherId": "t_21",
+    "dayOfWeek": "quinta",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "7A",
+    "subject": "História"
+  },
+  {
+    "id": "slot_t_21_quinta_5",
+    "teacherId": "t_21",
+    "dayOfWeek": "quinta",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "9A",
+    "subject": "História"
+  },
+  {
+    "id": "slot_t_21_quinta_6",
+    "teacherId": "t_21",
+    "dayOfWeek": "quinta",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "9A",
+    "subject": "História"
+  },
+  {
+    "id": "slot_t_21_quinta_7",
+    "teacherId": "t_21",
+    "dayOfWeek": "quinta",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "6B",
+    "subject": "História"
+  },
+  {
+    "id": "slot_t_21_quinta_8",
+    "teacherId": "t_21",
+    "dayOfWeek": "quinta",
+    "periodId": 8,
+    "type": "AULA",
+    "classId": "8A",
+    "subject": "História"
+  },
+  {
     "id": "slot_t_21_quinta_9",
     "teacherId": "t_21",
     "dayOfWeek": "quinta",
@@ -8263,13 +8190,83 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingName": "Tutoria"
   },
   {
+    "id": "slot_t_21_sexta_1",
+    "teacherId": "t_21",
+    "dayOfWeek": "sexta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "8A",
+    "subject": "História"
+  },
+  {
+    "id": "slot_t_21_sexta_2",
+    "teacherId": "t_21",
+    "dayOfWeek": "sexta",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "7B",
+    "subject": "História"
+  },
+  {
+    "id": "slot_t_21_sexta_3",
+    "teacherId": "t_21",
+    "dayOfWeek": "sexta",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "9B",
+    "subject": "História"
+  },
+  {
+    "id": "slot_t_21_sexta_4",
+    "teacherId": "t_21",
+    "dayOfWeek": "sexta",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "6A",
+    "subject": "História"
+  },
+  {
+    "id": "slot_t_21_sexta_5",
+    "teacherId": "t_21",
+    "dayOfWeek": "sexta",
+    "periodId": 5,
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
+  },
+  {
+    "id": "slot_t_21_sexta_6",
+    "teacherId": "t_21",
+    "dayOfWeek": "sexta",
+    "periodId": 6,
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
+  },
+  {
+    "id": "slot_t_21_sexta_7",
+    "teacherId": "t_21",
+    "dayOfWeek": "sexta",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "1EMA",
+    "subject": "Projeto de Vida"
+  },
+  {
+    "id": "slot_t_21_sexta_8",
+    "teacherId": "t_21",
+    "dayOfWeek": "sexta",
+    "periodId": 8,
+    "type": "AULA",
+    "classId": "7B",
+    "subject": "História"
+  },
+  {
     "id": "slot_t_21_sexta_9",
     "teacherId": "t_21",
     "dayOfWeek": "sexta",
     "periodId": 9,
     "type": "AULA",
-    "classId": "1EMA",
-    "subject": "Projeto de Vida"
+    "classId": "8B",
+    "subject": "História"
   },
   {
     "id": "slot_t_22_segunda_1",
@@ -8277,44 +8274,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "segunda",
     "periodId": 1,
     "type": "AULA",
-    "classId": "9A",
+    "classId": "1EMA",
     "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_22_terca_1",
-    "teacherId": "t_22",
-    "dayOfWeek": "terca",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "9B",
-    "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_22_quarta_1",
-    "teacherId": "t_22",
-    "dayOfWeek": "quarta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "9A",
-    "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_22_quinta_1",
-    "teacherId": "t_22",
-    "dayOfWeek": "quinta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "3EMB",
-    "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_22_sexta_1",
-    "teacherId": "t_22",
-    "dayOfWeek": "sexta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "9A",
-    "subject": "Orientação de Estudo"
   },
   {
     "id": "slot_t_22_segunda_2",
@@ -8322,8 +8283,73 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "segunda",
     "periodId": 2,
     "type": "AULA",
-    "classId": "9A",
+    "classId": "1EMA",
     "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_22_segunda_3",
+    "teacherId": "t_22",
+    "dayOfWeek": "segunda",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "1EMB",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_22_segunda_4",
+    "teacherId": "t_22",
+    "dayOfWeek": "segunda",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "1EMB",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_22_segunda_5",
+    "teacherId": "t_22",
+    "dayOfWeek": "segunda",
+    "periodId": 5,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_22_segunda_6",
+    "teacherId": "t_22",
+    "dayOfWeek": "segunda",
+    "periodId": 6,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_22_segunda_7",
+    "teacherId": "t_22",
+    "dayOfWeek": "segunda",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "3EMA_DS",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_22_segunda_8",
+    "teacherId": "t_22",
+    "dayOfWeek": "segunda",
+    "periodId": 8,
+    "type": "AULA",
+    "classId": "9B",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_22_segunda_9",
+    "teacherId": "t_22",
+    "dayOfWeek": "segunda",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_22_terca_1",
+    "teacherId": "t_22",
+    "dayOfWeek": "terca",
+    "periodId": 1,
+    "type": "LIVRE"
   },
   {
     "id": "slot_t_22_terca_2",
@@ -8336,12 +8362,147 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingEndTime": "09:30"
   },
   {
+    "id": "slot_t_22_terca_3",
+    "teacherId": "t_22",
+    "dayOfWeek": "terca",
+    "periodId": 3,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP",
+    "trainingStartTime": "08:00",
+    "trainingEndTime": "09:30"
+  },
+  {
+    "id": "slot_t_22_terca_4",
+    "teacherId": "t_22",
+    "dayOfWeek": "terca",
+    "periodId": 4,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_22_terca_5",
+    "teacherId": "t_22",
+    "dayOfWeek": "terca",
+    "periodId": 5,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_22_terca_6",
+    "teacherId": "t_22",
+    "dayOfWeek": "terca",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "9A",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_22_terca_7",
+    "teacherId": "t_22",
+    "dayOfWeek": "terca",
+    "periodId": 7,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_22_terca_8",
+    "teacherId": "t_22",
+    "dayOfWeek": "terca",
+    "periodId": 8,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC de Área"
+  },
+  {
+    "id": "slot_t_22_terca_9",
+    "teacherId": "t_22",
+    "dayOfWeek": "terca",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_22_quarta_1",
+    "teacherId": "t_22",
+    "dayOfWeek": "quarta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "9A",
+    "subject": "Matemática"
+  },
+  {
     "id": "slot_t_22_quarta_2",
     "teacherId": "t_22",
     "dayOfWeek": "quarta",
     "periodId": 2,
     "type": "AULA",
     "classId": "9A",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_22_quarta_3",
+    "teacherId": "t_22",
+    "dayOfWeek": "quarta",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "3EMB",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_22_quarta_4",
+    "teacherId": "t_22",
+    "dayOfWeek": "quarta",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "3EMB",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_22_quarta_5",
+    "teacherId": "t_22",
+    "dayOfWeek": "quarta",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "9B",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_22_quarta_6",
+    "teacherId": "t_22",
+    "dayOfWeek": "quarta",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "9B",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_22_quarta_7",
+    "teacherId": "t_22",
+    "dayOfWeek": "quarta",
+    "periodId": 7,
+    "type": "AULA",
+    "classId": "3EMA_DS",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_22_quarta_8",
+    "teacherId": "t_22",
+    "dayOfWeek": "quarta",
+    "periodId": 8,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
+  },
+  {
+    "id": "slot_t_22_quarta_9",
+    "teacherId": "t_22",
+    "dayOfWeek": "quarta",
+    "periodId": 9,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
+  },
+  {
+    "id": "slot_t_22_quinta_1",
+    "teacherId": "t_22",
+    "dayOfWeek": "quinta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "3EMB",
     "subject": "Matemática"
   },
   {
@@ -8354,81 +8515,12 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Matemática"
   },
   {
-    "id": "slot_t_22_sexta_2",
-    "teacherId": "t_22",
-    "dayOfWeek": "sexta",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "9A",
-    "subject": "Orientação de Estudo"
-  },
-  {
-    "id": "slot_t_22_segunda_3",
-    "teacherId": "t_22",
-    "dayOfWeek": "segunda",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "9B",
-    "subject": "Orientação de Estudo"
-  },
-  {
-    "id": "slot_t_22_terca_3",
-    "teacherId": "t_22",
-    "dayOfWeek": "terca",
-    "periodId": 3,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "Multiplica SP",
-    "trainingStartTime": "08:00",
-    "trainingEndTime": "09:30"
-  },
-  {
-    "id": "slot_t_22_quarta_3",
-    "teacherId": "t_22",
-    "dayOfWeek": "quarta",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "3EMB",
-    "subject": "Matemática"
-  },
-  {
     "id": "slot_t_22_quinta_3",
     "teacherId": "t_22",
     "dayOfWeek": "quinta",
     "periodId": 3,
     "type": "AULA",
-    "classId": "3EMA_DS",
-    "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_22_sexta_3",
-    "teacherId": "t_22",
-    "dayOfWeek": "sexta",
-    "periodId": 3,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_22_segunda_4",
-    "teacherId": "t_22",
-    "dayOfWeek": "segunda",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "9B",
-    "subject": "Orientação de Estudo"
-  },
-  {
-    "id": "slot_t_22_terca_4",
-    "teacherId": "t_22",
-    "dayOfWeek": "terca",
-    "periodId": 4,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_22_quarta_4",
-    "teacherId": "t_22",
-    "dayOfWeek": "quarta",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "3EMB",
+    "classId": "1EMA",
     "subject": "Matemática"
   },
   {
@@ -8436,38 +8528,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "teacherId": "t_22",
     "dayOfWeek": "quinta",
     "periodId": 4,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_22_sexta_4",
-    "teacherId": "t_22",
-    "dayOfWeek": "sexta",
-    "periodId": 4,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_22_segunda_5",
-    "teacherId": "t_22",
-    "dayOfWeek": "segunda",
-    "periodId": 5,
     "type": "AULA",
-    "classId": "3EMB",
-    "subject": "Orientação de Estudo"
-  },
-  {
-    "id": "slot_t_22_terca_5",
-    "teacherId": "t_22",
-    "dayOfWeek": "terca",
-    "periodId": 5,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_22_quarta_5",
-    "teacherId": "t_22",
-    "dayOfWeek": "quarta",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "9B",
+    "classId": "1EMA",
     "subject": "Matemática"
   },
   {
@@ -8476,40 +8538,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "quinta",
     "periodId": 5,
     "type": "AULA",
-    "classId": "9A",
-    "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_22_sexta_5",
-    "teacherId": "t_22",
-    "dayOfWeek": "sexta",
-    "periodId": 5,
-    "type": "ELETIVA",
-    "trainingName": "Eletiva"
-  },
-  {
-    "id": "slot_t_22_segunda_6",
-    "teacherId": "t_22",
-    "dayOfWeek": "segunda",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "3EMB",
-    "subject": "Orientação de Estudo"
-  },
-  {
-    "id": "slot_t_22_terca_6",
-    "teacherId": "t_22",
-    "dayOfWeek": "terca",
-    "periodId": 6,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_22_quarta_6",
-    "teacherId": "t_22",
-    "dayOfWeek": "quarta",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "9B",
+    "classId": "3EMA_DS",
     "subject": "Matemática"
   },
   {
@@ -8522,39 +8551,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Matemática"
   },
   {
-    "id": "slot_t_22_sexta_6",
-    "teacherId": "t_22",
-    "dayOfWeek": "sexta",
-    "periodId": 6,
-    "type": "ELETIVA",
-    "trainingName": "Eletiva"
-  },
-  {
-    "id": "slot_t_22_segunda_7",
-    "teacherId": "t_22",
-    "dayOfWeek": "segunda",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "3EMA_DS",
-    "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_22_terca_7",
-    "teacherId": "t_22",
-    "dayOfWeek": "terca",
-    "periodId": 7,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_22_quarta_7",
-    "teacherId": "t_22",
-    "dayOfWeek": "quarta",
-    "periodId": 7,
-    "type": "AULA",
-    "classId": "3EMB",
-    "subject": "Orientação de Estudo"
-  },
-  {
     "id": "slot_t_22_quinta_7",
     "teacherId": "t_22",
     "dayOfWeek": "quinta",
@@ -8562,38 +8558,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "type": "AULA",
     "classId": "9B",
     "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_22_sexta_7",
-    "teacherId": "t_22",
-    "dayOfWeek": "sexta",
-    "periodId": 7,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_22_segunda_8",
-    "teacherId": "t_22",
-    "dayOfWeek": "segunda",
-    "periodId": 8,
-    "type": "AULA",
-    "classId": "3EMA_DS",
-    "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_22_terca_8",
-    "teacherId": "t_22",
-    "dayOfWeek": "terca",
-    "periodId": 8,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC de Área"
-  },
-  {
-    "id": "slot_t_22_quarta_8",
-    "teacherId": "t_22",
-    "dayOfWeek": "quarta",
-    "periodId": 8,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC Geral"
   },
   {
     "id": "slot_t_22_quinta_8",
@@ -8605,43 +8569,78 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Matemática"
   },
   {
-    "id": "slot_t_22_sexta_8",
-    "teacherId": "t_22",
-    "dayOfWeek": "sexta",
-    "periodId": 8,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_22_segunda_9",
-    "teacherId": "t_22",
-    "dayOfWeek": "segunda",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
-    "id": "slot_t_22_terca_9",
-    "teacherId": "t_22",
-    "dayOfWeek": "terca",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
-    "id": "slot_t_22_quarta_9",
-    "teacherId": "t_22",
-    "dayOfWeek": "quarta",
-    "periodId": 9,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC Geral"
-  },
-  {
     "id": "slot_t_22_quinta_9",
     "teacherId": "t_22",
     "dayOfWeek": "quinta",
     "periodId": 9,
     "type": "ATIVIDADE",
     "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_22_sexta_1",
+    "teacherId": "t_22",
+    "dayOfWeek": "sexta",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "9A",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_22_sexta_2",
+    "teacherId": "t_22",
+    "dayOfWeek": "sexta",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "9A",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_22_sexta_3",
+    "teacherId": "t_22",
+    "dayOfWeek": "sexta",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "1EMB",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_22_sexta_4",
+    "teacherId": "t_22",
+    "dayOfWeek": "sexta",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "1EMB",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_22_sexta_5",
+    "teacherId": "t_22",
+    "dayOfWeek": "sexta",
+    "periodId": 5,
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
+  },
+  {
+    "id": "slot_t_22_sexta_6",
+    "teacherId": "t_22",
+    "dayOfWeek": "sexta",
+    "periodId": 6,
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
+  },
+  {
+    "id": "slot_t_22_sexta_7",
+    "teacherId": "t_22",
+    "dayOfWeek": "sexta",
+    "periodId": 7,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_22_sexta_8",
+    "teacherId": "t_22",
+    "dayOfWeek": "sexta",
+    "periodId": 8,
+    "type": "LIVRE"
   },
   {
     "id": "slot_t_22_sexta_9",
@@ -8660,38 +8659,6 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Matemática"
   },
   {
-    "id": "slot_t_23_terca_1",
-    "teacherId": "t_23",
-    "dayOfWeek": "terca",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "8A",
-    "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_23_quarta_1",
-    "teacherId": "t_23",
-    "dayOfWeek": "quarta",
-    "periodId": 1,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_23_quinta_1",
-    "teacherId": "t_23",
-    "dayOfWeek": "quinta",
-    "periodId": 1,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_23_sexta_1",
-    "teacherId": "t_23",
-    "dayOfWeek": "sexta",
-    "periodId": 1,
-    "type": "AULA",
-    "classId": "6A",
-    "subject": "Matemática"
-  },
-  {
     "id": "slot_t_23_segunda_2",
     "teacherId": "t_23",
     "dayOfWeek": "segunda",
@@ -8701,80 +8668,12 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Matemática"
   },
   {
-    "id": "slot_t_23_terca_2",
-    "teacherId": "t_23",
-    "dayOfWeek": "terca",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "6A",
-    "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_23_quarta_2",
-    "teacherId": "t_23",
-    "dayOfWeek": "quarta",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "6B",
-    "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_23_quinta_2",
-    "teacherId": "t_23",
-    "dayOfWeek": "quinta",
-    "periodId": 2,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_23_sexta_2",
-    "teacherId": "t_23",
-    "dayOfWeek": "sexta",
-    "periodId": 2,
-    "type": "AULA",
-    "classId": "6A",
-    "subject": "Matemática"
-  },
-  {
     "id": "slot_t_23_segunda_3",
     "teacherId": "t_23",
     "dayOfWeek": "segunda",
     "periodId": 3,
     "type": "AULA",
-    "classId": "8B",
-    "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_23_terca_3",
-    "teacherId": "t_23",
-    "dayOfWeek": "terca",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "6B",
-    "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_23_quarta_3",
-    "teacherId": "t_23",
-    "dayOfWeek": "quarta",
-    "periodId": 3,
-    "type": "AULA",
     "classId": "6A",
-    "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_23_quinta_3",
-    "teacherId": "t_23",
-    "dayOfWeek": "quinta",
-    "periodId": 3,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_23_sexta_3",
-    "teacherId": "t_23",
-    "dayOfWeek": "sexta",
-    "periodId": 3,
-    "type": "AULA",
-    "classId": "8A",
     "subject": "Matemática"
   },
   {
@@ -8783,40 +8682,8 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "segunda",
     "periodId": 4,
     "type": "AULA",
-    "classId": "8B",
+    "classId": "6A",
     "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_23_terca_4",
-    "teacherId": "t_23",
-    "dayOfWeek": "terca",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "6B",
-    "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_23_quarta_4",
-    "teacherId": "t_23",
-    "dayOfWeek": "quarta",
-    "periodId": 4,
-    "type": "AULA",
-    "classId": "8A",
-    "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_23_quinta_4",
-    "teacherId": "t_23",
-    "dayOfWeek": "quinta",
-    "periodId": 4,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_23_sexta_4",
-    "teacherId": "t_23",
-    "dayOfWeek": "sexta",
-    "periodId": 4,
-    "type": "LIVRE"
   },
   {
     "id": "slot_t_23_segunda_5",
@@ -8828,79 +8695,11 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Matemática"
   },
   {
-    "id": "slot_t_23_terca_5",
-    "teacherId": "t_23",
-    "dayOfWeek": "terca",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "7B",
-    "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_23_quarta_5",
-    "teacherId": "t_23",
-    "dayOfWeek": "quarta",
-    "periodId": 5,
-    "type": "AULA",
-    "classId": "8A",
-    "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_23_quinta_5",
-    "teacherId": "t_23",
-    "dayOfWeek": "quinta",
-    "periodId": 5,
-    "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_23_sexta_5",
-    "teacherId": "t_23",
-    "dayOfWeek": "sexta",
-    "periodId": 5,
-    "type": "ELETIVA",
-    "trainingName": "Eletiva"
-  },
-  {
     "id": "slot_t_23_segunda_6",
     "teacherId": "t_23",
     "dayOfWeek": "segunda",
     "periodId": 6,
-    "type": "AULA",
-    "classId": "7B",
-    "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_23_terca_6",
-    "teacherId": "t_23",
-    "dayOfWeek": "terca",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "7B",
-    "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_23_quarta_6",
-    "teacherId": "t_23",
-    "dayOfWeek": "quarta",
-    "periodId": 6,
-    "type": "AULA",
-    "classId": "8B",
-    "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_23_quinta_6",
-    "teacherId": "t_23",
-    "dayOfWeek": "quinta",
-    "periodId": 6,
     "type": "LIVRE"
-  },
-  {
-    "id": "slot_t_23_sexta_6",
-    "teacherId": "t_23",
-    "dayOfWeek": "sexta",
-    "periodId": 6,
-    "type": "ELETIVA",
-    "trainingName": "Eletiva"
   },
   {
     "id": "slot_t_23_segunda_7",
@@ -8913,12 +8712,146 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "trainingEndTime": "15:00"
   },
   {
+    "id": "slot_t_23_segunda_8",
+    "teacherId": "t_23",
+    "dayOfWeek": "segunda",
+    "periodId": 8,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "Multiplica SP",
+    "trainingStartTime": "13:30",
+    "trainingEndTime": "15:00"
+  },
+  {
+    "id": "slot_t_23_segunda_9",
+    "teacherId": "t_23",
+    "dayOfWeek": "segunda",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_23_terca_1",
+    "teacherId": "t_23",
+    "dayOfWeek": "terca",
+    "periodId": 1,
+    "type": "AULA",
+    "classId": "6B",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_23_terca_2",
+    "teacherId": "t_23",
+    "dayOfWeek": "terca",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "8A",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_23_terca_3",
+    "teacherId": "t_23",
+    "dayOfWeek": "terca",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "8B",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_23_terca_4",
+    "teacherId": "t_23",
+    "dayOfWeek": "terca",
+    "periodId": 4,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_23_terca_5",
+    "teacherId": "t_23",
+    "dayOfWeek": "terca",
+    "periodId": 5,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_23_terca_6",
+    "teacherId": "t_23",
+    "dayOfWeek": "terca",
+    "periodId": 6,
+    "type": "LIVRE"
+  },
+  {
     "id": "slot_t_23_terca_7",
     "teacherId": "t_23",
     "dayOfWeek": "terca",
     "periodId": 7,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_23_terca_8",
+    "teacherId": "t_23",
+    "dayOfWeek": "terca",
+    "periodId": 8,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC de Área"
+  },
+  {
+    "id": "slot_t_23_terca_9",
+    "teacherId": "t_23",
+    "dayOfWeek": "terca",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_23_quarta_1",
+    "teacherId": "t_23",
+    "dayOfWeek": "quarta",
+    "periodId": 1,
     "type": "AULA",
     "classId": "8B",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_23_quarta_2",
+    "teacherId": "t_23",
+    "dayOfWeek": "quarta",
+    "periodId": 2,
+    "type": "AULA",
+    "classId": "8B",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_23_quarta_3",
+    "teacherId": "t_23",
+    "dayOfWeek": "quarta",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "6A",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_23_quarta_4",
+    "teacherId": "t_23",
+    "dayOfWeek": "quarta",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "6A",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_23_quarta_5",
+    "teacherId": "t_23",
+    "dayOfWeek": "quarta",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "8A",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_23_quarta_6",
+    "teacherId": "t_23",
+    "dayOfWeek": "quarta",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "7B",
     "subject": "Matemática"
   },
   {
@@ -8927,15 +8860,148 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "quarta",
     "periodId": 7,
     "type": "AULA",
+    "classId": "6B",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_23_quarta_8",
+    "teacherId": "t_23",
+    "dayOfWeek": "quarta",
+    "periodId": 8,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
+  },
+  {
+    "id": "slot_t_23_quarta_9",
+    "teacherId": "t_23",
+    "dayOfWeek": "quarta",
+    "periodId": 9,
+    "type": "CURSO_FORMACAO",
+    "trainingName": "ATPC Geral"
+  },
+  {
+    "id": "slot_t_23_quinta_1",
+    "teacherId": "t_23",
+    "dayOfWeek": "quinta",
+    "periodId": 1,
+    "type": "AULA",
     "classId": "1EMB",
-    "subject": "Orientação de Estudo"
+    "subject": "Orientação de Matemática"
+  },
+  {
+    "id": "slot_t_23_quinta_2",
+    "teacherId": "t_23",
+    "dayOfWeek": "quinta",
+    "periodId": 2,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_23_quinta_3",
+    "teacherId": "t_23",
+    "dayOfWeek": "quinta",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "6A",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_23_quinta_4",
+    "teacherId": "t_23",
+    "dayOfWeek": "quinta",
+    "periodId": 4,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_23_quinta_5",
+    "teacherId": "t_23",
+    "dayOfWeek": "quinta",
+    "periodId": 5,
+    "type": "AULA",
+    "classId": "8B",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_23_quinta_6",
+    "teacherId": "t_23",
+    "dayOfWeek": "quinta",
+    "periodId": 6,
+    "type": "AULA",
+    "classId": "8A",
+    "subject": "Matemática"
   },
   {
     "id": "slot_t_23_quinta_7",
     "teacherId": "t_23",
     "dayOfWeek": "quinta",
     "periodId": 7,
+    "type": "AULA",
+    "classId": "7B",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_23_quinta_8",
+    "teacherId": "t_23",
+    "dayOfWeek": "quinta",
+    "periodId": 8,
+    "type": "AULA",
+    "classId": "7B",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_23_quinta_9",
+    "teacherId": "t_23",
+    "dayOfWeek": "quinta",
+    "periodId": 9,
+    "type": "ATIVIDADE",
+    "trainingName": "Tutoria"
+  },
+  {
+    "id": "slot_t_23_sexta_1",
+    "teacherId": "t_23",
+    "dayOfWeek": "sexta",
+    "periodId": 1,
     "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_23_sexta_2",
+    "teacherId": "t_23",
+    "dayOfWeek": "sexta",
+    "periodId": 2,
+    "type": "LIVRE"
+  },
+  {
+    "id": "slot_t_23_sexta_3",
+    "teacherId": "t_23",
+    "dayOfWeek": "sexta",
+    "periodId": 3,
+    "type": "AULA",
+    "classId": "8A",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_23_sexta_4",
+    "teacherId": "t_23",
+    "dayOfWeek": "sexta",
+    "periodId": 4,
+    "type": "AULA",
+    "classId": "8A",
+    "subject": "Matemática"
+  },
+  {
+    "id": "slot_t_23_sexta_5",
+    "teacherId": "t_23",
+    "dayOfWeek": "sexta",
+    "periodId": 5,
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
+  },
+  {
+    "id": "slot_t_23_sexta_6",
+    "teacherId": "t_23",
+    "dayOfWeek": "sexta",
+    "periodId": 6,
+    "type": "ELETIVA",
+    "trainingName": "Eletiva"
   },
   {
     "id": "slot_t_23_sexta_7",
@@ -8947,80 +9013,13 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "subject": "Matemática"
   },
   {
-    "id": "slot_t_23_segunda_8",
-    "teacherId": "t_23",
-    "dayOfWeek": "segunda",
-    "periodId": 8,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "Multiplica SP",
-    "trainingStartTime": "13:30",
-    "trainingEndTime": "15:00"
-  },
-  {
-    "id": "slot_t_23_terca_8",
-    "teacherId": "t_23",
-    "dayOfWeek": "terca",
-    "periodId": 8,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC de Área"
-  },
-  {
-    "id": "slot_t_23_quarta_8",
-    "teacherId": "t_23",
-    "dayOfWeek": "quarta",
-    "periodId": 8,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC Geral"
-  },
-  {
-    "id": "slot_t_23_quinta_8",
-    "teacherId": "t_23",
-    "dayOfWeek": "quinta",
-    "periodId": 8,
-    "type": "AULA",
-    "classId": "8A",
-    "subject": "Matemática"
-  },
-  {
     "id": "slot_t_23_sexta_8",
     "teacherId": "t_23",
     "dayOfWeek": "sexta",
     "periodId": 8,
     "type": "AULA",
-    "classId": "7B",
+    "classId": "6B",
     "subject": "Matemática"
-  },
-  {
-    "id": "slot_t_23_segunda_9",
-    "teacherId": "t_23",
-    "dayOfWeek": "segunda",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
-    "id": "slot_t_23_terca_9",
-    "teacherId": "t_23",
-    "dayOfWeek": "terca",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
-  },
-  {
-    "id": "slot_t_23_quarta_9",
-    "teacherId": "t_23",
-    "dayOfWeek": "quarta",
-    "periodId": 9,
-    "type": "CURSO_FORMACAO",
-    "trainingName": "ATPC Geral"
-  },
-  {
-    "id": "slot_t_23_quinta_9",
-    "teacherId": "t_23",
-    "dayOfWeek": "quinta",
-    "periodId": 9,
-    "type": "ATIVIDADE",
-    "trainingName": "Tutoria"
   },
   {
     "id": "slot_t_23_sexta_9",
@@ -9028,7 +9027,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "dayOfWeek": "sexta",
     "periodId": 9,
     "type": "AULA",
-    "classId": "6B",
+    "classId": "7B",
     "subject": "Matemática"
   },
   {
