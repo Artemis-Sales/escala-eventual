@@ -167,11 +167,12 @@ Página de spec publicada: https://claude.ai/artifact/DQDNtQoKdx5p13StPebGWM
 
 **Nomes cortados do curso técnico:** a planilha corta os nomes ("Modelagem e
 Desenvolviment…"). A escola definiu a forma curta em 06/10/2026: **Lógica e Linguagens,
-Modelagem, Processos, Redes de Computadores, Versionamento de Código** — no dicionário de
+Modelagem, Processos, Redes de Computadores, Versionamento de Código e Carreira e
+Competências** — no dicionário de
 `subjects.ts` (espelhado no gerador) e numa migração v2 do `localStorage` que **só renomeia**
 (rodar a v1 de novo recalcularia as áreas e apagaria edições manuais). "Lógica e Linguagens"
 contém "LINGUA" e cairia em Linguagens: a regra de área ganhou `LOGICA E LINGUAGENS`.
-**Ainda cortado, aguardando a escola:** "Carreira e Competências para …".
+Não sobrou nenhum nome cortado nos dados.
 
 **Cor da aula = área da disciplina**, não do professor (`subjectAreaKey`): Matemática dada por
 quem é de Educação Financeira continua verde.

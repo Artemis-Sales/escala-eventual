@@ -165,11 +165,14 @@ describe('nomes do curso técnico cortados pela planilha', () => {
     expect(canonicalSubjectName('PROCESSOS DE DESENVOLVIMENT…')).toBe('Processos');
     expect(canonicalSubjectName('Redes de Computadores e Seg…')).toBe('Redes de Computadores');
     expect(canonicalSubjectName('VERSIONAMENTO DE CODIGO E SISTEMAS …')).toBe('Versionamento de Código');
+    expect(canonicalSubjectName('CARREIRA E COMPETENCIAS PARA …')).toBe('Carreira e Competências');
   });
 
   it('a forma curta é estável ao passar de novo pela limpeza', () => {
     ['Lógica e Linguagens', 'Modelagem', 'Processos', 'Redes de Computadores',
-      'Versionamento de Código'].forEach((s) => expect(canonicalSubjectName(s)).toBe(s));
+      'Versionamento de Código', 'Carreira e Competências'].forEach((s) =>
+      expect(canonicalSubjectName(s)).toBe(s)
+    );
   });
 });
 

@@ -60,7 +60,8 @@ const CANONICAL_SUBJECTS: Record<string, string> = {
   'SOCIOLOGIA': 'Sociologia',
   // Parte Diversificada e curso tecnico
   // A planilha corta os nomes do curso tecnico ("…"); a escola definiu a forma curta.
-  'CARREIRA E COMPETENCIAS PARA …': 'Carreira e Competências para …',
+  'CARREIRA E COMPETENCIAS PARA …': 'Carreira e Competências',
+  'CARREIRA E COMPETENCIAS': 'Carreira e Competências',
   'EDUCACAO FINANCEIRA': 'Educação Financeira',
   'EMPREENDEDORISMO': 'Empreendedorismo',
   'INTELIGENCIA ARTIFICIAL': 'Inteligência Artificial',

@@ -90,7 +90,7 @@ export const INITIAL_TEACHERS: Teacher[] = [
     "knowledgeArea": "Parte Diversificada",
     "secondarySubjects": [
       "Modelagem",
-      "Carreira e Competências para …",
+      "Carreira e Competências",
       "Inteligência Artificial",
       "Processos",
       "Projeto Multidisciplinar",
@@ -1672,7 +1672,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "Carreira e Competências para …"
+    "subject": "Carreira e Competências"
   },
   {
     "id": "slot_t_4_quarta_2",
@@ -1752,7 +1752,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "Carreira e Competências para …"
+    "subject": "Carreira e Competências"
   },
   {
     "id": "slot_t_4_quinta_3",
@@ -1761,7 +1761,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "Carreira e Competências para …"
+    "subject": "Carreira e Competências"
   },
   {
     "id": "slot_t_4_quinta_4",
