@@ -251,7 +251,7 @@ input, select, textarea {
 }
 
 .btn-text-danger {
-  color: var(--color-danger);
+  color: #C81E1E;
   font-weight: 600;
   background: rgba(239, 68, 68, 0.08);
 }
@@ -719,7 +719,8 @@ input, select, textarea {
 }
 
 .text-primary { color: var(--color-brand); }
-.text-success { color: var(--color-success); }
+/* Verde mais escuro que --color-success, que e calibrado para borda e nao para texto. */
+.text-success { color: #047857; }
 .text-warning { color: var(--color-warning); }
 .text-danger { color: var(--color-danger); }
 .text-gestao { color: #4338CA; }
@@ -730,9 +731,11 @@ input, select, textarea {
   flex-wrap: wrap;
 }
 
+/* O verde e o reconhecimento da marca: escurece-lo descaracteriza o botao.
+   Por isso aqui o texto e que escurece, e nao o fundo. */
 .btn-action-whatsapp {
   background: #25D366;
-  color: #FFFFFF;
+  color: #111B21;
   font-weight: 700;
   font-size: 0.82rem;
   padding: 7px 12px;
@@ -759,7 +762,7 @@ input, select, textarea {
 .btn-action-print:hover { background: #E2E8F0; }
 
 .btn-action-excel {
-  background: #059669;
+  background: #047857;
   color: #FFFFFF;
   font-weight: 700;
   font-size: 0.82rem;
@@ -769,7 +772,7 @@ input, select, textarea {
   align-items: center;
   gap: 6px;
 }
-.btn-action-excel:hover { background: #047857; }
+.btn-action-excel:hover { background: #036B4C; }
 
 .btn-action-save {
   background: var(--color-brand);
@@ -977,7 +980,7 @@ input, select, textarea {
   border-radius: var(--radius-full);
 }
 
-.match-subject { background: #ECFDF5; color: #059669; border: 1px solid #A7F3D0; }
+.match-subject { background: #ECFDF5; color: #047857; border: 1px solid #A7F3D0; }
 .match-area { background: #EFF6FF; color: #2563EB; border: 1px solid #BFDBFE; }
 .match-manual { background: #F5F3FF; color: #7C3AED; border: 1px solid #DDD6FE; }
 .match-disponivel { background: #F1F5F9; color: #475569; border: 1px solid #CBD5E1; }
@@ -1727,6 +1730,11 @@ input, select, textarea {
 .profile-stats .text-primary,
 .class-banner-stats .text-primary {
   color: #60A5FA;
+}
+
+.profile-stats .text-success,
+.class-banner-stats .text-success {
+  color: #34D399;
 }
 
 .profile-stats {
