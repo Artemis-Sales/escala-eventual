@@ -1,71 +1,152 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import '@fontsource-variable/public-sans/wght.css';
 
+/* Quadro — tinta sobre papel.
+   Um único :root para o app inteiro. Cor só onde há significado: as cinco áreas de
+   conhecimento e os três estados de cobertura de uma aula. Todo o resto é tinta. */
 :root {
-  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  
-  /* Cores Principais */
-  --bg-app: #F8FAFC;
-  --bg-card: #FFFFFF;
-  --bg-card-subtle: #F1F5F9;
-  
-  --text-primary: #0F172A;
-  --text-secondary: #475569;
-  --text-muted: #636A74;
-  /* Texto secundario sobre as superficies escuras (header, banners). O cinza acima e
-     calibrado para papel e fica ilegivel sobre fundo escuro. */
-  --text-muted-dark: #A8B2C1;
+  /* Papel */
+  --papel: #FBFAF7;
+  --papel-fundo: #F2F0EA;
+  --papel-fundo-2: #E9E6DE;
+  --regua: #DFDBD1;
+  --regua-forte: #C4BEB1;
+  --campo: #FFFFFF;
 
-  --color-brand: #2563EB;
-  --color-brand-hover: #1D4ED8;
-  --color-brand-light: #EFF6FF;
+  /* Tinta — todos os degraus passam em AA sobre --papel e --papel-fundo */
+  --tinta-900: #171A1F;
+  --tinta-700: #3A4049;
+  --tinta-500: #5C636E;
+  --tinta-400: #636A74;
 
-  --color-success: #10B981;
-  --color-success-light: #ECFDF5;
-  --color-warning: #F59E0B;
-  --color-warning-light: #FFFBEB;
-  --color-danger: #EF4444;
-  --color-danger-light: #FEF2F2;
+  /* Verde-quadro: ação primária e seleção, nada mais */
+  --acento: #1C5C4F;
+  --acento-hover: #154A3F;
+  --acento-fraco: #E4EEE9;
 
-  --color-purple: #8B5CF6;
-  --color-purple-light: #F5F3FF;
-  
-  --border-color: #E2E8F0;
-  --border-focus: #3B82F6;
+  /* Áreas de conhecimento (modelo da escola) */
+  --area-linguagens: #9A3412;
+  --area-natureza: #166534;
+  --area-humanas: #155E75;
+  --area-diversificada: #6B21A8;
+  --area-gestao: #44403C;
 
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
-  --radius-full: 9999px;
+  /* Estado da aula */
+  --coberta: #15603A;
+  --coberta-fundo: #E3EFE7;
+  --ultimo-recurso: #8A5A00;
+  --ultimo-recurso-fundo: #F6ECD4;
+  --descoberta: #A11A1A;
+  --descoberta-fundo: #F8E4E1;
 
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.07);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.08);
-  --shadow-glow: 0 0 20px rgba(37, 99, 235, 0.15);
+  /* Tipo — seis degraus, piso de 12px */
+  --fonte: 'Public Sans Variable', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --texto-etiqueta: 0.75rem;   /* 12 */
+  --texto-apoio: 0.8125rem;    /* 13 */
+  --texto-corpo: 0.9375rem;    /* 15 */
+  --texto-destaque: 1.125rem;  /* 18 */
+  --texto-secao: 1.5rem;       /* 24 */
+  --texto-titulo: 2rem;        /* 32 */
+
+  /* Espaço — base 4 */
+  --e-1: 4px;
+  --e-2: 8px;
+  --e-3: 12px;
+  --e-4: 16px;
+  --e-5: 24px;
+  --e-6: 32px;
+  --e-7: 48px;
+  --e-8: 64px;
+
+  --raio: 4px;
+  --raio-painel: 6px;
+  --sombra-flutuante: 0 12px 32px -8px rgb(23 26 31 / 0.22), 0 2px 6px rgb(23 26 31 / 0.08);
+  --sombra-controle: 0 1px 2px rgb(23 26 31 / 0.08);
+
+  --altura-controle: 40px;
+  --ease-saida: cubic-bezier(0.16, 1, 0.3, 1);
+
+  color-scheme: light;
+  accent-color: var(--acento);
+  caret-color: var(--acento);
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+  scrollbar-color: var(--regua-forte) transparent;
+}
+
 body {
-  font-family: var(--font-main);
-  background-color: var(--bg-app);
-  color: var(--text-primary);
+  font-family: var(--fonte);
+  font-size: var(--texto-corpo);
   line-height: 1.5;
+  color: var(--tinta-700);
+  background: var(--papel-fundo);
+  font-variant-numeric: tabular-nums;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
 }
 
-button {
-  font-family: inherit;
-  cursor: pointer;
-  border: none;
-  background: none;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+::selection {
+  background: var(--acento-fraco);
+  color: var(--tinta-900);
 }
 
-input, select, textarea {
-  font-family: inherit;
+h1,
+h2,
+h3,
+h4 {
+  color: var(--tinta-900);
+  font-weight: 600;
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: 0;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+a {
+  color: var(--acento);
+  text-underline-offset: 3px;
+}
+
+/* Foco de teclado: visível em tudo, invisível no clique. */
+:focus-visible {
+  outline: 2px solid var(--acento);
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }

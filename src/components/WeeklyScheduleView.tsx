@@ -1,82 +1,79 @@
-import React, { useState } from 'react';
-import {
-  BookOpen,
-  GraduationCap,
-  ShieldCheck,
-  Edit3,
-  Check,
-  X,
-  Users,
-  Calendar,
-  School,
-  Search,
-  Filter,
-  FileDown,
-} from 'lucide-react';
+import React, { useMemo, useState } from 'react';
+import { FileDown, Search } from 'lucide-react';
 import * as XLSX from 'xlsx';
 import { useSchool } from '../context/SchoolContext';
 import { DAYS_OF_WEEK } from '../data/mockData';
 import { MultiplicaModal } from './MultiplicaModal';
-import type { DayOfWeek, ScheduleSlot, SlotType, ClassGroup } from '../types';
+import { Modal } from './Modal';
+import type { DayOfWeek, ScheduleSlot, SlotType, ClassGroup, Teacher } from '../types';
 import { electiveLessonsFor, weeklyLessonsFor } from '../utils/workload';
+import { areaKey, classLevel, displayName, shortClassName, startTime } from '../utils/display';
+
+type ViewMode = 'geral_dia' | 'professor' | 'turma';
+
+/** "Leonelia da Conceicao de Pontes Faria" → "Leonelia Faria": cabe na célula da grade. */
+function shortName(raw: string): string {
+  const parts = displayName(raw).split(' ');
+  return parts.length > 1 ? `${parts[0]} ${parts[parts.length - 1]}` : parts[0];
+}
 
 export const WeeklyScheduleView: React.FC = () => {
   const { teachers, classes, periods, scheduleSlots, updateSlot } = useSchool();
 
-  // Mode: 'geral_dia' | 'professor' | 'turma'
-  const [viewMode, setViewMode] = useState<'geral_dia' | 'professor' | 'turma'>('geral_dia');
+  const sortedTeachers = useMemo(
+    () =>
+      [...teachers].sort((a, b) =>
+        displayName(a.name).localeCompare(displayName(b.name), 'pt-BR')
+      ),
+    [teachers]
+  );
 
-  // Filtros
+  const [viewMode, setViewMode] = useState<ViewMode>('geral_dia');
   const [selectedDay, setSelectedDay] = useState<DayOfWeek>('segunda');
-  const [selectedTeacherId, setSelectedTeacherId] = useState<string>(teachers[0]?.id || 't_1');
+  const [selectedTeacherId, setSelectedTeacherId] = useState<string>(sortedTeachers[0]?.id || 't_1');
   const [selectedClassId, setSelectedClassId] = useState<string>(classes[0]?.id || '6A');
   const [segmentFilter, setSegmentFilter] = useState<'todos' | 'fundamental' | 'medio'>('todos');
   const [searchQuery, setSearchQuery] = useState('');
 
-  // Modais
   const [editingSlot, setEditingSlot] = useState<ScheduleSlot | null>(null);
   const [isMultiplicaOpen, setIsMultiplicaOpen] = useState(false);
 
-  const selectedTeacher = teachers.find((t) => t.id === selectedTeacherId);
+  const teacherById = useMemo(() => new Map(teachers.map((t) => [t.id, t])), [teachers]);
+  const selectedTeacher = teacherById.get(selectedTeacherId);
   const selectedClass = classes.find((c) => c.id === selectedClassId || c.name === selectedClassId);
+  const editingTeacher = editingSlot ? teacherById.get(editingSlot.teacherId) : undefined;
 
-  // Filtrar turmas pelo segmento
   const filteredClasses = classes.filter((c) => {
     if (segmentFilter === 'fundamental') return c.segment === 'Ensino Fundamental II';
     if (segmentFilter === 'medio') return c.segment === 'Ensino Médio';
     return true;
   });
 
+  const classSlot = (cls: ClassGroup, day: DayOfWeek, periodId: number) =>
+    scheduleSlots.find(
+      (s) =>
+        s.dayOfWeek === day &&
+        s.periodId === periodId &&
+        (s.classId === cls.id || s.classId === cls.name) &&
+        s.type === 'AULA'
+    );
+
   const handleSaveSlot = (updated: ScheduleSlot) => {
     updateSlot(updated);
     setEditingSlot(null);
   };
 
-  // Exportar Grade Geral do Dia para Excel
   const handleExportGeneralExcel = () => {
-    const rows: Record<string, string>[] = [];
-
-    filteredClasses.forEach((cls) => {
+    const rows = filteredClasses.map((cls) => {
       const rowObj: Record<string, string> = { 'Turma / Ano': cls.name };
-
       periods.forEach((p) => {
-        const slot = scheduleSlots.find(
-          (s) =>
-            s.dayOfWeek === selectedDay &&
-            s.periodId === p.id &&
-            (s.classId === cls.id || s.classId === cls.name) &&
-            s.type === 'AULA'
-        );
-
-        if (slot) {
-          const teacher = teachers.find((t) => t.id === slot.teacherId);
-          rowObj[`${p.label} (${p.time})`] = `${slot.subject || teacher?.mainSubject || 'Aula'} - ${teacher?.name || 'Prof'}`;
-        } else {
-          rowObj[`${p.label} (${p.time})`] = '- - -';
-        }
+        const slot = classSlot(cls, selectedDay, p.id);
+        const teacher = slot ? teacherById.get(slot.teacherId) : undefined;
+        rowObj[`${p.label} (${p.time})`] = slot
+          ? `${slot.subject || teacher?.mainSubject || 'Aula'} - ${teacher?.name || 'Prof'}`
+          : '';
       });
-
-      rows.push(rowObj);
+      return rowObj;
     });
 
     const worksheet = XLSX.utils.json_to_sheet(rows);
@@ -85,167 +82,141 @@ export const WeeklyScheduleView: React.FC = () => {
     XLSX.writeFile(workbook, `Grade_Geral_${selectedDay.toUpperCase()}_Todas_Turmas.xlsx`);
   };
 
+  const q = searchQuery.trim().toLowerCase();
+
   return (
-    <div className="weekly-schedule-view">
-      {/* Barra Superior com Alternador de Modos e Ações Rápidas */}
-      <div className="schedule-header-controls">
-        <div className="schedule-mode-toggle">
-          <button
-            className={`btn-mode-tab ${viewMode === 'geral_dia' ? 'active' : ''}`}
-            onClick={() => setViewMode('geral_dia')}
-          >
-            <School size={16} />
-            <span>Grade Geral do Dia (Todas as Turmas)</span>
-          </button>
-
-          <button
-            className={`btn-mode-tab ${viewMode === 'professor' ? 'active' : ''}`}
-            onClick={() => setViewMode('professor')}
-          >
-            <Users size={16} />
-            <span>Grade por Professor</span>
-          </button>
-
-          <button
-            className={`btn-mode-tab ${viewMode === 'turma' ? 'active' : ''}`}
-            onClick={() => setViewMode('turma')}
-          >
-            <BookOpen size={16} />
-            <span>Grade por Turma</span>
-          </button>
+    <div className="pagina">
+      <div className="barra">
+        <div className="segmentado" role="tablist" aria-label="Visão da grade">
+          {(
+            [
+              ['geral_dia', 'Por dia'],
+              ['professor', 'Por professor'],
+              ['turma', 'Por turma'],
+            ] as const
+          ).map(([mode, label]) => (
+            <button
+              key={mode}
+              type="button"
+              role="tab"
+              aria-selected={viewMode === mode}
+              className="segmento"
+              onClick={() => setViewMode(mode)}
+            >
+              {label}
+            </button>
+          ))}
         </div>
 
-        <div className="schedule-header-actions-right">
-          <button
-            onClick={() => setIsMultiplicaOpen(true)}
-            className="btn-multiplica-banner btn-sm"
-          >
-            <GraduationCap size={15} />
-            <span>Multiplica SP (1h30)</span>
+        <div className="barra-direita">
+          <button type="button" className="btn btn-secundario" onClick={() => setIsMultiplicaOpen(true)}>
+            Multiplica SP
           </button>
-
-          <button
-            onClick={handleExportGeneralExcel}
-            className="btn-secondary btn-sm"
-            title="Baixar Grade em Excel"
-          >
-            <FileDown size={15} />
-            <span>Exportar Excel</span>
-          </button>
+          {viewMode === 'geral_dia' && (
+            <button type="button" className="btn btn-secundario" onClick={handleExportGeneralExcel}>
+              <FileDown size={16} aria-hidden="true" />
+              Excel do dia
+            </button>
+          )}
         </div>
       </div>
 
-      {/* ========================================================================= */}
-      {/* MODO 1: GRADE GERAL DO DIA (TODAS AS TURMAS) */}
-      {/* ========================================================================= */}
+      {/* ------------------------------------------------------------------ */}
+      {/* Por dia: todas as turmas                                            */}
+      {/* ------------------------------------------------------------------ */}
       {viewMode === 'geral_dia' && (
-        <div className="general-day-schedule-section">
-          <div className="filters-bar-card">
-            {/* Seletor de Dia */}
-            <div className="day-picker-group">
-              <label className="filter-label">
-                <Calendar size={15} />
-                <span>Dia:</span>
-              </label>
-              <div className="day-buttons-row">
-                {DAYS_OF_WEEK.map((d) => (
-                  <button
-                    key={d.key}
-                    className={`btn-day-pill ${selectedDay === d.key ? 'active' : ''}`}
-                    onClick={() => setSelectedDay(d.key)}
-                  >
-                    {d.label}
-                  </button>
-                ))}
-              </div>
+        <section className="painel">
+          <div className="filtros">
+            <div className="segmentado" role="radiogroup" aria-label="Dia da semana">
+              {DAYS_OF_WEEK.map((d) => (
+                <button
+                  key={d.key}
+                  type="button"
+                  role="radio"
+                  aria-checked={selectedDay === d.key}
+                  className="segmento"
+                  onClick={() => setSelectedDay(d.key)}
+                >
+                  {d.short}
+                </button>
+              ))}
             </div>
 
-            {/* Filtro de Segmento */}
-            <div className="segment-filter-group">
-              <label className="filter-label">
-                <Filter size={15} />
-                <span>Segmento:</span>
-              </label>
-              <div className="segment-buttons-row">
+            <div className="segmentado" role="radiogroup" aria-label="Segmento">
+              {(
+                [
+                  ['todos', 'Todas'],
+                  ['fundamental', 'Fundamental II'],
+                  ['medio', 'Médio'],
+                ] as const
+              ).map(([key, label]) => (
                 <button
-                  className={`btn-segment-chip ${segmentFilter === 'todos' ? 'active' : ''}`}
-                  onClick={() => setSegmentFilter('todos')}
+                  key={key}
+                  type="button"
+                  role="radio"
+                  aria-checked={segmentFilter === key}
+                  className="segmento"
+                  onClick={() => setSegmentFilter(key)}
                 >
-                  Todas ({classes.length})
+                  {label}
                 </button>
-                <button
-                  className={`btn-segment-chip ${segmentFilter === 'fundamental' ? 'active' : ''}`}
-                  onClick={() => setSegmentFilter('fundamental')}
-                >
-                  Fundamental II
-                </button>
-                <button
-                  className={`btn-segment-chip ${segmentFilter === 'medio' ? 'active' : ''}`}
-                  onClick={() => setSegmentFilter('medio')}
-                >
-                  Ensino Médio
-                </button>
-              </div>
+              ))}
             </div>
 
-            {/* Busca Rápida */}
-            <div className="search-filter-box">
-              <Search size={15} />
+            <div className="busca busca-compacta">
+              <Search size={16} aria-hidden="true" />
               <input
-                type="text"
-                placeholder="Filtrar professor ou disciplina..."
+                type="search"
+                placeholder="Destacar professor ou disciplina"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
+                aria-label="Destacar professor ou disciplina"
               />
             </div>
           </div>
 
-          <div className="general-matrix-container">
-            <table className="general-matrix-table">
+          <div className="tabela-rolagem grade-rolagem">
+            <table className="tabela grade">
               <thead>
                 <tr>
-                  <th className="th-class-col">Turma</th>
-                  {periods.map((period) => (
-                    <th key={period.id} className="th-period-col">
-                      <div className="matrix-period-label">{period.label}</div>
-                      <div className="matrix-period-time">{period.time}</div>
+                  <th scope="col" className="grade-canto">Turma</th>
+                  {periods.map((p) => (
+                    <th key={p.id} scope="col" className="grade-aula">
+                      <span className="aula-num">{p.label.replace(' Aula', '')}</span>
+                      <span className="aula-hora">{startTime(p.time)}</span>
                     </th>
                   ))}
                 </tr>
               </thead>
               <tbody>
-                {filteredClasses.map((cls) => {
-                  return (
-                    <tr key={cls.id}>
-                      <td className="td-class-header">
-                        <div className="matrix-class-title">{cls.name}</div>
-                        <span className="matrix-class-segment">{cls.segment}</span>
-                      </td>
-
-                      {periods.map((period) => {
-                        const slot = scheduleSlots.find(
-                          (s) =>
-                            s.dayOfWeek === selectedDay &&
-                            s.periodId === period.id &&
-                            (s.classId === cls.id || s.classId === cls.name) &&
-                            s.type === 'AULA'
+                {filteredClasses.map((cls) => (
+                  <tr key={cls.id}>
+                    <th scope="row" className="grade-turma">
+                      <span className="turma">{shortClassName(cls.name)}</span>
+                      <span className="grade-turma-nivel">{classLevel(cls.name)}</span>
+                    </th>
+                    {periods.map((period) => {
+                      const slot = classSlot(cls, selectedDay, period.id);
+                      const teacher = slot ? teacherById.get(slot.teacherId) : undefined;
+                      const subject = slot?.subject || teacher?.mainSubject || '';
+                      const dimmed =
+                        !!q &&
+                        !(
+                          subject.toLowerCase().includes(q) ||
+                          (teacher?.name || '').toLowerCase().includes(q) ||
+                          displayName(teacher?.name).toLowerCase().includes(q)
                         );
 
-                        const teacher = slot ? teachers.find((t) => t.id === slot.teacherId) : null;
-                        const subjectName = slot?.subject || teacher?.mainSubject || '';
-
-                        const matchesSearch =
-                          !searchQuery ||
-                          cls.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          subjectName.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          (teacher?.name || '').toLowerCase().includes(searchQuery.toLowerCase());
-
-                        return (
-                          <td
-                            key={period.id}
-                            className={`td-matrix-cell ${slot ? 'cell-has-class' : 'cell-empty'} ${
-                              !matchesSearch && searchQuery ? 'cell-dimmed' : ''
-                            }`}
+                      return (
+                        <td key={period.id} className={`grade-celula ${dimmed ? 'is-apagada' : ''}`}>
+                          <button
+                            type="button"
+                            className="celula-botao"
+                            aria-label={
+                              slot && teacher
+                                ? `${shortClassName(cls.name)}, ${period.label}: ${subject} com ${displayName(teacher.name)}. Editar`
+                                : `${shortClassName(cls.name)}, ${period.label}: vaga. Editar`
+                            }
                             onClick={() =>
                               setEditingSlot(
                                 slot || {
@@ -261,240 +232,14 @@ export const WeeklyScheduleView: React.FC = () => {
                             }
                           >
                             {slot && teacher ? (
-                              <div className="matrix-cell-box">
-                                <div className="matrix-subject-name" title={subjectName}>
-                                  {subjectName}
-                                </div>
-                                <div className="matrix-teacher-row">
-                                  <div
-                                    className="matrix-teacher-avatar"
-                                    style={{ backgroundColor: teacher.color || '#3B82F6' }}
-                                  >
-                                    {teacher.name.charAt(0)}
-                                  </div>
-                                  <span className="matrix-teacher-name" title={teacher.name}>
-                                    {teacher.name}
-                                  </span>
-                                </div>
-                              </div>
-                            ) : (
-                              <div className="matrix-empty-slot">
-                                {/* Os traços são enfeite: a informação é a célula estar vazia.
-                                    Escondidos do leitor de tela, que já anuncia a célula vazia. */}
-                                <span aria-hidden="true">- - -</span>
-                              </div>
-                            )}
-                          </td>
-                        );
-                      })}
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      )}
-
-      {/* ========================================================================= */}
-      {/* MODO 2: GRADE INDIVIDUAL POR PROFESSOR */}
-      {/* ========================================================================= */}
-      {viewMode === 'professor' && (
-        <div className="teacher-individual-schedule-section">
-          {/* Seletor do Professor */}
-          <div className="schedule-top-bar">
-            <div className="teacher-select-group">
-              <label className="input-label">
-                <Users size={16} />
-                <span>Professor Selecionado:</span>
-              </label>
-              <select
-                value={selectedTeacherId}
-                onChange={(e) => setSelectedTeacherId(e.target.value)}
-                className="select-input-custom"
-                style={{ minWidth: 320 }}
-              >
-                {teachers.map((t) => (
-                  <option key={t.id} value={t.id}>
-                    {t.name} — {t.mainSubject} ({t.knowledgeArea}) {t.isExemptFromSubstitutions ? '🚫 [Isento]' : ''}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
-
-          {/* Card de Perfil do Professor */}
-          {selectedTeacher && (
-            <div className="teacher-profile-card">
-              <div className="profile-left">
-                <div
-                  className="profile-avatar"
-                  style={{ backgroundColor: selectedTeacher.color || '#3B82F6' }}
-                >
-                  {selectedTeacher.name.charAt(0)}
-                </div>
-                <div>
-                  <h2 className="profile-name">{selectedTeacher.name}</h2>
-                  <div className="profile-badges">
-                    <span className="badge-primary">{selectedTeacher.mainSubject}</span>
-                    <span className="badge-secondary">{selectedTeacher.knowledgeArea}</span>
-                    {selectedTeacher.isExemptFromSubstitutions && (
-                      <span className="badge-exempt">🚫 Isento de Substituições</span>
-                    )}
-                  </div>
-                </div>
-              </div>
-
-              <div className="profile-stats">
-                <div className="mini-stat">
-                  <span className="mini-stat-num text-primary">
-                    {weeklyLessonsFor(selectedTeacher, scheduleSlots)}
-                  </span>
-                  <span className="mini-stat-label">
-                    Aulas na Semana
-                    {electiveLessonsFor(selectedTeacher, scheduleSlots) > 0 && (
-                      <span className="mini-stat-note">
-                        {' '}
-                        (inclui {electiveLessonsFor(selectedTeacher, scheduleSlots)} de eletiva)
-                      </span>
-                    )}
-                  </span>
-                </div>
-                <div className="mini-stat">
-                  <span className="mini-stat-num text-warning">
-                    {scheduleSlots.filter((s) => s.teacherId === selectedTeacher.id && s.type === 'CURSO_FORMACAO').length}
-                  </span>
-                  <span className="mini-stat-label">Cursos / ATPC</span>
-                </div>
-                <div className="mini-stat">
-                  <span className="mini-stat-num text-success">
-                    {scheduleSlots.filter((s) => s.teacherId === selectedTeacher.id && s.type === 'LIVRE').length}
-                  </span>
-                  <span className="mini-stat-label">Horários Livres</span>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* Legenda de Cores */}
-          <div className="schedule-legend">
-            <div className="legend-item">
-              <div className="legend-box legend-aula"></div>
-              <span>Aula com Turma</span>
-            </div>
-            <div className="legend-item">
-              <div className="legend-box legend-multiplica"></div>
-              <span>Multiplica SP (1h30)</span>
-            </div>
-            <div className="legend-item">
-              <div className="legend-box legend-curso"></div>
-              <span>ATPC / Formação</span>
-            </div>
-            <div className="legend-item">
-              <div className="legend-box legend-atividade"></div>
-              <span>Eletiva / Tutoria</span>
-            </div>
-            <div className="legend-item">
-              <div className="legend-box legend-livre"></div>
-              <span>Livre / Janela (Disponível p/ Substituição)</span>
-            </div>
-          </div>
-
-          {/* Tabela da Grade Semanal do Professor */}
-          <div className="schedule-table-container">
-            <table className="schedule-table">
-              <thead>
-                <tr>
-                  <th className="th-period">Período / Horário</th>
-                  {DAYS_OF_WEEK.map((d) => (
-                    <th key={d.key} className="th-day">
-                      {d.label}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {periods.map((period) => (
-                  <tr key={period.id}>
-                    <td className="td-period-header">
-                      <div className="period-label-main">{period.label}</div>
-                      <div className="period-time-sub">{period.time}</div>
-                    </td>
-
-                    {DAYS_OF_WEEK.map((d) => {
-                      const slot = scheduleSlots.find(
-                        (s) => s.teacherId === selectedTeacherId && s.dayOfWeek === d.key && s.periodId === period.id
-                      );
-
-                      const slotType: SlotType = slot?.type || 'LIVRE';
-                      const isMultiplica = slot?.trainingName?.includes('Multiplica');
-                      const classGroup = classes.find((c) => c.id === slot?.classId || c.name === slot?.classId);
-
-                      return (
-                        <td
-                          key={d.key}
-                          className={`td-slot slot-${slotType.toLowerCase()} ${isMultiplica ? 'slot-multiplica' : ''}`}
-                          onClick={() =>
-                            setEditingSlot(
-                              slot || {
-                                id: `slot_${selectedTeacherId}_${d.key}_${period.id}`,
-                                teacherId: selectedTeacherId,
-                                dayOfWeek: d.key,
-                                periodId: period.id,
-                                type: 'LIVRE',
-                              }
-                            )
-                          }
-                        >
-                          <div className="slot-cell-content">
-                            {slotType === 'AULA' && (
                               <>
-                                <div className="slot-class-name">
-                                  <BookOpen size={12} />
-                                  <span title={slot?.classId}>{classGroup?.name || slot?.classId || 'Turma'}</span>
-                                </div>
-                                <div className="slot-subject-name">
-                                  {slot?.subject || selectedTeacher?.mainSubject}
-                                </div>
-                              </>
-                            )}
-
-                            {slotType === 'CURSO_FORMACAO' && (
-                              <>
-                                <div className={`slot-training-title ${isMultiplica ? 'text-multiplica' : ''}`}>
-                                  <GraduationCap size={13} />
-                                  <span>{slot?.trainingName || 'ATPC / Formação'}</span>
-                                </div>
-                                <span className={`slot-blocked-badge ${isMultiplica ? 'badge-multiplica' : ''}`}>
-                                  {isMultiplica ? 'Multiplica SP' : 'Bloqueado'}
+                                <span className={`celula-disciplina cor-area-${areaKey(teacher.knowledgeArea)}`}>
+                                  {subject}
                                 </span>
+                                <span className="celula-pessoa">{shortName(teacher.name)}</span>
                               </>
-                            )}
-
-                            {(slotType === 'ELETIVA' || slotType === 'ATIVIDADE') && (
-                              <>
-                                <div className="slot-training-title">
-                                  <Users size={13} />
-                                  <span>
-                                    {slot?.trainingName ||
-                                      (slotType === 'ELETIVA' ? 'Eletiva' : 'Atividade')}
-                                  </span>
-                                </div>
-                                <span className="slot-blocked-badge">Bloqueado</span>
-                              </>
-                            )}
-
-                            {slotType === 'LIVRE' && (
-                              <div className="slot-free-text">
-                                <ShieldCheck size={13} />
-                                <span>Livre (Janela)</span>
-                              </div>
-                            )}
-
-                            <button className="btn-edit-slot-hover" title="Clique para editar este horário">
-                              <Edit3 size={11} />
-                            </button>
-                          </div>
+                            ) : null}
+                          </button>
                         </td>
                       );
                     })}
@@ -503,72 +248,47 @@ export const WeeklyScheduleView: React.FC = () => {
               </tbody>
             </table>
           </div>
-        </div>
+          <AreaLegend />
+        </section>
       )}
 
-      {/* ========================================================================= */}
-      {/* MODO 3: GRADE SEMANAL POR TURMA */}
-      {/* ========================================================================= */}
-      {viewMode === 'turma' && (
-        <div className="class-individual-schedule-section">
-          {/* Seletor de Turma */}
-          <div className="schedule-top-bar">
-            <div className="teacher-select-group">
-              <label className="input-label">
-                <BookOpen size={16} />
-                <span>Turma Selecionada:</span>
+      {/* ------------------------------------------------------------------ */}
+      {/* Por professor                                                       */}
+      {/* ------------------------------------------------------------------ */}
+      {viewMode === 'professor' && (
+        <section className="painel">
+          <div className="ficha">
+            <div className="campo-grupo ficha-seletor">
+              <label className="campo-rotulo" htmlFor="grade-prof">
+                Professor
               </label>
               <select
-                value={selectedClassId}
-                onChange={(e) => setSelectedClassId(e.target.value)}
-                className="select-input-custom"
-                style={{ minWidth: 260 }}
+                id="grade-prof"
+                value={selectedTeacherId}
+                onChange={(e) => setSelectedTeacherId(e.target.value)}
+                className="campo"
               >
-                {classes.map((c) => (
-                  <option key={c.id} value={c.id}>
-                    {c.name} — ({c.segment})
+                {sortedTeachers.map((t) => (
+                  <option key={t.id} value={t.id}>
+                    {displayName(t.name)} — {t.mainSubject}
+                    {t.isExemptFromSubstitutions ? ' (isento)' : ''}
                   </option>
                 ))}
               </select>
             </div>
+
+            {selectedTeacher && <TeacherFacts teacher={selectedTeacher} slots={scheduleSlots} />}
           </div>
 
-          {/* Banner da Turma */}
-          {selectedClass && (
-            <div className="class-profile-banner">
-              <div className="class-banner-left">
-                <div className="class-avatar-box">
-                  <School size={24} />
-                </div>
-                <div>
-                  <h2 className="class-banner-title">{selectedClass.name}</h2>
-                  <span className="class-banner-segment">{selectedClass.segment}</span>
-                </div>
-              </div>
-              <div className="class-banner-stats">
-                <div className="mini-stat">
-                  <span className="mini-stat-num text-primary">
-                    {
-                      scheduleSlots.filter(
-                        (s) => (s.classId === selectedClass.id || s.classId === selectedClass.name) && s.type === 'AULA'
-                      ).length
-                    }
-                  </span>
-                  <span className="mini-stat-label">Aulas / Semana</span>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* Tabela Semanal da Turma */}
-          <div className="schedule-table-container">
-            <table className="schedule-table">
+          <div className="tabela-rolagem">
+            <table className="tabela semana">
               <thead>
                 <tr>
-                  <th className="th-period">Período / Horário</th>
+                  <th scope="col" className="semana-canto">Aula</th>
                   {DAYS_OF_WEEK.map((d) => (
-                    <th key={d.key} className="th-day">
-                      {d.label}
+                    <th key={d.key} scope="col">
+                      <span className="dia-longo">{d.label}</span>
+                      <span className="dia-curto">{d.short}</span>
                     </th>
                   ))}
                 </tr>
@@ -576,51 +296,69 @@ export const WeeklyScheduleView: React.FC = () => {
               <tbody>
                 {periods.map((period) => (
                   <tr key={period.id}>
-                    <td className="td-period-header">
-                      <div className="period-label-main">{period.label}</div>
-                      <div className="period-time-sub">{period.time}</div>
-                    </td>
-
+                    <th scope="row" className="semana-aula">
+                      <span className="aula-num">{period.label.replace(' Aula', '')}</span>
+                      <span className="aula-hora">{startTime(period.time)}</span>
+                    </th>
                     {DAYS_OF_WEEK.map((d) => {
                       const slot = scheduleSlots.find(
                         (s) =>
+                          s.teacherId === selectedTeacherId &&
                           s.dayOfWeek === d.key &&
-                          s.periodId === period.id &&
-                          (s.classId === selectedClassId || s.classId === selectedClass?.name) &&
-                          s.type === 'AULA'
+                          s.periodId === period.id
                       );
-
-                      const teacher = slot ? teachers.find((t) => t.id === slot.teacherId) : null;
-                      const subjectName = slot?.subject || teacher?.mainSubject || '';
+                      const type: SlotType = slot?.type || 'LIVRE';
+                      const isMultiplica = !!slot?.trainingName?.includes('Multiplica');
+                      const cls = classes.find((c) => c.id === slot?.classId || c.name === slot?.classId);
 
                       return (
-                        <td key={d.key} className={`td-slot ${slot ? 'slot-aula' : 'slot-livre'}`}>
-                          <div className="slot-cell-content">
-                            {slot && teacher ? (
+                        <td key={d.key} className={`semana-celula tipo-${isMultiplica ? 'multiplica' : type.toLowerCase()}`}>
+                          <button
+                            type="button"
+                            className="celula-botao"
+                            onClick={() =>
+                              setEditingSlot(
+                                slot || {
+                                  id: `slot_${selectedTeacherId}_${d.key}_${period.id}`,
+                                  teacherId: selectedTeacherId,
+                                  dayOfWeek: d.key,
+                                  periodId: period.id,
+                                  type: 'LIVRE',
+                                }
+                              )
+                            }
+                          >
+                            {type === 'AULA' && (
                               <>
-                                <div className="slot-subject-name" style={{ color: '#1E40AF', fontWeight: 800 }}>
-                                  {subjectName}
-                                </div>
-                                <div className="matrix-teacher-row" style={{ marginTop: 2 }}>
-                                  <div
-                                    className="matrix-teacher-avatar"
-                                    style={{ backgroundColor: teacher.color || '#3B82F6', width: 18, height: 18 }}
-                                  >
-                                    {teacher.name.charAt(0)}
-                                  </div>
-                                  <span className="matrix-teacher-name" style={{ fontWeight: 600 }}>
-                                    {teacher.name}
-                                  </span>
-                                </div>
+                                <span className="celula-turma">
+                                  {shortClassName(cls?.name || slot?.classId) || 'Turma'}
+                                </span>
+                                <span
+                                  className={`celula-disciplina cor-area-${areaKey(selectedTeacher?.knowledgeArea)}`}
+                                >
+                                  {slot?.subject || selectedTeacher?.mainSubject}
+                                </span>
                               </>
-                            ) : (
-                              <div className="matrix-empty-slot">
-                                {/* Os traços são enfeite: a informação é a célula estar vazia.
-                                    Escondidos do leitor de tela, que já anuncia a célula vazia. */}
-                                <span aria-hidden="true">- - -</span>
-                              </div>
                             )}
-                          </div>
+                            {type === 'CURSO_FORMACAO' && (
+                              <>
+                                <span className="celula-turma">
+                                  {isMultiplica ? 'Multiplica SP' : slot?.trainingName || 'ATPC'}
+                                </span>
+                                {isMultiplica && slot?.trainingStartTime && (
+                                  <span className="celula-pessoa">
+                                    {slot.trainingStartTime}–{slot.trainingEndTime}
+                                  </span>
+                                )}
+                              </>
+                            )}
+                            {(type === 'ELETIVA' || type === 'ATIVIDADE') && (
+                              <span className="celula-turma">
+                                {slot?.trainingName || (type === 'ELETIVA' ? 'Eletiva' : 'Tutoria')}
+                              </span>
+                            )}
+                            {type === 'LIVRE' && <span className="celula-livre">livre</span>}
+                          </button>
                         </td>
                       );
                     })}
@@ -629,31 +367,184 @@ export const WeeklyScheduleView: React.FC = () => {
               </tbody>
             </table>
           </div>
-        </div>
+
+          <ul className="legenda" aria-label="Legenda">
+            <li><span className="legenda-amostra tipo-aula" />Aula</li>
+            <li><span className="legenda-amostra tipo-eletiva" />Eletiva ou tutoria</li>
+            <li><span className="legenda-amostra tipo-curso_formacao" />ATPC ou formação</li>
+            <li><span className="legenda-amostra tipo-multiplica" />Multiplica SP</li>
+            <li><span className="celula-livre legenda-texto">livre</span>pode ser escalado</li>
+          </ul>
+        </section>
       )}
 
-      {/* Modal de Edição de Slot */}
+      {/* ------------------------------------------------------------------ */}
+      {/* Por turma                                                           */}
+      {/* ------------------------------------------------------------------ */}
+      {viewMode === 'turma' && (
+        <section className="painel">
+          <div className="ficha">
+            <div className="campo-grupo ficha-seletor">
+              <label className="campo-rotulo" htmlFor="grade-turma">
+                Turma
+              </label>
+              <select
+                id="grade-turma"
+                value={selectedClassId}
+                onChange={(e) => setSelectedClassId(e.target.value)}
+                className="campo"
+              >
+                {classes.map((c) => (
+                  <option key={c.id} value={c.id}>
+                    {shortClassName(c.name)} — {c.segment}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {selectedClass && (
+              <dl className="ficha-dados">
+                <div>
+                  <dt>Turma</dt>
+                  <dd>{selectedClass.name}</dd>
+                </div>
+                <div>
+                  <dt>Aulas na semana</dt>
+                  <dd className="numero">
+                    {
+                      scheduleSlots.filter(
+                        (s) =>
+                          (s.classId === selectedClass.id || s.classId === selectedClass.name) &&
+                          s.type === 'AULA'
+                      ).length
+                    }
+                  </dd>
+                </div>
+              </dl>
+            )}
+          </div>
+
+          <div className="tabela-rolagem">
+            <table className="tabela semana">
+              <thead>
+                <tr>
+                  <th scope="col" className="semana-canto">Aula</th>
+                  {DAYS_OF_WEEK.map((d) => (
+                    <th key={d.key} scope="col">
+                      <span className="dia-longo">{d.label}</span>
+                      <span className="dia-curto">{d.short}</span>
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {periods.map((period) => (
+                  <tr key={period.id}>
+                    <th scope="row" className="semana-aula">
+                      <span className="aula-num">{period.label.replace(' Aula', '')}</span>
+                      <span className="aula-hora">{startTime(period.time)}</span>
+                    </th>
+                    {DAYS_OF_WEEK.map((d) => {
+                      const slot = selectedClass ? classSlot(selectedClass, d.key, period.id) : undefined;
+                      const teacher = slot ? teacherById.get(slot.teacherId) : undefined;
+                      return (
+                        <td key={d.key} className="semana-celula">
+                          {slot && teacher && (
+                            <div className="celula-estatica">
+                              <span className={`celula-disciplina cor-area-${areaKey(teacher.knowledgeArea)}`}>
+                                {slot.subject || teacher.mainSubject}
+                              </span>
+                              <span className="celula-pessoa">{shortName(teacher.name)}</span>
+                            </div>
+                          )}
+                        </td>
+                      );
+                    })}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <AreaLegend />
+        </section>
+      )}
+
       {editingSlot && (
         <SlotEditModal
           slot={editingSlot}
           classes={classes}
-          teacherSubject={selectedTeacher?.mainSubject || ''}
+          teacherName={displayName(editingTeacher?.name)}
+          teacherSubject={editingTeacher?.mainSubject || ''}
           onSave={handleSaveSlot}
           onClose={() => setEditingSlot(null)}
         />
       )}
 
-      {/* Modal do Multiplica SP */}
-      {isMultiplicaOpen && (
-        <MultiplicaModal onClose={() => setIsMultiplicaOpen(false)} />
-      )}
+      {isMultiplicaOpen && <MultiplicaModal onClose={() => setIsMultiplicaOpen(false)} />}
     </div>
+  );
+};
+
+const AREAS = [
+  ['linguagens', 'Linguagens'],
+  ['natureza', 'Ciências da Natureza'],
+  ['humanas', 'Ciências Humanas'],
+  ['diversificada', 'Parte Diversificada'],
+  ['gestao', 'Gestão Escolar'],
+] as const;
+
+const AreaLegend: React.FC = () => (
+  <ul className="legenda" aria-label="Cores das áreas">
+    {AREAS.map(([key, label]) => (
+      <li key={key}>
+        <span className={`area-ponto area-${key}`} aria-hidden="true" />
+        {label}
+      </li>
+    ))}
+  </ul>
+);
+
+const TeacherFacts: React.FC<{ teacher: Teacher; slots: ScheduleSlot[] }> = ({ teacher, slots }) => {
+  const own = slots.filter((s) => s.teacherId === teacher.id);
+  const electives = electiveLessonsFor(teacher, slots);
+  return (
+    <dl className="ficha-dados">
+      <div>
+        <dt>Área</dt>
+        <dd>
+          <span className={`area-ponto area-${areaKey(teacher.knowledgeArea)}`} aria-hidden="true" />
+          {teacher.knowledgeArea}
+        </dd>
+      </div>
+      <div>
+        <dt>Aulas na semana</dt>
+        <dd className="numero">
+          {weeklyLessonsFor(teacher, slots)}
+          {electives > 0 && <span className="ficha-nota"> · {electives} de eletiva</span>}
+        </dd>
+      </div>
+      <div>
+        <dt>ATPC e cursos</dt>
+        <dd className="numero">{own.filter((s) => s.type === 'CURSO_FORMACAO').length}</dd>
+      </div>
+      <div>
+        <dt>Horários livres</dt>
+        <dd className="numero">{own.filter((s) => s.type === 'LIVRE').length}</dd>
+      </div>
+      {teacher.isExemptFromSubstitutions && (
+        <div>
+          <dt>Substituições</dt>
+          <dd>Isento</dd>
+        </div>
+      )}
+    </dl>
   );
 };
 
 interface SlotEditModalProps {
   slot: ScheduleSlot;
   classes: ClassGroup[];
+  teacherName: string;
   teacherSubject: string;
   onSave: (slot: ScheduleSlot) => void;
   onClose: () => void;
@@ -662,6 +553,7 @@ interface SlotEditModalProps {
 const SlotEditModal: React.FC<SlotEditModalProps> = ({
   slot,
   classes,
+  teacherName,
   teacherSubject,
   onSave,
   onClose,
@@ -669,9 +561,9 @@ const SlotEditModal: React.FC<SlotEditModalProps> = ({
   const [type, setType] = useState<SlotType>(slot.type || 'LIVRE');
   const [classId, setClassId] = useState(slot.classId || classes[0]?.id || '');
   const [subject, setSubject] = useState(slot.subject || teacherSubject);
-  const [trainingName, setTrainingName] = useState(
-    slot.trainingName || 'ATPC / Formação Pedagógica'
-  );
+  const [trainingName, setTrainingName] = useState(slot.trainingName || 'ATPC / Formação Pedagógica');
+
+  const dia = DAYS_OF_WEEK.find((d) => d.key === slot.dayOfWeek)?.label;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -684,141 +576,132 @@ const SlotEditModal: React.FC<SlotEditModalProps> = ({
     });
   };
 
+  // Eletiva e tutoria não são editáveis aqui; mostrar como "Aula" mentiria sobre o dado.
+  const editable = type === 'AULA' || type === 'CURSO_FORMACAO' || type === 'LIVRE';
+
   return (
-    <div className="modal-backdrop" onClick={onClose}>
-      <div className="modal-content modal-sm" onClick={(e) => e.stopPropagation()}>
-        <div className="modal-header">
-          <h3 className="modal-title">Editar Horário</h3>
-          <button className="btn-close" onClick={onClose}>
-            <X size={18} />
-          </button>
+    <Modal
+      title="Editar horário"
+      subtitle={`${teacherName ? `${teacherName} · ` : ''}${dia ?? ''} · ${slot.periodId}ª aula`}
+      size="sm"
+      onClose={onClose}
+    >
+      <form className="formulario" onSubmit={handleSubmit}>
+        <div className="campo-grupo">
+          <span className="campo-rotulo" id="slot-tipo">
+            Ocupação
+          </span>
+          <div className="segmentado segmentado-largo" role="radiogroup" aria-labelledby="slot-tipo">
+            {(
+              [
+                ['AULA', 'Aula'],
+                ['CURSO_FORMACAO', 'ATPC ou curso'],
+                ['LIVRE', 'Livre'],
+              ] as const
+            ).map(([value, label]) => (
+              <button
+                key={value}
+                type="button"
+                role="radio"
+                aria-checked={type === value}
+                className="segmento"
+                onClick={() => setType(value)}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+          {!editable && (
+            <p className="campo-ajuda">
+              Este horário é de {type === 'ELETIVA' ? 'eletiva' : 'tutoria'}. Escolha acima para
+              mudar.
+            </p>
+          )}
         </div>
 
-        <form onSubmit={handleSubmit}>
-          <div className="modal-body">
-            <div className="form-group">
-              <label className="input-label">Tipo de Ocupação:</label>
-              <div className="type-toggle-buttons">
-                <button
-                  type="button"
-                  className={`btn-type-toggle ${type === 'AULA' ? 'active aula' : ''}`}
-                  onClick={() => setType('AULA')}
-                >
-                  <BookOpen size={16} />
-                  <span>Em Aula</span>
-                </button>
-
-                <button
-                  type="button"
-                  className={`btn-type-toggle ${type === 'CURSO_FORMACAO' ? 'active curso' : ''}`}
-                  onClick={() => setType('CURSO_FORMACAO')}
-                >
-                  <GraduationCap size={16} />
-                  <span>Curso / ATPC</span>
-                </button>
-
-                <button
-                  type="button"
-                  className={`btn-type-toggle ${type === 'LIVRE' ? 'active livre' : ''}`}
-                  onClick={() => setType('LIVRE')}
-                >
-                  <ShieldCheck size={16} />
-                  <span>Livre / Janela</span>
-                </button>
-              </div>
+        {type === 'AULA' && (
+          <>
+            <div className="campo-grupo">
+              <label className="campo-rotulo" htmlFor="slot-turma">
+                Turma
+              </label>
+              <select
+                id="slot-turma"
+                value={classId}
+                onChange={(e) => setClassId(e.target.value)}
+                className="campo"
+              >
+                {classes.map((c) => (
+                  <option key={c.id} value={c.id}>
+                    {shortClassName(c.name)} — {c.segment}
+                  </option>
+                ))}
+              </select>
             </div>
+            <div className="campo-grupo">
+              <label className="campo-rotulo" htmlFor="slot-disciplina">
+                Disciplina
+              </label>
+              <input
+                id="slot-disciplina"
+                type="text"
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
+                className="campo"
+                placeholder="Matemática, História…"
+                required
+              />
+            </div>
+          </>
+        )}
 
-            {type === 'AULA' && (
-              <>
-                <div className="form-group">
-                  <label className="input-label">Turma:</label>
-                  <select
-                    value={classId}
-                    onChange={(e) => setClassId(e.target.value)}
-                    className="select-input-custom"
-                  >
-                    {classes.map((c) => (
-                      <option key={c.id} value={c.id}>
-                        {c.name} ({c.segment})
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
-                <div className="form-group">
-                  <label className="input-label">Disciplina Ministrada:</label>
-                  <input
-                    type="text"
-                    value={subject}
-                    onChange={(e) => setSubject(e.target.value)}
-                    className="text-input-custom"
-                    placeholder="Ex: MATEMÁTICA, HISTÓRIA..."
-                    required
-                  />
-                </div>
-              </>
-            )}
-
-            {type === 'CURSO_FORMACAO' && (
-              <div className="form-group">
-                <label className="input-label">Nome do Curso / ATPC / Multiplica:</label>
-                <div className="quick-training-presets">
-                  <button
-                    type="button"
-                    className="btn-preset-chip"
-                    onClick={() => setTrainingName('Multiplica SP (1h30 - Cursista)')}
-                  >
-                    Multiplica SP (Cursista)
-                  </button>
-                  <button
-                    type="button"
-                    className="btn-preset-chip"
-                    onClick={() => setTrainingName('Multiplica SP (1h30 - Formador)')}
-                  >
-                    Multiplica SP (Formador)
-                  </button>
-                  <button
-                    type="button"
-                    className="btn-preset-chip"
-                    onClick={() => setTrainingName('ATPC / Formação Pedagógica')}
-                  >
-                    ATPC Geral
-                  </button>
-                </div>
-                <input
-                  type="text"
-                  value={trainingName}
-                  onChange={(e) => setTrainingName(e.target.value)}
-                  className="text-input-custom"
-                  style={{ marginTop: 8 }}
-                  required
-                />
-                <small className="help-text">
-                  ⚠️ Professores em formação ou no Multiplica SP ficam bloqueados para substituições.
-                </small>
-              </div>
-            )}
-
-            {type === 'LIVRE' && (
-              <div className="info-box-livre">
-                <ShieldCheck size={18} />
-                <span>
-                  O professor estará <strong>disponível</strong> para cobrir eventuais faltas neste período.
-                </span>
-              </div>
-            )}
+        {type === 'CURSO_FORMACAO' && (
+          <div className="campo-grupo">
+            <label className="campo-rotulo" htmlFor="slot-curso">
+              Nome do curso
+            </label>
+            <div className="atalhos">
+              {[
+                ['Multiplica SP (1h30 - Cursista)', 'Multiplica · cursista'],
+                ['Multiplica SP (1h30 - Formador)', 'Multiplica · formador'],
+                ['ATPC / Formação Pedagógica', 'ATPC geral'],
+              ].map(([value, label]) => (
+                <button
+                  key={value}
+                  type="button"
+                  className="atalho"
+                  aria-pressed={trainingName === value}
+                  onClick={() => setTrainingName(value)}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+            <input
+              id="slot-curso"
+              type="text"
+              value={trainingName}
+              onChange={(e) => setTrainingName(e.target.value)}
+              className="campo"
+              required
+            />
+            <p className="campo-ajuda">Em formação, o professor não é escalado neste horário.</p>
           </div>
+        )}
 
-          <div className="modal-footer">
-            <button type="button" className="btn-secondary" onClick={onClose}>
-              Cancelar
-            </button>
-            <button type="submit" className="btn-primary">
-              <Check size={16} /> Salvar Horário
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
+        {type === 'LIVRE' && (
+          <p className="campo-ajuda">Livre: o professor pode ser escalado para cobrir faltas neste horário.</p>
+        )}
+
+        <div className="formulario-acoes">
+          <button type="button" className="btn btn-secundario" onClick={onClose}>
+            Cancelar
+          </button>
+          <button type="submit" className="btn btn-primario" disabled={!editable}>
+            Salvar horário
+          </button>
+        </div>
+      </form>
+    </Modal>
   );
 };

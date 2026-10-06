@@ -1,26 +1,28 @@
 import React from 'react';
-import {
-  X,
-  Check,
-  AlertTriangle,
-  BookOpen,
-  Clock,
-  ShieldCheck,
-  UserMinus,
-  GraduationCap,
-  Ban,
-  Crown,
-  Briefcase,
-} from 'lucide-react';
+import { Check } from 'lucide-react';
 import type { SubstitutionItem } from '../types';
 import { useSchool } from '../context/SchoolContext';
+import { Modal } from './Modal';
+import { areaKey, displayName, shortClassName, startTime } from '../utils/display';
 
 interface ManualSwapModalProps {
   item: SubstitutionItem;
   onClose: () => void;
+  onChanged?: (itemId: string) => void;
 }
 
-export const ManualSwapModal: React.FC<ManualSwapModalProps> = ({ item, onClose }) => {
+type Status =
+  | 'LIVRE'
+  | 'AULA'
+  | 'CURSO'
+  | 'MULTIPLICA'
+  | 'AUSENTE'
+  | 'ALOCADO_OUTRA_TURMA'
+  | 'ISENTO'
+  | 'COORD_AREA'
+  | 'GESTAO';
+
+export const ManualSwapModal: React.FC<ManualSwapModalProps> = ({ item, onClose, onChanged }) => {
   const {
     teachers,
     scheduleSlots,
@@ -39,11 +41,7 @@ export const ManualSwapModal: React.FC<ManualSwapModalProps> = ({ item, onClose 
     }
   });
 
-  const teacherOptions = teachers.map((teacher) => {
-    const isAbsent = absentTeacherIds.includes(teacher.id);
-    const isCurrentSub = teacher.id === item.substituteTeacherId;
-    const isAlreadyAssignedInPeriod = alreadyAllocatedInPeriod.has(teacher.id);
-    const isExempt = teacher.isExemptFromSubstitutions;
+  const options = teachers.map((teacher) => {
     const isAreaCoordinator = teacher.role === 'COORDENADOR_AREA';
     const isManagementTeam = teacher.role === 'EQUIPE_GESTORA';
 
@@ -51,197 +49,162 @@ export const ManualSwapModal: React.FC<ManualSwapModalProps> = ({ item, onClose 
       (s) => s.teacherId === teacher.id && s.dayOfWeek === selectedDay && s.periodId === item.periodId
     );
 
-    let status: 'LIVRE' | 'AULA' | 'CURSO' | 'MULTIPLICA' | 'AUSENTE' | 'ALOCADO_OUTRA_TURMA' | 'ISENTO' | 'COORD_AREA' | 'GESTAO' = 'LIVRE';
-    let detail = 'Disponível (Janela Livre)';
+    let status: Status = 'LIVRE';
+    let detail = 'Livre neste horário';
     let tier: 1 | 2 | 3 = 1;
 
-    if (isExempt) {
+    if (teacher.isExemptFromSubstitutions) {
       status = 'ISENTO';
-      detail = 'Isento de Substituições (Curso Técnico)';
-    } else if (isAbsent) {
+      detail = 'Isento de substituições';
+    } else if (absentTeacherIds.includes(teacher.id)) {
       status = 'AUSENTE';
-      detail = 'Ausente no dia';
+      detail = 'Também faltou';
     } else if (slot?.type === 'AULA') {
       status = 'AULA';
-      detail = `Em aula (${slot.subject || 'Lecionando'})`;
+      detail = `Em aula${slot.classId ? ` · ${shortClassName(slot.classId)}` : ''}`;
     } else if (slot?.type === 'ELETIVA' || slot?.type === 'ATIVIDADE') {
       status = 'AULA';
-      detail = slot.trainingName || (slot.type === 'ELETIVA' ? 'Eletiva' : 'Atividade');
+      detail = slot.trainingName || (slot.type === 'ELETIVA' ? 'Eletiva' : 'Tutoria');
     } else if (slot?.type === 'CURSO_FORMACAO') {
       if (slot.trainingName?.includes('Multiplica')) {
         status = 'MULTIPLICA';
-        detail = 'Em Multiplica SP (1h30)';
+        detail = 'No Multiplica SP';
       } else {
         status = 'CURSO';
-        detail = `Em formação (${slot.trainingName || 'ATPC'})`;
+        detail = slot.trainingName || 'ATPC';
       }
-    } else if (isAlreadyAssignedInPeriod) {
+    } else if (alreadyAllocatedInPeriod.has(teacher.id)) {
       status = 'ALOCADO_OUTRA_TURMA';
-      detail = 'Já escalado em outra turma neste período';
+      detail = 'Já cobre outra turma neste horário';
     } else if (isManagementTeam) {
       tier = 3;
       status = 'GESTAO';
-      detail = 'Equipe Gestora (Último recurso em caso extremo)';
+      detail = 'Equipe gestora';
     } else if (isAreaCoordinator) {
       tier = 2;
       status = 'COORD_AREA';
-      detail = 'Coordenação de Área (Entra apenas se não houver opção)';
+      detail = 'Coordenação de área';
     }
 
+    const subject = originalTeacher?.mainSubject.toLowerCase();
     const isSameSubject =
-      originalTeacher &&
-      (teacher.mainSubject.toLowerCase() === originalTeacher.mainSubject.toLowerCase() ||
-        teacher.secondarySubjects?.some(
-          (sub) => sub.toLowerCase() === originalTeacher.mainSubject.toLowerCase()
-        ));
+      !!subject &&
+      (teacher.mainSubject.toLowerCase() === subject ||
+        !!teacher.secondarySubjects?.some((s) => s.toLowerCase() === subject));
+    const isSameArea = !!originalTeacher && teacher.knowledgeArea === originalTeacher.knowledgeArea;
 
-    const isSameArea =
-      originalTeacher && teacher.knowledgeArea === originalTeacher.knowledgeArea;
-
-    let affinityTag = '';
-    if (isSameSubject) affinityTag = 'Mesma Disciplina';
-    else if (isSameArea) affinityTag = 'Mesma Área';
-    else if (isAreaCoordinator) affinityTag = 'Coord. de Área';
-    else if (isManagementTeam) affinityTag = 'Equipe Gestora';
-
-    const isEligible =
-      status === 'LIVRE' || status === 'COORD_AREA' || status === 'GESTAO';
+    const affinity = tier === 1 ? (isSameSubject ? 'Mesma disciplina' : isSameArea ? 'Mesma área' : '') : '';
 
     return {
       teacher,
       status,
       detail,
       tier,
-      isCurrentSub,
-      isEligible,
-      affinityTag,
-      subCount: teacher.totalSubstitutionsCount,
+      affinity,
+      isCurrent: teacher.id === item.substituteTeacherId,
+      isEligible: status === 'LIVRE' || status === 'COORD_AREA' || status === 'GESTAO',
     };
   });
 
-  teacherOptions.sort((a, b) => {
-    if (a.isEligible && !b.isEligible) return -1;
-    if (!a.isEligible && b.isEligible) return 1;
+  options.sort((a, b) => {
+    if (a.isEligible !== b.isEligible) return a.isEligible ? -1 : 1;
     if (a.tier !== b.tier) return a.tier - b.tier;
-    return a.subCount - b.subCount;
+    if (!!a.affinity !== !!b.affinity) return a.affinity ? -1 : 1;
+    return a.teacher.totalSubstitutionsCount - b.teacher.totalSubstitutionsCount;
   });
 
-  const handleSelect = (teacherId: string | null) => {
+  const eligible = options.filter((o) => o.isEligible);
+  const unavailable = options.filter((o) => !o.isEligible);
+
+  const choose = (teacherId: string | null) => {
     updateSubstitutionItem(item.id, teacherId);
+    onChanged?.(item.id);
     onClose();
   };
 
   return (
-    <div className="modal-backdrop" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <div className="modal-header">
-          <div>
-            <h3 className="modal-title">Substituição Manual</h3>
-            <p className="modal-subtitle">
-              {item.periodLabel} ({item.periodTime}) • <strong>{item.className}</strong> •{' '}
-              {item.originalSubject} (Ausente: {item.originalTeacherName})
-            </p>
-          </div>
-          <button className="btn-close" onClick={onClose}>
-            <X size={20} />
-          </button>
-        </div>
-
-        <div className="modal-body">
-          <div className="selection-instructions">
-            <span>Selecione um professor disponível ou deixe a aula sem substituto:</span>
-            <button
-              onClick={() => handleSelect(null)}
-              className="btn-danger-outline btn-xs"
-            >
-              <UserMinus size={14} />
-              Deixar Sem Substituto
+    <Modal
+      title="Trocar substituto"
+      size="md"
+      onClose={onClose}
+      subtitle={
+        <>
+          {item.periodLabel} · {startTime(item.periodTime)} · {shortClassName(item.className)} ·{' '}
+          {item.originalSubject} — falta de {displayName(item.originalTeacherName)}
+        </>
+      }
+      footer={
+        <>
+          {item.substituteTeacherId ? (
+            <button type="button" className="btn btn-perigo" onClick={() => choose(null)}>
+              Deixar sem cobertura
             </button>
-          </div>
-
-          <div className="candidates-list">
-            {teacherOptions.map((opt) => {
-              const isSelected = opt.isCurrentSub;
-
-              return (
-                <div
-                  key={opt.teacher.id}
-                  className={`candidate-card ${
-                    opt.isEligible ? 'eligible' : 'ineligible'
-                  } ${isSelected ? 'selected' : ''} ${
-                    opt.tier === 2 ? 'candidate-pca' : ''
-                  } ${opt.tier === 3 ? 'candidate-gestao' : ''}`}
-                  onClick={() => opt.isEligible && handleSelect(opt.teacher.id)}
-                >
-                  <div className="candidate-left">
-                    <div
-                      className="candidate-avatar"
-                      style={{ backgroundColor: opt.teacher.color || '#3B82F6' }}
-                    >
-                      {opt.teacher.name.charAt(0)}
-                    </div>
-                    <div>
-                      <div className="candidate-name-row">
-                        <span className="candidate-name">{opt.teacher.name}</span>
-                        {isSelected && (
-                          <span className="badge-current-sub">
-                            <Check size={12} /> Atual
-                          </span>
-                        )}
-                        {opt.tier === 2 && (
-                          <span className="badge-pca-tag">
-                            <Crown size={11} /> Coord. Área
-                          </span>
-                        )}
-                        {opt.tier === 3 && (
-                          <span className="badge-gestao-tag">
-                            <Briefcase size={11} /> Gestão
-                          </span>
-                        )}
-                        {opt.affinityTag && opt.tier === 1 && (
-                          <span className="badge-affinity">{opt.affinityTag}</span>
-                        )}
-                        {opt.status === 'ISENTO' && (
-                          <span className="badge-exempt">
-                            <Ban size={11} /> Não Substitui
-                          </span>
-                        )}
-                      </div>
-                      <div className="candidate-subject">
-                        {opt.teacher.mainSubject} • {opt.teacher.knowledgeArea}
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="candidate-right">
-                    <div className="sub-count-tag">
-                      <strong>{opt.subCount}</strong> subs feitas
-                    </div>
-
-                    <div className={`status-badge status-${opt.status.toLowerCase()}`}>
-                      {opt.status === 'LIVRE' && <ShieldCheck size={14} />}
-                      {opt.status === 'COORD_AREA' && <Crown size={14} />}
-                      {opt.status === 'GESTAO' && <Briefcase size={14} />}
-                      {opt.status === 'AULA' && <BookOpen size={14} />}
-                      {opt.status === 'CURSO' && <Clock size={14} />}
-                      {opt.status === 'MULTIPLICA' && <GraduationCap size={14} />}
-                      {opt.status === 'AUSENTE' && <AlertTriangle size={14} />}
-                      {opt.status === 'ISENTO' && <Ban size={14} />}
-                      <span>{opt.detail}</span>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        <div className="modal-footer">
-          <button className="btn-secondary" onClick={onClose}>
+          ) : (
+            <span />
+          )}
+          <button type="button" className="btn btn-secundario" onClick={onClose}>
             Fechar
           </button>
-        </div>
-      </div>
-    </div>
+        </>
+      }
+    >
+      <h3 className="grupo-titulo">
+        Livres agora <span className="grupo-contagem">{eligible.length}</span>
+      </h3>
+      {eligible.length === 0 ? (
+        <p className="grupo-vazio">Ninguém está livre neste horário.</p>
+      ) : (
+        <ul className="candidatos">
+          {eligible.map((opt) => (
+            <li key={opt.teacher.id}>
+              <button
+                type="button"
+                className={`candidato ${opt.isCurrent ? 'is-atual' : ''}`}
+                onClick={() => choose(opt.teacher.id)}
+                aria-current={opt.isCurrent || undefined}
+              >
+                <span className="candidato-texto">
+                  <span className="candidato-nome">{displayName(opt.teacher.name)}</span>
+                  <span className="candidato-meta">
+                    <span
+                      className={`area-ponto area-${areaKey(opt.teacher.knowledgeArea)}`}
+                      aria-hidden="true"
+                    />
+                    {opt.teacher.mainSubject}
+                    {opt.affinity && <span className="cor-coberta"> · {opt.affinity}</span>}
+                    {opt.tier > 1 && <span className="cor-ultimo-recurso"> · {opt.detail}</span>}
+                  </span>
+                </span>
+                <span className="candidato-contador">
+                  {opt.isCurrent && (
+                    <span className="candidato-atual">
+                      <Check size={12} aria-hidden="true" /> Atual
+                    </span>
+                  )}
+                  {opt.teacher.totalSubstitutionsCount}
+                  <span className="candidato-contador-rotulo"> subst.</span>
+                </span>
+              </button>
+            </li>
+          ))}
+        </ul>
+      )}
+
+      <details className="indisponiveis">
+        <summary>
+          Indisponíveis <span className="grupo-contagem">{unavailable.length}</span>
+        </summary>
+        <ul className="candidatos">
+          {unavailable.map((opt) => (
+            <li key={opt.teacher.id} className="candidato is-indisponivel">
+              <span className="candidato-texto">
+                <span className="candidato-nome">{displayName(opt.teacher.name)}</span>
+                <span className="candidato-meta">{opt.detail}</span>
+              </span>
+            </li>
+          ))}
+        </ul>
+      </details>
+    </Modal>
   );
 };

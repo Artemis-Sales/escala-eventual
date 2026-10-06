@@ -1,253 +1,231 @@
 import React, { useState } from 'react';
-import {
-  FileSpreadsheet,
-  UploadCloud,
-  Download,
-  CheckCircle2,
-  AlertTriangle,
-  Info,
-  Layers,
-  Users,
-} from 'lucide-react';
+import { Download, Upload } from 'lucide-react';
 import { useSchool } from '../context/SchoolContext';
 import { downloadExcelTemplate, parseUploadedExcel, type ParsedExcelResult } from '../utils/excelHelper';
 import { randomTeacherColor } from '../utils/colors';
+import { displayName } from '../utils/display';
 import type { Teacher } from '../types';
 
 export const ImportExportModal: React.FC = () => {
-  const { periods, setAllTeachers, setAllScheduleSlots } = useSchool();
+  const { periods, setAllTeachers, setAllScheduleSlots, resetAllData } = useSchool();
 
   const [dragActive, setDragActive] = useState(false);
   const [parsedData, setParsedData] = useState<ParsedExcelResult | null>(null);
+  const [fileName, setFileName] = useState<string | null>(null);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
-
-  const handleDownloadTemplate = () => {
-    downloadExcelTemplate(periods);
-  };
 
   const processFile = async (file: File) => {
     setParsedData(null);
     setSuccessMessage(null);
-
-    const result = await parseUploadedExcel(file);
-    setParsedData(result);
+    setFileName(file.name);
+    setParsedData(await parseUploadedExcel(file));
   };
 
   const handleDrop = (e: React.DragEvent) => {
     e.preventDefault();
-    e.stopPropagation();
     setDragActive(false);
-
-    if (e.dataTransfer.files && e.dataTransfer.files[0]) {
-      processFile(e.dataTransfer.files[0]);
-    }
-  };
-
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files[0]) {
-      processFile(e.target.files[0]);
-    }
+    const file = e.dataTransfer.files?.[0];
+    if (file) processFile(file);
   };
 
   const handleApplyImport = () => {
     if (!parsedData) return;
 
-    if (parsedData.importedTeachers && parsedData.importedTeachers.length > 0) {
-      const formattedTeachers: Teacher[] = parsedData.importedTeachers.map((t) => ({
+    if (parsedData.importedTeachers?.length) {
+      const formatted: Teacher[] = parsedData.importedTeachers.map((t) => ({
         ...t,
         color: randomTeacherColor(),
       }));
-
-      setAllTeachers(formattedTeachers);
+      setAllTeachers(formatted);
     }
-
-    if (parsedData.importedSlots && parsedData.importedSlots.length > 0) {
+    if (parsedData.importedSlots?.length) {
       setAllScheduleSlots(parsedData.importedSlots);
     }
 
-    setSuccessMessage('Dados da planilha importados e aplicados com sucesso no sistema!');
+    setSuccessMessage('Planilha aplicada. Professores e grade foram substituídos.');
     setParsedData(null);
+    setFileName(null);
+  };
+
+  const handleReset = () => {
+    if (
+      window.confirm(
+        'Restaurar a grade e o cadastro de professores para o padrão oficial?\n\n' +
+          'SERÁ PERDIDO: as alterações feitas na grade, incluindo os horários do Multiplica SP ' +
+          'e dos cursos de formação cadastrados.\n\n' +
+          'SERÁ MANTIDO: o histórico de escalas oficializadas e os contadores de substituição ' +
+          'de cada professor.'
+      )
+    ) {
+      resetAllData();
+      setSuccessMessage('Grade e cadastro restaurados para o padrão oficial.');
+    }
   };
 
   return (
-    <div className="import-view">
-      <div className="import-banner-card">
-        <div className="import-banner-info">
-          <div className="import-icon-box">
-            <FileSpreadsheet size={28} />
-          </div>
-          <div>
-            <h3 className="import-title">Importação de Planilhas da Escola</h3>
-            <p className="import-desc">
-              Carregue os horários existentes da sua escola via arquivo Excel (.xlsx ou .csv).
-              Você pode cadastrar professores, matriz de aulas e horários de cursos/ATPC.
-            </p>
-          </div>
+    <div className="pagina dados">
+      <div className="barra">
+        <div className="pagina-titulos">
+          <h1 className="pagina-titulo">Dados da escola</h1>
+          <p className="pagina-sub">Importar uma grade nova a partir de planilha, ou voltar à grade oficial.</p>
         </div>
-
-        <button onClick={handleDownloadTemplate} className="btn-secondary">
-          <Download size={16} />
-          <span>Baixar Modelo de Planilha (.xlsx)</span>
-        </button>
       </div>
 
       {successMessage && (
-        <div className="alert-banner-success">
-          <CheckCircle2 size={20} />
-          <span>{successMessage}</span>
-        </div>
+        <p className="faixa-aviso faixa-ok" role="status">
+          {successMessage}
+        </p>
       )}
 
-      <div
-        className={`drop-zone-card ${dragActive ? 'drop-active' : ''}`}
-        onDragEnter={(e) => {
-          e.preventDefault();
-          setDragActive(true);
-        }}
-        onDragLeave={(e) => {
-          e.preventDefault();
-          setDragActive(false);
-        }}
-        onDragOver={(e) => e.preventDefault()}
-        onDrop={handleDrop}
-      >
-        <UploadCloud size={44} className="text-primary drop-icon" />
-        <h4 className="drop-title">Arraste e solte sua planilha Excel aqui</h4>
-        <p className="drop-subtitle">Formatos suportados: .xlsx, .xls, .csv</p>
+      <section className="painel painel-margem">
+        <header className="secao-cabeca">
+          <h2 className="secao-titulo">Importar planilha</h2>
+          <button type="button" className="btn btn-secundario" onClick={() => downloadExcelTemplate(periods)}>
+            <Download size={16} aria-hidden="true" />
+            Baixar modelo (.xlsx)
+          </button>
+        </header>
 
-        <label className="btn-primary file-input-label">
-          <span>Procurar Arquivo no Computador</span>
+        <label
+          className={`soltar ${dragActive ? 'is-ativo' : ''}`}
+          onDragEnter={(e) => {
+            e.preventDefault();
+            setDragActive(true);
+          }}
+          onDragLeave={(e) => {
+            e.preventDefault();
+            setDragActive(false);
+          }}
+          onDragOver={(e) => e.preventDefault()}
+          onDrop={handleDrop}
+        >
+          <Upload size={20} aria-hidden="true" />
+          <span className="soltar-titulo">
+            Arraste a planilha para cá ou <span className="soltar-link">escolha um arquivo</span>
+          </span>
+          <span className="soltar-sub">.xlsx, .xls ou .csv — nada é aplicado antes da sua confirmação</span>
           <input
             type="file"
             accept=".xlsx,.xls,.csv"
-            onChange={handleFileChange}
-            style={{ display: 'none' }}
+            className="sr-only"
+            onChange={(e) => {
+              const file = e.target.files?.[0];
+              if (file) processFile(file);
+              e.target.value = '';
+            }}
           />
         </label>
-      </div>
 
-      {parsedData && (
-        <div className="import-preview-card">
-          <h4 className="preview-title">Resultado da Leitura da Planilha</h4>
+        {parsedData && (
+          <div className="leitura">
+            <h3 className="grupo-titulo">Leitura de {fileName}</h3>
 
-          {parsedData.error ? (
-            <div className="alert-banner-warning">
-              <AlertTriangle size={18} />
-              <span>{parsedData.error}</span>
-            </div>
-          ) : (
-            <>
-              <div className="preview-stats-grid">
-                <div className="preview-stat-item">
-                  <Users size={18} className="text-primary" />
+            {parsedData.error ? (
+              <p className="faixa-aviso faixa-erro">{parsedData.error}</p>
+            ) : (
+              <>
+                <dl className="ficha-dados">
                   <div>
-                    <strong>{parsedData.importedTeachers?.length || 0}</strong>
-                    <span>Professores identificados</span>
+                    <dt>Professores</dt>
+                    <dd className="numero">{parsedData.importedTeachers?.length || 0}</dd>
                   </div>
-                </div>
-
-                <div className="preview-stat-item">
-                  <Layers size={18} className="text-warning" />
                   <div>
-                    <strong>{parsedData.importedSlots?.length || 0}</strong>
-                    <span>Registros de horários/aulas</span>
+                    <dt>Horários e aulas</dt>
+                    <dd className="numero">{parsedData.importedSlots?.length || 0}</dd>
                   </div>
-                </div>
-              </div>
+                </dl>
 
-              {parsedData.warnings && parsedData.warnings.length > 0 && (
-                <div className="alert-banner-warning">
-                  <AlertTriangle size={18} />
-                  <div>
-                    <strong>{parsedData.warnings.length} linha(s) da grade foram ignoradas:</strong>
-                    <ul style={{ margin: '4px 0 0', paddingLeft: 18 }}>
+                {parsedData.warnings && parsedData.warnings.length > 0 && (
+                  <div className="faixa-aviso faixa-atencao">
+                    <p>
+                      <strong>
+                        {parsedData.warnings.length}{' '}
+                        {parsedData.warnings.length === 1 ? 'linha ignorada' : 'linhas ignoradas'}
+                      </strong>
+                    </p>
+                    <ul>
                       {parsedData.warnings.slice(0, 5).map((w, i) => (
                         <li key={i}>{w}</li>
                       ))}
-                      {parsedData.warnings.length > 5 && (
-                        <li>+{parsedData.warnings.length - 5} outras...</li>
-                      )}
+                      {parsedData.warnings.length > 5 && <li>e mais {parsedData.warnings.length - 5}.</li>}
                     </ul>
                   </div>
+                )}
+
+                {parsedData.importedTeachers && parsedData.importedTeachers.length > 0 && (
+                  <p className="leitura-amostra">
+                    {parsedData.importedTeachers
+                      .slice(0, 8)
+                      .map((t) => displayName(t.name))
+                      .join(', ')}
+                    {parsedData.importedTeachers.length > 8 &&
+                      ` e mais ${parsedData.importedTeachers.length - 8}`}
+                    .
+                  </p>
+                )}
+
+                <div className="formulario-acoes">
+                  <button
+                    type="button"
+                    className="btn btn-secundario"
+                    onClick={() => {
+                      setParsedData(null);
+                      setFileName(null);
+                    }}
+                  >
+                    Descartar
+                  </button>
+                  <button type="button" className="btn btn-primario" onClick={handleApplyImport}>
+                    Aplicar ao sistema
+                  </button>
                 </div>
-              )}
+                <p className="campo-ajuda">Aplicar substitui por completo os professores e a grade atuais.</p>
+              </>
+            )}
+          </div>
+        )}
 
-              {parsedData.importedTeachers && parsedData.importedTeachers.length > 0 && (
-                <div className="preview-teachers-list">
-                  <h5>Exemplo de Professores Encontrados:</h5>
-                  <div className="preview-chips">
-                    {parsedData.importedTeachers.slice(0, 8).map((t, i) => (
-                      <span key={i} className="chip-preview">
-                        {t.name} ({t.mainSubject})
-                      </span>
-                    ))}
-                    {parsedData.importedTeachers.length > 8 && (
-                      <span className="chip-preview-more">
-                        +{parsedData.importedTeachers.length - 8} outros
-                      </span>
-                    )}
-                  </div>
-                </div>
-              )}
-
-              <div className="preview-actions-footer">
-                <button
-                  onClick={() => setParsedData(null)}
-                  className="btn-secondary"
-                >
-                  Cancelar
-                </button>
-                <button onClick={handleApplyImport} className="btn-primary">
-                  <CheckCircle2 size={16} />
-                  <span>Aplicar Dados ao Sistema</span>
-                </button>
-              </div>
-            </>
-          )}
+        <div className="instrucoes">
+          <h3 className="grupo-titulo">Como a planilha deve estar</h3>
+          <dl className="instrucoes-lista">
+            <div>
+              <dt>Aba “Professores”</dt>
+              <dd>
+                Nome, Disciplina_Principal, Area_Conhecimento, Telefone, Cargo (PROFESSOR,
+                COORDENADOR_AREA ou EQUIPE_GESTORA) e Isento_Substituicao (SIM ou NAO).
+              </dd>
+            </div>
+            <div>
+              <dt>Aba “Grade_e_Cursos”</dt>
+              <dd>
+                Dia_Semana, Periodo_Numero (1 a 9), Nome_Professor (igual ao da aba Professores),
+                Tipo (AULA, CURSO_FORMACAO ou LIVRE), Turma e Disciplina_ou_Curso.
+              </dd>
+            </div>
+            <div>
+              <dt>Cursos e formações</dt>
+              <dd>
+                Todo horário com tipo <code>CURSO_FORMACAO</code> fica bloqueado para substituição.
+              </dd>
+            </div>
+          </dl>
         </div>
-      )}
+      </section>
 
-      <div className="import-instructions-card">
-        <h4 className="instructions-title">
-          <Info size={16} /> Como organizar sua planilha?
-        </h4>
-        <div className="instructions-grid">
-          <div className="instruction-step">
-            <span className="step-num">1</span>
-            <div className="step-content">
-              <strong>Aba "Professores"</strong>
-              <p>
-                Colunas: Nome, Disciplina_Principal, Area_Conhecimento, Telefone, Cargo
-                (PROFESSOR, COORDENADOR_AREA ou EQUIPE_GESTORA) e Isento_Substituicao (SIM/NAO).
-              </p>
-            </div>
+      <section className="painel painel-margem zona-cuidado">
+        <header className="secao-cabeca">
+          <div>
+            <h2 className="secao-titulo">Voltar à grade oficial</h2>
+            <p className="pagina-sub">
+              Desfaz as edições na grade e no cadastro, incluindo os horários do Multiplica SP. O
+              histórico e os contadores de substituição ficam.
+            </p>
           </div>
-
-          <div className="instruction-step">
-            <span className="step-num">2</span>
-            <div className="step-content">
-              <strong>Aba "Grade_e_Cursos"</strong>
-              <p>
-                Colunas: Dia_Semana, Periodo_Numero (1 a 9), Nome_Professor (deve bater com o
-                Nome da aba Professores), Tipo (AULA, CURSO_FORMACAO ou LIVRE), Turma,
-                Disciplina_ou_Curso.
-              </p>
-            </div>
-          </div>
-
-          <div className="instruction-step">
-            <span className="step-num">3</span>
-            <div className="step-content">
-              <strong>Bloqueios de Cursos/Formações</strong>
-              <p>
-                Qualquer período marcado com o tipo <code>CURSO_FORMACAO</code> será automaticamente
-                bloqueado para substituições. Ao aplicar a importação, professores e grade de
-                horários substituem por completo os dados atuais do sistema.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+          <button type="button" className="btn btn-perigo" onClick={handleReset}>
+            Restaurar dados oficiais
+          </button>
+        </header>
+      </section>
     </div>
   );
 };

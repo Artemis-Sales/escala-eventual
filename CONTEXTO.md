@@ -1,7 +1,7 @@
 # Escala Eventual — contexto do projeto
 
 Resumo de trabalho acumulado, para retomar sem reler todo o histórico.
-Última atualização: 06/10/2026.
+Última atualização: 06/10/2026 (redesign Quadro).
 
 ---
 
@@ -135,17 +135,39 @@ Página de spec publicada: https://claude.ai/artifact/DQDNtQoKdx5p13StPebGWM
 |---|---|---|
 | 01 | Bugs de oficialização | **concluído** |
 | 02 | Contraste e foco de teclado | **concluído** |
-| 03 | Unificar os dois `:root` e resolver a fonte fantasma | pendente |
-| 04 | Escala tipográfica e estrutura | pendente |
-| 05 | Celular | pendente |
+| 03 | Unificar os dois `:root` e resolver a fonte fantasma | **concluído** (branch `redesign/quadro`) |
+| 04 | Escala tipográfica e estrutura | **concluído** (branch `redesign/quadro`) |
+| 05 | Celular | **concluído** (branch `redesign/quadro`) |
 
-**Item 03 — o achado que o motiva:** `index.css` importa **Plus Jakarta Sans** do Google
-Fonts (6 pesos) e declara `--font-main` com ela; `App.css` então define
-`body { font-family: 'Inter' }`, que **nunca é carregada**. O app baixa seis pesos de uma
-fonte que não usa e renderiza numa que não baixou.
+### O que a implementação da Quadro fez (06/10/2026)
 
-**Item 05:** há **uma** media query em 3.177 linhas de CSS. Não há rolagem horizontal a
-375px (medido), então o mobile é *raso*, não quebrado.
+- **Um único `:root`** em `index.css`: papel/tinta, verde-quadro `#1C5C4F` só para ação primária
+  e seleção, 5 cores de área, 3 estados de cobertura, seis degraus de tipo, espaço base 4.
+  `App.css` foi reescrito do zero, sem cor literal fora dos tokens. Sistema registrado em `DESIGN.md`.
+- **Fonte:** Public Sans servida localmente (`@fontsource-variable/public-sans`, sem Google
+  Fonts), com `tabular-nums` no corpo inteiro. A Plus Jakarta e a Inter fantasma saíram.
+- **Escala do dia:** coluna "Quem faltou" (nomes inteiros em caixa normal, área, contador) +
+  a escala como **tabela** agrupada por aula, com o motivo de cada escolha. O modal "Estúdio"
+  (`ScalePreviewModal`) foi removido: a tabela já é a conferência, com arrastar para trocar
+  e o botão Trocar. As regras do motor ficam visíveis em "Como a escala escolhe".
+- **Saíram:** confete (`canvas-confetti` desinstalado), "Inteligente", troféu/pódio/ranking
+  (o Histórico virou distribuição em ordem alfabética), gradientes, avatares coloridos,
+  emojis, o favicon do Vite e os assets do template.
+- **Hierarquia de ação:** uma primária por momento — "Gerar escala" antes; "Oficializar"
+  depois; "Copiar para o WhatsApp" depois de oficializada.
+- **"Restaurar dados oficiais"** saiu do cabeçalho global para a aba **Dados**, como zona de cuidado.
+- **Diálogo único** (`components/Modal.tsx`): Esc fecha, foco entra e volta; vira folha
+  inferior no celular.
+- **Celular:** a escala vira blocos regrados, as cinco abas cabem a 390px, "Gerar" rola até a escala.
+- **Medido:** 0 reprovações de contraste em ~1.250 textos (todas as telas + diálogo), nenhum
+  texto abaixo de 12px, sem rolagem horizontal a 390px. `src/utils/display.ts` tem testes (108 no total).
+- **Correção de brinde:** editar um horário de eletiva/tutoria salvava como outro tipo e
+  apagava o nome; agora o salvar fica desabilitado nesses casos.
+- **Revisão independente:** 8 apontamentos, 7 resolvidos e conferidos por recaptura.
+
+**Pendente com a escola:** alguns nomes de disciplina chegam **cortados na origem**
+("Modelagem e Desenvolviment…", "Lógica e Linguagens de Progr…"). Corrigir em
+`src/utils/subjects.ts` quando os títulos completos forem confirmados — não adivinhar.
 
 ---
 

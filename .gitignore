@@ -38,3 +38,6 @@ inspectTurmas.cjs
 # O gerador que os le (generatePdfData.mjs) fica versionado: a escola entrega o
 # horario nesse formato, entao ele e o pipeline de dados, nao um script pontual.
 *.pdf
+
+# Capturas de revisão do redesign (contêm nomes reais)
+.impeccable/review/

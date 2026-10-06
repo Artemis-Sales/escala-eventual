@@ -1,0 +1,699 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-06T22:56:22.014Z",
+  "title": "Design System: Escala Eventual",
+  "extensions": {
+    "colorMeta": {
+      "papel": {
+        "role": "neutral",
+        "displayName": "Papel",
+        "canonical": "#FBFAF7",
+        "oklch": "oklch(98.5% 0.004 91.4)",
+        "cssVar": "--papel",
+        "tonalRamp": [
+          "#0C0B09",
+          "#262523",
+          "#434240",
+          "#62615F",
+          "#838280",
+          "#A6A5A2",
+          "#CAC9C6",
+          "#EFEEEB"
+        ]
+      },
+      "papel-fundo": {
+        "role": "neutral",
+        "displayName": "Papel de Fundo",
+        "canonical": "#F2F0EA",
+        "oklch": "oklch(95.5% 0.008 91.5)",
+        "cssVar": "--papel-fundo",
+        "tonalRamp": [
+          "#0C0B07",
+          "#262521",
+          "#43423D",
+          "#63615C",
+          "#84827D",
+          "#A7A59F",
+          "#CBC9C3",
+          "#F0EEE8"
+        ]
+      },
+      "papel-fundo-2": {
+        "role": "neutral",
+        "displayName": "Papel Dobrado",
+        "canonical": "#E9E6DE",
+        "oklch": "oklch(92.5% 0.011 89.7)",
+        "cssVar": "--papel-fundo-2",
+        "tonalRamp": [
+          "#0D0B06",
+          "#27251F",
+          "#44423B",
+          "#64615A",
+          "#85827B",
+          "#A8A59D",
+          "#CCC9C1",
+          "#F1EEE6"
+        ]
+      },
+      "regua": {
+        "role": "neutral",
+        "displayName": "Régua",
+        "canonical": "#DFDBD1",
+        "oklch": "oklch(89.2% 0.014 88.7)",
+        "cssVar": "--regua",
+        "tonalRamp": [
+          "#0E0B05",
+          "#28251D",
+          "#45423A",
+          "#646158",
+          "#868279",
+          "#A9A59B",
+          "#CDC9BF",
+          "#F2EEE4"
+        ]
+      },
+      "regua-forte": {
+        "role": "neutral",
+        "displayName": "Régua Forte",
+        "canonical": "#C4BEB1",
+        "oklch": "oklch(80.3% 0.019 86.2)",
+        "cssVar": "--regua-forte",
+        "tonalRamp": [
+          "#0F0B03",
+          "#29251A",
+          "#464137",
+          "#666155",
+          "#878276",
+          "#AAA498",
+          "#CFC9BB",
+          "#F4EEE0"
+        ]
+      },
+      "campo": {
+        "role": "neutral",
+        "displayName": "Folha do Campo",
+        "canonical": "#FFFFFF",
+        "oklch": "oklch(100.0% 0.000 89.9)",
+        "cssVar": null,
+        "tonalRamp": [
+          "#0B0B0B",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#A5A5A5",
+          "#C9C9C9",
+          "#EEEEEE"
+        ],
+        "note": "Token --campo em index.css; usado em .campo e .busca."
+      },
+      "tinta-900": {
+        "role": "neutral",
+        "displayName": "Tinta 900",
+        "canonical": "#171A1F",
+        "oklch": "oklch(21.7% 0.011 260.7)",
+        "cssVar": "--tinta-900",
+        "tonalRamp": [
+          "#090B10",
+          "#22252A",
+          "#3F4248",
+          "#5E6168",
+          "#7F8389",
+          "#A1A5AC",
+          "#C5C9D0",
+          "#EAEFF6"
+        ]
+      },
+      "tinta-700": {
+        "role": "neutral",
+        "displayName": "Tinta 700",
+        "canonical": "#3A4049",
+        "oklch": "oklch(36.9% 0.017 258.4)",
+        "cssVar": "--tinta-700",
+        "tonalRamp": [
+          "#070B13",
+          "#20252E",
+          "#3C424B",
+          "#5B626B",
+          "#7C838D",
+          "#9EA6B0",
+          "#C2CAD5",
+          "#E7EFFB"
+        ]
+      },
+      "tinta-500": {
+        "role": "neutral",
+        "displayName": "Tinta 500",
+        "canonical": "#5C636E",
+        "oklch": "oklch(49.8% 0.020 259.4)",
+        "cssVar": "--tinta-500",
+        "tonalRamp": [
+          "#070B13",
+          "#1F252F",
+          "#3C424D",
+          "#5B626D",
+          "#7B838E",
+          "#9EA6B2",
+          "#C2CAD6",
+          "#E7EFFC"
+        ]
+      },
+      "tinta-400": {
+        "role": "neutral",
+        "displayName": "Tinta 400",
+        "canonical": "#636A74",
+        "oklch": "oklch(52.2% 0.018 257.2)",
+        "cssVar": "--tinta-400",
+        "tonalRamp": [
+          "#070B13",
+          "#20252E",
+          "#3C424C",
+          "#5B626C",
+          "#7C838D",
+          "#9EA6B1",
+          "#C2CAD5",
+          "#E7EFFB"
+        ]
+      },
+      "acento": {
+        "role": "primary",
+        "displayName": "Verde-Quadro",
+        "canonical": "#1C5C4F",
+        "oklch": "oklch(43.1% 0.068 176.8)",
+        "cssVar": "--acento",
+        "tonalRamp": [
+          "#000F0B",
+          "#012D24",
+          "#064E41",
+          "#306E60",
+          "#539081",
+          "#76B3A4",
+          "#99D8C8",
+          "#BEFEED"
+        ]
+      },
+      "acento-hover": {
+        "role": "primary",
+        "displayName": "Verde-Quadro Fundo",
+        "canonical": "#154A3F",
+        "oklch": "oklch(37.1% 0.058 176.4)",
+        "cssVar": "--acento-hover",
+        "tonalRamp": [
+          "#000F0B",
+          "#002D24",
+          "#184C41",
+          "#3A6C60",
+          "#5B8E81",
+          "#7EB2A4",
+          "#A1D6C8",
+          "#C6FCED"
+        ]
+      },
+      "acento-fraco": {
+        "role": "primary",
+        "displayName": "Verde-Giz",
+        "canonical": "#E4EEE9",
+        "oklch": "oklch(94.0% 0.013 164.8)",
+        "cssVar": "--acento-fraco",
+        "tonalRamp": [
+          "#070D0A",
+          "#202723",
+          "#3C4440",
+          "#5B645F",
+          "#7C8580",
+          "#9EA8A3",
+          "#C2CCC7",
+          "#E7F1EC"
+        ]
+      },
+      "area-linguagens": {
+        "role": "secondary",
+        "displayName": "Tijolo (Linguagens)",
+        "canonical": "#9A3412",
+        "oklch": "oklch(47.0% 0.143 37.3)",
+        "cssVar": "--area-linguagens",
+        "tonalRamp": [
+          "#1B0300",
+          "#460F01",
+          "#742205",
+          "#A23B1B",
+          "#C85E3F",
+          "#F08261",
+          "#FCB6A1",
+          "#FEE9E3"
+        ]
+      },
+      "area-natureza": {
+        "role": "secondary",
+        "displayName": "Mata (Ciências da Natureza)",
+        "canonical": "#166534",
+        "oklch": "oklch(44.8% 0.108 151.3)",
+        "cssVar": "--area-natureza",
+        "tonalRamp": [
+          "#001004",
+          "#042E14",
+          "#025025",
+          "#277240",
+          "#4B9561",
+          "#6FB982",
+          "#93DEA5",
+          "#C9FED5"
+        ]
+      },
+      "area-humanas": {
+        "role": "secondary",
+        "displayName": "Petróleo (Ciências Humanas)",
+        "canonical": "#155E75",
+        "oklch": "oklch(45.0% 0.077 224.3)",
+        "cssVar": "--area-humanas",
+        "tonalRamp": [
+          "#000E14",
+          "#032A36",
+          "#01495E",
+          "#256A82",
+          "#4A8CA5",
+          "#6DB0C9",
+          "#91D5EF",
+          "#DAF4FE"
+        ]
+      },
+      "area-diversificada": {
+        "role": "secondary",
+        "displayName": "Uva (Parte Diversificada)",
+        "canonical": "#6B21A8",
+        "oklch": "oklch(43.8% 0.198 303.7)",
+        "cssVar": "--area-diversificada",
+        "tonalRamp": [
+          "#130025",
+          "#340557",
+          "#58118E",
+          "#7B35BA",
+          "#9D5BE1",
+          "#BC87FA",
+          "#D6BAFB",
+          "#F2EAFF"
+        ]
+      },
+      "area-gestao": {
+        "role": "secondary",
+        "displayName": "Pedra (Gestão Escolar)",
+        "canonical": "#44403C",
+        "oklch": "oklch(37.4% 0.009 67.6)",
+        "cssVar": "--area-gestao",
+        "tonalRamp": [
+          "#0E0A07",
+          "#282421",
+          "#45413D",
+          "#65605C",
+          "#86817D",
+          "#A9A49F",
+          "#CDC8C3",
+          "#F3EDE8"
+        ]
+      },
+      "coberta": {
+        "role": "tertiary",
+        "displayName": "Coberta",
+        "canonical": "#15603A",
+        "oklch": "oklch(43.4% 0.095 156.0)",
+        "cssVar": "--coberta",
+        "tonalRamp": [
+          "#000F05",
+          "#012E18",
+          "#084F2D",
+          "#2A714A",
+          "#4E936A",
+          "#71B78C",
+          "#95DCAF",
+          "#C7FEDA"
+        ]
+      },
+      "coberta-fundo": {
+        "role": "tertiary",
+        "displayName": "Coberta (fundo)",
+        "canonical": "#E3EFE7",
+        "oklch": "oklch(94.1% 0.017 156.9)",
+        "cssVar": "--coberta-fundo",
+        "tonalRamp": [
+          "#060D08",
+          "#1F2822",
+          "#3B453E",
+          "#5A645D",
+          "#7B857E",
+          "#9DA8A1",
+          "#C1CDC5",
+          "#E6F2EA"
+        ]
+      },
+      "ultimo-recurso": {
+        "role": "tertiary",
+        "displayName": "Último recurso",
+        "canonical": "#8A5A00",
+        "oklch": "oklch(50.8% 0.108 73.3)",
+        "cssVar": "--ultimo-recurso",
+        "tonalRamp": [
+          "#130900",
+          "#352001",
+          "#5A3A05",
+          "#83570E",
+          "#A9772E",
+          "#CE9A53",
+          "#F4BE77",
+          "#FEEBD4"
+        ]
+      },
+      "ultimo-recurso-fundo": {
+        "role": "tertiary",
+        "displayName": "Último recurso (fundo)",
+        "canonical": "#F6ECD4",
+        "oklch": "oklch(94.5% 0.033 88.1)",
+        "cssVar": "--ultimo-recurso-fundo",
+        "tonalRamp": [
+          "#110A00",
+          "#2C2411",
+          "#49412D",
+          "#69604C",
+          "#8B826C",
+          "#AEA48E",
+          "#D2C8B1",
+          "#F8EED6"
+        ]
+      },
+      "descoberta": {
+        "role": "tertiary",
+        "displayName": "Sem cobertura",
+        "canonical": "#A11A1A",
+        "oklch": "oklch(45.8% 0.170 27.2)",
+        "cssVar": "--descoberta",
+        "tonalRamp": [
+          "#1F0000",
+          "#4C0305",
+          "#7D0E10",
+          "#AD2825",
+          "#D55046",
+          "#FD7468",
+          "#FDB4AA",
+          "#FEE9E6"
+        ]
+      },
+      "descoberta-fundo": {
+        "role": "tertiary",
+        "displayName": "Sem cobertura (fundo)",
+        "canonical": "#F8E4E1",
+        "oklch": "oklch(93.4% 0.022 27.8)",
+        "cssVar": "--descoberta-fundo",
+        "tonalRamp": [
+          "#130806",
+          "#2F211F",
+          "#4D3E3B",
+          "#6E5D5A",
+          "#8F7E7B",
+          "#B3A09D",
+          "#D7C4C1",
+          "#FDE9E6"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Data / título de página",
+        "purpose": "A data por extenso no topo da escala e títulos de página; 18px abaixo de 640px.",
+        "cssVar": "--texto-secao"
+      },
+      "title": {
+        "displayName": "Título de seção",
+        "purpose": "Quem faltou, títulos de diálogo e seção, números do resumo (700).",
+        "cssVar": "--texto-destaque"
+      },
+      "body": {
+        "displayName": "Corpo",
+        "purpose": "Linhas de tabela e lista, nomes, turmas.",
+        "cssVar": "--texto-corpo"
+      },
+      "apoio": {
+        "displayName": "Apoio",
+        "purpose": "Metadados, motivo da escolha, horários, subtítulos; o degrau mais usado.",
+        "cssVar": "--texto-apoio"
+      },
+      "botao": {
+        "displayName": "Botão",
+        "purpose": "Todo botão, chip e segmento.",
+        "cssVar": "--texto-apoio"
+      },
+      "label": {
+        "displayName": "Cabeçalho de coluna",
+        "purpose": "Só cabeçalhos de coluna (caixa alta, 0.06em) e rótulos de ficha; selos em caixa normal.",
+        "cssVar": "--texto-etiqueta"
+      }
+    },
+    "shadows": [
+      {
+        "name": "sombra-flutuante",
+        "value": "0 12px 32px -8px rgb(23 26 31 / 0.22), 0 2px 6px rgb(23 26 31 / 0.08)",
+        "purpose": "Diálogos e aviso flutuante; só o que se sobrepõe à folha."
+      },
+      {
+        "name": "sombra-controle",
+        "value": "0 1px 2px rgb(23 26 31 / 0.08)",
+        "purpose": "Botão secundário em repouso."
+      },
+      {
+        "name": "segmento-escolhido",
+        "value": "0 1px 2px rgb(23 26 31 / 0.12), 0 0 0 1px var(--regua)",
+        "purpose": "Opção escolhida do controle segmentado."
+      },
+      {
+        "name": "foco-campo",
+        "value": "0 0 0 3px var(--acento-fraco)",
+        "purpose": "Anel externo de campo e busca em foco, com borda verde-quadro."
+      },
+      {
+        "name": "alvo-arrastar",
+        "value": "inset 0 1px 0 var(--acento), inset 0 -1px 0 var(--acento)",
+        "purpose": "Linha da escala que receberá o substituto arrastado."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-saida",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Entradas de diálogo, aviso e o piscar de linha alterada."
+      },
+      {
+        "name": "duracao-estado",
+        "value": "150ms ease",
+        "purpose": "Cor, fundo, borda e sombra de controles."
+      },
+      {
+        "name": "duracao-linha",
+        "value": "120ms ease",
+        "purpose": "Hover de linhas de lista, candidatos e células da grade."
+      },
+      {
+        "name": "fundo-dialogo",
+        "value": "160ms ease",
+        "purpose": "Esmaecer do fundo do diálogo."
+      },
+      {
+        "name": "dialogo-entra",
+        "value": "220ms var(--ease-saida); translateY(8px) scale(0.985) para 0",
+        "purpose": "Entrada do diálogo; no celular vira folha subindo 24px."
+      },
+      {
+        "name": "aviso-entra",
+        "value": "240ms var(--ease-saida); translateY(8px) para 0",
+        "purpose": "Entrada do aviso flutuante."
+      },
+      {
+        "name": "piscar",
+        "value": "1.4s var(--ease-saida); verde-giz nos primeiros 20%",
+        "purpose": "Linha da escala recém-alterada."
+      },
+      {
+        "name": "reduzir-movimento",
+        "value": "prefers-reduced-motion: durações a 0.01ms",
+        "purpose": "Desliga toda animação e transição."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "coluna-estreita",
+        "value": "1180px"
+      },
+      {
+        "name": "uma-coluna",
+        "value": "900px"
+      },
+      {
+        "name": "celular",
+        "value": "640px"
+      },
+      {
+        "name": "toque",
+        "value": "(pointer: coarse)"
+      },
+      {
+        "name": "impressao",
+        "value": "print"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botão primário",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "A única ação primária do momento: Gerar escala, Oficializar ou Copiar para o WhatsApp.",
+      "html": "<button class=\"ds-btn ds-btn-primario\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"8\" y=\"8\" width=\"14\" height=\"14\" rx=\"2\"/><path d=\"M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2\"/></svg>Copiar para o WhatsApp</button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--e-2); min-height: var(--altura-controle); padding: 0 var(--e-4); border-radius: var(--raio); border: 1px solid transparent; font-family: var(--fonte); font-size: var(--texto-apoio); font-weight: 600; line-height: 1.2; white-space: nowrap; cursor: pointer; transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease, box-shadow 150ms ease; } .ds-btn:active:not(:disabled) { transform: translateY(1px); } .ds-btn:focus-visible { outline: 2px solid var(--acento); outline-offset: 2px; } .ds-btn-primario { background: var(--acento); color: var(--papel); } .ds-btn-primario:hover:not(:disabled) { background: var(--acento-hover); } .ds-btn-primario:disabled { background: var(--papel-fundo-2); color: var(--tinta-500); cursor: not-allowed; }"
+    },
+    {
+      "name": "Botão secundário",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Saídas e ações reversíveis: WhatsApp em rascunho, Imprimir A4, Excel, Fechar.",
+      "html": "<button class=\"ds-btn ds-btn-secundario\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M6 9V2h12v7\"/><path d=\"M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2\"/><rect x=\"6\" y=\"14\" width=\"12\" height=\"8\"/></svg>Imprimir A4</button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--e-2); min-height: var(--altura-controle); padding: 0 var(--e-4); border-radius: var(--raio); border: 1px solid transparent; font-family: var(--fonte); font-size: var(--texto-apoio); font-weight: 600; line-height: 1.2; white-space: nowrap; cursor: pointer; transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease, box-shadow 150ms ease; } .ds-btn:active:not(:disabled) { transform: translateY(1px); } .ds-btn:focus-visible { outline: 2px solid var(--acento); outline-offset: 2px; } .ds-btn-secundario { background: var(--papel); border-color: var(--regua-forte); color: var(--tinta-900); box-shadow: var(--sombra-controle); } .ds-btn-secundario:hover:not(:disabled) { background: var(--papel-fundo); }"
+    },
+    {
+      "name": "Botão fantasma pequeno",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "O \"Trocar\" de cada linha da escala.",
+      "html": "<button class=\"ds-btn ds-btn-fantasma ds-btn-p\">Trocar</button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--e-2); min-height: var(--altura-controle); padding: 0 var(--e-4); border-radius: var(--raio); border: 1px solid transparent; font-family: var(--fonte); font-size: var(--texto-apoio); font-weight: 600; line-height: 1.2; white-space: nowrap; cursor: pointer; transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease, box-shadow 150ms ease; } .ds-btn:active:not(:disabled) { transform: translateY(1px); } .ds-btn:focus-visible { outline: 2px solid var(--acento); outline-offset: 2px; } .ds-btn-fantasma { background: transparent; color: var(--tinta-700); } .ds-btn-fantasma:hover:not(:disabled) { background: var(--papel-fundo); color: var(--tinta-900); } .ds-btn-p { min-height: 32px; padding: 0 var(--e-3); }"
+    },
+    {
+      "name": "Botão de perigo",
+      "kind": "button",
+      "refersTo": "button-danger",
+      "description": "Desfazer cobertura ou apagar; o vermelho de sem cobertura só em contorno e texto.",
+      "html": "<button class=\"ds-btn ds-btn-perigo\">Deixar sem cobertura</button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--e-2); min-height: var(--altura-controle); padding: 0 var(--e-4); border-radius: var(--raio); border: 1px solid transparent; font-family: var(--fonte); font-size: var(--texto-apoio); font-weight: 600; line-height: 1.2; white-space: nowrap; cursor: pointer; transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease, box-shadow 150ms ease; } .ds-btn:active:not(:disabled) { transform: translateY(1px); } .ds-btn:focus-visible { outline: 2px solid var(--acento); outline-offset: 2px; } .ds-btn-perigo { background: var(--papel); border-color: var(--regua-forte); color: var(--descoberta); } .ds-btn-perigo:hover:not(:disabled) { background: var(--descoberta-fundo); border-color: var(--descoberta); }"
+    },
+    {
+      "name": "Busca",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Campo de busca da lista de professores: folha branca, lupa em tinta 400, foco verde com anel verde-giz.",
+      "html": "<label class=\"ds-busca\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.3-4.3\"/></svg><input type=\"search\" placeholder=\"Nome, disciplina ou área\" aria-label=\"Buscar professor\"></label>",
+      "css": ".ds-busca { display: flex; align-items: center; gap: var(--e-2); min-height: var(--altura-controle); padding: 0 var(--e-3); background: #fff; border: 1px solid var(--regua-forte); border-radius: var(--raio); color: var(--tinta-400); transition: border-color 150ms ease, box-shadow 150ms ease; } .ds-busca:hover { border-color: var(--tinta-400); } .ds-busca:focus-within { border-color: var(--acento); box-shadow: 0 0 0 3px var(--acento-fraco); } .ds-busca input { flex: 1; min-width: 0; border: 0; background: transparent; font-family: var(--fonte); font-size: var(--texto-corpo); color: var(--tinta-900); outline: none; } .ds-busca input::placeholder { color: var(--tinta-400); }"
+    },
+    {
+      "name": "Abas",
+      "kind": "nav",
+      "refersTo": "",
+      "description": "Navegação principal: texto em tinta, traço de 2px em tinta 900 sob a aba ativa.",
+      "html": "<nav class=\"ds-abas\"><a class=\"ds-aba\" aria-current=\"page\" href=\"#\">Escala do dia</a><a class=\"ds-aba\" href=\"#\">Grade</a><a class=\"ds-aba\" href=\"#\">Professores</a><a class=\"ds-aba\" href=\"#\">Histórico</a></nav>",
+      "css": ".ds-abas { display: flex; gap: var(--e-1); background: var(--papel); border-bottom: 1px solid var(--regua); min-height: 56px; } .ds-aba { position: relative; display: flex; align-items: center; padding: 0 var(--e-3); font-family: var(--fonte); font-size: var(--texto-corpo); font-weight: 500; color: var(--tinta-500); text-decoration: none; white-space: nowrap; transition: color 150ms ease; } .ds-aba::after { content: ''; position: absolute; left: var(--e-3); right: var(--e-3); bottom: -1px; height: 2px; background: transparent; transition: background-color 150ms ease; } .ds-aba:hover { color: var(--tinta-900); } .ds-aba[aria-current='page'] { color: var(--tinta-900); font-weight: 600; } .ds-aba[aria-current='page']::after { background: var(--tinta-900); } .ds-aba:focus-visible { outline: 2px solid var(--acento); outline-offset: -4px; }"
+    },
+    {
+      "name": "Controle segmentado",
+      "kind": "chip",
+      "refersTo": "segment-selected",
+      "description": "Escolha única entre poucas opções; a escolhida vira uma tecla de papel.",
+      "html": "<div class=\"ds-segmentado\" role=\"radiogroup\"><button class=\"ds-segmento\" role=\"radio\" aria-checked=\"true\">Por turma</button><button class=\"ds-segmento\" role=\"radio\" aria-checked=\"false\">Por professor</button></div>",
+      "css": ".ds-segmentado { display: inline-flex; padding: 3px; gap: 2px; background: var(--papel-fundo); border: 1px solid var(--regua); border-radius: calc(var(--raio) + 2px); } .ds-segmento { min-height: 32px; padding: 0 var(--e-3); border: 0; border-radius: var(--raio); background: none; font-family: var(--fonte); font-size: var(--texto-apoio); font-weight: 500; color: var(--tinta-500); cursor: pointer; transition: background-color 150ms ease, color 150ms ease, box-shadow 150ms ease; } .ds-segmento:hover { color: var(--tinta-900); } .ds-segmento[aria-checked='true'] { background: var(--papel); color: var(--tinta-900); font-weight: 600; box-shadow: 0 1px 2px rgb(23 26 31 / 0.12), 0 0 0 1px var(--regua); } .ds-segmento:focus-visible { outline: 2px solid var(--acento); outline-offset: 2px; }"
+    },
+    {
+      "name": "Item de professor",
+      "kind": "custom",
+      "refersTo": "linha-selecionada",
+      "description": "Linha da lista \"Quem faltou\": checkbox, nome, marcador de área, selo de nível e contador; marcada vira verde-giz.",
+      "html": "<ul class=\"ds-lista\"><li><label class=\"ds-prof is-marcado\"><input type=\"checkbox\" checked><span class=\"ds-prof-texto\"><span class=\"ds-prof-nome\">Ana Paula de Souza</span><span class=\"ds-prof-meta\"><span class=\"ds-ponto\" style=\"--cor-area: var(--area-linguagens)\"></span>Língua Portuguesa<span class=\"ds-selo\">PCA</span></span></span><span class=\"ds-prof-contador\">4</span></label></li><li><label class=\"ds-prof\"><input type=\"checkbox\"><span class=\"ds-prof-texto\"><span class=\"ds-prof-nome\">Carlos Eduardo Lima</span><span class=\"ds-prof-meta\"><span class=\"ds-ponto\" style=\"--cor-area: var(--area-natureza)\"></span>Matemática</span></span><span class=\"ds-prof-contador\">2</span></label></li></ul>",
+      "css": ".ds-lista { list-style: none; margin: 0; padding: 0; font-family: var(--fonte); font-variant-numeric: tabular-nums; } .ds-prof { display: grid; grid-template-columns: 18px minmax(0, 1fr) auto; align-items: start; gap: var(--e-3); padding: var(--e-2); border-bottom: 1px solid var(--regua); border-radius: var(--raio); cursor: pointer; transition: background-color 120ms ease; } .ds-prof:hover { background: var(--papel-fundo); } .ds-prof.is-marcado { background: var(--acento-fraco); border-bottom-color: transparent; } .ds-prof input { width: 18px; height: 18px; margin-top: 2px; accent-color: var(--acento); } .ds-prof-texto { display: flex; flex-direction: column; min-width: 0; } .ds-prof-nome { font-size: var(--texto-corpo); font-weight: 500; color: var(--tinta-900); line-height: 1.35; } .is-marcado .ds-prof-nome { font-weight: 600; } .ds-prof-meta { font-size: var(--texto-apoio); color: var(--tinta-500); line-height: 1.4; } .ds-ponto { display: inline-block; width: 8px; height: 8px; border-radius: 2px; background: var(--cor-area, var(--area-gestao)); margin-right: 6px; vertical-align: 0.05em; } .ds-selo { display: inline-block; margin-left: var(--e-2); padding: 0 5px; border-radius: 3px; background: var(--papel-fundo-2); font-size: var(--texto-etiqueta); font-weight: 600; color: var(--tinta-700); } .ds-prof-contador { font-size: var(--texto-apoio); font-weight: 600; color: var(--tinta-500); text-align: right; padding-top: 1px; }"
+    },
+    {
+      "name": "Linha da escala",
+      "kind": "custom",
+      "refersTo": "linha-sem-cobertura",
+      "description": "Assinatura do sistema: aula, turma, disciplina com marcador de área e ausente, substituto com o motivo na cor do estado; réguas em três espessuras.",
+      "html": "<table class=\"ds-escala\"><thead><tr><th>Aula</th><th>Turma</th><th>Disciplina e ausente</th><th>Substituto</th></tr></thead><tbody><tr><th rowspan=\"2\" class=\"ds-aula\"><span class=\"ds-aula-num\">1ª</span><span class=\"ds-aula-hora\">07:10</span></th><td class=\"ds-turma\">6º A</td><td><span class=\"ds-disc\"><span class=\"ds-ponto\" style=\"--cor-area: var(--area-humanas)\"></span>História</span><span class=\"ds-ausente\">falta de Marta Ribeiro</span></td><td class=\"ds-coberta\"><span class=\"ds-nome\">João Batista Alves</span><span class=\"ds-motivo\">Mesma área</span></td></tr><tr><td class=\"ds-turma\">8º B</td><td><span class=\"ds-disc\"><span class=\"ds-ponto\" style=\"--cor-area: var(--area-natureza)\"></span>Ciências</span><span class=\"ds-ausente\">falta de Paulo Mendes</span></td><td class=\"ds-descoberta\"><span class=\"ds-nome\">Sem cobertura</span><span class=\"ds-motivo\">Sem professor livre</span></td></tr></tbody></table>",
+      "css": ".ds-escala { width: 100%; border-collapse: collapse; background: var(--papel); font-family: var(--fonte); font-size: var(--texto-corpo); font-variant-numeric: tabular-nums; color: var(--tinta-700); } .ds-escala th, .ds-escala td { text-align: left; vertical-align: top; padding: var(--e-3) var(--e-4); border-bottom: 1px solid var(--regua); } .ds-escala thead th { font-size: var(--texto-etiqueta); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--tinta-500); border-bottom-color: var(--tinta-900); padding-top: var(--e-2); padding-bottom: var(--e-2); } .ds-escala tbody tr:hover > td:not(.ds-descoberta) { background: color-mix(in srgb, var(--papel-fundo) 55%, var(--papel)); } .ds-aula { border-right: 1px solid var(--regua); width: 64px; } .ds-aula-num { display: block; font-weight: 700; color: var(--tinta-900); } .ds-aula-hora { display: block; font-size: var(--texto-apoio); font-weight: 500; color: var(--tinta-500); } .ds-turma { font-weight: 700; color: var(--tinta-900); white-space: nowrap; } .ds-disc { display: flex; align-items: center; font-weight: 500; color: var(--tinta-900); } .ds-ponto { display: inline-block; flex: none; width: 8px; height: 8px; border-radius: 2px; background: var(--cor-area, var(--area-gestao)); margin-right: var(--e-2); } .ds-ausente { display: block; font-size: var(--texto-apoio); color: var(--tinta-500); margin-top: 2px; padding-left: 16px; } .ds-nome { display: block; font-weight: 600; color: var(--tinta-900); } .ds-motivo { display: block; font-size: var(--texto-apoio); font-weight: 600; margin-top: 2px; } .ds-coberta .ds-motivo { color: var(--coberta); } .ds-descoberta { background: var(--descoberta-fundo); } .ds-descoberta .ds-nome { color: var(--descoberta); } .ds-descoberta .ds-motivo { color: var(--descoberta); font-weight: 500; } .ds-escala tbody tr:last-child > * { border-bottom: 0; }"
+    },
+    {
+      "name": "Aviso flutuante",
+      "kind": "custom",
+      "refersTo": "aviso",
+      "description": "Confirmação breve em tinta 900 sobre a página; entra subindo 8px.",
+      "html": "<div class=\"ds-aviso\" role=\"status\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 6 9 17l-5-5\"/></svg>Escala copiada para o WhatsApp</div>",
+      "css": ".ds-aviso { display: inline-flex; align-items: center; gap: var(--e-2); padding: var(--e-3) var(--e-4); background: var(--tinta-900); color: var(--papel); border-radius: var(--raio-painel); box-shadow: var(--sombra-flutuante); font-family: var(--fonte); font-size: var(--texto-apoio); font-weight: 500; animation: ds-aviso-entra 240ms var(--ease-saida); } @keyframes ds-aviso-entra { from { opacity: 0; transform: translateY(8px); } } @media (prefers-reduced-motion: reduce) { .ds-aviso { animation: none; } }"
+    }
+  ],
+  "narrative": {
+    "northStar": "O Quadro de Horários",
+    "overview": "A escala é a folha que a coordenação afixaria no mural da sala dos professores: tinta escura sobre papel morno, réguas finas separando as linhas, e quase nenhuma cor. O que a tela mostra é o que vai para a impressão A4 e para o WhatsApp, então a interface se comporta como um documento que se pode editar, e não como um painel de controle. A densidade é a de uma tabela de secretaria: linhas de 15px, metadados de 13px logo abaixo, números com algarismos tabulares alinhados em coluna.\n\nA estrutura vem das réguas, não das caixas. Grupos se leem por uma régua mais forte no começo de cada aula, cabeçalhos de tabela fecham com um traço de tinta, e as superfícies são no máximo um ou dois painéis por página. A cor é reservada para significado: as cinco áreas de conhecimento da escola, os três estados de cobertura de uma aula, e o verde-quadro que marca a única ação primária do momento e o que está selecionado. Todo o resto é tinta em quatro degraus.\n\nO sistema recusa explicitamente o vocabulário de painel SaaS: grade de cards, degradês, avatares coloridos e botões \"Inteligente\". A escolha de cada substituto é mostrada como texto (o motivo, logo abaixo do nome), não como selo luminoso ou ícone mágico.",
+    "keyCharacteristics": [
+      "Papel morno (#F2F0EA de fundo, #FBFAF7 nos painéis), tinta grafite em quatro degraus, réguas de 1px.",
+      "Verde-quadro só na ação primária e na seleção; uma ação primária por momento.",
+      "Cor semântica fechada: 5 áreas, 3 estados de cobertura. Nada mais tem matiz.",
+      "Public Sans variável com algarismos tabulares em todo o app; piso de 12px.",
+      "Tabelas e listas com réguas no lugar de cards; o celular converte a tabela em blocos, sem mudar o conteúdo.",
+      "Plano: sombra só no que flutua (diálogo, aviso) e um sopro sob botões secundários."
+    ],
+    "rules": [
+      {
+        "name": "A Regra do Verde Único",
+        "body": "Em cada momento do fluxo existe exatamente um botão verde. Antes de gerar, é \"Gerar escala\"; com rascunho, \"Oficializar\" (e Gerar vira secundário); oficializada, \"Copiar para o WhatsApp\". Se dois botões verdes aparecem juntos, um deles está errado.",
+        "section": "colors"
+      },
+      {
+        "name": "A Regra da Cor com Significado",
+        "body": "Matiz só existe para as 5 áreas, os 3 estados de cobertura e o acento. Um elemento que não carrega nenhum desses significados é tinta ou papel.",
+        "section": "colors"
+      },
+      {
+        "name": "A Regra da Carga Sem Ranking",
+        "body": "Contadores de substituição e barras de distribuição são sempre tinta neutra. Nunca se pinta o maior, o menor ou o \"vencedor\".",
+        "section": "colors"
+      },
+      {
+        "name": "A Regra do Piso de 12",
+        "body": "Nenhum texto abaixo de 12px, em nenhum breakpoint e em nenhum selo.",
+        "section": "typography"
+      },
+      {
+        "name": "A Regra da Caixa Alta de Coluna",
+        "body": "Caixa alta com tracking só aparece onde um quadro impresso a teria: cabeçalho de coluna e rótulo de campo de ficha. Nunca acima de um título, nunca como sobretítulo de seção.",
+        "section": "typography"
+      },
+      {
+        "name": "A Regra do Nome Legível",
+        "body": "Nomes chegam em caixa alta da planilha e são exibidos em caixa de título, com partículas (da, de, do, dos, e) em minúscula. Turmas são encurtadas (\"6º A\", \"2ª A · DS\").",
+        "section": "typography"
+      },
+      {
+        "name": "A Regra das Três Réguas",
+        "body": "Dentro de uma tabela há três espessuras de significado, todas de 1px: tinta 900 fecha o cabeçalho, régua forte abre cada grupo (cada aula), régua comum separa linhas. Grupos se leem pelas réguas, nunca por caixas ou fundos alternados.",
+        "section": "layout"
+      },
+      {
+        "name": "A Regra do Só-o-que-Flutua",
+        "body": "Nada que está na folha tem sombra de elevação. Se não se sobrepõe a outra coisa, não projeta sombra.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** usar exatamente um botão primário verde-quadro por momento do fluxo: Gerar escala → Oficializar → Copiar para o WhatsApp.",
+      "**Do** separar linhas e grupos com réguas de 1px (régua, régua forte no início do grupo, tinta 900 sob o cabeçalho).",
+      "**Do** mostrar o motivo de cada escolha em texto de 13px/600 na cor do estado, logo abaixo do nome do substituto.",
+      "**Do** marcar área de conhecimento só com o quadradinho de 8px e 2px de canto antes da disciplina.",
+      "**Do** manter algarismos tabulares em todo número e alinhar contadores à direita.",
+      "**Do** deixar a aula sem cobertura visível: célula em vermelho claro no desktop, texto vermelho no celular.",
+      "**Do** usar 44px de altura de controle com ponteiro grosso e manter o piso de 12px de texto.",
+      "**Do** usar a hachura diagonal de 1px (papel dobrado sobre papel de fundo) para horários bloqueados na grade."
+    ],
+    "donts": [
+      "**Don't** montar grades de cards; uma página tem um ou dois painéis, e dentro deles tudo é tabela ou lista.",
+      "**Don't** usar degradê como fundo ou preenchimento de cor; a hachura listrada de horário bloqueado é o único padrão.",
+      "**Don't** usar avatares, coloridos ou não; a pessoa é o nome, a área é o quadradinho.",
+      "**Don't** criar botões \"Inteligente\", brilhos, ícones mágicos ou qualquer sinal de automação; a regra é mostrada como texto.",
+      "**Don't** introduzir matiz fora das 5 áreas, dos 3 estados de cobertura e do verde-quadro.",
+      "**Don't** usar o vermelho de sem cobertura para nada além de aula descoberta, ação destrutiva e erro.",
+      "**Don't** pintar contadores ou barras de carga para destacar quem substituiu mais ou menos.",
+      "**Don't** pôr sombra em painéis, linhas ou cards que não flutuam.",
+      "**Don't** usar caixa alta fora de cabeçalho de coluna e rótulo de ficha; nada de sobretítulo acima de título.",
+      "**Don't** usar cantos de pílula ou círculo; o maior raio do sistema é 6px."
+    ]
+  }
+}

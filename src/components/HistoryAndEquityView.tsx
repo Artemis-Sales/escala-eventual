@@ -1,12 +1,6 @@
-import React from 'react';
-import {
-  History,
-  Calendar,
-  Award,
-  ArrowRight,
-  RotateCcw,
-} from 'lucide-react';
+import React, { useMemo } from 'react';
 import { useSchool } from '../context/SchoolContext';
+import { areaKey, capitalize, displayName, longDate, shortClassName } from '../utils/display';
 
 export const HistoryAndEquityView: React.FC = () => {
   const { history, teachers, setAllTeachers } = useSchool();
@@ -14,171 +8,122 @@ export const HistoryAndEquityView: React.FC = () => {
   const handleResetCounters = () => {
     if (
       window.confirm(
-        'Deseja zerar o contador de substituições de todos os professores para iniciar um novo mês ou bimestre?'
+        'Zerar o contador de substituições de todos os professores?\n\n' +
+          'Use no começo de um novo mês ou bimestre. O histórico de escalas continua guardado.'
       )
     ) {
-      setAllTeachers(
-        teachers.map((t) => ({
-          ...t,
-          totalSubstitutionsCount: 0,
-        }))
-      );
+      setAllTeachers(teachers.map((t) => ({ ...t, totalSubstitutionsCount: 0 })));
     }
   };
 
-  // Ordenar professores pelo número de substituições
-  const rankedTeachers = [...teachers].sort(
-    (a, b) => b.totalSubstitutionsCount - a.totalSubstitutionsCount
+  // Ordem alfabética, de propósito: é para achar uma pessoa e ver a carga dela, não para
+  // classificar quem trabalhou mais.
+  const people = useMemo(
+    () =>
+      teachers
+        .filter((t) => !t.isExemptFromSubstitutions)
+        .sort((a, b) => displayName(a.name).localeCompare(displayName(b.name), 'pt-BR')),
+    [teachers]
   );
 
+  const counts = people.map((t) => t.totalSubstitutionsCount);
+  const max = Math.max(1, ...counts);
+  const total = counts.reduce((a, b) => a + b, 0);
+  const average = people.length ? total / people.length : 0;
+  const none = counts.filter((c) => c === 0).length;
+
   return (
-    <div className="history-equity-view">
-      {/* Ranking de Equidade Geral */}
-      <section className="equity-section-card">
-        <div className="section-header-row">
-          <div className="title-with-badge">
-            <Award className="text-warning" size={22} />
-            <div>
-              <h3 className="section-title">Ranking de Distribuição de Substituições</h3>
-              <p className="section-subtitle">
-                Controle de transparência para garantir que todos os professores contribuam de forma equilibrada.
-              </p>
-            </div>
+    <div className="pagina historico">
+      <section className="painel">
+        <header className="painel-cabeca">
+          <div className="pagina-titulos">
+            <h1 className="pagina-titulo">Distribuição das substituições</h1>
+            <p className="pagina-sub">
+              <span className="numero">{total}</span> substituições oficializadas · média de{' '}
+              <span className="numero">{average.toLocaleString('pt-BR', { maximumFractionDigits: 1 })}</span>{' '}
+              por pessoa ·{' '}
+              <span className="numero">{none}</span> {none === 1 ? 'pessoa ainda não substituiu' : 'pessoas ainda não substituíram'}
+            </p>
           </div>
-
-          <button onClick={handleResetCounters} className="btn-secondary btn-sm">
-            <RotateCcw size={14} />
-            <span>Zerar Contadores (Novo Mês/Bimestre)</span>
+          <button type="button" className="btn btn-secundario" onClick={handleResetCounters}>
+            Zerar contadores
           </button>
-        </div>
+        </header>
 
-        <div className="ranking-table-container">
-          <table className="ranking-table">
-            <thead>
-              <tr>
-                <th style={{ width: '60px' }}>#</th>
-                <th>Professor</th>
-                <th>Disciplina</th>
-                <th>Área</th>
-                <th style={{ textAlign: 'center' }}>Total de Substituições</th>
-                <th>Status de Equidade</th>
-              </tr>
-            </thead>
-            <tbody>
-              {rankedTeachers.map((teacher, idx) => {
-                let badgeClass = 'badge-equity-balanced';
-                let badgeText = 'Equilibrado';
-
-                if (teacher.totalSubstitutionsCount === 0) {
-                  badgeClass = 'badge-equity-low';
-                  badgeText = 'Nenhuma feita (Prioritário)';
-                } else if (teacher.totalSubstitutionsCount >= 4) {
-                  badgeClass = 'badge-equity-high';
-                  badgeText = 'Mais Solicitado';
-                }
-
-                return (
-                  <tr key={teacher.id}>
-                    <td className="rank-position">{idx + 1}º</td>
-                    <td>
-                      <div className="teacher-table-cell">
-                        <div
-                          className="table-avatar"
-                          style={{ backgroundColor: teacher.color || '#3B82F6' }}
-                        >
-                          {teacher.name.replace(/Prof\.|Profa\./g, '').trim().charAt(0)}
-                        </div>
-                        <span className="teacher-name-bold">{teacher.name}</span>
-                      </div>
-                    </td>
-                    <td>{teacher.mainSubject}</td>
-                    <td>
-                      <span className="table-area-tag">{teacher.knowledgeArea}</span>
-                    </td>
-                    <td style={{ textAlign: 'center' }}>
-                      <span className="subs-count-badge">
-                        {teacher.totalSubstitutionsCount}
-                      </span>
-                    </td>
-                    <td>
-                      <span className={`badge-equity ${badgeClass}`}>
-                        {badgeText}
-                      </span>
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
+        <ul className="distribuicao">
+          {people.map((t) => {
+            const n = t.totalSubstitutionsCount;
+            return (
+              <li key={t.id} className="distribuicao-linha">
+                <span className="distribuicao-nome">
+                  <span className={`area-ponto area-${areaKey(t.knowledgeArea)}`} aria-hidden="true" />
+                  {displayName(t.name)}
+                </span>
+                <span className="distribuicao-barra" aria-hidden="true">
+                  <span style={{ width: `${(n / max) * 100}%` }} />
+                </span>
+                <span className="distribuicao-valor">{n}</span>
+              </li>
+            );
+          })}
+        </ul>
       </section>
 
-      {/* Histórico de Dias Gravados */}
-      <section className="history-section-card">
-        <div className="section-header-row">
-          <div className="title-with-badge">
-            <History className="text-primary" size={22} />
-            <div>
-              <h3 className="section-title">Histórico de Escalas Oficializadas</h3>
-              <p className="section-subtitle">
-                Registro de todas as escalas confirmadas no sistema.
-              </p>
-            </div>
+      <section className="painel">
+        <header className="painel-cabeca">
+          <div className="pagina-titulos">
+            <h2 className="pagina-titulo">Escalas oficializadas</h2>
+            <p className="pagina-sub">Só entra aqui o que foi oficializado na escala do dia.</p>
           </div>
-        </div>
+        </header>
 
         {history.length === 0 ? (
-          <div className="empty-history-state">
-            <Calendar size={48} className="text-muted" />
-            <p>Nenhuma escala foi oficializada ainda.</p>
-            <small className="text-muted">
-              Gere uma escala na aba "Escala do Dia" e clique em "Oficializar Escala" para gravar aqui.
-            </small>
-          </div>
+          <p className="grupo-vazio painel-margem">
+            Nenhuma escala oficializada ainda. Na aba Escala do dia, gere a escala e use
+            Oficializar para registrá-la aqui.
+          </p>
         ) : (
-          <div className="history-list">
-            {history.map((record) => {
-              const formattedDate = new Date(record.date + 'T00:00:00').toLocaleDateString('pt-BR', {
-                weekday: 'long',
-                day: '2-digit',
-                month: '2-digit',
-                year: 'numeric',
-              });
-
-              return (
-                <div key={record.id} className="history-record-card">
-                  <div className="record-header">
-                    <div className="record-date-badge">
-                      <Calendar size={15} />
-                      <span>{formattedDate.charAt(0).toUpperCase() + formattedDate.slice(1)}</span>
-                    </div>
-                    <span className="record-timestamp">Gravado em: {record.timestamp}</span>
-                  </div>
-
-                  <div className="record-absent-row">
-                    <strong>Professores Ausentes:</strong>{' '}
-                    <span className="text-danger">{record.absentTeachersNames.join(', ')}</span>
-                  </div>
-
-                  <div className="record-subs-summary">
-                    <strong>Substituições Realizadas ({record.substitutions.length}):</strong>
-                    <div className="record-subs-tags">
-                      {record.substitutions.map((sub, sIdx) => (
-                        <div key={sIdx} className="record-sub-tag">
-                          <span className="tag-class">{sub.className}</span>
-                          <span className="tag-period">{sub.periodLabel}</span>
-                          <span className="tag-teacher text-danger">{sub.originalTeacherName}</span>
-                          <ArrowRight size={12} />
-                          <span className="tag-substitute text-success font-bold">
-                            {sub.substituteTeacherName || 'Sem Substituto'}
-                          </span>
-                        </div>
+          <div className="registros">
+            {history.map((record) => (
+              <article key={record.id} className="registro">
+                <header className="registro-cabeca">
+                  <h3 className="registro-data">
+                    {capitalize(longDate(record.date))}
+                  </h3>
+                  <span className="registro-hora">gravada em {record.timestamp}</span>
+                </header>
+                <p className="registro-faltas">
+                  <span className="resumo-rotulo">Faltaram</span>{' '}
+                  {record.absentTeachersNames.map(displayName).join(', ')}
+                </p>
+                <div className="tabela-rolagem">
+                  <table className="tabela tabela-compacta">
+                    <thead>
+                      <tr>
+                        <th scope="col">Aula</th>
+                        <th scope="col">Turma</th>
+                        <th scope="col">Ausente</th>
+                        <th scope="col">Substituto</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {record.substitutions.map((sub) => (
+                        <tr key={sub.id}>
+                          <td className="numero">{sub.periodLabel.replace(' Aula', '')}</td>
+                          <td>{shortClassName(sub.className)}</td>
+                          <td>{displayName(sub.originalTeacherName)}</td>
+                          <td className={sub.substituteTeacherName ? '' : 'cor-descoberta'}>
+                            {sub.substituteTeacherName
+                              ? displayName(sub.substituteTeacherName)
+                              : 'Sem cobertura'}
+                          </td>
+                        </tr>
                       ))}
-                    </div>
-                  </div>
+                    </tbody>
+                  </table>
                 </div>
-              );
-            })}
+              </article>
+            ))}
           </div>
         )}
       </section>

@@ -1,32 +1,42 @@
 import React, { useMemo, useState } from 'react';
-import {
-  GraduationCap,
-  Clock,
-  CheckCircle2,
-  Trash2,
-  Plus,
-  AlertCircle,
-  X,
-  UserCheck,
-  Calendar,
-} from 'lucide-react';
+import { Trash2 } from 'lucide-react';
 import { useSchool } from '../context/SchoolContext';
 import { DAYS_OF_WEEK } from '../data/mockData';
 import { INICIOS_FREQUENTES, courseEndTime, periodsOverlappedBy } from '../utils/multiplica';
 import type { DayOfWeek } from '../types';
+import { Modal } from './Modal';
+import { displayName } from '../utils/display';
 
 interface MultiplicaModalProps {
   onClose: () => void;
+}
+
+interface MultiplicaGroup {
+  key: string;
+  teacherId: string;
+  teacherName: string;
+  dayOfWeek: DayOfWeek;
+  periodIds: number[];
+  trainingName: string;
+  horario?: string;
 }
 
 export const MultiplicaModal: React.FC<MultiplicaModalProps> = ({ onClose }) => {
   const { teachers, scheduleSlots, periods, addMultiplicaCourse, removeMultiplicaCourse } =
     useSchool();
 
-  const [selectedTeacherId, setSelectedTeacherId] = useState<string>(teachers[0]?.id || '');
+  const sortedTeachers = useMemo(
+    () =>
+      [...teachers].sort((a, b) =>
+        displayName(a.name).localeCompare(displayName(b.name), 'pt-BR')
+      ),
+    [teachers]
+  );
+
+  const [selectedTeacherId, setSelectedTeacherId] = useState<string>(sortedTeachers[0]?.id || '');
   const [selectedDay, setSelectedDay] = useState<DayOfWeek>('terca');
   const [role, setRole] = useState<'cursista' | 'multiplicador'>('cursista');
-  const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const [saved, setSaved] = useState<string | null>(null);
 
   // O curso tem horário próprio, independente da grade: começa numa hora livre e dura
   // 1h30. Ele pode começar no meio de uma aula, durante o intervalo ou no almoço, e
@@ -40,7 +50,7 @@ export const MultiplicaModal: React.FC<MultiplicaModalProps> = ({ onClose }) => 
   );
 
   const affectedLabels = affectedPeriods
-    .map((id) => periods.find((p) => p.id === id)?.label ?? `${id}ª Aula`)
+    .map((id) => periods.find((p) => p.id === id)?.label.replace(' Aula', '') ?? `${id}ª`)
     .join(', ');
 
   const handleAdd = (e: React.FormEvent) => {
@@ -49,278 +59,230 @@ export const MultiplicaModal: React.FC<MultiplicaModalProps> = ({ onClose }) => 
 
     const teacher = teachers.find((t) => t.id === selectedTeacherId);
     const roleLabel = role === 'multiplicador' ? 'Formador/Multiplicador' : 'Cursista';
-    const trainingName = `Multiplica SP (1h30 - ${roleLabel})`;
 
     addMultiplicaCourse(
       selectedTeacherId,
       selectedDay,
       affectedPeriods,
-      trainingName,
+      `Multiplica SP (1h30 - ${roleLabel})`,
       startTime,
       endTime
     );
 
-    setToastMessage(
-      `✅ ${teacher?.name || 'Professor'} cadastrado no Multiplica SP (${startTime} - ${endTime}) com sucesso!`
-    );
-    setTimeout(() => setToastMessage(null), 3000);
+    const dia = DAYS_OF_WEEK.find((d) => d.key === selectedDay)?.label.toLowerCase();
+    setSaved(`${displayName(teacher?.name)} bloqueado na ${dia}, das ${startTime} às ${endTime}.`);
   };
 
-  const multiplicaSlots = scheduleSlots.filter(
-    (s) => s.type === 'CURSO_FORMACAO' && s.trainingName?.includes('Multiplica')
-  );
-
-  interface MultiplicaGroup {
-    key: string;
-    teacherId: string;
-    teacherName: string;
-    dayOfWeek: DayOfWeek;
-    periodIds: number[];
-    periodLabels: string;
-    trainingName: string;
-    horario?: string;
-  }
-
-  const groupsMap = new Map<string, MultiplicaGroup>();
-
-  multiplicaSlots.forEach((slot) => {
-    const key = `${slot.teacherId}_${slot.dayOfWeek}`;
-    const teacher = teachers.find((t) => t.id === slot.teacherId);
-    const pDef = periods.find((p) => p.id === slot.periodId);
-
-    if (groupsMap.has(key)) {
-      const g = groupsMap.get(key)!;
-      if (!g.periodIds.includes(slot.periodId)) {
-        g.periodIds.push(slot.periodId);
-        g.periodLabels += `, ${pDef?.label || slot.periodId}`;
+  const groups = new Map<string, MultiplicaGroup>();
+  scheduleSlots
+    .filter((s) => s.type === 'CURSO_FORMACAO' && s.trainingName?.includes('Multiplica'))
+    .forEach((slot) => {
+      const key = `${slot.teacherId}_${slot.dayOfWeek}`;
+      const existing = groups.get(key);
+      if (existing) {
+        if (!existing.periodIds.includes(slot.periodId)) existing.periodIds.push(slot.periodId);
+        return;
       }
-    } else {
-      groupsMap.set(key, {
+      groups.set(key, {
         key,
         teacherId: slot.teacherId,
-        teacherName: teacher?.name || 'Professor',
+        teacherName: teachers.find((t) => t.id === slot.teacherId)?.name || 'Professor',
         dayOfWeek: slot.dayOfWeek,
         periodIds: [slot.periodId],
-        periodLabels: pDef?.label || `${slot.periodId}ª Aula`,
         trainingName: slot.trainingName || 'Multiplica SP',
         horario:
           slot.trainingStartTime && slot.trainingEndTime
-            ? `${slot.trainingStartTime} - ${slot.trainingEndTime}`
+            ? `${slot.trainingStartTime}–${slot.trainingEndTime}`
             : undefined,
       });
-    }
-  });
+    });
 
-  const multiplicaList = Array.from(groupsMap.values());
+  const dayOrder = DAYS_OF_WEEK.map((d) => d.key);
+  const list = Array.from(groups.values()).sort(
+    (a, b) =>
+      dayOrder.indexOf(a.dayOfWeek) - dayOrder.indexOf(b.dayOfWeek) ||
+      displayName(a.teacherName).localeCompare(displayName(b.teacherName), 'pt-BR')
+  );
 
   return (
-    <div className="modal-backdrop" onClick={onClose}>
-      <div className="modal-content modal-lg" onClick={(e) => e.stopPropagation()}>
-        <div className="modal-header header-multiplica">
-          <div className="multiplica-header-title-box">
-            <div className="multiplica-badge-icon">
-              <GraduationCap size={24} />
-            </div>
-            <div>
-              <h3 className="modal-title">Gestão do Curso Multiplica SP</h3>
-              <p className="modal-subtitle">
-                Bloqueio de horários de formação (1h30min de duração). Professores em formação não
-                podem receber substituições.
-              </p>
-            </div>
-          </div>
-          <button className="btn-close" onClick={onClose}>
-            <X size={20} />
+    <Modal
+      title="Multiplica SP"
+      subtitle="O curso dura 1h30 e bloqueia toda aula que atravessar. Quem está no curso não é escalado."
+      size="lg"
+      onClose={onClose}
+      footer={
+        <>
+          <span />
+          <button type="button" className="btn btn-secundario" onClick={onClose}>
+            Concluir
           </button>
-        </div>
+        </>
+      }
+    >
+      <div className="multiplica">
+        <form className="formulario" onSubmit={handleAdd}>
+          <h3 className="grupo-titulo">Novo bloqueio</h3>
 
-        <div className="modal-body">
-          {toastMessage && (
-            <div className="alert-banner-success" style={{ marginBottom: 16 }}>
-              <CheckCircle2 size={18} />
-              <span>{toastMessage}</span>
-            </div>
-          )}
+          <div className="campo-grupo">
+            <label className="campo-rotulo" htmlFor="mp-prof">
+              Professor
+            </label>
+            <select
+              id="mp-prof"
+              value={selectedTeacherId}
+              onChange={(e) => setSelectedTeacherId(e.target.value)}
+              className="campo"
+              required
+            >
+              {sortedTeachers.map((t) => (
+                <option key={t.id} value={t.id}>
+                  {displayName(t.name)} — {t.mainSubject}
+                </option>
+              ))}
+            </select>
+          </div>
 
-          <div className="multiplica-grid-layout">
-            {/* Formulário para cadastrar */}
-            <div className="multiplica-form-card">
-              <h4 className="card-subtitle">
-                <Plus size={16} /> Cadastrar Horário de Multiplica SP
-              </h4>
-
-              <form onSubmit={handleAdd}>
-                <div className="form-group">
-                  <label className="input-label">Professor:</label>
-                  <select
-                    value={selectedTeacherId}
-                    onChange={(e) => setSelectedTeacherId(e.target.value)}
-                    className="select-input-custom"
-                    required
-                  >
-                    {teachers.map((t) => (
-                      <option key={t.id} value={t.id}>
-                        {t.name} ({t.mainSubject})
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
-                <div className="form-group">
-                  <label className="input-label">Dia da Semana:</label>
-                  <select
-                    value={selectedDay}
-                    onChange={(e) => setSelectedDay(e.target.value as DayOfWeek)}
-                    className="select-input-custom"
-                  >
-                    {DAYS_OF_WEEK.map((d) => (
-                      <option key={d.key} value={d.key}>
-                        {d.label}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
-                <div className="form-group">
-                  <label className="input-label" htmlFor="multiplica-inicio">
-                    Horário de Início (duração de 1h30):
-                  </label>
-
-                  <div className="multiplica-time-row">
-                    <input
-                      id="multiplica-inicio"
-                      type="time"
-                      value={startTime}
-                      onChange={(e) => setStartTime(e.target.value)}
-                      className="select-input-custom multiplica-time-input"
-                      required
-                    />
-                    <span className="multiplica-time-end">
-                      <Clock size={15} /> termina às <strong>{endTime}</strong>
-                    </span>
-                  </div>
-
-                  <div className="multiplica-quick-times">
-                    {INICIOS_FREQUENTES.map((h) => (
-                      <button
-                        type="button"
-                        key={h}
-                        className={`multiplica-quick-chip ${startTime === h ? 'active' : ''}`}
-                        onClick={() => setStartTime(h)}
-                      >
-                        {h}
-                      </button>
-                    ))}
-                  </div>
-
-                  {affectedPeriods.length > 0 ? (
-                    <p className="multiplica-affected">
-                      Bloqueia {affectedPeriods.length} aula(s) para substituição:{' '}
-                      <strong>{affectedLabels}</strong>
-                    </p>
-                  ) : (
-                    <p className="multiplica-affected multiplica-affected-empty">
-                      <AlertCircle size={14} /> Nesse horário o curso não cruza nenhuma aula da
-                      grade — nada seria bloqueado.
-                    </p>
-                  )}
-                </div>
-
-                <div className="form-group">
-                  <label className="input-label">Função no Multiplica:</label>
-                  <div className="role-radio-group">
-                    <label className={`role-chip ${role === 'cursista' ? 'active' : ''}`}>
-                      <input
-                        type="radio"
-                        name="role"
-                        checked={role === 'cursista'}
-                        onChange={() => setRole('cursista')}
-                      />
-                      <span>Professor Cursista</span>
-                    </label>
-
-                    <label className={`role-chip ${role === 'multiplicador' ? 'active' : ''}`}>
-                      <input
-                        type="radio"
-                        name="role"
-                        checked={role === 'multiplicador'}
-                        onChange={() => setRole('multiplicador')}
-                      />
-                      <span>Professor Multiplicador (Formador)</span>
-                    </label>
-                  </div>
-                </div>
-
-                <button type="submit" className="btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
-                  <CheckCircle2 size={16} />
-                  <span>Salvar Bloqueio do Multiplica SP</span>
+          <div className="campo-grupo">
+            <span className="campo-rotulo" id="mp-dia-rotulo">
+              Dia
+            </span>
+            <div className="segmentado" role="radiogroup" aria-labelledby="mp-dia-rotulo">
+              {DAYS_OF_WEEK.map((d) => (
+                <button
+                  key={d.key}
+                  type="button"
+                  role="radio"
+                  aria-checked={selectedDay === d.key}
+                  className="segmento"
+                  onClick={() => setSelectedDay(d.key)}
+                >
+                  {d.short}
                 </button>
-              </form>
-            </div>
-
-            {/* Lista dos Professores com Multiplica cadastrado */}
-            <div className="multiplica-list-card">
-              <div className="list-card-header">
-                <h4 className="card-subtitle">
-                  <UserCheck size={16} /> Horários Cadastrados ({multiplicaList.length})
-                </h4>
-              </div>
-
-              {multiplicaList.length === 0 ? (
-                <div className="empty-multiplica-state">
-                  <AlertCircle size={32} className="text-muted" />
-                  <p>Nenhum professor com Multiplica SP registrado ainda.</p>
-                  <small className="text-muted">
-                    Cadastre os professores ao lado para bloquear automaticamente suas substituições
-                    nesses horários.
-                  </small>
-                </div>
-              ) : (
-                <div className="multiplica-items-scroll">
-                  {multiplicaList.map((item) => {
-                    const dayLabel =
-                      DAYS_OF_WEEK.find((d) => d.key === item.dayOfWeek)?.label || item.dayOfWeek;
-
-                    return (
-                      <div key={item.key} className="multiplica-item-row">
-                        <div className="item-left">
-                          <div className="item-name">{item.teacherName}</div>
-                          <div className="item-meta">
-                            <span className="item-day">
-                              <Calendar size={13} /> {dayLabel}
-                            </span>
-                            <span className="item-periods">
-                              <Clock size={13} /> {item.horario ?? '1h30'}
-                            </span>
-                            <span className="item-periods">{item.periodLabels}</span>
-                          </div>
-                          <div className="item-training-tag">{item.trainingName}</div>
-                        </div>
-
-                        <button
-                          onClick={() =>
-                            removeMultiplicaCourse(item.teacherId, item.dayOfWeek, item.periodIds)
-                          }
-                          className="btn-icon-subtle text-danger"
-                          title="Remover bloqueio do Multiplica"
-                        >
-                          <Trash2 size={16} />
-                        </button>
-                      </div>
-                    );
-                  })}
-                </div>
-              )}
+              ))}
             </div>
           </div>
-        </div>
 
-        <div className="modal-footer">
-          <button className="btn-secondary" onClick={onClose}>
-            Concluir & Fechar
+          <div className="campo-grupo">
+            <label className="campo-rotulo" htmlFor="mp-inicio">
+              Início
+            </label>
+            <div className="multiplica-hora">
+              <input
+                id="mp-inicio"
+                type="time"
+                value={startTime}
+                onChange={(e) => setStartTime(e.target.value)}
+                className="campo campo-hora"
+                required
+              />
+              <span className="multiplica-fim">termina às {endTime}</span>
+            </div>
+            <div className="atalhos" aria-label="Inícios frequentes">
+              {INICIOS_FREQUENTES.map((h) => (
+                <button
+                  type="button"
+                  key={h}
+                  className="atalho"
+                  aria-pressed={startTime === h}
+                  onClick={() => setStartTime(h)}
+                >
+                  {h}
+                </button>
+              ))}
+            </div>
+            {affectedPeriods.length > 0 ? (
+              <p className="campo-ajuda">
+                Bloqueia {affectedPeriods.length === 1 ? 'a' : 'as'} <strong>{affectedLabels}</strong>{' '}
+                {affectedPeriods.length === 1 ? 'aula' : 'aulas'}.
+              </p>
+            ) : (
+              <p className="campo-ajuda cor-ultimo-recurso">
+                Nesse horário o curso não cruza nenhuma aula — nada seria bloqueado.
+              </p>
+            )}
+          </div>
+
+          <div className="campo-grupo">
+            <span className="campo-rotulo" id="mp-funcao-rotulo">
+              Função
+            </span>
+            <div className="segmentado" role="radiogroup" aria-labelledby="mp-funcao-rotulo">
+              <button
+                type="button"
+                role="radio"
+                aria-checked={role === 'cursista'}
+                className="segmento"
+                onClick={() => setRole('cursista')}
+              >
+                Cursista
+              </button>
+              <button
+                type="button"
+                role="radio"
+                aria-checked={role === 'multiplicador'}
+                className="segmento"
+                onClick={() => setRole('multiplicador')}
+              >
+                Formador
+              </button>
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            className="btn btn-primario btn-largo"
+            disabled={affectedPeriods.length === 0}
+          >
+            Salvar bloqueio
           </button>
+          {saved && (
+            <p className="campo-ajuda cor-coberta" role="status">
+              {saved}
+            </p>
+          )}
+        </form>
+
+        <div className="multiplica-lista">
+          <h3 className="grupo-titulo">
+            Cadastrados <span className="grupo-contagem">{list.length}</span>
+          </h3>
+          {list.length === 0 ? (
+            <p className="grupo-vazio">
+              Ninguém no Multiplica ainda. O bloqueio cadastrado ao lado tira a pessoa da escala
+              nesses horários.
+            </p>
+          ) : (
+            <ul className="linhas">
+              {list.map((g) => {
+                const dia = DAYS_OF_WEEK.find((d) => d.key === g.dayOfWeek)?.short ?? g.dayOfWeek;
+                const aulas = [...g.periodIds]
+                  .sort((a, b) => a - b)
+                  .map((id) => `${id}ª`)
+                  .join(', ');
+                return (
+                  <li key={g.key} className="linha-item">
+                    <span className="linha-item-dia">{dia}</span>
+                    <span className="linha-item-texto">
+                      <span className="linha-item-nome">{displayName(g.teacherName)}</span>
+                      <span className="linha-item-meta">
+                        {g.horario ?? '1h30'} · {aulas} · {g.trainingName.includes('Formador') ? 'formador' : 'cursista'}
+                      </span>
+                    </span>
+                    <button
+                      type="button"
+                      className="btn-icone btn-icone-perigo"
+                      onClick={() => removeMultiplicaCourse(g.teacherId, g.dayOfWeek, g.periodIds)}
+                      aria-label={`Remover o Multiplica de ${displayName(g.teacherName)} (${dia})`}
+                    >
+                      <Trash2 size={16} />
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
+          )}
         </div>
       </div>
-    </div>
+    </Modal>
   );
 };

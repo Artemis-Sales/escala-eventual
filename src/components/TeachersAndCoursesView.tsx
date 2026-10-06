@@ -1,198 +1,220 @@
-import React, { useState } from 'react';
-import {
-  Search,
-  Plus,
-  Edit2,
-  Trash2,
-  X,
-  Check,
-  Ban,
-  Crown,
-  Briefcase,
-  GraduationCap,
-} from 'lucide-react';
+import React, { useMemo, useState } from 'react';
+import { Minus, Plus, Search, Trash2 } from 'lucide-react';
 import { useSchool } from '../context/SchoolContext';
 import { MultiplicaModal } from './MultiplicaModal';
+import { Modal } from './Modal';
 import type { Teacher, KnowledgeArea, StaffRole } from '../types';
+import { areaKey, displayName } from '../utils/display';
+
+const AREAS: KnowledgeArea[] = [
+  'Linguagens',
+  'Ciências da Natureza',
+  'Ciências Humanas',
+  'Parte Diversificada',
+  'Gestão Escolar',
+];
+
+const ROLE_LABEL: Record<StaffRole, string> = {
+  PROFESSOR: 'Professor',
+  COORDENADOR_AREA: 'Coord. de área',
+  EQUIPE_GESTORA: 'Equipe gestora',
+};
 
 export const TeachersAndCoursesView: React.FC = () => {
   const { teachers, addTeacher, updateTeacher, deleteTeacher, updateTeacherSubCount } = useSchool();
 
   const [search, setSearch] = useState('');
-  const [selectedArea, setSelectedArea] = useState<string>('TODAS');
+  const [selectedArea, setSelectedArea] = useState<KnowledgeArea | 'TODAS'>('TODAS');
   const [editingTeacher, setEditingTeacher] = useState<Teacher | null>(null);
   const [isAddingNew, setIsAddingNew] = useState(false);
   const [isMultiplicaOpen, setIsMultiplicaOpen] = useState(false);
 
-  const areas: KnowledgeArea[] = [
-    'Linguagens',
-    'Ciências da Natureza',
-    'Ciências Humanas',
-    'Parte Diversificada',
-    'Gestão Escolar',
-  ];
+  const q = search.trim().toLowerCase();
+  const visible = useMemo(
+    () =>
+      teachers
+        .filter(
+          (t) =>
+            (selectedArea === 'TODAS' || t.knowledgeArea === selectedArea) &&
+            (!q || t.name.toLowerCase().includes(q) || t.mainSubject.toLowerCase().includes(q))
+        )
+        .sort((a, b) => displayName(a.name).localeCompare(displayName(b.name), 'pt-BR')),
+    [teachers, selectedArea, q]
+  );
 
-  const filteredTeachers = teachers.filter((t) => {
-    const matchesSearch =
-      t.name.toLowerCase().includes(search.toLowerCase()) ||
-      t.mainSubject.toLowerCase().includes(search.toLowerCase());
-    const matchesArea = selectedArea === 'TODAS' || t.knowledgeArea === selectedArea;
-    return matchesSearch && matchesArea;
-  });
-
-  const handleSave = (teacherData: Omit<Teacher, 'id' | 'totalSubstitutionsCount'>) => {
+  const handleSave = (data: Omit<Teacher, 'id' | 'totalSubstitutionsCount'>) => {
     if (editingTeacher) {
-      updateTeacher({ ...editingTeacher, ...teacherData });
+      updateTeacher({ ...editingTeacher, ...data });
       setEditingTeacher(null);
     } else if (isAddingNew) {
-      addTeacher(teacherData);
+      addTeacher(data);
       setIsAddingNew(false);
     }
   };
 
   return (
-    <div className="teachers-view">
-      <div className="teachers-header-card">
-        <div className="search-filter-row">
-          <div className="search-input-wrapper">
-            <Search size={18} />
+    <div className="pagina">
+      <div className="barra">
+        <div className="pagina-titulos">
+          <h1 className="pagina-titulo">Professores</h1>
+          <p className="pagina-sub">
+            {teachers.length} pessoas na escala. O contador de substituições é o que a escala usa
+            para equilibrar a carga.
+          </p>
+        </div>
+        <div className="barra-direita">
+          <button type="button" className="btn btn-secundario" onClick={() => setIsMultiplicaOpen(true)}>
+            Multiplica SP
+          </button>
+          <button type="button" className="btn btn-primario" onClick={() => setIsAddingNew(true)}>
+            <Plus size={16} aria-hidden="true" />
+            Cadastrar
+          </button>
+        </div>
+      </div>
+
+      <section className="painel">
+        <div className="filtros">
+          <div className="busca busca-compacta">
+            <Search size={16} aria-hidden="true" />
             <input
-              type="text"
-              placeholder="Buscar por nome ou disciplina..."
+              type="search"
+              placeholder="Nome ou disciplina"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="search-input-modern"
+              aria-label="Buscar professor"
             />
           </div>
 
-          <div className="filter-chips">
+          <div className="filtro-areas" role="radiogroup" aria-label="Área">
             <button
-              className={`filter-chip ${selectedArea === 'TODAS' ? 'active' : ''}`}
+              type="button"
+              role="radio"
+              aria-checked={selectedArea === 'TODAS'}
+              className="filtro"
               onClick={() => setSelectedArea('TODAS')}
             >
-              Todas as Áreas ({teachers.length})
+              Todas <span className="filtro-contagem">{teachers.length}</span>
             </button>
-            {areas.map((area) => {
-              const count = teachers.filter((t) => t.knowledgeArea === area).length;
-              return (
-                <button
-                  key={area}
-                  className={`filter-chip ${selectedArea === area ? 'active' : ''}`}
-                  onClick={() => setSelectedArea(area)}
-                >
-                  {area} ({count})
-                </button>
-              );
-            })}
+            {AREAS.map((area) => (
+              <button
+                key={area}
+                type="button"
+                role="radio"
+                aria-checked={selectedArea === area}
+                className="filtro"
+                onClick={() => setSelectedArea(area)}
+              >
+                <span className={`area-ponto area-${areaKey(area)}`} aria-hidden="true" />
+                {area}{' '}
+                <span className="filtro-contagem">
+                  {teachers.filter((t) => t.knowledgeArea === area).length}
+                </span>
+              </button>
+            ))}
           </div>
         </div>
 
-        <div className="header-actions">
-          <button
-            onClick={() => setIsMultiplicaOpen(true)}
-            className="btn-multiplica-banner"
-          >
-            <GraduationCap size={18} />
-            <span>Gerenciar Multiplica SP (1h30)</span>
-          </button>
-
-          <button onClick={() => setIsAddingNew(true)} className="btn-primary">
-            <Plus size={18} />
-            <span>Cadastrar Professor / Gestor</span>
-          </button>
+        <div className="tabela-rolagem">
+          <table className="tabela pessoas">
+            <thead>
+              <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">Disciplina</th>
+                <th scope="col">Área</th>
+                <th scope="col">Nível</th>
+                <th scope="col" className="col-numero">Substituições</th>
+                <th scope="col" className="col-acao">
+                  <span className="sr-only">Ações</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {visible.map((t) => {
+                const nome = displayName(t.name);
+                return (
+                  <tr key={t.id}>
+                    <td data-rotulo="Nome">
+                      <span className="pessoa-nome">{nome}</span>
+                      {t.isExemptFromSubstitutions && (
+                        <span className="selo selo-neutro" title={t.exemptReason}>
+                          Isento
+                        </span>
+                      )}
+                    </td>
+                    <td data-rotulo="Disciplina">{t.mainSubject}</td>
+                    <td data-rotulo="Área">
+                      <span className="area-rotulo">
+                        <span className={`area-ponto area-${areaKey(t.knowledgeArea)}`} aria-hidden="true" />
+                        {t.knowledgeArea}
+                      </span>
+                    </td>
+                    <td data-rotulo="Nível">
+                      <span className={t.role && t.role !== 'PROFESSOR' ? 'cor-ultimo-recurso' : ''}>
+                        {ROLE_LABEL[t.role ?? 'PROFESSOR']}
+                      </span>
+                    </td>
+                    <td data-rotulo="Substituições" className="col-numero">
+                      <div className="contador">
+                        <button
+                          type="button"
+                          className="btn-icone"
+                          onClick={() => updateTeacherSubCount(t.id, -1)}
+                          disabled={t.totalSubstitutionsCount <= 0}
+                          aria-label={`Diminuir substituições de ${nome}`}
+                        >
+                          <Minus size={14} />
+                        </button>
+                        <span className="contador-valor">{t.totalSubstitutionsCount}</span>
+                        <button
+                          type="button"
+                          className="btn-icone"
+                          onClick={() => updateTeacherSubCount(t.id, 1)}
+                          aria-label={`Aumentar substituições de ${nome}`}
+                        >
+                          <Plus size={14} />
+                        </button>
+                      </div>
+                    </td>
+                    <td className="col-acao">
+                      <div className="linha-acoes">
+                        <button
+                          type="button"
+                          className="btn btn-fantasma btn-p"
+                          onClick={() => setEditingTeacher(t)}
+                        >
+                          Editar
+                        </button>
+                        <button
+                          type="button"
+                          className="btn-icone btn-icone-perigo"
+                          onClick={() => {
+                            if (window.confirm(`Remover ${nome} do cadastro?`)) deleteTeacher(t.id);
+                          }}
+                          aria-label={`Remover ${nome}`}
+                        >
+                          <Trash2 size={16} />
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                );
+              })}
+              {visible.length === 0 && (
+                <tr>
+                  <td colSpan={6} className="tabela-vazia">
+                    Ninguém encontrado com esse filtro.
+                  </td>
+                </tr>
+              )}
+            </tbody>
+          </table>
         </div>
-      </div>
-
-      <div className="teachers-grid">
-        {filteredTeachers.map((teacher) => (
-          <div key={teacher.id} className="teacher-card">
-            <div className="tcard-top">
-              <div
-                className="tcard-avatar"
-                style={{ backgroundColor: teacher.color || '#3B82F6' }}
-              >
-                {teacher.name.charAt(0)}
-              </div>
-              <div className="tcard-info">
-                <h4 className="tcard-name">{teacher.name}</h4>
-                <span className="tcard-subject">{teacher.mainSubject}</span>
-                <span className="tcard-area">{teacher.knowledgeArea}</span>
-              </div>
-            </div>
-
-            <div className="tcard-badges-row">
-              {teacher.role === 'COORDENADOR_AREA' && (
-                <span className="badge-pca-tag">
-                  <Crown size={11} /> Coord. de Área (Último Recurso)
-                </span>
-              )}
-
-              {teacher.role === 'EQUIPE_GESTORA' && (
-                <span className="badge-gestao-tag">
-                  <Briefcase size={11} /> Equipe Gestora (Caso Extremo)
-                </span>
-              )}
-
-              {teacher.isExemptFromSubstitutions && (
-                <div className="tcard-exempt-badge">
-                  <Ban size={12} />
-                  <span>Isento de Substituições</span>
-                </div>
-              )}
-            </div>
-
-            <div className="tcard-stats">
-              <div className="tcard-stat-box">
-                <span className="tstat-label">Substituições Realizadas:</span>
-                <div className="tstat-counter-row">
-                  <button
-                    onClick={() => updateTeacherSubCount(teacher.id, -1)}
-                    className="btn-counter-ctrl"
-                    title="Diminuir"
-                  >
-                    -
-                  </button>
-                  <span className="tstat-number">{teacher.totalSubstitutionsCount}</span>
-                  <button
-                    onClick={() => updateTeacherSubCount(teacher.id, 1)}
-                    className="btn-counter-ctrl"
-                    title="Aumentar"
-                  >
-                    +
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div className="tcard-actions">
-              <button
-                onClick={() => setEditingTeacher(teacher)}
-                className="btn-card-edit"
-                title="Editar dados"
-              >
-                <Edit2 size={15} />
-                <span>Editar</span>
-              </button>
-              <button
-                onClick={() => {
-                  if (confirm(`Deseja realmente remover o docente ${teacher.name}?`)) {
-                    deleteTeacher(teacher.id);
-                  }
-                }}
-                className="btn-card-delete"
-                title="Excluir"
-              >
-                <Trash2 size={15} />
-              </button>
-            </div>
-          </div>
-        ))}
-      </div>
+      </section>
 
       {(editingTeacher || isAddingNew) && (
         <TeacherFormModal
           teacher={editingTeacher}
-          areas={areas}
           onSave={handleSave}
           onClose={() => {
             setEditingTeacher(null);
@@ -201,42 +223,32 @@ export const TeachersAndCoursesView: React.FC = () => {
         />
       )}
 
-      {isMultiplicaOpen && (
-        <MultiplicaModal onClose={() => setIsMultiplicaOpen(false)} />
-      )}
+      {isMultiplicaOpen && <MultiplicaModal onClose={() => setIsMultiplicaOpen(false)} />}
     </div>
   );
 };
 
 interface TeacherFormModalProps {
   teacher: Teacher | null;
-  areas: KnowledgeArea[];
   onSave: (data: Omit<Teacher, 'id' | 'totalSubstitutionsCount'>) => void;
   onClose: () => void;
 }
 
-const TeacherFormModal: React.FC<TeacherFormModalProps> = ({
-  teacher,
-  areas,
-  onSave,
-  onClose,
-}) => {
+const TeacherFormModal: React.FC<TeacherFormModalProps> = ({ teacher, onSave, onClose }) => {
   const [name, setName] = useState(teacher?.name || '');
   const [mainSubject, setMainSubject] = useState(teacher?.mainSubject || '');
-  const [knowledgeArea, setKnowledgeArea] = useState<KnowledgeArea>(
-    teacher?.knowledgeArea || 'Linguagens'
-  );
+  const [knowledgeArea, setKnowledgeArea] = useState<KnowledgeArea>(teacher?.knowledgeArea || 'Linguagens');
   const [role, setRole] = useState<StaffRole>(teacher?.role || 'PROFESSOR');
   const [isExempt, setIsExempt] = useState(teacher?.isExemptFromSubstitutions || false);
   const [exemptReason, setExemptReason] = useState(
-    teacher?.exemptReason || 'Professor do Curso Técnico (Não realiza substituições)'
+    teacher?.exemptReason || 'Professor do curso técnico'
   );
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     onSave({
       name: name.trim().toUpperCase(),
-      mainSubject: mainSubject.trim().toUpperCase(),
+      mainSubject: mainSubject.trim(),
       knowledgeArea,
       role,
       isExemptFromSubstitutions: isExempt,
@@ -245,109 +257,107 @@ const TeacherFormModal: React.FC<TeacherFormModalProps> = ({
   };
 
   return (
-    <div className="modal-backdrop" onClick={onClose}>
-      <div className="modal-content modal-md" onClick={(e) => e.stopPropagation()}>
-        <div className="modal-header">
-          <h3 className="modal-title">
-            {teacher ? 'Editar Integrante' : 'Cadastrar Novo Docente / Gestor'}
-          </h3>
-          <button className="btn-close" onClick={onClose}>
-            <X size={20} />
-          </button>
+    <Modal
+      title={teacher ? 'Editar cadastro' : 'Cadastrar pessoa'}
+      subtitle={teacher ? displayName(teacher.name) : 'Professor, coordenador de área ou gestão.'}
+      size="sm"
+      onClose={onClose}
+    >
+      <form className="formulario" onSubmit={handleSubmit}>
+        <div className="campo-grupo">
+          <label className="campo-rotulo" htmlFor="pessoa-nome">
+            Nome completo
+          </label>
+          <input
+            id="pessoa-nome"
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="campo"
+            autoComplete="off"
+            required
+          />
         </div>
 
-        <form onSubmit={handleSubmit}>
-          <div className="modal-body">
-            <div className="form-group">
-              <label className="input-label">Nome Completo:</label>
-              <input
-                type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                className="text-input-custom"
-                required
-                placeholder="Ex: PROF. CARLOS EDUARDO"
-              />
-            </div>
+        <div className="campo-grupo">
+          <label className="campo-rotulo" htmlFor="pessoa-disciplina">
+            Disciplina principal
+          </label>
+          <input
+            id="pessoa-disciplina"
+            type="text"
+            value={mainSubject}
+            onChange={(e) => setMainSubject(e.target.value)}
+            className="campo"
+            placeholder="Matemática, História…"
+            required
+          />
+        </div>
 
-            <div className="form-group">
-              <label className="input-label">Função / Cargo:</label>
-              <select
-                value={role}
-                onChange={(e) => setRole(e.target.value as StaffRole)}
-                className="select-input-custom"
-              >
-                <option value="PROFESSOR">Professor Regular (Prioridade Padrão)</option>
-                <option value="COORDENADOR_AREA">🌟 Coordenador de Área (Entra apenas se não houver outra opção)</option>
-                <option value="EQUIPE_GESTORA">👔 Equipe Gestora - Direção/Coord. Geral (Caso Extremo)</option>
-              </select>
-            </div>
+        <div className="campo-grupo">
+          <label className="campo-rotulo" htmlFor="pessoa-area">
+            Área de conhecimento
+          </label>
+          <select
+            id="pessoa-area"
+            value={knowledgeArea}
+            onChange={(e) => setKnowledgeArea(e.target.value as KnowledgeArea)}
+            className="campo"
+          >
+            {AREAS.map((a) => (
+              <option key={a} value={a}>
+                {a}
+              </option>
+            ))}
+          </select>
+        </div>
 
-            <div className="form-group">
-              <label className="input-label">Disciplina Principal:</label>
-              <input
-                type="text"
-                value={mainSubject}
-                onChange={(e) => setMainSubject(e.target.value)}
-                className="text-input-custom"
-                required
-                placeholder="Ex: MATEMATICA, FISICA..."
-              />
-            </div>
+        <div className="campo-grupo">
+          <label className="campo-rotulo" htmlFor="pessoa-nivel">
+            Nível na escala
+          </label>
+          <select
+            id="pessoa-nivel"
+            value={role}
+            onChange={(e) => setRole(e.target.value as StaffRole)}
+            className="campo"
+          >
+            <option value="PROFESSOR">Professor — prioridade normal</option>
+            <option value="COORDENADOR_AREA">Coordenador de área — só se não houver professor</option>
+            <option value="EQUIPE_GESTORA">Equipe gestora — último recurso</option>
+          </select>
+        </div>
 
-            <div className="form-group">
-              <label className="input-label">Área do Conhecimento:</label>
-              <select
-                value={knowledgeArea}
-                onChange={(e) => setKnowledgeArea(e.target.value as KnowledgeArea)}
-                className="select-input-custom"
-              >
-                {areas.map((a) => (
-                  <option key={a} value={a}>
-                    {a}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            <div className="form-group" style={{ background: '#FEF2F2', padding: 12, borderRadius: 8, border: '1px solid #FECACA' }}>
-              <label style={{ display: 'flex', alignItems: 'center', gap: 8, cursor: 'pointer', fontWeight: 700, color: '#991B1B' }}>
-                <input
-                  type="checkbox"
-                  checked={isExempt}
-                  onChange={(e) => setIsExempt(e.target.checked)}
-                  style={{ width: 18, height: 18 }}
-                />
-                <span>🚫 Isentar este docente de realizar substituições</span>
+        <div className="campo-grupo">
+          <label className="caixa">
+            <input type="checkbox" checked={isExempt} onChange={(e) => setIsExempt(e.target.checked)} />
+            Não faz substituições
+          </label>
+          {isExempt && (
+            <>
+              <label className="campo-rotulo" htmlFor="pessoa-motivo">
+                Motivo
               </label>
+              <input
+                id="pessoa-motivo"
+                type="text"
+                value={exemptReason}
+                onChange={(e) => setExemptReason(e.target.value)}
+                className="campo"
+              />
+            </>
+          )}
+        </div>
 
-              {isExempt && (
-                <div style={{ marginTop: 8 }}>
-                  <label className="input-label" style={{ fontSize: '0.78rem', color: '#7F1D1D' }}>
-                    Motivo da Isenção:
-                  </label>
-                  <input
-                    type="text"
-                    value={exemptReason}
-                    onChange={(e) => setExemptReason(e.target.value)}
-                    className="text-input-custom"
-                    placeholder="Ex: Professor do Curso Técnico..."
-                  />
-                </div>
-              )}
-            </div>
-          </div>
-
-          <div className="modal-footer">
-            <button type="button" className="btn-secondary" onClick={onClose}>
-              Cancelar
-            </button>
-            <button type="submit" className="btn-primary">
-              <Check size={16} /> Salvar Integrante
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
+        <div className="formulario-acoes">
+          <button type="button" className="btn btn-secundario" onClick={onClose}>
+            Cancelar
+          </button>
+          <button type="submit" className="btn btn-primario">
+            Salvar
+          </button>
+        </div>
+      </form>
+    </Modal>
   );
 };
