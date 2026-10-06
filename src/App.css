@@ -403,7 +403,7 @@ input, select, textarea {
 }
 
 .stat-number {
-  background: #EF4444;
+  background: #DC2626;
   color: #FFFFFF;
   font-weight: 800;
   font-size: 0.85rem;
@@ -537,7 +537,7 @@ input, select, textarea {
   position: absolute;
   top: -6px;
   right: -4px;
-  background: #EF4444;
+  background: #DC2626;
   color: #FFFFFF;
   font-size: 0.65rem;
   font-weight: 800;
