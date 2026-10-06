@@ -1,4 +1,5 @@
 import type { KnowledgeArea, SubstitutionItem } from '../types';
+import { resolveKnowledgeArea } from './subjects';
 
 // Partículas que ficam em minúsculas no meio de um nome próprio.
 const PARTICULAS = new Set(['da', 'das', 'de', 'do', 'dos', 'e']);
@@ -93,4 +94,12 @@ export function startTime(range: string): string {
 
 export function capitalize(s: string): string {
   return s.charAt(0).toUpperCase() + s.slice(1);
+}
+
+/**
+ * Área de uma aula pela disciplina, não pelo professor: quem é de Educação Financeira
+ * e dá Matemática numa turma está dando uma aula de Ciências da Natureza.
+ */
+export function subjectAreaKey(subject: string | null | undefined, fallback?: KnowledgeArea): string {
+  return subject ? areaKey(resolveKnowledgeArea(subject)) : areaKey(fallback);
 }

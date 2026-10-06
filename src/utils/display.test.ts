@@ -1,5 +1,13 @@
 import { describe, expect, it } from 'vitest';
-import { areaKey, coverageOf, displayName, reasonOf, shortClassName, startTime } from './display';
+import {
+  areaKey,
+  coverageOf,
+  displayName,
+  reasonOf,
+  shortClassName,
+  startTime,
+  subjectAreaKey,
+} from './display';
 import type { SubstitutionItem } from '../types';
 
 const item = (over: Partial<SubstitutionItem>): SubstitutionItem => ({
@@ -76,5 +84,16 @@ describe('areaKey e startTime', () => {
 
   it('pega o início do intervalo', () => {
     expect(startTime('07:10 - 08:00')).toBe('07:10');
+  });
+});
+
+describe('subjectAreaKey', () => {
+  it('pinta a aula pela disciplina, não pela área de quem dá a aula', () => {
+    expect(subjectAreaKey('Matemática', 'Parte Diversificada')).toBe('natureza');
+    expect(subjectAreaKey('Lógica e Linguagens', 'Linguagens')).toBe('diversificada');
+  });
+
+  it('usa a área do professor quando a disciplina falta', () => {
+    expect(subjectAreaKey('', 'Ciências Humanas')).toBe('humanas');
   });
 });

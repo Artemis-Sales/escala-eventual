@@ -25,6 +25,7 @@ import {
   reasonOf,
   shortClassName,
   startTime,
+  subjectAreaKey,
 } from '../utils/display';
 
 export const DailyDashboard: React.FC = () => {
@@ -472,7 +473,7 @@ export const DailyDashboard: React.FC = () => {
                         <td>
                           <span className="disciplina">
                             <span
-                              className={`area-ponto area-${areaKey(absent?.knowledgeArea)}`}
+                              className={`area-ponto area-${subjectAreaKey(item.originalSubject, absent?.knowledgeArea)}`}
                               aria-hidden="true"
                             />
                             {item.originalSubject}

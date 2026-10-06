@@ -137,6 +137,14 @@ describe('resolveKnowledgeArea', () => {
     );
   });
 
+  it('mantém o curso técnico fora de Linguagens com os nomes curtos', () => {
+    // "Lógica e Linguagens" contém "LINGUA": sem regra própria, cairia em Linguagens.
+    ['Lógica e Linguagens', 'Modelagem', 'Processos', 'Redes de Computadores',
+      'Versionamento de Código'].forEach((s) =>
+      expect(resolveKnowledgeArea(s)).toBe('Parte Diversificada')
+    );
+  });
+
   it('classifica a equipe gestora', () => {
     ['Direção Escolar', 'Vice-Direção', 'Coordenação Pedagógica Geral'].forEach((s) =>
       expect(resolveKnowledgeArea(s)).toBe('Gestão Escolar')
@@ -147,6 +155,21 @@ describe('resolveKnowledgeArea', () => {
     expect(resolveKnowledgeArea('APROFUNDAMENTO DE GEOGRAFIA 3ª SERIE B INTEGRAL 9H ANUAL')).toBe(
       'Ciências Humanas'
     );
+  });
+});
+
+describe('nomes do curso técnico cortados pela planilha', () => {
+  it('passam para a forma curta definida pela escola', () => {
+    expect(canonicalSubjectName('LOGICA E LINGUAGENS DE PROGR…')).toBe('Lógica e Linguagens');
+    expect(canonicalSubjectName('Modelagem e Desenvolviment…')).toBe('Modelagem');
+    expect(canonicalSubjectName('PROCESSOS DE DESENVOLVIMENT…')).toBe('Processos');
+    expect(canonicalSubjectName('Redes de Computadores e Seg…')).toBe('Redes de Computadores');
+    expect(canonicalSubjectName('VERSIONAMENTO DE CODIGO E SISTEMAS …')).toBe('Versionamento de Código');
+  });
+
+  it('a forma curta é estável ao passar de novo pela limpeza', () => {
+    ['Lógica e Linguagens', 'Modelagem', 'Processos', 'Redes de Computadores',
+      'Versionamento de Código'].forEach((s) => expect(canonicalSubjectName(s)).toBe(s));
   });
 });
 

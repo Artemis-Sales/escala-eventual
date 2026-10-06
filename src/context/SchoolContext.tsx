@@ -78,7 +78,10 @@ const LOCAL_STORAGE_KEY_DATA_VERSION = 'escala_escola_oficial_data_version';
 // Versao 1: disciplinas passaram a ter grafia unica (sem o nome da turma grudado) e as
 // areas seguem o modelo da escola, com Matematica em Ciencias da Natureza. Trocar a
 // chave descartaria os contadores de substituicao, entao migramos os dados no lugar.
-const CURRENT_DATA_VERSION = 1;
+// Versao 2: os nomes do curso tecnico que a planilha cortava ("Modelagem e
+// Desenvolviment…") passam para a forma curta definida pela escola. So renomeia: rodar a
+// migracao da versao 1 de novo recalcularia a area de todos e apagaria edicoes manuais.
+const CURRENT_DATA_VERSION = 2;
 
 function loadFromStorage<T>(key: string, fallback: T): T {
   const saved = localStorage.getItem(key);
@@ -119,13 +122,32 @@ function migrateSlots(slots: ScheduleSlot[]): ScheduleSlot[] {
   );
 }
 
+const CORTADO = '…';
+
+/** Versao 2: troca so os nomes cortados pela grafia canonica; o resto fica como esta. */
+const renameCut = (subject: string) =>
+  subject.includes(CORTADO) ? canonicalSubjectName(subject) || subject : subject;
+
+function renameCutTeacherSubjects(teachers: Teacher[]): Teacher[] {
+  return teachers.map((teacher) => ({
+    ...teacher,
+    mainSubject: renameCut(teacher.mainSubject),
+    secondarySubjects: teacher.secondarySubjects?.map(renameCut),
+  }));
+}
+
+function renameCutSlotSubjects(slots: ScheduleSlot[]): ScheduleSlot[] {
+  return slots.map((slot) => (slot.subject ? { ...slot, subject: renameCut(slot.subject) } : slot));
+}
+
 export const SchoolProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   // Dados salvos antes da versao atual passam pela migracao uma unica vez.
-  const isOutdated = readDataVersion() < CURRENT_DATA_VERSION;
+  const dataVersion = readDataVersion();
 
   const [teachers, setTeachers] = useState<Teacher[]>(() => {
     const loaded = loadFromStorage(LOCAL_STORAGE_KEY_TEACHERS, INITIAL_TEACHERS);
-    return isOutdated ? migrateTeachers(loaded) : loaded;
+    if (dataVersion < 1) return migrateTeachers(loaded);
+    return dataVersion < 2 ? renameCutTeacherSubjects(loaded) : loaded;
   });
 
   const [classes] = useState<ClassGroup[]>(INITIAL_CLASSES);
@@ -133,7 +155,8 @@ export const SchoolProvider: React.FC<{ children: React.ReactNode }> = ({ childr
 
   const [scheduleSlots, setScheduleSlots] = useState<ScheduleSlot[]>(() => {
     const loaded = loadFromStorage(LOCAL_STORAGE_KEY_SLOTS, generateInitialSchedule());
-    return isOutdated ? migrateSlots(loaded) : loaded;
+    if (dataVersion < 1) return migrateSlots(loaded);
+    return dataVersion < 2 ? renameCutSlotSubjects(loaded) : loaded;
   });
 
   const [history, setHistory] = useState<HistoryRecord[]>(() =>

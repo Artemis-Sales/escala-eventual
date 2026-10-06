@@ -86,15 +86,15 @@ export const INITIAL_TEACHERS: Teacher[] = [
   {
     "id": "t_4",
     "name": "DANILO",
-    "mainSubject": "Lógica e Linguagens de Progr…",
+    "mainSubject": "Lógica e Linguagens",
     "knowledgeArea": "Parte Diversificada",
     "secondarySubjects": [
-      "Modelagem e Desenvolviment…",
+      "Modelagem",
       "Carreira e Competências para …",
       "Inteligência Artificial",
-      "Processos de Desenvolviment…",
+      "Processos",
       "Projeto Multidisciplinar",
-      "Redes de Computadores e Seg…"
+      "Redes de Computadores"
     ],
     "totalSubstitutionsCount": 0,
     "color": "#B45309",
@@ -212,7 +212,7 @@ export const INITIAL_TEACHERS: Teacher[] = [
     "secondarySubjects": [
       "Programação Back-End",
       "Programação Front-End",
-      "Versionamento de Código e Sistemas …"
+      "Versionamento de Código"
     ],
     "totalSubstitutionsCount": 0,
     "color": "#B45309",
@@ -1526,7 +1526,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "Processos de Desenvolviment…"
+    "subject": "Processos"
   },
   {
     "id": "slot_t_4_segunda_2",
@@ -1558,7 +1558,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "Lógica e Linguagens de Progr…"
+    "subject": "Lógica e Linguagens"
   },
   {
     "id": "slot_t_4_segunda_6",
@@ -1567,7 +1567,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "Lógica e Linguagens de Progr…"
+    "subject": "Lógica e Linguagens"
   },
   {
     "id": "slot_t_4_segunda_7",
@@ -1576,7 +1576,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "Redes de Computadores e Seg…"
+    "subject": "Redes de Computadores"
   },
   {
     "id": "slot_t_4_segunda_8",
@@ -1585,7 +1585,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "Redes de Computadores e Seg…"
+    "subject": "Redes de Computadores"
   },
   {
     "id": "slot_t_4_segunda_9",
@@ -1609,7 +1609,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 2,
     "type": "AULA",
     "classId": "3EMA_DS",
-    "subject": "Modelagem e Desenvolviment…"
+    "subject": "Modelagem"
   },
   {
     "id": "slot_t_4_terca_3",
@@ -1618,7 +1618,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "3EMA_DS",
-    "subject": "Modelagem e Desenvolviment…"
+    "subject": "Modelagem"
   },
   {
     "id": "slot_t_4_terca_4",
@@ -1702,7 +1702,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "Lógica e Linguagens de Progr…"
+    "subject": "Lógica e Linguagens"
   },
   {
     "id": "slot_t_4_quarta_6",
@@ -1711,7 +1711,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "Lógica e Linguagens de Progr…"
+    "subject": "Lógica e Linguagens"
   },
   {
     "id": "slot_t_4_quarta_7",
@@ -1743,7 +1743,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "Redes de Computadores e Seg…"
+    "subject": "Redes de Computadores"
   },
   {
     "id": "slot_t_4_quinta_2",
@@ -1779,7 +1779,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 5,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "Processos de Desenvolviment…"
+    "subject": "Processos"
   },
   {
     "id": "slot_t_4_quinta_6",
@@ -1788,7 +1788,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 6,
     "type": "AULA",
     "classId": "2EMA_DS",
-    "subject": "Processos de Desenvolviment…"
+    "subject": "Processos"
   },
   {
     "id": "slot_t_4_quinta_7",
@@ -1867,7 +1867,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 7,
     "type": "AULA",
     "classId": "3EMA_DS",
-    "subject": "Modelagem e Desenvolviment…"
+    "subject": "Modelagem"
   },
   {
     "id": "slot_t_4_sexta_8",
@@ -1876,7 +1876,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 8,
     "type": "AULA",
     "classId": "3EMA_DS",
-    "subject": "Modelagem e Desenvolviment…"
+    "subject": "Modelagem"
   },
   {
     "id": "slot_t_4_sexta_9",
@@ -4670,7 +4670,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "3EMA_DS",
-    "subject": "Versionamento de Código e Sistemas …"
+    "subject": "Versionamento de Código"
   },
   {
     "id": "slot_t_12_quarta_4",
@@ -4745,7 +4745,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 3,
     "type": "AULA",
     "classId": "3EMA_DS",
-    "subject": "Versionamento de Código e Sistemas …"
+    "subject": "Versionamento de Código"
   },
   {
     "id": "slot_t_12_quinta_4",
@@ -4799,7 +4799,7 @@ export const OFFICIAL_SCHEDULE_SLOTS: ScheduleSlot[] = [
     "periodId": 1,
     "type": "AULA",
     "classId": "3EMA_DS",
-    "subject": "Versionamento de Código e Sistemas …"
+    "subject": "Versionamento de Código"
   },
   {
     "id": "slot_t_12_sexta_2",

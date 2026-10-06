@@ -165,9 +165,16 @@ Página de spec publicada: https://claude.ai/artifact/DQDNtQoKdx5p13StPebGWM
   apagava o nome; agora o salvar fica desabilitado nesses casos.
 - **Revisão independente:** 8 apontamentos, 7 resolvidos e conferidos por recaptura.
 
-**Pendente com a escola:** alguns nomes de disciplina chegam **cortados na origem**
-("Modelagem e Desenvolviment…", "Lógica e Linguagens de Progr…"). Corrigir em
-`src/utils/subjects.ts` quando os títulos completos forem confirmados — não adivinhar.
+**Nomes cortados do curso técnico:** a planilha corta os nomes ("Modelagem e
+Desenvolviment…"). A escola definiu a forma curta em 06/10/2026: **Lógica e Linguagens,
+Modelagem, Processos, Redes de Computadores, Versionamento de Código** — no dicionário de
+`subjects.ts` (espelhado no gerador) e numa migração v2 do `localStorage` que **só renomeia**
+(rodar a v1 de novo recalcularia as áreas e apagaria edições manuais). "Lógica e Linguagens"
+contém "LINGUA" e cairia em Linguagens: a regra de área ganhou `LOGICA E LINGUAGENS`.
+**Ainda cortado, aguardando a escola:** "Carreira e Competências para …".
+
+**Cor da aula = área da disciplina**, não do professor (`subjectAreaKey`): Matemática dada por
+quem é de Educação Financeira continua verde.
 
 ---
 

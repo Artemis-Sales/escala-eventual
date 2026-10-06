@@ -59,23 +59,29 @@ const CANONICAL_SUBJECTS: Record<string, string> = {
   'HISTORIA': 'História',
   'SOCIOLOGIA': 'Sociologia',
   // Parte Diversificada e curso tecnico
+  // A planilha corta os nomes do curso tecnico ("…"); a escola definiu a forma curta.
   'CARREIRA E COMPETENCIAS PARA …': 'Carreira e Competências para …',
   'EDUCACAO FINANCEIRA': 'Educação Financeira',
   'EMPREENDEDORISMO': 'Empreendedorismo',
   'INTELIGENCIA ARTIFICIAL': 'Inteligência Artificial',
-  'LOGICA E LINGUAGENS DE PROGR…': 'Lógica e Linguagens de Progr…',
-  'MODELAGEM E DESENVOLVIMENT…': 'Modelagem e Desenvolviment…',
-  'PROCESSOS DE DESENVOLVIMENT…': 'Processos de Desenvolviment…',
+  'LOGICA E LINGUAGENS DE PROGR…': 'Lógica e Linguagens',
+  'LOGICA E LINGUAGENS': 'Lógica e Linguagens',
+  'MODELAGEM E DESENVOLVIMENT…': 'Modelagem',
+  'MODELAGEM': 'Modelagem',
+  'PROCESSOS DE DESENVOLVIMENT…': 'Processos',
+  'PROCESSOS': 'Processos',
   'PROGRAMACAO': 'Programação',
   'PROGRAMACAO BACK-END': 'Programação Back-End',
   'PROGRAMACAO FRONT-END': 'Programação Front-End',
   'PROGRAMACAO MOBILE': 'Programação Mobile',
   'PROJETO DE VIDA': 'Projeto de Vida',
   'PROJETO MULTIDISCIPLINAR': 'Projeto Multidisciplinar',
-  'REDES DE COMPUTADORES E SEG…': 'Redes de Computadores e Seg…',
+  'REDES DE COMPUTADORES E SEG…': 'Redes de Computadores',
+  'REDES DE COMPUTADORES': 'Redes de Computadores',
   'ROBOTICA': 'Robótica',
   'TECNOLOGIA E INOVACAO': 'Tecnologia e Inovação',
-  'VERSIONAMENTO DE CODIGO E SISTEMAS …': 'Versionamento de Código e Sistemas …',
+  'VERSIONAMENTO DE CODIGO E SISTEMAS …': 'Versionamento de Código',
+  'VERSIONAMENTO DE CODIGO': 'Versionamento de Código',
   // Gestao escolar
   'DIRECAO ESCOLAR': 'Direção Escolar',
   'VICE-DIRECAO': 'Vice-Direção',
@@ -134,14 +140,14 @@ export function canonicalSubjectName(raw: string | undefined | null): string {
 // curso tecnico, tutoria) ou Gestao Escolar.
 //
 // A ordem importa: regras mais especificas primeiro. "EDUCACAO FISICA" precisa ser
-// testada antes de "FISICA", e "LOGICA E LINGUAGENS DE PROGRAMACAO" antes de "LINGUA".
+// testada antes de "FISICA", e "LOGICA E LINGUAGENS" (curso tecnico) antes de "LINGUA".
 const AREA_RULES: { pattern: RegExp; area: KnowledgeArea }[] = [
   { pattern: /DIRECAO|COORDENACAO PEDAGOGICA|GESTAO/, area: 'Gestão Escolar' },
   { pattern: /EDUCACAO FISICA|ESPORTE/, area: 'Linguagens' },
   { pattern: /MATEM/, area: 'Ciências da Natureza' },
   {
     pattern:
-      /LINGUAGENS DE PROGR|PROGRAMA|DESENVOLVIMENT|MODELAGEM|REDES DE COMPUTADORES|INTELIGENCIA ARTIFICIAL|VERSIONAMENTO|ROBOTICA|TECNOLOGIA|CARREIRA E COMPETENCIAS|PROJETO DE VIDA|PROJETO MULTIDISCIPLINAR|EDUCACAO FINANCEIRA|EMPREENDEDORISMO|TUTORIA|ELETIVA|CLUBE/,
+      /LINGUAGENS DE PROGR|LOGICA E LINGUAGENS|^PROCESSOS|PROGRAMA|DESENVOLVIMENT|MODELAGEM|REDES DE COMPUTADORES|INTELIGENCIA ARTIFICIAL|VERSIONAMENTO|ROBOTICA|TECNOLOGIA|CARREIRA E COMPETENCIAS|PROJETO DE VIDA|PROJETO MULTIDISCIPLINAR|EDUCACAO FINANCEIRA|EMPREENDEDORISMO|TUTORIA|ELETIVA|CLUBE/,
     area: 'Parte Diversificada',
   },
   { pattern: /LINGUA|PORTUGUES|INGLES|REDACAO|LEITURA|ARTE/, area: 'Linguagens' },

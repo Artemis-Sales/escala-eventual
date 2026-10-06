@@ -7,7 +7,14 @@ import { MultiplicaModal } from './MultiplicaModal';
 import { Modal } from './Modal';
 import type { DayOfWeek, ScheduleSlot, SlotType, ClassGroup, Teacher } from '../types';
 import { electiveLessonsFor, weeklyLessonsFor } from '../utils/workload';
-import { areaKey, classLevel, displayName, shortClassName, startTime } from '../utils/display';
+import {
+  areaKey,
+  classLevel,
+  displayName,
+  shortClassName,
+  startTime,
+  subjectAreaKey,
+} from '../utils/display';
 
 type ViewMode = 'geral_dia' | 'professor' | 'turma';
 
@@ -233,7 +240,7 @@ export const WeeklyScheduleView: React.FC = () => {
                           >
                             {slot && teacher ? (
                               <>
-                                <span className={`celula-disciplina cor-area-${areaKey(teacher.knowledgeArea)}`}>
+                                <span className={`celula-disciplina cor-area-${subjectAreaKey(subject, teacher.knowledgeArea)}`}>
                                   {subject}
                                 </span>
                                 <span className="celula-pessoa">{shortName(teacher.name)}</span>
@@ -334,7 +341,10 @@ export const WeeklyScheduleView: React.FC = () => {
                                   {shortClassName(cls?.name || slot?.classId) || 'Turma'}
                                 </span>
                                 <span
-                                  className={`celula-disciplina cor-area-${areaKey(selectedTeacher?.knowledgeArea)}`}
+                                  className={`celula-disciplina cor-area-${subjectAreaKey(
+                                    slot?.subject || selectedTeacher?.mainSubject,
+                                    selectedTeacher?.knowledgeArea
+                                  )}`}
                                 >
                                   {slot?.subject || selectedTeacher?.mainSubject}
                                 </span>
@@ -451,7 +461,12 @@ export const WeeklyScheduleView: React.FC = () => {
                         <td key={d.key} className="semana-celula">
                           {slot && teacher && (
                             <div className="celula-estatica">
-                              <span className={`celula-disciplina cor-area-${areaKey(teacher.knowledgeArea)}`}>
+                              <span
+                                  className={`celula-disciplina cor-area-${subjectAreaKey(
+                                    slot.subject || teacher.mainSubject,
+                                    teacher.knowledgeArea
+                                  )}`}
+                                >
                                 {slot.subject || teacher.mainSubject}
                               </span>
                               <span className="celula-pessoa">{shortName(teacher.name)}</span>
